@@ -1,49 +1,74 @@
-/* plug.dj themescript made for Chillout Mixer
+/* JS extensions */
+#user-settings .ext-plug .item span{
+  color: rgb(180, 201, 222) !Important;
+} /* Disabled */
+#user-settings .ext-plug .item:not(.selected) span{
+  opacity: 0.75 !Important;
+}
 
-   --- Information ---
-   
-   This is an affiliated themescript and hosted theme.
-   If you would like to see more details and information
-   about our development please see our repository:
-   https://github.com/themescript/themescript.github.io
+/* Vote */
+  /* icons */
+.cm .badge-box .icon.icon-woot,
+.cm .badge-box .icon.icon-grab,
+.cm .badge-box .icon.icon-meh,
+.cm.extplug-user-join .badge-box i,
+.cm.extplug-user-leave .badge-box i,
+.cm.extplug-friend-join .badge-box span,
+.cm.extplug-friend-leave .badge-box span{
+  background-image: url(file:///media/ExtStore/themescript.github.io/images/cmix_icons.png) !important;
+  background-size: 270px 480px !Important;
+}
+.cm .badge-box .icon.icon-woot{
+  background-position: -90px -60px !Important;
+}
+.cm .badge-box .icon.icon-grab{
+  background-position: -120px 0px !Important;
+}
+.cm .badge-box .icon.icon-meh{
+  background-position: -90px -30px !Important;
+} /* Text */
+.cm.extplug-woot .text{
+  color: rgb(74, 108, 143) !important;
+}
+.cm.extplug-grab .text{
+  color: rgb(92, 135, 179) !important;
+}
+.cm.extplug-meh .text{
+  color: rgb(255, 45, 49) !important;
+}
 
-   Coded using universal properties exclusively.
-   Non-CSS3 browsers will encounter compatibility issues.
-   
-   Version 4 (07/12/15)
+/* Other chat mentions */
+.cm.extplug-user-join .badge-box i{
+  background-position: -240px -240px !Important;
+}
+.cm.extplug-user-leave .badge-box i{
+  background-position: -240px -270px !Important;
+}
+.cm.extplug-friend-join .badge-box span{
+  background-position: -247px -307px !Important;
+}
+.cm.extplug-friend-leave .badge-box span{
+  background-position: -247px -337px !Important;
+}
 
-   --- Credits and contact ---
+/* Buttons */
+#user-settings .ext-plug button{
+  background-color: rgb(50, 60, 83) !important;
+} /* Left */
+#user-settings .ext-plug .left button:hover{
+  color: rgb(180, 201, 222) !Important;
+  background-color: rgb(92, 135, 179) !important;
+} /* Right */
+#user-settings .ext-plug .right button:hover{
+  color: rgb(255, 255, 255) !important;
+  background-color: rgb(255, 45, 49) !important;
+}
 
-   Primary style developer:
-   HEEBEEJEEBEES; bluufoxx[at]gmail[dot]com
-
-   Original concept, theme director and code host:
-   Wizzikz; rihikz[at]gmail[dot]com
-
-   Community host, community background and assorted UI images:
-   Nighthawk; nite4wk[at]gmail[dot]com
-
-   Chillout Mixer logo and assorted site images:
-   FunkyBrewster
-
-   Additional icons and style work:
-   EckerDecker
-
-   All other members of the chilloutmixer community who provided useful input on style development
-
-   You. Yes, you! Keep on chillin' !
-
-   Additional icons modified without permission are property of plug.dj and plugcubed art / development teams.
-
-*/
-
-/* Theme components */
-/* > Additional styles for plugins are handled by plugins.css */
-/*@import url("https://themescript.github.io/settings/loading.css");
-@import url("https://themescript.github.io/badges/badges.css");
-@import url("https://themescript.github.io/themes/cmix/usrlogos.css");
-@import url("https://themescript.github.io/settings/settings.css");*/
-@import url("https://hebgbs.github.io/IMPTEST.css");
-/*@import url("https://themescript.github.io/settings/roominfo.css");*/
-
-/* Put more stuff here */
+/* Highlight */
+#chat-messages .extplug-deleted:hover{
+  opacity: 1 !Important;
+}
+#chat-messages .extplug-deleted:hover,
+#chat-messages .extplug-deleted:not(:hover){
+  transition: 0.2s !Important;
+}
