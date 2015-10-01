@@ -7,7 +7,7 @@
    Most of the basic styling elements and colour language from it has been
    transferred to this theme for DubTrack.
    
-   First GitHub release, version 0.6 (09/30/15)
+   version 0.7 (10/01/15)
 */
 
 #main-menu-left A:not(:hover),
@@ -48,7 +48,8 @@
 .browser-content-header .close SPAN,
 #main-menu-left A.logout-link,
 HEADER .logout:hover SPAN,
-.playlist-item .img_bg.remove_icon:hover{
+.playlist-item .img_bg.remove_icon:hover,
+.playlist-style .delete:hover{
   color: rgb(255, 45, 49) !important;
 }
 
