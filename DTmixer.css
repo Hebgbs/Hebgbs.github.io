@@ -10,77 +10,20 @@
    First GitHub release, version 0.6 (09/30/15)
 */
 
-#main-menu-left A:not(:hover){
+#main-menu-left A:not(:hover),
+.playlist-style DIV:not(:hover),
+.content-videos .img_bg:not(:hover){
   opacity: 0.75 !Important;
 }
 
 #main-menu-left A:hover,
 #chat .room-user-counter,
-#avatar A SPAN{
-  opacity: 1 !Important;
-}
-
-HEADER,
-HEADER H1,
-#player-controller,
-#chat,
-#main_avatar_room,
-#user_popover,
-.close-menu,
-#addToPlaylistFloatContainer{
-  background-color: rgb(30, 41, 66) !important;
-}
-  
-#main-menu-left,
-#main-menu-right{
-  background-color: rgba(30, 41, 66, 0.75) !important;
-}
-
-#mobile-room-menu,
-.ui-slider,
-#avatar .dubs,
-.playlist-list-action LI:hover{
-  background-color: rgb(29, 69, 110) !important;
-}
-
-HEADER BUTTON,
-#chat BUTTON,
-#global-search,
-#new-message-input,
-#chat-txt-message,
-#message-input,
-.input-room-users-search INPUT,
-#playlist-input,
-.icon-plus,
-#player-controller .navigate:hover,
-.mod.currentDJ:after,
-.dubup:hover,
-.dubup.voted{
-  background-color: rgb(50, 60, 83) !Important;
-}
-
-.queue-info,
-.info-counter,
-.message-counter,
-#chat .room-user-counter,
 #avatar A SPAN,
-.pusher-chat-widget-send-btn,
-#new-messages-counter,
-.ui-slider-handle,
-.mod:after,
-.progressBg,
-.add-to-playlist A:hover{
-  background-color: rgb(74, 108, 143) !Important;
-}
-
-.dubdown:hover,
-.dubdown.voted{
-  background-color: rgb(255, 45, 49) !important;
-}
-
-.message-item.new-message:before,
-.creator:after{
-  background-color: rgb(180, 201, 222) !important;
+#browser .close,
+#playlists-scroll LI,
+.playlist-style DIV:hover,
+.content-videos .img_bg:hover{
+  opacity: 1 !Important;
 }
 
 .icon-camera,
@@ -94,13 +37,18 @@ HEADER BUTTON,
 #main-menu-left A,
 .username-handle,
 #user_popover A,
-.message-item.new-message H3{
+.message-item.new-message H3,
+.sidebar .title,
+.content-videos .preview,
+.content-videos .img_bg{
   color: rgb(180, 201, 222) !important;
 }
 
 .icon-close,
-.icon-remove-circle,
-#main-menu-left A.logout-link{
+.browser-content-header .close SPAN,
+#main-menu-left A.logout-link,
+HEADER .logout:hover SPAN,
+.playlist-item .img_bg.remove_icon:hover{
   color: rgb(255, 45, 49) !important;
 }
 
@@ -109,14 +57,101 @@ I,
 #chat BUTTON,
 P,
 #player-controller SPAN,
-#maindubtotal{
+#maindubtotal,
+#playlists-scroll LI:hover,
+.playlist-style DIV,
+.icon-plus,
+.browser-content-header SPAN,
+.content-videos .timeDisplay{
   color: rgb(238, 238, 238) !important;
+}
+#playlists-scroll LI:not(:hover){
+  color: rgba(238, 238, 238, 0.75) !important;
+}
+
+HEADER,
+HEADER H1,
+#player-controller,
+#chat,
+#main_avatar_room,
+#user_popover,
+.close-menu,
+#addToPlaylistFloatContainer,
+.browser-content{
+  background-color: rgb(30, 41, 66) !important;
+}
+  
+#main-menu-left,
+#main-menu-right{
+  background-color: rgba(30, 41, 66, 0.75) !important;
+}
+
+#mobile-room-menu,
+.ui-slider,
+#avatar .dubs,
+.playlist-list-action LI:hover,
+.queue-item,
+.playlist-item,
+#playlists-scroll LI:hover{
+  background-color: rgb(29, 69, 110) !important;
+}
+
+HEADER BUTTON,
+#chat BUTTON,
+#global-search,
+#new-message-input,
+#chat-txt-message,
+#message-input,
+.input-room-users-search INPUT,
+.sidebar INPUT,
+#playlist-input,
+.icon-plus,
+#player-controller .navigate:hover,
+.currentDJ:after,
+.dubup:hover,
+.dubup.voted,
+.browser-content-header INPUT,
+#playlists-scroll LI,
+.content-videos .timeDisplay{
+  background-color: rgb(50, 60, 83) !Important;
+}
+
+.queue-info,
+.info-counter,
+.message-counter,
+#chat .room-user-counter,
+#avatar A SPAN,
+.pusher-chat-widget-send-btn,
+#new-messages-counter,
+.ui-slider-handle,
+.mod:after,
+.progressBg,
+.add-to-playlist A:hover,
+.clear-queue,
+.search-btn{
+  background-color: rgb(74, 108, 143) !Important;
+}
+
+.dubdown:hover,
+.dubdown.voted{
+  background-color: rgb(255, 45, 49) !important;
+}
+
+.message-item.new-message:before,
+.creator:after{
+  background-color: rgb(180, 201, 222) !important;
+}
+
+.content-videos{
+  background-image: url(https://mediadubtrackfm.s3.amazonaws.com/assets/images/backgrounds/pattern-stripes.png) !important;
 }
 
 #chat-txt-message,
 #message-input,
 .input-room-users-search INPUT,
-#new-message-input{
+#new-message-input,
+#playlists-scroll LI,
+.sidebar INPUT{
   border-color: rgb(50, 60, 83) !Important;
 }
 
@@ -137,10 +172,18 @@ P,
 #playlist-input{
   box-shadow: inset -30px 0px 0px 0px rgb(30, 41, 66) !Important;
 }
+.sidebar INPUT{
+  box-shadow: inset -29px 0px 0px 0px rgb(30, 41, 66) !Important;
+}
+
+.br-btn.active{
+  box-shadow: inset 0px 0px 0px 1px rgb(92, 135, 179) !Important;
+}
 
 #chat-txt-message{
   box-shadow: 0px -1px 0px 0px rgb(50, 60, 83) !Important;
 }
+.browser-content-header INPUT,
 .icon-plus{
   box-shadow: 0px 1px 0px 0px rgb(50, 60, 83) !Important;
 }
@@ -167,10 +210,6 @@ HEADER .relate,
   border-right-color: transparent !Important;
 }
 
-*{
-  outline-style: none !Important;
-}
-
 .chat_tools,
 .pusher-chat-widget-input,
 .message-list-wrapper-inner,
@@ -181,19 +220,32 @@ HEADER .relate,
 .input-container,
 .input-room-users-search,
 .message-list-wrapper,
-.playlist-list-action LI
+.playlist-list-action LI,
+.browser-content .sidebar,
+.browser-content-header
 {
   background-color: transparent !Important;
 }
 
-#addToPlaylistFloatContainer LI{
+.browser-content{
+  background-image: none !Important;
+}
+
+#addToPlaylistFloatContainer LI,
+.browser-content{
   border: none !important;
 }
 #player-controller .remove-if-banned:nth-child(4){
   border-right: none !Important;
 }
 
+*{
+  outline-style: none !Important;
+}
+
 .image_row:after,
-#player-controller .copy{
+#player-controller .copy,
+.playlist-style .ps-scrollbar-y,
+.playlist-style .ps-scrollbar-y-rail{
   display: none !Important;
 }
