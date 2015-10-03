@@ -7,7 +7,7 @@
    Most of the basic styling elements and colour language from it has been
    transferred to this theme for DubTrack.
    
-   version 0.7 (10/01/15)
+   version 0.8 (10/03/15)
 */
 
 #main-menu-left A:not(:hover),
@@ -16,6 +16,7 @@
   opacity: 0.75 !Important;
 }
 
+.loading,
 #main-menu-left A:hover,
 #chat .room-user-counter,
 #avatar A SPAN,
@@ -24,6 +25,10 @@
 .playlist-style DIV:hover,
 .content-videos .img_bg:hover{
   opacity: 1 !Important;
+}
+
+.loading{
+  font-weight: normal !important;
 }
 
 .icon-camera,
@@ -53,12 +58,14 @@ HEADER .logout:hover SPAN,
   color: rgb(255, 45, 49) !important;
 }
 
+.loading,
 HEADER BUTTON,
-I,
+I:not(.icon-arrow-down2),
 #chat BUTTON,
 P,
-#player-controller SPAN,
+#player-controller:not(.queue-info) SPAN,
 #maindubtotal,
+.playlist_info A,
 #playlists-scroll LI:hover,
 .playlist-style DIV,
 .icon-plus,
@@ -70,6 +77,8 @@ P,
   color: rgba(238, 238, 238, 0.75) !important;
 }
 
+#main-loading,
+.loading,
 HEADER,
 HEADER H1,
 #player-controller,
@@ -77,13 +86,15 @@ HEADER H1,
 #main_avatar_room,
 #user_popover,
 .close-menu,
+.playlist_info,
 #addToPlaylistFloatContainer,
 .browser-content{
   background-color: rgb(30, 41, 66) !important;
 }
   
 #main-menu-left,
-#main-menu-right{
+#main-menu-right,
+.loading{
   background-color: rgba(30, 41, 66, 0.75) !important;
 }
 
@@ -112,6 +123,8 @@ HEADER BUTTON,
 .dubup:hover,
 .dubup.voted,
 .browser-content-header INPUT,
+.playlist_filter,
+.shuffle-playlist,
 #playlists-scroll LI,
 .content-videos .timeDisplay{
   background-color: rgb(50, 60, 83) !Important;
@@ -134,7 +147,8 @@ HEADER BUTTON,
 }
 
 .dubdown:hover,
-.dubdown.voted{
+.dubdown.voted,
+.playlist_type_private{
   background-color: rgb(255, 45, 49) !important;
 }
 
@@ -151,6 +165,7 @@ HEADER BUTTON,
 #message-input,
 .input-room-users-search INPUT,
 #new-message-input,
+.playlist_filter,
 #playlists-scroll LI,
 .sidebar INPUT{
   border-color: rgb(50, 60, 83) !Important;
@@ -189,7 +204,8 @@ HEADER BUTTON,
   box-shadow: 0px 1px 0px 0px rgb(50, 60, 83) !Important;
 }
 
-BUTTON:hover{
+BUTTON:hover,
+.shuffle-playlist:hover{
   box-shadow: inset 0px -2px 0px 0px rgb(74, 108, 143) !Important;
 }
 
@@ -209,6 +225,10 @@ HEADER .relate,
 .user-info-button,
 .logout BUTTON{
   border-right-color: transparent !Important;
+}
+
+.playlist_info A{
+  border-radius: 3px !important;
 }
 
 .chat_tools,
@@ -233,6 +253,7 @@ HEADER .relate,
 }
 
 #addToPlaylistFloatContainer LI,
+.playlist_info A,
 .browser-content{
   border: none !important;
 }
@@ -246,6 +267,7 @@ HEADER .relate,
 
 .image_row:after,
 #player-controller .copy,
+.playlist_type_private SPAN,
 .playlist-style .ps-scrollbar-y,
 .playlist-style .ps-scrollbar-y-rail{
   display: none !Important;
