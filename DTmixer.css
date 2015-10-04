@@ -7,7 +7,7 @@
    Most of the basic styling elements and colour language from it has been
    transferred to this theme for DubTrack.
    
-   version 0.82 (10/04/15)
+   version 0.83 (10/04/15)
 */
 
 #main-menu-left A:not(.close-menu):not(:hover),
@@ -38,6 +38,7 @@
 .icon-camera,
 .username,
 #user_popover H3,
+.mod:after,
 .message-item H3,
 .message-header A{
   color: rgb(92, 135, 179) !Important;
@@ -46,11 +47,16 @@
 #main-menu-left A,
 .username-handle,
 #user_popover A,
+.creator:after,
 .message-item.new-message H3,
 .sidebar .title,
 .content-videos .preview,
 .content-videos .img_bg{
   color: rgb(180, 201, 222) !important;
+}
+
+.currentDJ:after{
+  color: rgb(74, 108, 143) !Important;
 }
 
 .icon-close,
@@ -111,7 +117,6 @@ A.close-menu,
 
 #mobile-room-menu,
 .ui-slider,
-#avatar .dubs,
 .playlist-list-action LI:hover,
 .content-videos LI,
 #playlists-scroll LI:hover,
@@ -135,7 +140,6 @@ HEADER BUTTON,
 #playlist-input,
 .icon-plus,
 #player-controller .navigate:hover,
-.currentDJ:after,
 .dubup:hover,
 .dubup.voted,
 .browser-content-header INPUT,
@@ -153,8 +157,7 @@ HEADER BUTTON,
 #avatar A SPAN,
 .pusher-chat-widget-send-btn,
 #new-messages-counter,
-.ui-slider-handle,
-.mod:after,
+.ui-slider-handle
 .progressBg,
 .add-to-playlist A:hover,
 .clear-queue,
@@ -168,8 +171,7 @@ HEADER BUTTON,
   background-color: rgb(255, 45, 49) !important;
 }
 
-.message-item.new-message:before,
-.creator:after{
+.message-item.new-message:before{
   background-color: rgb(180, 201, 222) !important;
 }
 
@@ -181,6 +183,7 @@ HEADER BUTTON,
 #message-input,
 .input-room-users-search INPUT,
 #new-message-input,
+#avatar LI.updub,
 .playlist_filter,
 #playlists-scroll LI,
 .sidebar INPUT{
@@ -199,9 +202,15 @@ HEADER BUTTON,
 }
 
 #mobile-room-menu A,
+#avatar LI,
 .message-list LI{
   border-color: rgb(30, 41, 66) !Important;
 }
+
+#avatar LI.downdub{
+  border-color: rgb(255, 45, 49) !important;
+}
+
 #playlist-input{
   box-shadow: inset -30px 0px 0px 0px rgb(30, 41, 66) !Important;
 }
