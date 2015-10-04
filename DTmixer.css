@@ -7,18 +7,22 @@
    Most of the basic styling elements and colour language from it has been
    transferred to this theme for DubTrack.
    
-   version 0.8 (10/03/15)
+   version 0.82 (10/04/15)
 */
 
-#main-menu-left A:not(:hover),
+#main-menu-left A:not(.close-menu):not(:hover),
+.chatDelete:not(:hover)
 .playlist-style DIV:not(:hover),
 .content-videos .img_bg:not(:hover){
   opacity: 0.75 !Important;
 }
 
+#main-loading,
 .loading,
 #main-menu-left A:hover,
 #chat .room-user-counter,
+.system,
+.chatDelete:hover,
 #avatar A SPAN,
 #browser .close,
 #playlists-scroll LI,
@@ -50,6 +54,7 @@
 }
 
 .icon-close,
+.system,
 .browser-content-header .close SPAN,
 #main-menu-left A.logout-link,
 HEADER .logout:hover SPAN,
@@ -58,6 +63,7 @@ HEADER .logout:hover SPAN,
   color: rgb(255, 45, 49) !important;
 }
 
+#main-loading,
 .loading,
 HEADER BUTTON,
 I:not(.icon-arrow-down2),
@@ -77,8 +83,11 @@ P,
   color: rgba(238, 238, 238, 0.75) !important;
 }
 
-#main-loading,
-.loading,
+.ps-scrollbar-y-rail{
+  background-color: rgb(22, 31, 49) !important;
+}
+
+.spinner,
 HEADER,
 HEADER H1,
 #player-controller,
@@ -91,10 +100,12 @@ HEADER H1,
 .browser-content{
   background-color: rgb(30, 41, 66) !important;
 }
-  
+
+.loading,
 #main-menu-left,
 #main-menu-right,
-.loading{
+A.close-menu,
+.isSwordful{
   background-color: rgba(30, 41, 66, 0.75) !important;
 }
 
@@ -102,12 +113,17 @@ HEADER H1,
 .ui-slider,
 #avatar .dubs,
 .playlist-list-action LI:hover,
-.queue-item,
-.playlist-item,
-#playlists-scroll LI:hover{
+.content-videos LI,
+#playlists-scroll LI:hover,
+#chat .user-560354e8e863210300468f71,
+#chat .user-5600dd6e2e803803000fed3e{
   background-color: rgb(29, 69, 110) !important;
 }
+#main-loading{
+  background-color: rgba(29, 69, 110, 0.75) !important;
+}
 
+.ps-scrollbar-y,
 HEADER BUTTON,
 #chat BUTTON,
 #global-search,
@@ -182,7 +198,8 @@ HEADER BUTTON,
   border-color: rgb(29, 69, 110) !Important;
 }
 
-#mobile-room-menu A{
+#mobile-room-menu A,
+.message-list LI{
   border-color: rgb(30, 41, 66) !Important;
 }
 #playlist-input{
@@ -202,6 +219,12 @@ HEADER BUTTON,
 .browser-content-header INPUT,
 .icon-plus{
   box-shadow: 0px 1px 0px 0px rgb(50, 60, 83) !Important;
+}
+
+#chat .user-560354e8e863210300468f71,
+#chat .user-5600dd6e2e803803000fed3e{
+  box-shadow: -9px 0px 0px 0px rgb(29, 69, 110),
+              9px 0px 0px 0px rgb(29, 69, 110) !important;
 }
 
 BUTTON:hover,
@@ -233,6 +256,7 @@ HEADER .relate,
 
 .chat_tools,
 .pusher-chat-widget-input,
+.message-header,
 .message-list-wrapper-inner,
 .message-list-wrapper,
 .message-details,
@@ -243,7 +267,8 @@ HEADER .relate,
 .message-list-wrapper,
 .playlist-list-action LI,
 .browser-content .sidebar,
-.browser-content-header
+.browser-content-header,
+.isSwordful LI
 {
   background-color: transparent !Important;
 }
@@ -254,9 +279,11 @@ HEADER .relate,
 
 #addToPlaylistFloatContainer LI,
 .playlist_info A,
-.browser-content{
+.browser-content,
+.isSwordful{
   border: none !important;
 }
+
 #player-controller .remove-if-banned:nth-child(4){
   border-right: none !Important;
 }
