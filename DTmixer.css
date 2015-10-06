@@ -7,9 +7,11 @@
    Most of the basic styling elements and colour language from it has been
    transferred to this theme for DubTrack.
    
-   version 0.83 (10/04/15)
+   version 0.85 (10/06/15)
 */
 
+.search-results DIV .result-item:not(:hover) SPAN,
+.chatSound.mute,
 #main-menu-left A:not(.close-menu):not(:hover),
 .chatDelete:not(:hover)
 .playlist-style DIV:not(:hover),
@@ -17,12 +19,14 @@
   opacity: 0.75 !Important;
 }
 
+.search-results DIV .result-item:hover SPAN,
 #main-loading,
 .loading,
 #main-menu-left A:hover,
 #chat .room-user-counter,
 .system,
 .chatDelete:hover,
+.loadRoomAva DIV,
 #avatar A SPAN,
 #browser .close,
 #playlists-scroll LI,
@@ -44,19 +48,33 @@
   color: rgb(92, 135, 179) !Important;
 }
 
+.search-results DIV .result-item,
+.search-results H3,
 #main-menu-left A,
 .username-handle,
 #user_popover A,
+.loadRoomAva,
 .creator:after,
 .message-item.new-message H3,
 .sidebar .title,
 .content-videos .preview,
-.content-videos .img_bg{
+.content-videos .img_bg,
+#chat LI.user-560354e8e863210300468f71 .autolink,
+#chat LI.user-5600dd6e2e803803000fed3e .autolink{
   color: rgb(180, 201, 222) !important;
 }
 
+TIME,
 .currentDJ:after{
   color: rgb(74, 108, 143) !Important;
+}
+
+.chat-system-loading{
+  color: rgb(50, 60, 83) !Important;
+}
+
+#chat .autolink{
+  color: rgb(0, 155, 255) !Important;
 }
 
 .icon-close,
@@ -73,16 +91,21 @@ HEADER .logout:hover SPAN,
 .loading,
 HEADER BUTTON,
 I:not(.icon-arrow-down2),
+INPUT,
+#browser INPUT.placeholder,
 #chat BUTTON,
+.chatSound,
 P,
-#player-controller:not(.queue-info) SPAN,
+#player-controller SPAN:not(.queue-active),
 #maindubtotal,
 .playlist_info A,
 #playlists-scroll LI:hover,
 .playlist-style DIV,
 .icon-plus,
 .browser-content-header SPAN,
-.content-videos .timeDisplay{
+.content-videos .timeDisplay,
+#chat LI.user-560354e8e863210300468f71 .username,
+#chat LI.user-5600dd6e2e803803000fed3e .username{
   color: rgb(238, 238, 238) !important;
 }
 #playlists-scroll LI:not(:hover){
@@ -94,6 +117,7 @@ P,
 }
 
 .spinner,
+.search-results,
 HEADER,
 HEADER H1,
 #player-controller,
@@ -160,7 +184,7 @@ HEADER BUTTON,
 .ui-slider-handle,
 .progressBg,
 .add-to-playlist A:hover,
-.clear-queue,
+.content-videos .clear-queue,
 .search-btn{
   background-color: rgb(74, 108, 143) !Important;
 }
@@ -169,6 +193,9 @@ HEADER BUTTON,
 .dubdown.voted,
 .playlist_type_private{
   background-color: rgb(255, 45, 49) !important;
+}
+.loading.skip-el{
+  background-color: rgba(255, 45, 49, 0.75) !important;
 }
 
 .message-item.new-message:before{
@@ -186,13 +213,17 @@ HEADER BUTTON,
 #avatar LI.updub,
 .playlist_filter,
 #playlists-scroll LI,
-.sidebar INPUT{
+.sidebar INPUT,
+.isSwordful .verSwordful{
   border-color: rgb(50, 60, 83) !Important;
 }
 
+.chat_tools,
+.pusher-chat-widget-input,
 .ui-slider,
 #user_popover,
-#addToPlaylistFloatContainer{
+#addToPlaylistFloatContainer,
+.isSwordful .istitle{
   border-color: rgb(29, 69, 110) !important;
 }
 
@@ -201,9 +232,11 @@ HEADER BUTTON,
   border-color: rgb(29, 69, 110) !Important;
 }
 
+#main-menu-left a:not(.close-menu),
 #mobile-room-menu A,
 #avatar LI,
-.message-list LI{
+.message-list LI,
+.user-messages-button{
   border-color: rgb(30, 41, 66) !Important;
 }
 
@@ -241,6 +274,10 @@ BUTTON:hover,
   box-shadow: inset 0px -2px 0px 0px rgb(74, 108, 143) !Important;
 }
 
+#chat LI[style="box-shadow: -4px 0px 0px 0px rgb(255, 0, 255) inset;"]{
+  box-shadow: inset -4px 0px 0px 0px rgb(74, 108, 143) !Important;
+}
+
 BUTTON{
   box-shadow: inset 0px -2px 0px 0px transparent !Important;
 }
@@ -263,6 +300,7 @@ HEADER .relate,
   border-radius: 3px !important;
 }
 
+.search-results DIV,
 .chat_tools,
 .pusher-chat-widget-input,
 .message-header,
