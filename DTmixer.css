@@ -7,7 +7,7 @@
    Most of the basic styling elements and colour language from it has been
    transferred to this theme for DubTrack.
    
-   version 0.85 (10/06/15)
+   version 0.86 (10/06/15)
 */
 
 .search-results DIV .result-item:not(:hover) SPAN,
@@ -35,7 +35,8 @@
   opacity: 1 !Important;
 }
 
-.loading{
+#main_player .loading,
+.autolink{
   font-weight: normal !important;
 }
 
@@ -73,7 +74,7 @@ TIME,
   color: rgb(50, 60, 83) !Important;
 }
 
-#chat .autolink{
+.autolink{
   color: rgb(0, 155, 255) !Important;
 }
 
@@ -82,7 +83,7 @@ TIME,
 .browser-content-header .close SPAN,
 #main-menu-left A.logout-link,
 HEADER .logout:hover SPAN,
-.playlist-item .img_bg.remove_icon:hover,
+.content-videos .img_bg.remove_icon:hover,
 .playlist-style .delete:hover{
   color: rgb(255, 45, 49) !important;
 }
@@ -116,7 +117,7 @@ P,
   background-color: rgb(22, 31, 49) !important;
 }
 
-.spinner,
+#main-loading .spinner,
 .search-results,
 HEADER,
 HEADER H1,
@@ -174,12 +175,14 @@ HEADER BUTTON,
   background-color: rgb(50, 60, 83) !Important;
 }
 
+.content-videos .spinner DIV,
 .queue-info,
 .info-counter,
 .message-counter,
 #chat .room-user-counter,
 #avatar A SPAN,
 .pusher-chat-widget-send-btn,
+.display-success,
 #new-messages-counter,
 .ui-slider-handle,
 .progressBg,
@@ -203,7 +206,12 @@ HEADER BUTTON,
 }
 
 .content-videos{
-  background-image: url(https://mediadubtrackfm.s3.amazonaws.com/assets/images/backgrounds/pattern-stripes.png) !important;
+  background: url(https://mediadubtrackfm.s3.amazonaws.com/assets/images/backgrounds/pattern-stripes.png),
+              url(https://i.imgur.com/nQu4KMz.jpg) center center/529px 434px no-repeat !important;
+}
+
+HEADER H1 SPAN{
+  background-image: url(https://i.imgur.com/Bj3cLb3.png) !important;
 }
 
 #chat-txt-message,
