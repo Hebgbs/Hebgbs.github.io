@@ -8,7 +8,7 @@
    Most of the basic styling elements and colour language from it has been
    transferred to this theme for DubTrack.
    
-   version 0.88 (10/06/15)
+   version 0.9 (10/07/15)
 */
 
 .search-results DIV .result-item:not(:hover) SPAN,
@@ -20,9 +20,11 @@
   opacity: 0.75 !Important;
 }
 
+.loading,
+.playerPreview .buttons,
+.playerPreview .controlContainer:after,
 .search-results DIV .result-item:hover SPAN,
 #main-loading,
-.loading,
 #main-menu-left A:hover,
 #chat .room-user-counter,
 .system,
@@ -107,6 +109,7 @@ HEADER .logout:hover SPAN,
 
 #main-loading,
 .loading,
+.comments-main BUTTON,
 HEADER BUTTON,
 I:not(.icon-arrow-down2),
 INPUT,
@@ -119,6 +122,7 @@ P,
 .playlist_info A,
 #playlists-scroll LI:hover,
 .playlist-style DIV,
+.icon-play,
 .icon-plus,
 .browser-content-header SPAN,
 .content-videos .timeDisplay,
@@ -139,6 +143,8 @@ P,
 
 #main-loading .spinner,
 .search-results,
+.ui-slider-range,
+.playerPreview .progressContainer,
 HEADER,
 HEADER H1,
 .player_sharing,
@@ -155,6 +161,7 @@ HEADER H1,
 }
 
 .loading,
+.playerPreview .replay,
 #main-menu-left,
 #main-menu-right,
 A.close-menu,
@@ -162,6 +169,7 @@ A.close-menu,
   background-color: rgba(30, 41, 66, 0.75) !important;
 }
 
+.playerPreview,
 #mobile-room-menu,
 .ui-slider,
 .playlist-list-action LI:hover,
@@ -174,8 +182,14 @@ A.close-menu,
 #main-loading{
   background-color: rgba(29, 69, 110, 0.75) !important;
 }
+.playerPreview .controlContainer:after{
+  background-color: rgba(29, 69, 110, 0.50) !important;
+}
 
 .ps-scrollbar-y,
+.playerPreview .loaded,
+.playerPreview TEXTAREA,
+.comments-main BUTTON,
 HEADER BUTTON,
 #chat BUTTON,
 #global-search,
@@ -200,6 +214,7 @@ HEADER BUTTON,
   background-color: rgb(50, 60, 83) !Important;
 }
 
+.playerPreview .progress,
 .content-videos .spinner DIV,
 .queue-info,
 .info-counter,
@@ -239,6 +254,7 @@ HEADER H1 SPAN{
   background-image: url(https://i.imgur.com/Bj3cLb3.png) !important;
 }
 
+.playerPreview TEXTAREA,
 #chat-txt-message,
 #message-input,
 .input-room-users-search INPUT,
@@ -324,10 +340,6 @@ HEADER .logout BUTTON{
   border-radius: 0px 3px 3px 0px !important;
 }
 
-#player-controller .imgEl{
-  border-color: transparent !Important;
-}
-
 HEADER .relate,
 .user-info-button,
 .logout BUTTON{
@@ -340,7 +352,34 @@ HEADER .relate,
   border-radius: 3px !important;
 }
 
+INPUT#d3vs-playlist-import-btn{
+  padding-top: 8px !Important;
+  padding-bottom: 8px !Important;
+}
+
+#d3vs-playlist-import-code{
+  margin-top: 8px !Important;
+  margin-bottom: 8px !Important;
+}
+
+.ui-slider-horizontal{
+  height: 0px !Important;
+  top: 2px !Important;
+}
+
+.playerPreview .ui-slider-handle{
+  top: -8px !Important;
+}
+
+.comments-main BUTTON{
+  position: relative !Important;
+  top: 8px !Important;
+  left: calc(100% - 124px) !Important;
+}
+
 .search-results DIV,
+.playerPreview .close,
+.comments-textarea-container,
 .chat_tools,
 .pusher-chat-widget-input,
 .message-header,
@@ -376,14 +415,8 @@ INPUT#d3vs-playlist-import-btn{
   border-right: none !Important;
 }
 
-INPUT#d3vs-playlist-import-btn{
-  padding-top: 8px !Important;
-  padding-bottom: 8px !Important;
-}
-
-#d3vs-playlist-import-code{
-  margin-top: 8px !Important;
-  margin-bottom: 8px !Important;
+.playerPreview .progressContainer{
+  box-shadow: none !Important;
 }
 
 #main_player{
@@ -394,6 +427,9 @@ INPUT#d3vs-playlist-import-btn{
   outline-style: none !Important;
 }
 
+#main_player:not(:hover) .loading,
+.playerPreview:before,
+#main-player:hover .loading,
 .image_row:after,
 #player-controller .copy,
 .playlist_type_private SPAN,
