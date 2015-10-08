@@ -8,7 +8,7 @@
    Most of the basic styling elements and colour language from it has been
    transferred to this theme for DubTrack.
    
-   version 0.90 (10/07/15)
+   version 0.92 (10/08/15)
 */
 
 .search-results DIV .result-item:not(:hover) SPAN,
@@ -32,6 +32,7 @@
 .loadRoomAva DIV,
 #avatar A SPAN,
 #browser .close,
+.content-videos LI,
 #playlists-scroll LI,
 .playlist-style DIV:hover,
 .content-videos .img_bg:hover{
@@ -65,11 +66,14 @@ INPUT#d3vs-playlist-import-btn{
 .creator:after,
 .message-item.new-message H3,
 .sidebar .title,
-.content-videos .preview,
+.content-videos LI:hover .preview,
 .content-videos .img_bg,
 #chat LI.user-560354e8e863210300468f71 .autolink,
 #chat LI.user-5600dd6e2e803803000fed3e .autolink{
   color: rgb(180, 201, 222) !important;
+}
+.content-videos LI:not(:hover) .preview{
+  color: rgba(180, 201, 222, 0.75) !important;
 }
 
 TIME,
@@ -77,7 +81,9 @@ TIME,
   color: rgb(74, 108, 143) !Important;
 }
 
-.chat-system-loading{
+.chat-system-loading,
+.comment-dub .icon-arrow-up:hover,
+.comment-dub .icon-arrow-up.dubvoted{
   color: rgb(50, 60, 83) !Important;
 }
 
@@ -98,6 +104,10 @@ TIME,
 }
 
 .icon-close,
+.icon-flag,
+.comment-dub A:hover,
+.comment-dub .icon-arrow-down.dubvoted,
+.comment-dub .icon-arrow-down:hover,
 .system,
 .browser-content-header .close SPAN,
 #main-menu-left A.logout-link,
@@ -110,6 +120,8 @@ HEADER .logout:hover SPAN,
 #main-loading,
 .loading,
 .comments-main BUTTON,
+.comment-dub,
+.comment-dub A,
 HEADER BUTTON,
 I:not(.icon-arrow-down2),
 INPUT,
@@ -119,6 +131,7 @@ INPUT,
 P,
 #player-controller SPAN:not(.queue-active),
 #maindubtotal,
+.content-videos LI:hover H2,
 .playlist_info A,
 #playlists-scroll LI:hover,
 .playlist-style DIV,
@@ -133,18 +146,22 @@ P,
 #d3vs-playlist-import-code{
   color: rgb(238, 238, 238) !important;
 }
+.content-videos LI:not(:hover) H2,
 #playlists-scroll LI:not(:hover){
   color: rgba(238, 238, 238, 0.75) !important;
 }
 
-.ps-scrollbar-y-rail{
+.playerPreview .tooltip{
+  color: rgb(0, 0, 0) !important;
+}
+
+.ps-scrollbar-y-rail,
+.playerPreview .progressContainer{
   background-color: rgb(22, 31, 49) !important;
 }
 
 #main-loading .spinner,
 .search-results,
-.ui-slider-range,
-.playerPreview .progressContainer,
 HEADER,
 HEADER H1,
 .player_sharing,
@@ -165,21 +182,23 @@ HEADER H1,
 #main-menu-left,
 #main-menu-right,
 A.close-menu,
+.content-videos LI,
 .isSwordful{
   background-color: rgba(30, 41, 66, 0.75) !important;
 }
 
 .playerPreview,
+.ui-slider-range,
 #mobile-room-menu,
 .ui-slider,
 .playlist-list-action LI:hover,
-.content-videos LI,
 #playlists-scroll LI:hover,
 #chat .user-560354e8e863210300468f71,
 #chat .user-5600dd6e2e803803000fed3e{
   background-color: rgb(29, 69, 110) !important;
 }
-#main-loading{
+#main-loading,
+.content-videos LI:hover{
   background-color: rgba(29, 69, 110, 0.75) !important;
 }
 .playerPreview .controlContainer:after{
@@ -215,6 +234,7 @@ HEADER BUTTON,
 }
 
 .playerPreview .progress,
+.playerPreview .tooltip,
 .content-videos .spinner DIV,
 .queue-info,
 .info-counter,
@@ -260,6 +280,7 @@ HEADER H1 SPAN{
 .input-room-users-search INPUT,
 #new-message-input,
 #avatar LI.updub,
+.content-videos LI,
 .playlist_filter,
 #playlists-scroll LI,
 .sidebar INPUT,
@@ -352,6 +373,11 @@ HEADER .relate,
   border-radius: 3px !important;
 }
 
+.ui-slider-horizontal{
+  height: 3px !Important;
+  top: 2px !Important;
+}
+
 INPUT#d3vs-playlist-import-btn{
   padding-top: 8px !Important;
   padding-bottom: 8px !Important;
@@ -362,13 +388,16 @@ INPUT#d3vs-playlist-import-btn{
   margin-bottom: 8px !Important;
 }
 
-.ui-slider-horizontal{
-  height: 0px !Important;
-  top: 2px !Important;
-}
-
 .playerPreview .ui-slider-handle{
   top: -8px !Important;
+}
+
+#player-controller .ui-slider-handle{
+  top: -9px !Important;
+}
+
+#player-controller .ui-slider-horizontal{
+  top: 0px !Important;
 }
 
 .comments-main BUTTON{
@@ -379,6 +408,7 @@ INPUT#d3vs-playlist-import-btn{
 
 .search-results DIV,
 .playerPreview .close,
+.playerPreview HEADER,
 .comments-textarea-container,
 .chat_tools,
 .pusher-chat-widget-input,
@@ -401,6 +431,10 @@ INPUT#d3vs-playlist-import-btn{
 
 .browser-content{
   background-image: none !Important;
+}
+
+.ui-slider-range{
+  border-color: transparent !Important;
 }
 
 #addToPlaylistFloatContainer LI,
