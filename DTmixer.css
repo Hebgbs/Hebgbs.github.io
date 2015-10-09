@@ -8,7 +8,7 @@
    Most of the basic styling elements and colour language from it has been
    transferred to this theme for DubTrack.
    
-   version 0.93 (10/08/15)
+   version 0.94 (10/09/15)
 */
 
 .search-results DIV .result-item:not(:hover) SPAN,
@@ -116,6 +116,10 @@ HEADER .logout:hover SPAN,
 .content-videos .img_bg.remove_icon:hover,
 .playlist-style .delete:hover{
   color: rgb(255, 45, 49) !important;
+}
+
+.admin:after{
+  color: rgb(0, 255, 255) !important;
 }
 
 #main-loading,
@@ -425,7 +429,6 @@ INPUT#d3vs-playlist-import-btn{
 .loading.hideVideo-el{
   height: 45px !Important;
   margin-top: 2px !Important;
-  line-height: 18px !Important;
 }
 
 .search-results DIV,
