@@ -4,11 +4,11 @@
    2. Access the DubX menu and click on "Custom CSS"
    3. Copy the address of this file into the dialog box input
    
-   This sryle sheet is inspired more-or-less from the old plug.dj theme.
+   This style sheet is inspired more-or-less from the old plug.dj theme.
    Most of the basic styling elements and colour language from it has been
    transferred to this theme for DubTrack.
    
-   version 0.92 (10/08/15)
+   version 0.93 (10/08/15)
 */
 
 .search-results DIV .result-item:not(:hover) SPAN,
@@ -109,6 +109,7 @@ TIME,
 .comment-dub .icon-arrow-down.dubvoted,
 .comment-dub .icon-arrow-down:hover,
 .system,
+.chat-system-loading.system-error,
 .browser-content-header .close SPAN,
 #main-menu-left A.logout-link,
 HEADER .logout:hover SPAN,
@@ -132,6 +133,7 @@ P,
 #player-controller SPAN:not(.queue-active),
 #maindubtotal,
 .content-videos LI:hover H2,
+.content-videos LI:hover .playedby,
 .playlist_info A,
 #playlists-scroll LI:hover,
 .playlist-style DIV,
@@ -147,6 +149,7 @@ P,
   color: rgb(238, 238, 238) !important;
 }
 .content-videos LI:not(:hover) H2,
+.content-videos LI:not(:hover) .playedby,
 #playlists-scroll LI:not(:hover){
   color: rgba(238, 238, 238, 0.75) !important;
 }
@@ -173,6 +176,10 @@ HEADER H1,
 .playlist_info,
 #addToPlaylistFloatContainer,
 .browser-content,
+.containerB div:first-child,
+.containerY div:first-child,
+.containerB,
+.containerY,
 .tinner{
   background-color: rgb(30, 41, 66) !important;
 }
@@ -227,6 +234,8 @@ HEADER BUTTON,
 .shuffle-playlist,
 #playlists-scroll LI,
 .content-videos .timeDisplay,
+.containerB INPUT,
+.containerY TEXTAREA,
 #d3vs-playlist-import-name,
 #d3vs-playlist-import-code,
 #d3vs-playlist-import-btn{
@@ -248,7 +257,9 @@ HEADER BUTTON,
 .progressBg,
 .add-to-playlist A:hover,
 .content-videos .clear-queue,
-.search-btn{
+.search-btn,
+.containerB DIV DIV,
+.containerY DIV DIV{
   background-color: rgb(74, 108, 143) !Important;
 }
 
@@ -342,6 +353,11 @@ HEADER H1 SPAN{
   box-shadow: -9px 0px 0px 0px rgb(29, 69, 110),
               9px 0px 0px 0px rgb(29, 69, 110) !important;
 }
+.containerB,
+.containerY{
+  box-shadow: inset 0px 55px 0px 0px rgb(29, 69, 110),
+              inset 0px -53px 0px 0px rgb(29, 69, 110) !important;
+}
 
 BUTTON:hover,
 .shuffle-playlist:hover,
@@ -404,6 +420,12 @@ INPUT#d3vs-playlist-import-btn{
   position: relative !Important;
   top: 8px !Important;
   left: calc(100% - 124px) !Important;
+}
+
+.loading.hideVideo-el{
+  height: 45px !Important;
+  margin-top: 2px !Important;
+  line-height: 18px !Important;
 }
 
 .search-results DIV,
