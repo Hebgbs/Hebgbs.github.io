@@ -8,7 +8,7 @@
    Most of the basic styling elements and colour language from it has been
    transferred to this theme for DubTrack.
    
-   version 0.97 (10/11/15)
+   version 0.98 (10/11/15)
 */
 
 .search-results DIV .result-item:not(:hover) SPAN,
@@ -64,6 +64,7 @@ INPUT#d3vs-playlist-import-btn{
 .icon-camera,
 .username,
 #user_popover H3,
+.manager:after,
 .mod:after,
 .message-item H3,
 .message-header A{
@@ -79,6 +80,7 @@ INPUT#d3vs-playlist-import-btn{
 .username-handle,
 #user_popover HEADER A,
 .loadRoomAva,
+.co-owner:after,
 .creator:after,
 .message-item.new-message H3,
 .sidebar .title,
@@ -93,8 +95,9 @@ INPUT#d3vs-playlist-import-btn{
 }
 
 TIME,
-.currentDJ:after,
-.vip:after{
+:not(.creator):not(.co-owner):not(.manager):not(.mod):not(.vip):not(.resident-dj).currentDJ:after,
+.vip:after,
+.resident-dj:after{
   color: rgb(74, 108, 143) !Important;
 }
 
@@ -126,6 +129,10 @@ TIME,
 .comment-dub .icon-arrow-down.dubvoted,
 .comment-dub .icon-arrow-down:hover,
 .system,
+#user_popover .kick:hover,
+#user_popover .ban:hover,
+#user_popover .ban:hover INPUT,
+#user_popover .mute:hover,
 #roomFormUpdate .closebtn:hover,
 #roomFormUpdate BUTTON.cancel:hover,
 .chat-system-loading.system-error,
@@ -155,6 +162,7 @@ INPUT,
 .chatSound,
 P,
 #user_popover .global-actions A,
+#user_popover .actions A,
 #player-controller SPAN:not(.queue-active),
 #maindubtotal,
 .content-videos LI:hover H2,
@@ -231,6 +239,9 @@ A.close-menu,
 #mobile-room-menu,
 .modal-header,
 .ui-slider,
+#user_popover .kick:hover,
+#user_popover .ban:hover,
+#user_popover .mute:hover,
 #room-lock-queue:hover,
 .playlist-list-action LI:hover,
 #playlists-scroll LI:hover,
@@ -262,6 +273,7 @@ TEXTAREA,
 #message-input,
 .icon-plus,
 #user_popover .global-actions A,
+#user_popover .actions A,
 #player-controller .navigate:hover,
 .dubup:hover,
 .dubup.voted,
@@ -288,6 +300,7 @@ TEXTAREA,
 #avatar A SPAN,
 .pusher-chat-widget-send-btn,
 #user_popover .global-actions A:hover,
+#user_popover .actions A:not(.kick):not(.ban):not(.mute):hover,
 .display-success,
 #new-messages-counter,
 .ui-slider-handle,
@@ -370,11 +383,15 @@ HEADER H1 SPAN{
   border-color: rgb(29, 69, 110) !important;
 }
 
-#player-controller DIV LI,
-#player-controller .right,
+/*#player-controller DIV LI,
+#player-controller .right,*/
 #roomFormUpdate,
 #roomInfoModal{
   border-color: rgb(29, 69, 110) !Important;
+}
+#player-controller DIV LI:not(:first-child):not(.infoContainer),
+.add-to-playlist{
+  border-left: 1px solid rgb(29, 69, 110) !Important;
 }
 
 #main-menu-left a:not(.close-menu),
@@ -387,6 +404,14 @@ HEADER H1 SPAN{
 
 #avatar LI.downdub{
   border-color: rgb(255, 45, 49) !important;
+}
+
+#user_popover .ban INPUT{
+  border-color: rgb(238, 238, 238) !important;
+}
+
+#user_popover .ban:hover INPUT{
+  border-color: rgb(255, 45, 49) !Important;
 }
 
 #playlist-input{
@@ -523,7 +548,7 @@ HEADER .relate,
 .logout BUTTON{
   border-right-color: transparent !Important;
 }
-
+ 
 #addToPlaylistFloatContainer LI,
 .playlist_info A,
 .browser-content,
@@ -531,9 +556,11 @@ HEADER .relate,
 INPUT#d3vs-playlist-import-btn{
   border: none !important;
 }
-
-#player-controller .remove-if-banned:nth-child(4){
-  border-right: none !Important;
+#player-controller DIV LI{
+  border-right-style: none !Important;
+}
+#player-controller .right{
+  border-left-style: none !Important;
 }
 
 .playerPreview .progressContainer{
