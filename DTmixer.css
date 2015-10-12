@@ -8,7 +8,7 @@
    Most of the basic styling elements and colour language from it has been
    transferred to this theme for DubTrack.
    
-   version 0.96 (10/11/15)
+   version 0.97 (10/11/15)
 */
 
 .search-results DIV .result-item:not(:hover) SPAN,
@@ -77,7 +77,7 @@ INPUT#d3vs-playlist-import-btn{
 .search-results H3,
 #main-menu-left A,
 .username-handle,
-#user_popover A,
+#user_popover HEADER A,
 .loadRoomAva,
 .creator:after,
 .message-item.new-message H3,
@@ -93,7 +93,8 @@ INPUT#d3vs-playlist-import-btn{
 }
 
 TIME,
-.currentDJ:after{
+.currentDJ:after,
+.vip:after{
   color: rgb(74, 108, 143) !Important;
 }
 
@@ -153,6 +154,7 @@ INPUT,
 #browser INPUT.placeholder,
 .chatSound,
 P,
+#user_popover .global-actions A,
 #player-controller SPAN:not(.queue-active),
 #maindubtotal,
 .content-videos LI:hover H2,
@@ -163,7 +165,7 @@ P,
 .icon-play,
 .icon-plus,
 .browser-content-header SPAN,
-.queue-management DIV,
+.content-videos .queue-management DIV,
 SPAN.room-info-display:hover,
 #room-lock-queue:hover,
 .content-videos .timeDisplay,
@@ -232,7 +234,7 @@ A.close-menu,
 #room-lock-queue:hover,
 .playlist-list-action LI:hover,
 #playlists-scroll LI:hover,
-.content-videos .clear-queue,
+.content-videos .clear-queue:hover,
 #chat .user-560354e8e863210300468f71,
 #chat .user-5600dd6e2e803803000fed3e{
   background-color: rgb(29, 69, 110) !important;
@@ -247,33 +249,29 @@ A.close-menu,
 
 .ps-scrollbar-y,
 .playerPreview .loaded,
-.playerPreview TEXTAREA,
 .comments-main BUTTON,
-#roomFormUpdate INPUT,
-#roomFormUpdate TEXTAREA,
 #roomFormUpdate SELECT,
 #roomFormUpdate BUTTON,
 HEADER BUTTON,
+INPUT,
+TEXTAREA,
 #chat BUTTON,
 #global-search,
 #new-message-input,
 #chat-txt-message,
 #message-input,
-.input-room-users-search INPUT,
-.sidebar INPUT,
-#playlist-input,
 .icon-plus,
+#user_popover .global-actions A,
 #player-controller .navigate:hover,
 .dubup:hover,
 .dubup.voted,
-.browser-content-header INPUT,
+#playlist-input,
 .playlist_filter,
 .shuffle-playlist,
-#playlists-scroll LI,
+.content-videos .queue-management DIV,
 .content-videos .timeDisplay,
+#playlists-scroll LI,
 #room-lock-queue,
-.containerB INPUT,
-.containerY TEXTAREA,
 #d3vs-playlist-import-name,
 #d3vs-playlist-import-code,
 #d3vs-playlist-import-btn{
@@ -289,11 +287,12 @@ HEADER BUTTON,
 #chat .room-user-counter,
 #avatar A SPAN,
 .pusher-chat-widget-send-btn,
+#user_popover .global-actions A:hover,
 .display-success,
 #new-messages-counter,
 .ui-slider-handle,
 #room-lock-queue.locked:hover,
-.content-videos .pause-queue,
+.content-videos .pause-queue:hover,
 .progressBg,
 .add-to-playlist A:hover,
 .search-btn,
@@ -438,12 +437,6 @@ HEADER .logout BUTTON{
   border-radius: 0px 3px 3px 0px !important;
 }
 
-HEADER .relate,
-.user-info-button,
-.logout BUTTON{
-  border-right-color: transparent !Important;
-}
-
 .playlist_info A,
 #d3vs-playlist-import-div INPUT,
 #d3vs-playlist-import-div TEXTAREA,
@@ -491,6 +484,10 @@ G#d3vs-playlist-import-btn{
   margin-top: 2px !Important;
 }
 
+FIGURE{
+  border-radius: 0px !important;
+}
+
 .search-results DIV,
 .playerPreview .close,
 .playerPreview HEADER,
@@ -520,6 +517,11 @@ G#d3vs-playlist-import-btn{
 
 .ui-slider-range{
   border-color: transparent !Important;
+}
+HEADER .relate,
+.user-info-button,
+.logout BUTTON{
+  border-right-color: transparent !Important;
 }
 
 #addToPlaylistFloatContainer LI,
@@ -555,4 +557,9 @@ INPUT#d3vs-playlist-import-btn{
 .playlist-style .ps-scrollbar-y,
 .playlist-style .ps-scrollbar-y-rail{
   display: none !Important;
+}
+
+/* Special requests */
+.user-5601698c2d5038030094db14 .username{
+  color: rgb(255, 0, 255) !important;
 }
