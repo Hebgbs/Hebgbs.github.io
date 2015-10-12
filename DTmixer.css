@@ -8,13 +8,13 @@
    Most of the basic styling elements and colour language from it has been
    transferred to this theme for DubTrack.
    
-   version 0.94 (10/09/15)
+   version 0.95 (10/11/15)
 */
 
 .search-results DIV .result-item:not(:hover) SPAN,
 .chatSound.mute,
 #main-menu-left A:not(.close-menu):not(:hover),
-.chatDelete:not(:hover)
+.chatDelete:not(:hover),
 .playlist-style DIV:not(:hover),
 .content-videos .img_bg:not(:hover){
   opacity: 0.75 !Important;
@@ -32,11 +32,16 @@
 .loadRoomAva DIV,
 #avatar A SPAN,
 #browser .close,
+.playlist-style .delete:hover,
 .content-videos LI,
 #playlists-scroll LI,
 .playlist-style DIV:hover,
 .content-videos .img_bg:hover{
   opacity: 1 !Important;
+}
+
+.modal-header{
+  font-family: bebas-neue, Arial, Helvetica, sans-serif !important;
 }
 
 INPUT#d3vs-playlist-import-btn{
@@ -57,6 +62,7 @@ INPUT#d3vs-playlist-import-btn{
   color: rgb(92, 135, 179) !Important;
 }
 
+.modal-header H3,
 .search-results DIV .result-item,
 .search-results H3,
 #main-menu-left A,
@@ -109,8 +115,11 @@ TIME,
 .comment-dub .icon-arrow-down.dubvoted,
 .comment-dub .icon-arrow-down:hover,
 .system,
+#roomFormUpdate .closebtn:hover,
+#roomFormUpdate BUTTON.cancel:hover,
 .chat-system-loading.system-error,
 .browser-content-header .close SPAN,
+.content-videos .clear-queue:hover,
 #main-menu-left A.logout-link,
 HEADER .logout:hover SPAN,
 .content-videos .img_bg.remove_icon:hover,
@@ -124,14 +133,13 @@ HEADER .logout:hover SPAN,
 
 #main-loading,
 .loading,
-.comments-main BUTTON,
 .comment-dub,
 .comment-dub A,
-HEADER BUTTON,
+.closebtn,
+BUTTON,
 I:not(.icon-arrow-down2),
 INPUT,
 #browser INPUT.placeholder,
-#chat BUTTON,
 .chatSound,
 P,
 #player-controller SPAN:not(.queue-active),
@@ -144,6 +152,9 @@ P,
 .icon-play,
 .icon-plus,
 .browser-content-header SPAN,
+.queue-management DIV,
+SPAN.room-info-display:hover,
+#room-lock-queue:hover,
 .content-videos .timeDisplay,
 #chat LI.user-560354e8e863210300468f71 .username,
 #chat LI.user-5600dd6e2e803803000fed3e .username,
@@ -152,8 +163,10 @@ P,
 #d3vs-playlist-import-code{
   color: rgb(238, 238, 238) !important;
 }
+#roomInfoModal .closebtn:not(:hover),
 .content-videos LI:not(:hover) H2,
 .content-videos LI:not(:hover) .playedby,
+#room-lock-queue:not(:hover),
 #playlists-scroll LI:not(:hover){
   color: rgba(238, 238, 238, 0.75) !important;
 }
@@ -168,6 +181,8 @@ P,
 }
 
 #main-loading .spinner,
+#roomFormUpdate,
+#roomInfoModal,
 .search-results,
 HEADER,
 HEADER H1,
@@ -180,8 +195,8 @@ HEADER H1,
 .playlist_info,
 #addToPlaylistFloatContainer,
 .browser-content,
-.containerB div:first-child,
-.containerY div:first-child,
+.containerB DIV:first-child,
+.containerY DIV:first-child,
 .containerB,
 .containerY,
 .tinner{
@@ -201,9 +216,12 @@ A.close-menu,
 .playerPreview,
 .ui-slider-range,
 #mobile-room-menu,
+.modal-header,
 .ui-slider,
+#room-lock-queue:hover,
 .playlist-list-action LI:hover,
 #playlists-scroll LI:hover,
+.content-videos .clear-queue,
 #chat .user-560354e8e863210300468f71,
 #chat .user-5600dd6e2e803803000fed3e{
   background-color: rgb(29, 69, 110) !important;
@@ -220,6 +238,10 @@ A.close-menu,
 .playerPreview .loaded,
 .playerPreview TEXTAREA,
 .comments-main BUTTON,
+#roomFormUpdate INPUT,
+#roomFormUpdate TEXTAREA,
+#roomFormUpdate SELECT,
+#roomFormUpdate BUTTON,
 HEADER BUTTON,
 #chat BUTTON,
 #global-search,
@@ -238,6 +260,7 @@ HEADER BUTTON,
 .shuffle-playlist,
 #playlists-scroll LI,
 .content-videos .timeDisplay,
+#room-lock-queue,
 .containerB INPUT,
 .containerY TEXTAREA,
 #d3vs-playlist-import-name,
@@ -258,9 +281,10 @@ HEADER BUTTON,
 .display-success,
 #new-messages-counter,
 .ui-slider-handle,
+#room-lock-queue.locked:hover,
+.content-videos .pause-queue,
 .progressBg,
 .add-to-playlist A:hover,
-.content-videos .clear-queue,
 .search-btn,
 .containerB DIV DIV,
 .containerY DIV DIV{
@@ -290,6 +314,9 @@ HEADER H1 SPAN{
 }
 
 .playerPreview TEXTAREA,
+#roomFormUpdate INPUT,
+#roomFormUpdate TEXTAREA,
+#roomFormUpdate SELECT,
 #chat-txt-message,
 #message-input,
 .input-room-users-search INPUT,
@@ -317,7 +344,9 @@ HEADER H1 SPAN{
 }
 
 #player-controller DIV LI,
-#player-controller .right{
+#player-controller .right,
+#roomFormUpdate,
+#roomInfoModal{
   border-color: rgb(29, 69, 110) !Important;
 }
 
@@ -389,7 +418,10 @@ HEADER .relate,
 
 .playlist_info A,
 #d3vs-playlist-import-div INPUT,
-#d3vs-playlist-import-div TEXTAREA{
+#d3vs-playlist-import-div TEXTAREA,
+#roomFormUpdate INPUT,
+#roomFormUpdate TEXTAREA,
+#roomFormUpdate SELECT{
   border-radius: 3px !important;
 }
 
@@ -398,7 +430,7 @@ HEADER .relate,
   top: 2px !Important;
 }
 
-INPUT#d3vs-playlist-import-btn{
+G#d3vs-playlist-import-btn{
   padding-top: 8px !Important;
   padding-bottom: 8px !Important;
 }
