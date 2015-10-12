@@ -8,7 +8,7 @@
    Most of the basic styling elements and colour language from it has been
    transferred to this theme for DubTrack.
    
-   version 0.95 (10/11/15)
+   version 0.96 (10/11/15)
 */
 
 .search-results DIV .result-item:not(:hover) SPAN,
@@ -42,6 +42,14 @@
 
 .modal-header{
   font-family: bebas-neue, Arial, Helvetica, sans-serif !important;
+  font-size: 18pt !Important;
+  padding-top: 17px !Important;
+  padding-left: 12px !important;
+  padding-bottom: 1px !Important;
+}
+
+.chat-welcome-message{
+  text-align: center !Important;
 }
 
 INPUT#d3vs-playlist-import-btn{
@@ -63,6 +71,8 @@ INPUT#d3vs-playlist-import-btn{
 }
 
 .modal-header H3,
+#roomFormUpdate LABEL,
+.chat-welcome-message,
 .search-results DIV .result-item,
 .search-results H3,
 #main-menu-left A,
@@ -136,6 +146,7 @@ HEADER .logout:hover SPAN,
 .comment-dub,
 .comment-dub A,
 .closebtn,
+#roomInfoModal .control-group,
 BUTTON,
 I:not(.icon-arrow-down2),
 INPUT,
@@ -307,6 +318,23 @@ HEADER BUTTON,
 .content-videos{
   background: url(https://mediadubtrackfm.s3.amazonaws.com/assets/images/backgrounds/pattern-stripes.png),
               url(https://i.imgur.com/nQu4KMz.jpg) center center/529px 434px no-repeat !important;
+}
+
+#roomFormUpdate{
+  background: rgb(30, 41, 66) url(http://i.imgur.com/soBKKWr.png) center center/529px 434px no-repeat !important;
+}
+
+#roomFormUpdate INPUT,
+#roomFormUpdate TEXTAREA,
+#roomFormUpdate SELECT{
+  background: rgb(50, 60, 83) url(http://i.imgur.com/soBKKWr.png) center center/529px 434px no-repeat !important;
+}
+
+#roomFormUpdate,
+#roomFormUpdate INPUT,
+#roomFormUpdate TEXTAREA,
+#roomFormUpdate SELECT{
+  background-attachment: fixed !Important;
 }
 
 HEADER H1 SPAN{
