@@ -8,7 +8,7 @@
    Most of the basic styling elements and colour language from it has been
    transferred to this theme for DubTrack.
    
-   version 1.0 (10/11/15)
+   version 1.01 (10/11/15)
 */
 
 .search-results DIV .result-item:not(:hover) SPAN,
@@ -178,7 +178,13 @@ TIME,
   color: rgba(134, 148, 178, 0.30) !important;
 }
 
- 
+.player_sharing .icon-facebook:hover{
+  color: rgb(59, 87, 157) !Important;
+}
+
+.player_sharing .icon-twitter:hover{
+  color: rgb(28, 173, 235) !Important;
+}
 
 .icon-remove-circle,
 .icon-close,
