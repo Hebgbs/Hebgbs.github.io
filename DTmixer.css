@@ -8,7 +8,7 @@
    Most of the basic styling elements and colour language from it has been
    transferred to this theme for DubTrack.
    
-   version 0.98 (10/11/15)
+   version 1.0 (10/11/15)
 */
 
 .search-results DIV .result-item:not(:hover) SPAN,
@@ -17,10 +17,11 @@
 .chatDelete:not(:hover),
 .playlist-style DIV:not(:hover),
 .content-videos .img_bg:not(:hover){
-  opacity: 0.75 !Important;
+  opacity: 0.75 !important;
 }
 
 .loading,
+.user-info,
 .playerPreview .buttons,
 .playerPreview .controlContainer:after,
 .search-results DIV .result-item:hover SPAN,
@@ -37,23 +38,76 @@
 #playlists-scroll LI,
 .playlist-style DIV:hover,
 .content-videos .img_bg:hover{
-  opacity: 1 !Important;
+  opacity: 1 !important;
+}
+
+.room-item .name,
+.login-model-container H1,
+.modal-header,
+.infoProfile span.usernameContainer{
+  font-family: bebas-neue, Arial, Helvetica, sans-serif !important;
+}
+
+.room-item .description{
+  padding: 0px !important;
+  margin: 0px !important;
+}
+
+.room-item .current-song{
+  position: relative !important;
+  top: -2px !important;
+  font-style: normal !important;
+}
+
+.room-item .user-info{
+  padding: 0px !important;
+  margin: 0px !important;
+}
+.room-item .room-user{
+  float: right !important;
+  position: relative !important;
+  top: -2px !important;
+  padding-right: 8px !important;
+}
+
+.room-item .name{
+  font-size: 18pt !important;
+  line-height: 24px !important;
+  position: relative !important;
+  padding-left: 4px !important;
+  padding-right: 4px !important;
+  top: 2px !important;
+}
+
+.login-model-container H1{
+  font-size: 24pt !important;
 }
 
 .modal-header{
-  font-family: bebas-neue, Arial, Helvetica, sans-serif !important;
-  font-size: 18pt !Important;
-  padding-top: 17px !Important;
+  font-size: 18pt !important;
+  padding-top: 17px !important;
   padding-left: 12px !important;
-  padding-bottom: 1px !Important;
+  padding-bottom: 1px !important;
 }
 
+.infoProfile span.usernameContainer{
+  font-size: 22pt !important;
+  height: 24px !important;
+  position: relative !important;
+  top: -2px !important;
+  line-height: 24px !important;
+  font-weight: normal !important;
+}
+
+.err-message,
+.success-message,
+.room-item .description,
 .chat-welcome-message{
-  text-align: center !Important;
+  text-align: center !important;
 }
 
 INPUT#d3vs-playlist-import-btn{
-  font-size: 12px !Important;
+  font-size: 12px !important;
 }
 
 #main_player .loading,
@@ -61,6 +115,9 @@ INPUT#d3vs-playlist-import-btn{
   font-weight: normal !important;
 }
 
+.room-item .user-info,
+.room-item .user-info A,
+.login-model-container .account-actions A,
 .icon-camera,
 .username,
 #user_popover H3,
@@ -68,9 +125,13 @@ INPUT#d3vs-playlist-import-btn{
 .mod:after,
 .message-item H3,
 .message-header A{
-  color: rgb(92, 135, 179) !Important;
+  color: rgb(92, 135, 179) !important;
 }
 
+.room-item .name,
+.room-item .user-info A:hover,
+.login-model-container .account-actions A:hover,
+.login-model-container H1,
 .modal-header H3,
 #roomFormUpdate LABEL,
 .chat-welcome-message,
@@ -78,6 +139,7 @@ INPUT#d3vs-playlist-import-btn{
 .search-results H3,
 #main-menu-left A,
 .username-handle,
+.message-header B,
 #user_popover HEADER A,
 .loadRoomAva,
 .co-owner:after,
@@ -87,7 +149,8 @@ INPUT#d3vs-playlist-import-btn{
 .content-videos LI:hover .preview,
 .content-videos .img_bg,
 #chat LI.user-560354e8e863210300468f71 .autolink,
-#chat LI.user-5600dd6e2e803803000fed3e .autolink{
+#chat LI.user-5600dd6e2e803803000fed3e .autolink,
+.infoProfile span.usernameContainer{
   color: rgb(180, 201, 222) !important;
 }
 .content-videos LI:not(:hover) .preview{
@@ -98,31 +161,26 @@ TIME,
 :not(.creator):not(.co-owner):not(.manager):not(.mod):not(.vip):not(.resident-dj).currentDJ:after,
 .vip:after,
 .resident-dj:after{
-  color: rgb(74, 108, 143) !Important;
+  color: rgb(74, 108, 143) !important;
 }
 
 .chat-system-loading,
 .comment-dub .icon-arrow-up:hover,
 .comment-dub .icon-arrow-up.dubvoted{
-  color: rgb(50, 60, 83) !Important;
+  color: rgb(50, 60, 83) !important;
 }
 
 .autolink{
-  color: rgb(0, 155, 255) !Important;
+  color: rgb(0, 155, 255) !important;
 }
 
 .player_sharing SPAN{
-  color: rgba(134, 148, 178, 0.30) !Important;
+  color: rgba(134, 148, 178, 0.30) !important;
 }
 
-.player_sharing .icon-facebook:hover{
-  color: rgb(59, 87, 157) !Important;
-}
+ 
 
-.player_sharing .icon-twitter:hover{
-  color: rgb(28, 173, 235) !Important;
-}
-
+.icon-remove-circle,
 .icon-close,
 .icon-flag,
 .comment-dub A:hover,
@@ -151,6 +209,10 @@ HEADER .logout:hover SPAN,
 
 #main-loading,
 .loading,
+.join,
+.current-song,
+.facebook-login,
+.twitter-login,
 .comment-dub,
 .comment-dub A,
 .closebtn,
@@ -202,10 +264,12 @@ SPAN.room-info-display:hover,
 }
 
 #main-loading .spinner,
+.room-item .user-info,
+.login-model-container,
 #roomFormUpdate,
 #roomInfoModal,
 .search-results,
-HEADER,
+:not(.room-item) HEADER,
 HEADER H1,
 .player_sharing,
 #player-controller,
@@ -216,6 +280,7 @@ HEADER H1,
 .playlist_info,
 #addToPlaylistFloatContainer,
 .browser-content,
+.contentTab,
 .containerB DIV:first-child,
 .containerY DIV:first-child,
 .containerB,
@@ -230,10 +295,12 @@ HEADER H1,
 #main-menu-right,
 A.close-menu,
 .content-videos LI,
+.profileView,
 .isSwordful{
   background-color: rgba(30, 41, 66, 0.75) !important;
 }
 
+.room-item HEADER,
 .playerPreview,
 .ui-slider-range,
 #mobile-room-menu,
@@ -247,9 +314,12 @@ A.close-menu,
 #playlists-scroll LI:hover,
 .content-videos .clear-queue:hover,
 #chat .user-560354e8e863210300468f71,
-#chat .user-5600dd6e2e803803000fed3e{
+#chat .user-5600dd6e2e803803000fed3e,
+.infoProfile,
+.contentMainProfile UL{
   background-color: rgb(29, 69, 110) !important;
 }
+A.join:before,
 #main-loading,
 .content-videos LI:hover{
   background-color: rgba(29, 69, 110, 0.75) !important;
@@ -284,12 +354,14 @@ TEXTAREA,
 .content-videos .timeDisplay,
 #playlists-scroll LI,
 #room-lock-queue,
+.follow-btn,
 #d3vs-playlist-import-name,
 #d3vs-playlist-import-code,
 #d3vs-playlist-import-btn{
-  background-color: rgb(50, 60, 83) !Important;
+  background-color: rgb(50, 60, 83) !important;
 }
 
+.user-count,
 .playerPreview .progress,
 .playerPreview .tooltip,
 .content-videos .spinner DIV,
@@ -309,9 +381,14 @@ TEXTAREA,
 .progressBg,
 .add-to-playlist A:hover,
 .search-btn,
+.editUsername,
 .containerB DIV DIV,
 .containerY DIV DIV{
-  background-color: rgb(74, 108, 143) !Important;
+  background-color: rgb(74, 108, 143) !important;
+}
+
+.updatePictureGif{
+  background-image: linear-gradient(to bottom, rgba(74, 108, 143, 0.75) 23px, transparent 23px, transparent 100%) !important;
 }
 
 .dubdown:hover,
@@ -325,6 +402,14 @@ TEXTAREA,
 
 .message-item.new-message:before{
   background-color: rgb(180, 201, 222) !important;
+}
+
+.facebook-login{
+  background-color: rgb(59, 87, 157) !important;
+}
+
+.twitter-login{
+  background-color: rgb(28, 173, 235) !important;
 }
 
 .content-videos{
@@ -346,11 +431,20 @@ TEXTAREA,
 #roomFormUpdate INPUT,
 #roomFormUpdate TEXTAREA,
 #roomFormUpdate SELECT{
-  background-attachment: fixed !Important;
+  background-attachment: fixed !important;
 }
 
 HEADER H1 SPAN{
   background-image: url(https://i.imgur.com/Bj3cLb3.png) !important;
+}
+
+#followersEl{
+  background-image: linear-gradient(to bottom, rgb(29, 69, 110) 47px, rgb(30, 41, 66) 47px, rgb(30, 41, 66) 100%) !important;
+}
+
+#private-messages .search-results{
+  box-shadow: 17px 0px 0px 0px rgb(30, 41, 66),
+              -17px 0px 0px 0px rgb(30, 41, 66) !important;
 }
 
 .playerPreview TEXTAREA,
@@ -367,39 +461,38 @@ HEADER H1 SPAN{
 #playlists-scroll LI,
 .sidebar INPUT,
 .isSwordful .verSwordful{
-  border-color: rgb(50, 60, 83) !Important;
+  border-color: rgb(50, 60, 83) !important;
 }
+.login-model-container INPUT,
 #d3vs-playlist-import-name,
 #d3vs-playlist-import-code{
-  border: 1px solid rgb(50, 60, 83) !Important;
+  border: 1px solid rgb(50, 60, 83) !important;
 }
 
-.chat_tools,
+.login-model-container{
+  border: 1px solid rgb(29, 69, 110) !important;
+}
 .pusher-chat-widget-input,
 .ui-slider,
+#roomFormUpdate,
+#roomInfoModal,
+.chat_tools,
 #user_popover,
 #addToPlaylistFloatContainer,
 .isSwordful .istitle{
   border-color: rgb(29, 69, 110) !important;
 }
-
-/*#player-controller DIV LI,
-#player-controller .right,*/
-#roomFormUpdate,
-#roomInfoModal{
-  border-color: rgb(29, 69, 110) !Important;
-}
 #player-controller DIV LI:not(:first-child):not(.infoContainer),
 .add-to-playlist{
-  border-left: 1px solid rgb(29, 69, 110) !Important;
+  border-left: 1px solid rgb(29, 69, 110) !important;
 }
 
-#main-menu-left a:not(.close-menu),
+#main-menu-left A:not(.close-menu),
 #mobile-room-menu A,
 #avatar LI,
 .message-list LI,
 .user-messages-button{
-  border-color: rgb(30, 41, 66) !Important;
+  border-color: rgb(30, 41, 66) !important;
 }
 
 #avatar LI.downdub{
@@ -411,26 +504,30 @@ HEADER H1 SPAN{
 }
 
 #user_popover .ban:hover INPUT{
-  border-color: rgb(255, 45, 49) !Important;
+  border-color: rgb(255, 45, 49) !important;
+}
+
+.updatePictureGif{
+  height: 150px !important;
 }
 
 #playlist-input{
-  box-shadow: inset -30px 0px 0px 0px rgb(30, 41, 66) !Important;
+  box-shadow: inset -30px 0px 0px 0px rgb(30, 41, 66) !important;
 }
 .sidebar INPUT{
-  box-shadow: inset -29px 0px 0px 0px rgb(30, 41, 66) !Important;
+  box-shadow: inset -29px 0px 0px 0px rgb(30, 41, 66) !important;
 }
 
 .br-btn.active{
-  box-shadow: inset 0px 0px 0px 1px rgb(92, 135, 179) !Important;
+  box-shadow: inset 0px 0px 0px 1px rgb(92, 135, 179) !important;
 }
 
 #chat-txt-message{
-  box-shadow: 0px -1px 0px 0px rgb(50, 60, 83) !Important;
+  box-shadow: 0px -1px 0px 0px rgb(50, 60, 83) !important;
 }
 .browser-content-header INPUT,
 .icon-plus{
-  box-shadow: 0px 1px 0px 0px rgb(50, 60, 83) !Important;
+  box-shadow: 0px 1px 0px 0px rgb(50, 60, 83) !important;
 }
 
 #chat .user-560354e8e863210300468f71,
@@ -438,6 +535,7 @@ HEADER H1 SPAN{
   box-shadow: -9px 0px 0px 0px rgb(29, 69, 110),
               9px 0px 0px 0px rgb(29, 69, 110) !important;
 }
+
 .containerB,
 .containerY{
   box-shadow: inset 0px 55px 0px 0px rgb(29, 69, 110),
@@ -447,68 +545,92 @@ HEADER H1 SPAN{
 BUTTON:hover,
 .shuffle-playlist:hover,
 INPUT#d3vs-playlist-import-btn:hover{
-  box-shadow: inset 0px -2px 0px 0px rgb(74, 108, 143) !Important;
+  box-shadow: inset 0px -2px 0px 0px rgb(74, 108, 143) !important;
 }
 
 #chat LI[style="box-shadow: -4px 0px 0px 0px rgb(255, 0, 255) inset;"]{
-  box-shadow: inset -4px 0px 0px 0px rgb(74, 108, 143) !Important;
+  box-shadow: inset -4px 0px 0px 0px rgb(74, 108, 143) !important;
 }
 
 BUTTON{
-  box-shadow: inset 0px -2px 0px 0px transparent !Important;
+  box-shadow: inset 0px -2px 0px 0px transparent !important;
 }
 
 HEADER .logout BUTTON{
   border-radius: 0px 3px 3px 0px !important;
 }
 
-.playlist_info A,
-#d3vs-playlist-import-div INPUT,
-#d3vs-playlist-import-div TEXTAREA,
+.login-model-container INPUT,
+.login-model-container A,
 #roomFormUpdate INPUT,
 #roomFormUpdate TEXTAREA,
-#roomFormUpdate SELECT{
+#roomFormUpdate SELECT,
+.chat_tools BUTTON,
+#chat-txt-message,
+#private-messages INPUT,
+.playlist_info A,
+#d3vs-playlist-import-div INPUT,
+#d3vs-playlist-import-div TEXTAREA{
   border-radius: 3px !important;
 }
 
 .ui-slider-horizontal{
-  height: 3px !Important;
-  top: 2px !Important;
+  height: 3px !important;
+  top: 2px !important;
+}
+
+.rewindProfile{
+  top: 9px !important;
+  right: -1px !important;
 }
 
 G#d3vs-playlist-import-btn{
-  padding-top: 8px !Important;
-  padding-bottom: 8px !Important;
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
 }
 
 #d3vs-playlist-import-code{
-  margin-top: 8px !Important;
-  margin-bottom: 8px !Important;
+  margin-top: 8px !important;
+  margin-bottom: 8px !important;
 }
 
 .playerPreview .ui-slider-handle{
-  top: -8px !Important;
+  top: -8px !important;
 }
 
 #player-controller .ui-slider-handle{
-  top: -9px !Important;
+  top: -9px !important;
 }
 
 #player-controller .ui-slider-horizontal{
-  top: 0px !Important;
+  top: 0px !important;
 }
 
 .comments-main BUTTON{
-  position: relative !Important;
-  top: 8px !Important;
-  left: calc(100% - 124px) !Important;
+  position: relative !important;
+  top: 8px !important;
+  left: calc(100% - 124px) !important;
 }
 
 .loading.hideVideo-el{
-  height: 45px !Important;
-  margin-top: 2px !Important;
+  height: 45px !important;
+  margin-top: 2px !important;
 }
 
+BUTTON.follow{
+  margin-right: 46px !important;
+  margin-top: 9px !important;
+}
+
+#mobile-room-menu{
+  z-index: 0 !important;
+}
+
+HEADER H1{
+  pointer-events: none !important;
+}
+
+.room-item *,
 FIGURE{
   border-radius: 0px !important;
 }
@@ -532,58 +654,70 @@ FIGURE{
 .left_section,
 .browser-content .sidebar,
 .browser-content-header,
+.rewindProfile,
+.updatePictureGif,
+.profileView IMG,
+.contentMainProfile LI,
 .isSwordful LI{
-  background-color: transparent !Important;
+  background-color: transparent !important;
 }
 
 .browser-content{
-  background-image: none !Important;
+  background-image: none !important;
 }
 
 .ui-slider-range{
-  border-color: transparent !Important;
+  border-color: transparent !important;
 }
 HEADER .relate,
 .user-info-button,
 .logout BUTTON{
-  border-right-color: transparent !Important;
+  border-right-color: transparent !important;
 }
- 
+
+.err-message,
+.success-message,
 #addToPlaylistFloatContainer LI,
 .playlist_info A,
 .browser-content,
+.profileView IMG,
+.rewindProfile,
 .isSwordful,
 INPUT#d3vs-playlist-import-btn{
   border: none !important;
 }
+
 #player-controller DIV LI{
-  border-right-style: none !Important;
+  border-right-style: none !important;
 }
 #player-controller .right{
-  border-left-style: none !Important;
+  border-left-style: none !important;
 }
 
 .playerPreview .progressContainer{
-  box-shadow: none !Important;
+  box-shadow: none !important;
 }
 
 #main_player{
-  padding: 0px !Important;
+  padding: 0px !important;
 }
 
 *{
-  outline-style: none !Important;
+  outline-style: none !important;
 }
 
-#main_player:not(:hover) .loading,
+.login-model-container:after,
+#player.full-frame:not(:hover) .loading,
 .playerPreview:before,
-#main-player:hover .loading,
 .image_row:after,
+.player_container:not(:hover) .loading,
 #player-controller .copy,
 .playlist_type_private SPAN,
 .playlist-style .ps-scrollbar-y,
-.playlist-style .ps-scrollbar-y-rail{
-  display: none !Important;
+.playlist-style .ps-scrollbar-y-rail,
+.pictureContainer:not(:hover) .updatePictureGif,
+.contentMainProfile .progress{
+  display: none !important;
 }
 
 /* Special requests */
