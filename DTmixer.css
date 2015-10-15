@@ -66,7 +66,7 @@
 .room-item .room-user{
   float: right !important;
   position: relative !important;
-  top: -2px !important;
+  top: -1px !important;
   padding-right: 8px !important;
 }
 
@@ -724,9 +724,4 @@ INPUT#d3vs-playlist-import-btn{
 .pictureContainer:not(:hover) .updatePictureGif,
 .contentMainProfile .progress{
   display: none !important;
-}
-
-/* Special requests */
-.user-5601698c2d5038030094db14 .username{
-  color: rgb(255, 0, 255) !important;
 }
