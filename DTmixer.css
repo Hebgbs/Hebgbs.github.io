@@ -8,7 +8,7 @@
    Most of the basic styling elements and colour language from it has been
    transferred to this theme for DubTrack.
    
-   version 1.01 (10/11/15)
+   version 1.03 (10/18/15)
 */
 
 .search-results DIV .result-item:not(:hover) SPAN,
@@ -44,7 +44,8 @@
 .room-item .name,
 .login-model-container H1,
 .modal-header,
-.infoProfile span.usernameContainer{
+.infoProfile span.usernameContainer,
+#warning H3{
   font-family: bebas-neue, Arial, Helvetica, sans-serif !important;
 }
 
@@ -79,8 +80,10 @@
   top: 2px !important;
 }
 
-.login-model-container H1{
+.login-model-container H1,
+#warning H3{
   font-size: 24pt !important;
+  font-weight: normal !Important;
 }
 
 .modal-header{
@@ -158,6 +161,7 @@ INPUT#d3vs-playlist-import-btn{
 }
 
 TIME,
+.placeholder > h5:nth-child(1) > span:nth-child(1),
 :not(.creator):not(.co-owner):not(.manager):not(.mod):not(.vip):not(.resident-dj).currentDJ:after,
 .vip:after,
 .resident-dj:after{
@@ -205,7 +209,8 @@ TIME,
 #main-menu-left A.logout-link,
 HEADER .logout:hover SPAN,
 .content-videos .img_bg.remove_icon:hover,
-.playlist-style .delete:hover{
+.playlist-style .delete:hover,
+#warning H3{
   color: rgb(255, 45, 49) !important;
 }
 
@@ -226,9 +231,10 @@ HEADER .logout:hover SPAN,
 BUTTON,
 I:not(.icon-arrow-down2),
 INPUT,
-#browser INPUT.placeholder,
+.player_container H5,
 .chatSound,
 P,
+.player-container.placeholder,
 #user_popover .global-actions A,
 #user_popover .actions A,
 #player-controller SPAN:not(.queue-active),
@@ -274,8 +280,8 @@ SPAN.room-info-display:hover,
 .login-model-container,
 #roomFormUpdate,
 #roomInfoModal,
-.search-results,
-:not(.room-item) HEADER,
+#private-messages .search-results:before,
+#header-global,
 HEADER H1,
 .player_sharing,
 #player-controller,
@@ -322,6 +328,7 @@ A.close-menu,
 #chat .user-560354e8e863210300468f71,
 #chat .user-5600dd6e2e803803000fed3e,
 .infoProfile,
+#warning,
 .contentMainProfile UL{
   background-color: rgb(29, 69, 110) !important;
 }
@@ -361,6 +368,7 @@ TEXTAREA,
 #playlists-scroll LI,
 #room-lock-queue,
 .follow-btn,
+#warning BUTTON,
 #d3vs-playlist-import-name,
 #d3vs-playlist-import-code,
 #d3vs-playlist-import-btn{
@@ -394,7 +402,7 @@ TEXTAREA,
 }
 
 .updatePictureGif{
-  background-image: linear-gradient(to bottom, rgba(74, 108, 143, 0.75) 23px, transparent 23px, transparent 100%) !important;
+  background-image: linear-gradient(to bottom, rgba(74, 108, 143, 0.75) 21px, transparent 21px, transparent 100%) !important;
 }
 
 .dubdown:hover,
@@ -448,11 +456,6 @@ HEADER H1 SPAN{
   background-image: linear-gradient(to bottom, rgb(29, 69, 110) 47px, rgb(30, 41, 66) 47px, rgb(30, 41, 66) 100%) !important;
 }
 
-#private-messages .search-results{
-  box-shadow: 17px 0px 0px 0px rgb(30, 41, 66),
-              -17px 0px 0px 0px rgb(30, 41, 66) !important;
-}
-
 .playerPreview TEXTAREA,
 #roomFormUpdate INPUT,
 #roomFormUpdate TEXTAREA,
@@ -485,6 +488,7 @@ HEADER H1 SPAN{
 .chat_tools,
 #user_popover,
 #addToPlaylistFloatContainer,
+#private-messages HEADER,
 .isSwordful .istitle{
   border-color: rgb(29, 69, 110) !important;
 }
@@ -501,16 +505,13 @@ HEADER H1 SPAN{
   border-color: rgb(30, 41, 66) !important;
 }
 
-#avatar LI.downdub{
+#avatar LI.downdub,
+#user_popover .ban:hover INPUT{
   border-color: rgb(255, 45, 49) !important;
 }
 
 #user_popover .ban INPUT{
   border-color: rgb(238, 238, 238) !important;
-}
-
-#user_popover .ban:hover INPUT{
-  border-color: rgb(255, 45, 49) !important;
 }
 
 .updatePictureGif{
@@ -556,6 +557,10 @@ INPUT#d3vs-playlist-import-btn:hover{
 
 #chat LI[style="box-shadow: -4px 0px 0px 0px rgb(255, 0, 255) inset;"]{
   box-shadow: inset -4px 0px 0px 0px rgb(74, 108, 143) !important;
+}
+
+#warning{
+  box-shadow: inset 0px 0px 0px 2px rgb(255, 45, 49) !important;
 }
 
 BUTTON{
@@ -628,6 +633,16 @@ BUTTON.follow{
   margin-top: 9px !important;
 }
 
+#private-messages .search-results:before{
+  content: '';
+  width: 100%;
+  height: 173px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: -1 !Important;
+}
+
 #mobile-room-menu{
   z-index: 0 !important;
 }
@@ -663,6 +678,7 @@ FIGURE{
 .rewindProfile,
 .updatePictureGif,
 .profileView IMG,
+#profileSidebar,
 .contentMainProfile LI,
 .isSwordful LI{
   background-color: transparent !important;
@@ -722,6 +738,7 @@ INPUT#d3vs-playlist-import-btn{
 .playlist-style .ps-scrollbar-y,
 .playlist-style .ps-scrollbar-y-rail,
 .pictureContainer:not(:hover) .updatePictureGif,
-.contentMainProfile .progress{
+.contentMainProfile .progress,
+#warning:after{
   display: none !important;
 }
