@@ -441,7 +441,7 @@ TEXTAREA,
   background: rgb(30, 41, 66) url(http://i.imgur.com/soBKKWr.png) center center/529px 434px no-repeat !important;
 }
 
-.soundcloud{
+#room-main-player-container-soundcloud{
   background: url(https://i.imgur.com/nQu4KMz.jpg) center center/529px 434px no-repeat,
               linear-gradient(to top, rgba(30, 41, 66, 0.75) 0%, rgba(30, 41, 66, 0.75) 100%),
               rgb(30, 41, 66) url(https://mediadubtrackfm.s3.amazonaws.com/assets/images/backgrounds/pattern-stripes.png) !important;
