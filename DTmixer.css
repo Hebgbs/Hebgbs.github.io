@@ -1,4 +1,7 @@
 /* How to use;
+   > Pre-requisites for use
+      1. Install Bebas Neue Regular from here:
+         http://www.fontfabric.com/downfont/bebas.zip
    > For use without DubX (active in every community)
       1. Go to https://userstyles.org/styles/119287
       2. Follow other instructions from userstyles.org
@@ -14,7 +17,7 @@
    Most of the basic styling elements and colour language from it has been
    transferred to this theme for DubTrack.
    
-   version 1.04 (10/19/15)
+   version 1.05 (10/27/15) [OLD UI FINAL]
 */
 
 .search-results DIV .result-item:not(:hover) SPAN,
@@ -50,9 +53,10 @@
 .room-item .name,
 .login-model-container H1,
 .modal-header,
+#browser .sidebar .title,
 .infoProfile span.usernameContainer,
 #warning H3{
-  font-family: bebas-neue, Arial, Helvetica, sans-serif !important;
+  font-family: bebas neue, Arial, Helvetica, sans-serif !important;
 }
 
 .room-item .description{
@@ -501,6 +505,7 @@ HEADER H1 SPAN{
 #user_popover,
 #addToPlaylistFloatContainer,
 #private-messages HEADER,
+#private-messages .input-container,
 .isSwordful .istitle{
   border-color: rgb(29, 69, 110) !important;
 }
