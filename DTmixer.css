@@ -17,7 +17,7 @@
    Most of the basic styling elements and colour language from it has been
    transferred to this theme for DubTrack.
    
-   version 1.05 (10/27/15) [OLD UI FINAL]
+   version 1.06 (11/01/15) [OLD UI FINAL+]
 */
 
 .search-results DIV .result-item:not(:hover) SPAN,
@@ -748,6 +748,7 @@ INPUT#d3vs-playlist-import-btn{
 .login-model-container:after,
 IMG[alt=""][src="https://res.cloudinary.com/hhberclba/image/upload/c_fill,h_460,w_900/tiqxlzynh3rxrkwvzeak.jpg"],
 #player.full-frame:not(:hover) .loading,
+#main_player .soundcloud IMG,
 .playerPreview:before,
 .image_row:after,
 .player_container:not(:hover) .loading,
