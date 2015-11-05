@@ -463,10 +463,6 @@ HEADER FIGURE,
   border-radius: 0px !Important;
 }
 
-#emoji-preview{
-  bottom: 56px !important;
-}
-
 #private-messages .search-results:before{
   content: '';
   width: 100%;
