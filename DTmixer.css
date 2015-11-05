@@ -1,13 +1,10 @@
 /* How to use;
-   > Pre-requisites for use
-      1. Install Bebas Neue Regular from here:
-         http://www.fontfabric.com/downfont/bebas.zip
    > For use without DubX (active in every community)
       1. Go to https://userstyles.org/styles/119287
       2. Follow other instructions from userstyles.org
    > For use in chillout-mixer only
       1. Install DubX via dubx.net and execute it
-      2. Access the DubX menu and click on "Community CSS"
+      2. Access the DubX menu and click on "Room CSS"
    > For use everywhere in DubTrack (without Stylish)
       1. Install DubX via dubx.net and execute it
       2. Access the DubX menu and click on "Custom CSS"
@@ -17,602 +14,511 @@
    Most of the basic styling elements and colour language from it has been
    transferred to this theme for DubTrack.
    
-   version 1.06 (11/01/15) [OLD UI FINAL+]
+   version 2.0 (11/05/15)
 */
 
-.search-results DIV .result-item:not(:hover) SPAN,
-.chatSound.mute,
-#main-menu-left A:not(.close-menu):not(:hover),
-.chatDelete:not(:hover),
-.playlist-style DIV:not(:hover),
-.content-videos .img_bg:not(:hover){
-  opacity: 0.75 !important;
-}
-
-.loading,
-.user-info,
-.playerPreview .buttons,
-.playerPreview .controlContainer:after,
-.search-results DIV .result-item:hover SPAN,
 #main-loading,
-#main-menu-left A:hover,
-#chat .room-user-counter,
-.system,
-.chatDelete:hover,
-.loadRoomAva DIV,
-#avatar A SPAN,
-#browser .close,
-.playlist-style .delete:hover,
-.content-videos LI,
-#playlists-scroll LI,
-.playlist-style DIV:hover,
-.content-videos .img_bg:hover{
+.loading,
+#new-messages-counter,
+.player_header SPAN,
+.message-item,
+#browser .browser-content,
+.playerPreview .progressContainer *{
   opacity: 1 !important;
 }
 
-.room-item .name,
-.login-model-container H1,
-.modal-header,
-#browser .sidebar .title,
-.infoProfile span.usernameContainer,
-#warning H3{
-  font-family: bebas neue, Arial, Helvetica, sans-serif !important;
+#main-menu-left A:not(:hover),
+.mod-controllers-headers A:not(:hover):not(.active),
+#browser .sidebar LI:not(:hover):not(.selected),
+.content-videos LI .preview:not(:hover),
+#user_popover .usercontent:not(:hover) H3,
+#user_popover .ban:not(:hover) INPUT{
+  opacity: 0.7 !Important;
 }
 
-.room-item .description{
-  padding: 0px !important;
-  margin: 0px !important;
+#user_popover .ban INPUT{
+  text-align: center !Important;
 }
 
-.room-item .current-song{
-  position: relative !important;
-  top: -2px !important;
-  font-style: normal !important;
-}
-
-.room-item .user-info{
-  padding: 0px !important;
-  margin: 0px !important;
-}
-.room-item .room-user{
-  float: right !important;
-  position: relative !important;
-  top: -1px !important;
-  padding-right: 8px !important;
-}
-
-.room-item .name{
-  font-size: 18pt !important;
-  line-height: 24px !important;
-  position: relative !important;
-  padding-left: 4px !important;
-  padding-right: 4px !important;
-  top: 2px !important;
-}
-
-.login-model-container H1,
-#warning H3{
-  font-size: 24pt !important;
-  font-weight: normal !Important;
-}
-
-.modal-header{
-  font-size: 18pt !important;
-  padding-top: 17px !important;
-  padding-left: 12px !important;
-  padding-bottom: 1px !important;
-}
-
-.infoProfile span.usernameContainer{
-  font-size: 22pt !important;
-  height: 24px !important;
-  position: relative !important;
-  top: -2px !important;
-  line-height: 24px !important;
+.autolink,
+.room-item HEADER{
   font-weight: normal !important;
 }
 
-.err-message,
-.success-message,
-.room-item .description,
-.chat-welcome-message{
-  text-align: center !important;
+#user_popover .ban INPUT,
+#addToPlaylistFloatContainer .playlist-list-action LI{
+  font-weight: bold !Important;
 }
 
 INPUT#d3vs-playlist-import-btn{
   font-size: 12px !important;
 }
 
-#main_player .loading,
-.autolink{
-  font-weight: normal !important;
+INPUT,
+#main-loading,
+.loading,
+#warning BUTTON,
+.room-loby-header A,
+.room-item .user-count *,
+.room-item .current-song,
+#roomFormUpdate H3,
+#roomFormUpdate .mid *:not(LABEL),
+#roomFormUpdate BUTTON,
+.message-counter,
+.lobby-link,
+#main-room-active-link,
+.header-right-navigation SPAN,
+#mobile-room-menu A,
+.player_header SPAN,
+.player_sharing,
+.mod-controllers-headers A.active,
+.mods-controller-container .chat-command-list .actions,
+P,
+.mods-controller-container H2,
+.room-info-display-container H2,
+.room-info-display-container .description,
+#user_popover .dubs,
+.play-song-link .queue-info,
+.play-song-link *,
+.browser-content-header *:not(.close-browser),
+#browser .playlist_info A,
+#browser .queue-info A,
+#results_video_api,
+#browser .text-button,
+#browser .actions A:not(.remove_icon) SPAN,
+#browser .actions .remove_icon:not(:hover) SPAN,
+.icon-createplaylist,
+#player-controller .currentSong,
+#player-controller .icon-playlist,
+#player-controller A.voted SPAN,
+#player-controller A.dubup:not(:hover):not(.voted) .icon-arrow-up,
+#player-controller A.dubup:not(:hover),
+#player-controller A.dubdown:not(:hover):not(.voted) .icon-arrow-down,
+#player-controller A.dubdown:not(:hover),
+.currentTime,
+.icon-heart:before{
+  color: rgb(238, 238, 238) !important;
 }
 
-.room-item .user-info,
-.room-item .user-info A,
-.login-model-container .account-actions A,
-.icon-camera,
-.username,
-#user_popover H3,
-.manager:after,
-.mod:after,
-.message-item H3,
-.message-header A{
+.create-playlist-form .icon-createplaylist,
+.create-playlist-input .icon-add{
+  color: rgb(0, 0, 0) !important;
+}
+
+.room-item .room-user,
+.message-header A,
+.message-list LI H3,
+.manager .username,
+.manager .username:after,
+.mod .username,
+.mod .username:after,
+.for_content_version{
   color: rgb(92, 135, 179) !important;
 }
 
-.room-item .name,
-.room-item .user-info A:hover,
-.login-model-container .account-actions A:hover,
-.login-model-container H1,
-.modal-header H3,
+.room-item HEADER .name,
+.room-item .room-user A,
 #roomFormUpdate LABEL,
-.chat-welcome-message,
-.search-results DIV .result-item,
-.search-results H3,
 #main-menu-left A,
+#main-room-active-link .icon-chevron,
 .username-handle,
-.message-header B,
-#user_popover HEADER A,
-.loadRoomAva,
-.co-owner:after,
-.creator:after,
-.message-item.new-message H3,
-.sidebar .title,
-.content-videos LI:hover .preview,
-.content-videos .img_bg,
-#chat LI.user-560354e8e863210300468f71 .autolink,
-#chat LI.user-5600dd6e2e803803000fed3e .autolink,
-.infoProfile span.usernameContainer{
+.creator .username,
+.creator .username:after,
+.co-owner .username,
+.co-owner .username:after,
+.chat-option-header,
+.chat-option-buttons *:hover,
+#player-controller .currentDJSong,
+.mod-controllers-headers A,
+.mods-controller-container H2 SPAN,
+.mods-controller-container .chat-command-list LI,
+.mods-controller-container .user-list LI:hover,
+.mods-controller-container .user-list .actions:hover,
+#browser .display-success,
+#browser .playlist_info A:not(.text-button):hover,
+#browser .queue_info A:not(.text-button):hover,
+#browser .actions A:not(.remove_icon):hover SPAN,
+#browser .content-videos LI:hover H2,
+#browser .content-videos LI.selected H2,
+#browser .content-videos LI.selected .timeDisplay,
+#browser .playedby,
+#browser .sidebar .title,
+#browser .sidebar LI SPAN,
+#browser .sidebar LI,
+.content-videos LI .preview,
+#user_popover .usercontent H3,
+#user_popover A:hover,
+#user_popover .ban INPUT,
+#addToPlaylistFloatContainer .create-playlist-header,
+#addToPlaylistFloatContainer .playlist-list-action LI:hover,
+.for_content_ver,
+.for_content_c{
   color: rgb(180, 201, 222) !important;
 }
-.content-videos LI:not(:hover) .preview{
-  color: rgba(180, 201, 222, 0.75) !important;
+.chat-option-buttons *,
+.mods-controller-container .user-list *,
+#user_popover A,
+#addToPlaylistFloatContainer .playlist-list-action LI{
+  color: rgba(180, 201, 222, 0.70) !important;
 }
 
-TIME,
-.placeholder > h5:nth-child(1) > span:nth-child(1),
-:not(.creator):not(.co-owner):not(.manager):not(.mod):not(.vip):not(.resident-dj).currentDJ:after,
-.vip:after,
-.resident-dj:after{
+#player-controller A.add-to-playlist:hover .icon-heart:before,
+.content-videos .actions .add_to_playlist:hover .icon-heart:before,
+:not(.creator):not(.co-owner):not(.manager):not(.mod):not(.vip):not(.resident-dj).currentDJ .username,
+:not(.creator):not(.co-owner):not(.manager):not(.mod):not(.vip):not(.resident-dj).currentDJ .username:after,
+.vip .username,
+.vip .username:after,
+.resident-dj .username,
+.resident-dj .username:after,
+.username{
   color: rgb(74, 108, 143) !important;
 }
 
 .chat-system-loading,
-.comment-dub .icon-arrow-up:hover,
-.comment-dub .icon-arrow-up.dubvoted{
+.timeago,
+A.dubup:hover SPAN{
   color: rgb(50, 60, 83) !important;
+}
+
+#warning H3,
+.icon-close,
+#main-menu-left A.logout-link:hover,
+.icon-eye-blocked:hover,
+A.close-menu SPAN,
+.system,
+A.dubdown:hover SPAN,
+#browser .queue_info A:hover.icon-unlocked,
+.content-videos .actions .remove_icon:hover SPAN,
+#browser .playlist_info A:hover.icon-trash,
+#user_popover .actions A:hover:nth-child(-n+3),
+#user_popover .ban:hover INPUT,
+.check_username_info.error{
+  color: rgb(255, 45, 49) !important;
+}
+
+.admin .username,
+.admin .username:after{
+  color: rgb(0, 255, 255) !important;
 }
 
 .autolink{
   color: rgb(0, 155, 255) !important;
 }
 
-.player_sharing SPAN{
+.room-loby-header .facebook,
+.room-loby-header .twitter,
+.player_sharing .icon-facebook,
+.player_sharing .icon-twitter,
+#main-menu-left .social-links SPAN{
   color: rgba(134, 148, 178, 0.30) !important;
 }
 
-.player_sharing .icon-facebook:hover{
+.room-loby-header .facebook:hover,
+.player_sharing .icon-facebook:hover,
+#main-menu-left .icon-facebook:hover{
   color: rgb(59, 87, 157) !Important;
 }
 
-.player_sharing .icon-twitter:hover{
+.room-loby-header .twitter:hover,
+.player_sharing .icon-twitter:hover,
+#main-menu-left .icon-twitter:hover{
   color: rgb(28, 173, 235) !Important;
 }
 
-.icon-remove-circle,
-.icon-close,
-.icon-flag,
-.comment-dub A:hover,
-.comment-dub .icon-arrow-down.dubvoted,
-.comment-dub .icon-arrow-down:hover,
-.system,
-#user_popover .kick:hover,
-#user_popover .ban:hover,
-#user_popover .ban:hover INPUT,
-#user_popover .mute:hover,
-#roomFormUpdate .closebtn:hover,
-#roomFormUpdate BUTTON.cancel:hover,
-.chat-system-loading.system-error,
-.browser-content-header .close SPAN,
-.content-videos .clear-queue:hover,
-#main-menu-left A.logout-link,
-HEADER .logout:hover SPAN,
-.content-videos .img_bg.remove_icon:hover,
-.playlist-style .delete:hover,
-#warning H3{
-  color: rgb(255, 45, 49) !important;
-}
-
-.admin:after{
-  color: rgb(0, 255, 255) !important;
-}
-
-#main-loading,
-.loading,
-.join,
-.current-song,
-.facebook-login,
-.twitter-login,
-.comment-dub,
-.comment-dub A,
-.closebtn,
-#roomInfoModal .control-group,
-BUTTON,
-I:not(.icon-arrow-down2),
-INPUT,
-.player_container H5,
-.chatSound,
-P,
-.player-container.placeholder,
-#user_popover .global-actions A,
-#user_popover .actions A,
-#player-controller SPAN:not(.queue-active),
-#maindubtotal,
-.content-videos LI:hover H2,
-.content-videos LI:hover .playedby,
-.playlist_info A,
-#playlists-scroll LI:hover,
-.playlist-style DIV,
-.icon-play,
-.icon-plus,
-.browser-content-header SPAN,
-.content-videos .queue-management DIV,
-SPAN.room-info-display:hover,
-#room-lock-queue:hover,
-.content-videos .timeDisplay,
-#chat LI.user-560354e8e863210300468f71 .username,
-#chat LI.user-5600dd6e2e803803000fed3e .username,
-#metamod-menu-list,
-.tcontent,
-#d3vs-playlist-import-code{
-  color: rgb(238, 238, 238) !important;
-}
-#roomInfoModal .closebtn:not(:hover),
-.content-videos LI:not(:hover) H2,
-.content-videos LI:not(:hover) .playedby,
-#room-lock-queue:not(:hover),
-#playlists-scroll LI:not(:hover){
-  color: rgba(238, 238, 238, 0.75) !important;
-}
-
-.playerPreview .tooltip{
-  color: rgb(0, 0, 0) !important;
-}
-
 .ps-scrollbar-y-rail,
+.ui-slider-horizontal,
+#player-controller A:not(.voted):hover,
 .playerPreview .progressContainer{
   background-color: rgb(22, 31, 49) !important;
 }
 
-#main-loading .spinner,
-.room-item .user-info,
-.login-model-container,
 #roomFormUpdate,
-#roomInfoModal,
-#private-messages .search-results:before,
 #header-global,
-HEADER H1,
-.player_sharing,
-#player-controller,
-#chat,
-#main_avatar_room,
+#warning,
+.loading-el,
+#private-messages .search-results:before,
+#player-controller .left,
+#browser .browser-content,
+#browser .playlist_info,
+#browser .queue_info,
+#browser .sidebar,
 #user_popover,
-.close-menu,
-.playlist_info,
-#addToPlaylistFloatContainer,
-.browser-content,
-.contentTab,
-.containerB DIV:first-child,
-.containerY DIV:first-child,
-.containerB,
-.containerY,
 .tinner{
   background-color: rgb(30, 41, 66) !important;
 }
-
-.loading,
-.playerPreview .replay,
-#main-menu-left,
-#main-menu-right,
+.for_content,
 A.close-menu,
-.content-videos LI,
-.profileView,
-.isSwordful{
-  background-color: rgba(30, 41, 66, 0.75) !important;
+#browser .content-videos LI{
+  background-color: rgba(30, 41, 66, 0.70) !important;
 }
 
-.room-item HEADER,
+#main_player,
+.play-song-link,
+.right_section,
+#addToPlaylistFloatContainer,
 .playerPreview,
-.ui-slider-range,
-#mobile-room-menu,
-.modal-header,
-.ui-slider,
-#user_popover .kick:hover,
-#user_popover .ban:hover,
-#user_popover .mute:hover,
-#room-lock-queue:hover,
-.playlist-list-action LI:hover,
-#playlists-scroll LI:hover,
-.content-videos .clear-queue:hover,
-#chat .user-560354e8e863210300468f71,
-#chat .user-5600dd6e2e803803000fed3e,
-.infoProfile,
-#warning,
-.contentMainProfile UL{
-  background-color: rgb(29, 69, 110) !important;
-}
-A.join:before,
-#main-loading,
-.content-videos LI:hover{
-  background-color: rgba(29, 69, 110, 0.75) !important;
-}
-.playerPreview .controlContainer:after{
-  background-color: rgba(29, 69, 110, 0.50) !important;
+.playerPreview .close{
+  background-color: rgba(30, 41, 66, 0.95) !Important;
 }
 
 .ps-scrollbar-y,
-.playerPreview .loaded,
-.comments-main BUTTON,
+#warning BUTTON,
+#room-search,
+.playerPreview .player .replay,
+#roomFormUpdate INPUT,
+#roomFormUpdate TEXTAREA,
 #roomFormUpdate SELECT,
 #roomFormUpdate BUTTON,
-HEADER BUTTON,
-INPUT,
-TEXTAREA,
-#chat BUTTON,
-#global-search,
+A.dubup.voted,
+.ui-slider-range-min,
 #new-message-input,
-#chat-txt-message,
-#message-input,
-.icon-plus,
-#user_popover .global-actions A,
-#user_popover .actions A,
-#player-controller .navigate:hover,
-.dubup:hover,
-.dubup.voted,
-#playlist-input,
-.playlist_filter,
-.shuffle-playlist,
-.content-videos .queue-management DIV,
-.content-videos .timeDisplay,
-#playlists-scroll LI,
-#room-lock-queue,
-.follow-btn,
-#warning BUTTON,
+.browser-content-header INPUT,
+#browser .music-type-select,
+#browser .music-type-dropdown,
+#browser .text-button,
+#browser .playlist_info A,
+#browser .queue_info A,
+#browser .sidebar .create-playlist,
+.playerPreview .loaded,
 #d3vs-playlist-import-name,
 #d3vs-playlist-import-code,
 #d3vs-playlist-import-btn{
   background-color: rgb(50, 60, 83) !important;
 }
+.player_header SPAN,
+.mods-controller-container .skip-el,
+.edit-btn{
+  background-color: rgba(50, 60, 83, 0.95) !important;
+}
+#emoji-preview LI{
+  background-color: rgba(50, 60, 83, 0.70) !important;
+}
 
-.user-count,
-.playerPreview .progress,
-.playerPreview .tooltip,
-.content-videos .spinner DIV,
-.queue-info,
-.info-counter,
-.message-counter,
-#chat .room-user-counter,
-#avatar A SPAN,
-.pusher-chat-widget-send-btn,
-#user_popover .global-actions A:hover,
-#user_popover .actions A:not(.kick):not(.ban):not(.mute):hover,
-.display-success,
+#main-loading,
+.loading :not(.loading-el),
+.playerPreview .player:hover .replay,
+.room-loby-header,
+#warning BUTTON:hover,
+#roomFormUpdate BUTTON:hover,
+#mobile-room-menu,
+#playlists-scroll LI.selected,
+#browser .music-type-dropdown SPAN:hover,
+#browser .text-button:hover,
+#browser .sidebar .create-playlist:hover,
+#browser .playlist_info A:hover,
+#browser .queue_info A:hover,
+#player-controller .right{
+  background-color: rgb(29, 69, 110) !important;
+}
+.player_header SPAN:hover,
+.edit-btn:hover{
+  background-color: rgba(29, 69, 110, 0.95) !Important;
+}
+#emoji-preview LI:hover,
+#emoji-preview LI.selected,
+#browser .content-videos LI.selected{
+  background-color: rgba(29, 69, 110, 0.70) !Important;
+}
+
 #new-messages-counter,
+.message-item.new-message:before,
+.close-browser,
+.display-sidebar,
+#browser .display-success,
+.create-playlist-form .icon-createplaylist,
+.create-playlist-input .icon-add,
 .ui-slider-handle,
-#room-lock-queue.locked:hover,
-.content-videos .pause-queue:hover,
+.message-counter,
+.play-song-link .queue-info,
 .progressBg,
-.add-to-playlist A:hover,
-.search-btn,
-.editUsername,
-.containerB DIV DIV,
-.containerY DIV DIV{
+.playerPreview .progress{
   background-color: rgb(74, 108, 143) !important;
 }
-
-.updatePictureGif{
-  background-image: linear-gradient(to bottom, rgba(74, 108, 143, 0.75) 21px, transparent 21px, transparent 100%) !important;
+.player_header SPAN.active{
+  background-color: rgba(74, 108, 143, 0.95) !important;
 }
 
-.dubdown:hover,
-.dubdown.voted,
-.playlist_type_private{
+#roomFormUpdate BUTTON.cancel:hover,
+.player_header SPAN.skip-el:hover,
+A.dubdown.voted,
+.mods-controller-container .skip-el:hover,
+#browser .text-button.clear-queue:hover,
+.edit-btn.cancelUsername:hover{
   background-color: rgb(255, 45, 49) !important;
 }
-.loading.skip-el{
-  background-color: rgba(255, 45, 49, 0.75) !important;
+
+.room-item{
+  background-image: linear-gradient(to bottom,
+                                    rgba(30, 41, 66, 0.95) calc(100% - 36px),
+                                    rgba(50, 60, 83, 0.95) calc(100% - 36px),
+                                    rgba(50, 60, 83, 0.95) 100%) !Important;
 }
 
-.message-item.new-message:before{
-  background-color: rgb(180, 201, 222) !important;
+#main-menu-left,
+#main-menu-right{
+  background-image: linear-gradient(to bottom,
+                                    rgb(30, 41, 66) 58px,
+                                    rgba(30, 41, 66, 0.70) 58px,
+                                    rgba(30, 41, 66, 0.70) calc(100% - 56px),
+                                    rgb(30, 41, 66) calc(100% - 56px),
+                                    rgb(30, 41, 66) 100%) !Important;
 }
 
-.facebook-login{
-  background-color: rgb(59, 87, 157) !important;
+#header-global H1{
+  background-image: url(http://i.imgur.com/451A0RO.png) !important;
 }
 
-.twitter-login{
-  background-color: rgb(28, 173, 235) !important;
-}
-
-.content-videos{
+#browser .content-videos{
   background: url(https://mediadubtrackfm.s3.amazonaws.com/assets/images/backgrounds/pattern-stripes.png),
               url(https://i.imgur.com/nQu4KMz.jpg) center center/529px 434px no-repeat !important;
 }
 
-#roomFormUpdate{
-  background: rgb(30, 41, 66) url(http://i.imgur.com/soBKKWr.png) center center/529px 434px no-repeat !important;
-}
-
-#room-main-player-container-soundcloud{
-  background: url(https://i.imgur.com/nQu4KMz.jpg) center center/529px 434px no-repeat,
+#room-main-player-container-soundcloud,
+.SCplayerImage{
+  background: url(http://i.imgur.com/B4n0yoz.png) center center/80% 80% no-repeat,
               linear-gradient(to top, rgba(30, 41, 66, 0.75) 0%, rgba(30, 41, 66, 0.75) 100%),
               rgb(30, 41, 66) url(https://mediadubtrackfm.s3.amazonaws.com/assets/images/backgrounds/pattern-stripes.png) !important;
 }
 
-#roomFormUpdate INPUT,
-#roomFormUpdate TEXTAREA,
-#roomFormUpdate SELECT{
-  background: rgb(50, 60, 83) url(http://i.imgur.com/soBKKWr.png) center center/529px 434px no-repeat !important;
+#warning{
+  border: 1px solid rgb(255, 45, 49) !important;
 }
 
-#roomFormUpdate,
-#roomFormUpdate INPUT,
-#roomFormUpdate TEXTAREA,
-#roomFormUpdate SELECT{
-  background-attachment: fixed !important;
+.room-search,
+#mobile-room-menu .player-button,
+.message-list LI,
+#browser .music-type-dropdown SPAN,
+#browser .playlist_info A{
+  border-color: rgb(30, 41, 66) !important;
+}
+#mobile-room-menu{
+  border-bottom: 1px solid rgb(30, 41, 66) !important;
 }
 
-HEADER H1 SPAN{
-  background-image: url(https://i.imgur.com/Bj3cLb3.png) !important;
+.chat-option-buttons *,
+#addToPlaylistFloatContainer .playlist-list-action LI,
+.chat_tools,
+.chat_tools SPAN:after,
+.pusher-chat-widget-input,
+#private-messages .message-header,
+#private-messages .input-container{
+  border-color: rgb(29, 69, 110) !important;
+}
+#user_popover,
+#addToPlaylistFloatContainer{
+  border: 1px solid rgb(29, 69, 110) !important;
+}
+#user_popover A{
+  border-top: 1px solid rgb(29, 69, 110) !important;
+}
+#user_popover .send-pm-message{
+  border-right: 1px solid rgb(29, 69, 110) !Important;
 }
 
-#followersEl{
-  background-image: linear-gradient(to bottom, rgb(29, 69, 110) 47px, rgb(30, 41, 66) 47px, rgb(30, 41, 66) 100%) !important;
-}
-
-.playerPreview TEXTAREA,
-#roomFormUpdate INPUT,
-#roomFormUpdate TEXTAREA,
-#roomFormUpdate SELECT,
-#chat-txt-message,
-#message-input,
-.input-room-users-search INPUT,
-#new-message-input,
-#avatar LI.updub,
-.content-videos LI,
-.playlist_filter,
-#playlists-scroll LI,
-.sidebar INPUT,
-.isSwordful .verSwordful{
+#new-message-input{
   border-color: rgb(50, 60, 83) !important;
 }
-.login-model-container INPUT,
 #d3vs-playlist-import-name,
 #d3vs-playlist-import-code{
   border: 1px solid rgb(50, 60, 83) !important;
 }
 
-.login-model-container{
-  border: 1px solid rgb(29, 69, 110) !important;
-}
-.pusher-chat-widget-input,
-.ui-slider,
-#roomFormUpdate,
-#roomInfoModal,
-.chat_tools,
-#user_popover,
-#addToPlaylistFloatContainer,
-#private-messages HEADER,
-#private-messages .input-container,
-.isSwordful .istitle{
-  border-color: rgb(29, 69, 110) !important;
-}
-#player-controller DIV LI:not(:first-child):not(.infoContainer),
-.add-to-playlist{
-  border-left: 1px solid rgb(29, 69, 110) !important;
+#user_popover .ban INPUT{
+  border-color: rgb(180, 201, 222) !important;
 }
 
-#main-menu-left A:not(.close-menu),
-#mobile-room-menu A,
-#avatar LI,
-.message-list LI,
-.user-messages-button{
-  border-color: rgb(30, 41, 66) !important;
-}
-
-#avatar LI.downdub,
 #user_popover .ban:hover INPUT{
   border-color: rgb(255, 45, 49) !important;
 }
 
-#user_popover .ban INPUT{
-  border-color: rgb(238, 238, 238) !important;
-}
-
-.updatePictureGif{
-  height: 150px !important;
-}
-
-#playlist-input{
-  box-shadow: inset -30px 0px 0px 0px rgb(30, 41, 66) !important;
-}
-.sidebar INPUT{
-  box-shadow: inset -29px 0px 0px 0px rgb(30, 41, 66) !important;
-}
-
-.br-btn.active{
-  box-shadow: inset 0px 0px 0px 1px rgb(92, 135, 179) !important;
-}
-
-#chat-txt-message{
-  box-shadow: 0px -1px 0px 0px rgb(50, 60, 83) !important;
-}
-.browser-content-header INPUT,
-.icon-plus{
-  box-shadow: 0px 1px 0px 0px rgb(50, 60, 83) !important;
-}
-
-#chat .user-560354e8e863210300468f71,
-#chat .user-5600dd6e2e803803000fed3e{
-  box-shadow: -9px 0px 0px 0px rgb(29, 69, 110),
-              9px 0px 0px 0px rgb(29, 69, 110) !important;
-}
-
-.containerB,
-.containerY{
-  box-shadow: inset 0px 55px 0px 0px rgb(29, 69, 110),
-              inset 0px -53px 0px 0px rgb(29, 69, 110) !important;
-}
-
-BUTTON:hover,
-.shuffle-playlist:hover,
 INPUT#d3vs-playlist-import-btn:hover{
   box-shadow: inset 0px -2px 0px 0px rgb(74, 108, 143) !important;
 }
 
-#chat LI[style="box-shadow: -4px 0px 0px 0px rgb(255, 0, 255) inset;"]{
-  box-shadow: inset -4px 0px 0px 0px rgb(74, 108, 143) !important;
+#roomFormUpdate BUTTON{
+  border-radius: 21px !Important;
 }
 
-#warning{
-  box-shadow: inset 0px 0px 0px 2px rgb(255, 45, 49) !important;
+#warning BUTTON,
+.mods-controller-container .skip-el{
+  border-radius: 20px !Important;
 }
 
-BUTTON{
-  box-shadow: inset 0px -2px 0px 0px transparent !important;
+.edit-btn{
+  border-radius: 17px !Important;
 }
 
-HEADER .logout BUTTON{
-  border-radius: 0px 3px 3px 0px !important;
-}
-
-.login-model-container INPUT,
-.login-model-container A,
-#roomFormUpdate INPUT,
-#roomFormUpdate TEXTAREA,
-#roomFormUpdate SELECT,
-.chat_tools BUTTON,
-#chat-txt-message,
-#private-messages INPUT,
-.playlist_info A,
 #d3vs-playlist-import-div INPUT,
 #d3vs-playlist-import-div TEXTAREA{
   border-radius: 3px !important;
 }
 
-.ui-slider-horizontal{
-  height: 3px !important;
-  top: 2px !important;
+HEADER FIGURE,
+#chat .image_row,
+#private-messages FIGURE,
+.pictureContainer,
+.updatePictureGif,
+#user_popover FIGURE,
+#user_popover .ban INPUT{
+  border-radius: 0px !Important;
 }
 
-.rewindProfile{
-  top: 9px !important;
-  right: -1px !important;
+#emoji-preview{
+  bottom: 56px !important;
 }
 
-G#d3vs-playlist-import-btn{
+#private-messages .search-results:before{
+  content: '';
+  width: 100%;
+  height: 198px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: -1 !Important;
+}
+
+.message-item.new-message:before{
+  width: 1px !Important;
+}
+
+.message-list-wrapper-inner{
+  height: calc(100% + 16px) !Important;
+}
+
+#browser .playlist_filter{
+  width: calc(100% - 46px) !Important;
+  position: relative !Important;
+  top: 1px !Important;
+}
+
+.playerPreview .close{
+  top: 24px !important;
+  right: 24px !Important;
+  padding: 8px !Important;
+  padding-top: 6px !Important;
+}
+
+.playerPreview .controlContainer .buttons{
+  position: relative !Important;
+  top: 2px !Important;
+}
+
+.playerPreview .controlContainer{
+  bottom: -28px !Important;
+}
+
+.input-container{
+  padding-top: 7px !Important;
+  padding-bottom: 7px !Important;
+  padding-left: 0px !Important;
+  padding-right: 0px !Important;
+}
+
+#private-messages #message-input{
+  padding-right: 16px !Important;
+}
+
+#d3vs-playlist-import-btn{
   padding-top: 8px !important;
   padding-bottom: 8px !important;
 }
@@ -622,142 +528,58 @@ G#d3vs-playlist-import-btn{
   margin-bottom: 8px !important;
 }
 
-.playerPreview .ui-slider-handle{
-  top: -8px !important;
+.playerPreview .progressContainer,
+.playerPreview .volume-control{
+  border-color: transparent !Important;
 }
 
-#player-controller .ui-slider-handle{
-  top: -9px !important;
-}
-
-#player-controller .ui-slider-horizontal{
-  top: 0px !important;
-}
-
-.comments-main BUTTON{
-  position: relative !important;
-  top: 8px !important;
-  left: calc(100% - 124px) !important;
-}
-
-.loading.hideVideo-el{
-  height: 45px !important;
-  margin-top: 2px !important;
-}
-
-BUTTON.follow{
-  margin-right: 46px !important;
-  margin-top: 9px !important;
-}
-
-#private-messages .search-results:before{
-  content: '';
-  width: 100%;
-  height: 173px;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  z-index: -1 !Important;
-}
-
-#mobile-room-menu{
-  z-index: 0 !important;
-}
-
-HEADER H1{
-  pointer-events: none !important;
-}
-
-.room-item *,
-FIGURE{
-  border-radius: 0px !important;
-}
-
-.search-results DIV,
-.playerPreview .close,
-.playerPreview HEADER,
-.comments-textarea-container,
-.chat_tools,
-.pusher-chat-widget-input,
-.message-header,
-.message-list-wrapper-inner,
-.message-list-wrapper,
-.message-details,
-#main-message-list,
-.loadRoomAva,
-.input-container,
-.input-room-users-search,
-.message-list-wrapper,
-.playlist-list-action LI,
-.left_section,
-.browser-content .sidebar,
-.browser-content-header,
-.rewindProfile,
-.updatePictureGif,
-.profileView IMG,
-#profileSidebar,
-.contentMainProfile LI,
-.isSwordful LI{
-  background-color: transparent !important;
-}
-
-.browser-content{
-  background-image: none !important;
-}
-
-.ui-slider-range{
-  border-color: transparent !important;
-}
-HEADER .relate,
-.user-info-button,
-.logout BUTTON{
-  border-right-color: transparent !important;
-}
-
-.err-message,
-.success-message,
-#addToPlaylistFloatContainer LI,
-.playlist_info A,
-.browser-content,
-.profileView IMG,
-.rewindProfile,
-.isSwordful,
+#warning BUTTON,
+#roomFormUpdate *,
+#emoji-preview,
+#emoji-preview UL,
+#private-messages #message-input,
+.mods-controller-container .skip-el,
+#browser .content-videos LI,
+#browser .text-button,
+.edit-btn,
+#browser .actions A,
+.create-playlist INPUT,
 INPUT#d3vs-playlist-import-btn{
   border: none !important;
 }
 
-#player-controller DIV LI{
-  border-right-style: none !important;
-}
-#player-controller .right{
-  border-left-style: none !important;
-}
-
-.playerPreview .progressContainer{
-  box-shadow: none !important;
-}
-
-#main_player{
-  padding: 0px !important;
+#user_popover .ban INPUT{
+  border-left: none !Important;
+  border-right: none !Important;
+  border-top: none !Important;
+  padding-left: 0px !Important;
+  padding-right: 0px !Important;
+  width: 38px !Important;
 }
 
 *{
-  outline-style: none !important;
+  outline-style: none !Important;
 }
 
-.login-model-container:after,
-IMG[alt=""][src="https://res.cloudinary.com/hhberclba/image/upload/c_fill,h_460,w_900/tiqxlzynh3rxrkwvzeak.jpg"],
-#player.full-frame:not(:hover) .loading,
-#main_player .soundcloud IMG,
-.playerPreview:before,
-.image_row:after,
-.player_container:not(:hover) .loading,
-#player-controller .copy,
-.playlist_type_private SPAN,
-.playlist-style .ps-scrollbar-y,
-.playlist-style .ps-scrollbar-y-rail,
-.pictureContainer:not(:hover) .updatePictureGif,
-.contentMainProfile .progress,
-#warning:after{
-  display: none !important;
+.room-item,
+.room-item .current-song,
+.modal-header,
+.modal-footer,
+#main-menu-left,
+#main-menu-right,
+.message-header,
+.message-details,
+#main-message-list,
+#browser .browser-content-header,
+#browser .actions A,
+#user_popover DIV,
+#user_popover .ban INPUT{
+  background-color: transparent !Important;
+}
+
+#main-loading .spinner,
+.soundcloud IMG,
+.chat-option-buttons i,
+.playerPreview:not(:hover) .close{
+  display: none !Important;
 }
