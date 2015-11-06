@@ -14,7 +14,7 @@
    Most of the basic styling elements and colour language from it has been
    transferred to this theme for DubTrack.
    
-   version 2.0 (11/05/15)
+   version 2.01 (11/06/15)
 */
 
 #main-loading,
@@ -32,7 +32,9 @@
 #browser .sidebar LI:not(:hover):not(.selected),
 .content-videos LI .preview:not(:hover),
 #user_popover .usercontent:not(:hover) H3,
-#user_popover .ban:not(:hover) INPUT{
+#user_popover .ban:not(:hover) INPUT,
+.tinner .tcontent P:nth-child(2) A:not(:hover),
+.tinner .tcontent P:last-child A:not(:first-child):not(:hover){
   opacity: 0.7 !Important;
 }
 
@@ -96,7 +98,9 @@ P,
 #player-controller A.dubdown:not(:hover):not(.voted) .icon-arrow-down,
 #player-controller A.dubdown:not(:hover),
 .currentTime,
-.icon-heart:before{
+.icon-heart:before,
+#metamod-menu-list H2,
+.tinner .tcontent *:not(A){
   color: rgb(238, 238, 238) !important;
 }
 
@@ -152,7 +156,8 @@ P,
 #addToPlaylistFloatContainer .create-playlist-header,
 #addToPlaylistFloatContainer .playlist-list-action LI:hover,
 .for_content_ver,
-.for_content_c{
+.for_content_c,
+.tinner .tcontent A{
   color: rgb(180, 201, 222) !important;
 }
 .chat-option-buttons *,
@@ -287,7 +292,8 @@ A.dubup.voted,
 }
 .player_header SPAN,
 .mods-controller-container .skip-el,
-.edit-btn{
+.edit-btn,
+#metamod-btn{
   background-color: rgba(50, 60, 83, 0.95) !important;
 }
 #emoji-preview LI{
@@ -311,7 +317,8 @@ A.dubup.voted,
   background-color: rgb(29, 69, 110) !important;
 }
 .player_header SPAN:hover,
-.edit-btn:hover{
+.edit-btn:hover,
+#metamod-btn:hover{
   background-color: rgba(29, 69, 110, 0.95) !Important;
 }
 #emoji-preview LI:hover,
@@ -461,6 +468,10 @@ HEADER FIGURE,
 #user_popover FIGURE,
 #user_popover .ban INPUT{
   border-radius: 0px !Important;
+}
+
+#emoji-preview{
+  bottom: 56px !important;
 }
 
 #private-messages .search-results:before{
