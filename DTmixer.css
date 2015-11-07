@@ -14,7 +14,7 @@
    Most of the basic styling elements and colour language from it has been
    transferred to this theme for DubTrack.
    
-   version 2.02 (11/07/15)
+   version 2.03 (11/07/15)
 */
 
 #main-loading,
@@ -87,6 +87,7 @@ P,
 #browser .text-button,
 #browser .actions A:not(.remove_icon) SPAN,
 #browser .actions .remove_icon:not(:hover) SPAN,
+#browser .display-success,
 .icon-createplaylist,
 #player-controller .currentSong,
 #player-controller .icon-playlist,
@@ -135,7 +136,6 @@ P,
 .mods-controller-container .chat-command-list LI,
 .mods-controller-container .user-list LI:hover,
 .mods-controller-container .user-list .actions:hover,
-#browser .display-success,
 #browser .playlist_info A:not(.text-button):hover,
 #browser .queue_info A:not(.text-button):hover,
 #browser .actions A:not(.remove_icon):hover SPAN,
