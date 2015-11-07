@@ -14,7 +14,7 @@
    Most of the basic styling elements and colour language from it has been
    transferred to this theme for DubTrack.
    
-   version 2.01 (11/06/15)
+   version 2.02 (11/07/15)
 */
 
 #main-loading,
@@ -32,9 +32,7 @@
 #browser .sidebar LI:not(:hover):not(.selected),
 .content-videos LI .preview:not(:hover),
 #user_popover .usercontent:not(:hover) H3,
-#user_popover .ban:not(:hover) INPUT,
-.tinner .tcontent P:nth-child(2) A:not(:hover),
-.tinner .tcontent P:last-child A:not(:first-child):not(:hover){
+#user_popover .ban:not(:hover) INPUT{
   opacity: 0.7 !Important;
 }
 
@@ -99,8 +97,7 @@ P,
 #player-controller A.dubdown:not(:hover),
 .currentTime,
 .icon-heart:before,
-#metamod-menu-list H2,
-.tinner .tcontent *:not(A){
+.container *{
   color: rgb(238, 238, 238) !important;
 }
 
@@ -156,8 +153,7 @@ P,
 #addToPlaylistFloatContainer .create-playlist-header,
 #addToPlaylistFloatContainer .playlist-list-action LI:hover,
 .for_content_ver,
-.for_content_c,
-.tinner .tcontent A{
+.for_content_c{
   color: rgb(180, 201, 222) !important;
 }
 .chat-option-buttons *,
@@ -195,9 +191,11 @@ A.dubdown:hover SPAN,
 #browser .queue_info A:hover.icon-unlocked,
 .content-videos .actions .remove_icon:hover SPAN,
 #browser .playlist_info A:hover.icon-trash,
+#browser .display-error,
 #user_popover .actions A:hover:nth-child(-n+3),
 #user_popover .ban:hover INPUT,
-.check_username_info.error{
+.check_username_info.error,
+.container .cancel:hover P{
   color: rgb(255, 45, 49) !important;
 }
 
@@ -248,6 +246,7 @@ A.dubdown:hover SPAN,
 #browser .queue_info,
 #browser .sidebar,
 #user_popover,
+.container,
 .tinner{
   background-color: rgb(30, 41, 66) !important;
 }
@@ -267,11 +266,11 @@ A.close-menu,
 }
 
 .ps-scrollbar-y,
+TEXTAREA,
 #warning BUTTON,
 #room-search,
 .playerPreview .player .replay,
 #roomFormUpdate INPUT,
-#roomFormUpdate TEXTAREA,
 #roomFormUpdate SELECT,
 #roomFormUpdate BUTTON,
 A.dubup.voted,
@@ -285,6 +284,8 @@ A.dubup.voted,
 #browser .queue_info A,
 #browser .sidebar .create-playlist,
 .playerPreview .loaded,
+.container .title,
+.container .control DIV,
 #d3vs-playlist-import-name,
 #d3vs-playlist-import-code,
 #d3vs-playlist-import-btn{
@@ -292,8 +293,7 @@ A.dubup.voted,
 }
 .player_header SPAN,
 .mods-controller-container .skip-el,
-.edit-btn,
-#metamod-btn{
+.edit-btn{
   background-color: rgba(50, 60, 83, 0.95) !important;
 }
 #emoji-preview LI{
@@ -313,12 +313,13 @@ A.dubup.voted,
 #browser .sidebar .create-playlist:hover,
 #browser .playlist_info A:hover,
 #browser .queue_info A:hover,
-#player-controller .right{
+#browser .display-error,
+#player-controller .right,
+.container .control .cancel:hover{
   background-color: rgb(29, 69, 110) !important;
 }
 .player_header SPAN:hover,
-.edit-btn:hover,
-#metamod-btn:hover{
+.edit-btn:hover{
   background-color: rgba(29, 69, 110, 0.95) !Important;
 }
 #emoji-preview LI:hover,
@@ -338,7 +339,8 @@ A.dubup.voted,
 .message-counter,
 .play-song-link .queue-info,
 .progressBg,
-.playerPreview .progress{
+.playerPreview .progress,
+.container .control DIV:hover{
   background-color: rgb(74, 108, 143) !important;
 }
 .player_header SPAN.active{
