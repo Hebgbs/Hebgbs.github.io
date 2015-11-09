@@ -14,7 +14,7 @@
    Most of the basic styling elements and colour language from it has been
    transferred to this theme for DubTrack.
    
-   version 2.03 (11/07/15)
+   version 2.04 (11/09/15)
 */
 
 #main-loading,
@@ -28,6 +28,7 @@
 }
 
 #main-menu-left A:not(:hover),
+.videoquality-el:not(.active-hd):not(:hover),
 .mod-controllers-headers A:not(:hover):not(.active),
 #browser .sidebar LI:not(:hover):not(.selected),
 .content-videos LI .preview:not(:hover),
@@ -36,15 +37,20 @@
   opacity: 0.7 !Important;
 }
 
+#chat .chat-welcome-message,
 #user_popover .ban INPUT{
   text-align: center !Important;
 }
 
+#chat .chat-welcome-message,
+.room-info-display-container SPAN,
 .autolink,
-.room-item HEADER{
+.room-item HEADER
+{
   font-weight: normal !important;
 }
 
+.room-info-display-container SPAN I,
 #user_popover .ban INPUT,
 #addToPlaylistFloatContainer .playlist-list-action LI{
   font-weight: bold !Important;
@@ -71,6 +77,7 @@ INPUT,
 #mobile-room-menu A,
 .player_header SPAN,
 .player_sharing,
+.videoquality-el.active-hd,
 .mod-controllers-headers A.active,
 .mods-controller-container .chat-command-list .actions,
 P,
@@ -123,19 +130,22 @@ P,
 #roomFormUpdate LABEL,
 #main-menu-left A,
 #main-room-active-link .icon-chevron,
+.room-info-display-container SPAN I,
 .username-handle,
 .creator .username,
 .creator .username:after,
 .co-owner .username,
 .co-owner .username:after,
-.chat-option-header,
-.chat-option-buttons *:hover,
-#player-controller .currentDJSong,
+.videoquality-el,
 .mod-controllers-headers A,
 .mods-controller-container H2 SPAN,
 .mods-controller-container .chat-command-list LI,
 .mods-controller-container .user-list LI:hover,
 .mods-controller-container .user-list .actions:hover,
+#chat .chat-welcome-message,
+.chat-option-header,
+.chat-option-buttons *:hover,
+#player-controller .currentDJSong,
 #browser .playlist_info A:not(.text-button):hover,
 #browser .queue_info A:not(.text-button):hover,
 #browser .actions A:not(.remove_icon):hover SPAN,
@@ -163,6 +173,7 @@ P,
   color: rgba(180, 201, 222, 0.70) !important;
 }
 
+.room-info-display-container SPAN,
 #player-controller A.add-to-playlist:hover .icon-heart:before,
 .content-videos .actions .add_to_playlist:hover .icon-heart:before,
 :not(.creator):not(.co-owner):not(.manager):not(.mod):not(.vip):not(.resident-dj).currentDJ .username,
@@ -228,6 +239,10 @@ A.dubdown:hover SPAN,
   color: rgb(28, 173, 235) !Important;
 }
 
+.ui-slider-handle{
+  background-color: rgb(238, 238, 238) !important;
+}
+
 .ps-scrollbar-y-rail,
 .ui-slider-horizontal,
 #player-controller A:not(.voted):hover,
@@ -262,7 +277,7 @@ A.close-menu,
 #addToPlaylistFloatContainer,
 .playerPreview,
 .playerPreview .close{
-  background-color: rgba(30, 41, 66, 0.95) !Important;
+  background-color: rgba(30, 41, 66, 0.80) !Important;
 }
 
 .ps-scrollbar-y,
@@ -274,7 +289,6 @@ TEXTAREA,
 #roomFormUpdate SELECT,
 #roomFormUpdate BUTTON,
 A.dubup.voted,
-.ui-slider-range-min,
 #new-message-input,
 .browser-content-header INPUT,
 #browser .music-type-select,
@@ -294,7 +308,7 @@ A.dubup.voted,
 .player_header SPAN,
 .mods-controller-container .skip-el,
 .edit-btn{
-  background-color: rgba(50, 60, 83, 0.95) !important;
+  background-color: rgba(50, 60, 83, 0.80) !important;
 }
 #emoji-preview LI{
   background-color: rgba(50, 60, 83, 0.70) !important;
@@ -320,7 +334,7 @@ A.dubup.voted,
 }
 .player_header SPAN:hover,
 .edit-btn:hover{
-  background-color: rgba(29, 69, 110, 0.95) !Important;
+  background-color: rgba(29, 69, 110, 0.80) !Important;
 }
 #emoji-preview LI:hover,
 #emoji-preview LI.selected,
@@ -335,7 +349,7 @@ A.dubup.voted,
 #browser .display-success,
 .create-playlist-form .icon-createplaylist,
 .create-playlist-input .icon-add,
-.ui-slider-handle,
+.ui-slider-range-min,
 .message-counter,
 .play-song-link .queue-info,
 .progressBg,
@@ -344,7 +358,7 @@ A.dubup.voted,
   background-color: rgb(74, 108, 143) !important;
 }
 .player_header SPAN.active{
-  background-color: rgba(74, 108, 143, 0.95) !important;
+  background-color: rgba(74, 108, 143, 0.80) !important;
 }
 
 #roomFormUpdate BUTTON.cancel:hover,
@@ -358,9 +372,9 @@ A.dubdown.voted,
 
 .room-item{
   background-image: linear-gradient(to bottom,
-                                    rgba(30, 41, 66, 0.95) calc(100% - 36px),
-                                    rgba(50, 60, 83, 0.95) calc(100% - 36px),
-                                    rgba(50, 60, 83, 0.95) 100%) !Important;
+                                    rgba(30, 41, 66, 0.80) calc(100% - 36px),
+                                    rgba(50, 60, 83, 0.80) calc(100% - 36px),
+                                    rgba(50, 60, 83, 0.80) 100%) !Important;
 }
 
 #main-menu-left,
@@ -384,8 +398,8 @@ A.dubdown.voted,
 
 #room-main-player-container-soundcloud,
 .SCplayerImage{
-  background: url(http://i.imgur.com/B4n0yoz.png) center center/80% 80% no-repeat,
-              linear-gradient(to top, rgba(30, 41, 66, 0.75) 0%, rgba(30, 41, 66, 0.75) 100%),
+  background: url(http://i.imgur.com/NxKiWSL.png) center center/80% 80% no-repeat,
+              linear-gradient(to top, rgba(30, 41, 66, 0.70) 0%, rgba(30, 41, 66, 0.70) 100%),
               rgb(30, 41, 66) url(https://mediadubtrackfm.s3.amazonaws.com/assets/images/backgrounds/pattern-stripes.png) !important;
 }
 
