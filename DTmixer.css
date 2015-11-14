@@ -14,7 +14,7 @@
    Most of the basic styling elements and colour language from it has been
    transferred to this theme for DubTrack.
    
-   version 2.07 (11/14/15)
+   version 2.08 (11/14/15)
 */
 
 #main-loading,
@@ -590,26 +590,26 @@ HEADER FIGURE,
 }
 
 #chat .stream-item-content,
-#chat .system,
 .chat-welcome-message,
+#chat .system,
+#chat .chat-me-command-joined,
 #chat .chat-system-loading{
   padding-left: 16px !important;
   padding-right: 16px !important;
 }
 
-.chat-welcome-message{
+.chat-welcome-message,
+#chat .chat-me-command-joined{
   padding-top: 8px !Important;
   padding-bottom: 8px !Important;
 }
 
-#chat .image_row{
-  margin-left: 16px !Important;
+#chat .chat-me-command-joined{
+  min-height: auto !Important;
 }
 
-#chat .image_row,
-#chat LI P:first-child,
-#chat .chatDelete{
-  margin-top: 16px !Important;
+#chat .image_row{
+  margin-left: 16px !Important;
 }
 
 #chat .timeago,
