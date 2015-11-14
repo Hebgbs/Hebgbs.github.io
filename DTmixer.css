@@ -14,7 +14,7 @@
    Most of the basic styling elements and colour language from it has been
    transferred to this theme for DubTrack.
    
-   version 2.06 (11/14/15)
+   version 2.07 (11/14/15)
 */
 
 #main-loading,
@@ -32,11 +32,11 @@
 .mod-controllers-headers A:not(:hover):not(.active),
 #browser .sidebar LI:not(:hover):not(.selected),
 .content-videos LI .preview:not(:hover),
+#browser .playlist-type-select SPAN:not(:hover),
 #user_popover .usercontent:not(:hover) H3,
 #user_popover .ban:not(:hover) INPUT,
 .tcontent P:nth-child(2) A:not(:hover),
-.tcontent P:last-child A:not(:first-child):not(:hover)
-{
+.tcontent P:last-child A:not(:first-child):not(:hover){
   opacity: 0.7 !Important;
 }
 
@@ -56,7 +56,7 @@
 }
 
 .room-info-display-container SPAN I,
-#user_popover .ban INPUT,
+#user_popover .ban G,
 #addToPlaylistFloatContainer .playlist-list-action LI{
   font-weight: bold !Important;
 }
@@ -67,6 +67,7 @@
 
 INPUT,
 TEXTAREA,
+P,
 #main-loading,
 .loading,
 #warning BUTTON,
@@ -86,14 +87,13 @@ TEXTAREA,
 .videoquality-el.active-hd,
 .mod-controllers-headers A.active,
 .mods-controller-container .chat-command-list .actions,
-P,
 #chat .user-562323b2f31fff200030c322 .username,
 .mods-controller-container H2,
 .room-info-display-container H2,
 .room-info-display-container .description,
-#user_popover .dubs,
 .play-song-link .queue-info,
 .play-song-link *,
+#user_popover .dubs,
 .browser-content-header *:not(.close-browser),
 #browser .playlist_info A,
 #browser .queue-info A,
@@ -102,7 +102,10 @@ P,
 #browser .actions A:not(.remove_icon) SPAN,
 #browser .actions .remove_icon:not(:hover) SPAN,
 #browser .display-success,
+#browser .import-playlist *,
+SPAN.import-playlist,
 .icon-createplaylist,
+#import-playlist-container H3,
 #player-controller .currentSong,
 #player-controller .icon-playlist,
 #player-controller A.voted SPAN,
@@ -117,7 +120,7 @@ P,
 .tinner H2,
 .tinner P
 {
-  color: rgb(238, 238, 238) !important;
+  color: rgb(238, 0, 238) !important;
 }
 
 .create-playlist-form .icon-createplaylist,
@@ -168,6 +171,7 @@ P,
 #browser .sidebar LI SPAN,
 #browser .sidebar LI,
 .content-videos LI .preview,
+#browser .playlist-type-select SPAN,
 #user_popover .usercontent H3,
 #user_popover A:hover,
 #user_popover .ban INPUT,
@@ -295,6 +299,7 @@ A.dubdown:hover SPAN,
 #browser .playlist_info,
 #browser .queue_info,
 #browser .sidebar,
+#import-playlist-container,
 #user_popover,
 .container,
 .tinner{
@@ -334,6 +339,7 @@ A.dubup.voted,
 #browser .playlist_info A,
 #browser .queue_info A,
 #browser .sidebar .create-playlist,
+#browser .import-playlist,
 .playerPreview .loaded,
 .container .title,
 .container .control DIV,
@@ -366,6 +372,7 @@ A.dubup.voted,
 #browser .playlist_info A:hover,
 #browser .queue_info A:hover,
 #browser .display-error,
+#browser .import-playlist:hover,
 #player-controller .right,
 .container .control .cancel:hover,
 #d3vs-playlist-import-btn:hover{
@@ -726,6 +733,7 @@ HEADER FIGURE,
 #main-message-list,
 #browser .browser-content-header,
 #browser .actions A,
+.close-import-playlist,
 #user_popover DIV,
 #user_popover .ban INPUT{
   background-color: transparent !Important;
