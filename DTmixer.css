@@ -14,7 +14,7 @@
    Most of the basic styling elements and colour language from it has been
    transferred to this theme for DubTrack.
    
-   version 2.09 (11/14/15)
+   version 2.10 (11/13/15)
 */
 
 #main-loading,
@@ -70,6 +70,7 @@ TEXTAREA,
 P,
 #main-loading,
 .loading,
+.buffering,
 #warning BUTTON,
 .room-loby-header A,
 .room-item .user-count *,
@@ -363,6 +364,7 @@ A.dubup.voted,
 
 #main-loading,
 .loading,
+.buffering,
 .playerPreview .player:hover .replay,
 .room-loby-header,
 #warning BUTTON:hover,
