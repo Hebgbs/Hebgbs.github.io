@@ -14,7 +14,7 @@
    Most of the basic styling elements and colour language from it has been
    transferred to this theme for DubTrack.
    
-   version 2.04 (11/09/15)
+   version 2.06 (11/14/15)
 */
 
 #main-loading,
@@ -33,11 +33,16 @@
 #browser .sidebar LI:not(:hover):not(.selected),
 .content-videos LI .preview:not(:hover),
 #user_popover .usercontent:not(:hover) H3,
-#user_popover .ban:not(:hover) INPUT{
+#user_popover .ban:not(:hover) INPUT,
+.tcontent P:nth-child(2) A:not(:hover),
+.tcontent P:last-child A:not(:first-child):not(:hover)
+{
   opacity: 0.7 !Important;
 }
 
 #chat .chat-welcome-message,
+#chat .system,
+#chat .chat-system-loading,
 #user_popover .ban INPUT{
   text-align: center !Important;
 }
@@ -56,11 +61,12 @@
   font-weight: bold !Important;
 }
 
-INPUT#d3vs-playlist-import-btn{
-  font-size: 12px !important;
+#d3vs-playlist-import-btn{
+  font-size: 18px !important;
 }
 
 INPUT,
+TEXTAREA,
 #main-loading,
 .loading,
 #warning BUTTON,
@@ -81,6 +87,7 @@ INPUT,
 .mod-controllers-headers A.active,
 .mods-controller-container .chat-command-list .actions,
 P,
+#chat .user-562323b2f31fff200030c322 .username,
 .mods-controller-container H2,
 .room-info-display-container H2,
 .room-info-display-container .description,
@@ -105,7 +112,11 @@ P,
 #player-controller A.dubdown:not(:hover),
 .currentTime,
 .icon-heart:before,
-.container *{
+.container *,
+.tinner H1,
+.tinner H2,
+.tinner P
+{
   color: rgb(238, 238, 238) !important;
 }
 
@@ -163,7 +174,8 @@ P,
 #addToPlaylistFloatContainer .create-playlist-header,
 #addToPlaylistFloatContainer .playlist-list-action LI:hover,
 .for_content_ver,
-.for_content_c{
+.for_content_c,
+.tinner A{
   color: rgb(180, 201, 222) !important;
 }
 .chat-option-buttons *,
@@ -186,10 +198,13 @@ P,
   color: rgb(74, 108, 143) !important;
 }
 
-.chat-system-loading,
 .timeago,
 A.dubup:hover SPAN{
   color: rgb(50, 60, 83) !important;
+}
+
+#chat .chat-system-loading{
+  color: rgb(29, 69, 110) !important;
 }
 
 #warning H3,
@@ -239,6 +254,26 @@ A.dubdown:hover SPAN,
   color: rgb(28, 173, 235) !Important;
 }
 
+#main-menu-left,
+#chat LI:not(.user-562323b2f31fff200030c322) P,
+#chat .chat-welcome-message,
+#chat .system,
+#chat .chat-system-loading,
+#chat-txt-message,
+.input-room-users-search INPUT,
+#avatar-list,
+#private-messages .message-list{
+  text-shadow: 0px 0px 6px rgb(30, 41, 66),
+               0px 0px 6px rgb(30, 41, 66),
+               0px 0px 6px rgb(30, 41, 66) !important;
+}
+
+#chat LI .user-562323b2f31fff200030c322 P{
+  text-shadow: 0px 0px 6px rgb(29, 69, 110),
+               0px 0px 6px rgb(29, 69, 110),
+               0px 0px 6px rgb(29, 69, 110) !important;
+}
+
 .ui-slider-handle{
   background-color: rgb(238, 238, 238) !important;
 }
@@ -273,8 +308,10 @@ A.close-menu,
 
 #main_player,
 .play-song-link,
-.right_section,
 #addToPlaylistFloatContainer,
+.chat_tools,
+#chat LI,
+.pusher-chat-widget-input,
 .playerPreview,
 .playerPreview .close{
   background-color: rgba(30, 41, 66, 0.80) !Important;
@@ -307,7 +344,8 @@ A.dubup.voted,
 }
 .player_header SPAN,
 .mods-controller-container .skip-el,
-.edit-btn{
+.edit-btn,
+#metamod-btn{
   background-color: rgba(50, 60, 83, 0.80) !important;
 }
 #emoji-preview LI{
@@ -315,7 +353,7 @@ A.dubup.voted,
 }
 
 #main-loading,
-.loading :not(.loading-el),
+.loading,
 .playerPreview .player:hover .replay,
 .room-loby-header,
 #warning BUTTON:hover,
@@ -329,11 +367,14 @@ A.dubup.voted,
 #browser .queue_info A:hover,
 #browser .display-error,
 #player-controller .right,
-.container .control .cancel:hover{
+.container .control .cancel:hover,
+#d3vs-playlist-import-btn:hover{
   background-color: rgb(29, 69, 110) !important;
 }
 .player_header SPAN:hover,
-.edit-btn:hover{
+.edit-btn:hover,
+#chat LI.user-562323b2f31fff200030c322,
+#metamod-btn:hover{
   background-color: rgba(29, 69, 110, 0.80) !Important;
 }
 #emoji-preview LI:hover,
@@ -368,6 +409,20 @@ A.dubdown.voted,
 #browser .text-button.clear-queue:hover,
 .edit-btn.cancelUsername:hover{
   background-color: rgb(255, 45, 49) !important;
+}
+
+#main_avatar_room{
+  background-image: linear-gradient(to bottom,
+                                      transparent 50px,
+                                    rgba(30, 41, 66, 0.80) 50px,
+                                    rgba(30, 41, 66, 0.80) 100%) !important;
+}
+
+#chat .chat-options{
+  background-image: linear-gradient(to bottom,
+                                      transparent 56px,
+                                    rgba(30, 41, 66, 0.80) 56px,
+                                    rgba(30, 41, 66, 0.80) 100%) !important;
 }
 
 .room-item{
@@ -431,11 +486,19 @@ A.dubdown.voted,
 #addToPlaylistFloatContainer{
   border: 1px solid rgb(29, 69, 110) !important;
 }
-#user_popover A{
-  border-top: 1px solid rgb(29, 69, 110) !important;
+.chat-option-header,
+.hideImagesToggle,
+.chat-option-buttons-sound SPAN:first-child{
+  border-left: 1px solid rgb(29, 69, 110) !Important;
 }
+.chat-option-header,
+.clearChatToggle,
+.chat-option-buttons-sound SPAN:last-child,
 #user_popover .send-pm-message{
   border-right: 1px solid rgb(29, 69, 110) !Important;
+}
+#user_popover A{
+  border-top: 1px solid rgb(29, 69, 110) !important;
 }
 
 #new-message-input{
@@ -454,8 +517,8 @@ A.dubdown.voted,
   border-color: rgb(255, 45, 49) !important;
 }
 
-INPUT#d3vs-playlist-import-btn:hover{
-  box-shadow: inset 0px -2px 0px 0px rgb(74, 108, 143) !important;
+#chat LI:last-child{
+  box-shadow: 0px 1500px 0px 1500px rgba(30, 41, 66, 0.80) !important;
 }
 
 #roomFormUpdate BUTTON{
@@ -463,7 +526,8 @@ INPUT#d3vs-playlist-import-btn:hover{
 }
 
 #warning BUTTON,
-.mods-controller-container .skip-el{
+.mods-controller-container .skip-el,
+#d3vs-playlist-import-btn{
   border-radius: 20px !Important;
 }
 
@@ -471,13 +535,27 @@ INPUT#d3vs-playlist-import-btn:hover{
   border-radius: 17px !Important;
 }
 
-#d3vs-playlist-import-div INPUT,
+.tinner{
+  border-radius: 16px !Important;
+}
+
+.chat_tools{
+  border-radius: 16px 16px 0px 0px !important;
+}
+
+.pusher-chat-widget-input,
+#main_avatar_room,
+#chat .chat-options{
+  border-radius: 0px 0px 16px 16px !Important;
+}
+
+#d3vs-playlist-import-name,
 #d3vs-playlist-import-div TEXTAREA{
-  border-radius: 3px !important;
+  border-radius: 8px !important;
 }
 
 HEADER FIGURE,
-#chat .image_row,
+#chat LI:not(.user-562323b2f31fff200030c322) .image_row,
 #private-messages FIGURE,
 .pictureContainer,
 .updatePictureGif,
@@ -488,6 +566,56 @@ HEADER FIGURE,
 
 #emoji-preview{
   bottom: 56px !important;
+}
+
+#chat .ps-container{
+  top: -3px !Important;
+  height: calc(100% + 3px) !important;
+}
+
+#private-messages .ps-container{
+  top: -7px !Important;
+  height: calc(100% + 22px) !important;
+}
+
+#chat UL{
+  padding: 0px !Important;
+}
+
+#chat .stream-item-content,
+#chat .system,
+.chat-welcome-message,
+#chat .chat-system-loading{
+  padding-left: 16px !important;
+  padding-right: 16px !important;
+}
+
+.chat-welcome-message{
+  padding-top: 8px !Important;
+  padding-bottom: 8px !Important;
+}
+
+#chat .image_row{
+  margin-left: 16px !Important;
+}
+
+#chat .image_row,
+#chat LI P:first-child,
+#chat .chatDelete{
+  margin-top: 16px !Important;
+}
+
+#chat .timeago,
+#chat .chatDelete{
+  margin-right: 16px !Important;
+}
+
+#chat .chat-options{
+  height: 100% !Important;
+}
+
+.chat-option-header{
+  margin-top: 0px !Important;
 }
 
 #private-messages .search-results:before{
@@ -541,19 +669,19 @@ HEADER FIGURE,
   padding-right: 16px !Important;
 }
 
-#d3vs-playlist-import-btn{
-  padding-top: 8px !important;
-  padding-bottom: 8px !important;
-}
-
-#d3vs-playlist-import-code{
-  margin-top: 8px !important;
-  margin-bottom: 8px !important;
-}
-
 .playerPreview .progressContainer,
 .playerPreview .volume-control{
   border-color: transparent !Important;
+}
+
+#d3vs-playlist-import-code{
+  margin-top: 7px !important;
+  margin-bottom: 5px !important;
+}
+
+#d3vs-playlist-import-btn{
+  padding-top: 5px !Important;
+  padding-bottom: 4px !Important;
 }
 
 #warning BUTTON,
@@ -567,7 +695,8 @@ HEADER FIGURE,
 .edit-btn,
 #browser .actions A,
 .create-playlist INPUT,
-INPUT#d3vs-playlist-import-btn{
+#d3vs-playlist-import-btn,
+.tinner{
   border: none !important;
 }
 
@@ -584,12 +713,14 @@ INPUT#d3vs-playlist-import-btn{
   outline-style: none !Important;
 }
 
+.loading-el,
 .room-item,
 .room-item .current-song,
 .modal-header,
 .modal-footer,
 #main-menu-left,
 #main-menu-right,
+.right_section,
 .message-header,
 .message-details,
 #main-message-list,
