@@ -14,7 +14,7 @@
    Most of the basic styling elements and colour language from it has been
    transferred to this theme for DubTrack.
    
-   version 2.19 (11/16/15)
+   version 2.20 (11/16/15)
 */
 
 #main-loading,
@@ -154,11 +154,11 @@ SPAN.import-playlist,
 .room-info-display-container SPAN I,
 .username-handle,
 .creator .username,
-.isCo-owner .username,
 .creator .currentDJ,
 .creator .username:after,
 .creator .currentDJ :after,
 .co-owner .username,
+.isCo-owner .username,
 .co-owner .currentDJ,
 .co-owner .username:after,
 .currentDJ .username:after,
@@ -728,7 +728,7 @@ A.dubdown.voted,
 #chat .user-55ff8382c1bc060300c708d3.isResident-dj .username,
 #chat .user-55ff8382c1bc060300c708d3.isDj .username,
 #chat .user-55ff8382c1bc060300c708d3.isVip .username{
-  color: rgb(74, 143, 774) !Important;
+  color: rgb(74, 143, 74) !Important;
 }
 #chat .user-55ff8382c1bc060300c708d3 P{
   text-shadow: 0px 0px 6px rgb(31, 66, 38),
@@ -739,7 +739,6 @@ A.dubdown.voted,
   background-color: rgba(31, 66, 38, 0.80) !Important;
 }
 
-/* Remove / Disappear */
 .chat-option-header{
   margin-top: 0px !Important;
 }
