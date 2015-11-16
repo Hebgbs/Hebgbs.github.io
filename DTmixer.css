@@ -14,7 +14,7 @@
    Most of the basic styling elements and colour language from it has been
    transferred to this theme for DubTrack.
    
-   version 2.11 (11/15/15)
+   version 2.12 (11/16/15)
 */
 
 #main-loading,
@@ -566,16 +566,6 @@ A.dubdown.voted,
   border-radius: 8px !important;
 }
 
-HEADER FIGURE,
-#chat LI:not(.user-562323b2f31fff200030c322) .image_row,
-#private-messages FIGURE,
-.pictureContainer,
-.updatePictureGif,
-#user_popover FIGURE,
-#user_popover .ban INPUT{
-  border-radius: 0px !Important;
-}
-
 #emoji-preview{
   bottom: 56px !important;
 }
@@ -588,10 +578,6 @@ HEADER FIGURE,
 #private-messages .ps-container{
   top: -7px !Important;
   height: calc(100% + 22px) !important;
-}
-
-#chat UL{
-  padding: 0px !Important;
 }
 
 #chat .stream-item-content,
@@ -629,10 +615,6 @@ HEADER FIGURE,
 
 #chat .chat-options{
   height: 100% !Important;
-}
-
-.chat-option-header{
-  margin-top: 0px !Important;
 }
 
 #private-messages .search-results:before{
@@ -686,6 +668,15 @@ HEADER FIGURE,
   padding-right: 16px !Important;
 }
 
+#user_popover .ban INPUT{
+  border-left: none !Important;
+  border-right: none !Important;
+  border-top: none !Important;
+  padding-left: 0px !Important;
+  padding-right: 0px !Important;
+  width: 38px !Important;
+}
+
 .playerPreview .progressContainer,
 .playerPreview .volume-control{
   border-color: transparent !Important;
@@ -699,6 +690,27 @@ HEADER FIGURE,
 #d3vs-playlist-import-btn{
   padding-top: 5px !Important;
   padding-bottom: 4px !Important;
+}
+
+.dubx LI .stream-item-content .image_row,
+.dubx LI .chatDelete{
+  top: 0px;
+}
+
+.chat-option-header{
+  margin-top: 0px !Important;
+}
+
+#chat UL{
+  padding: 0px !Important;
+}
+
+.dubx #chat LI .activity-row,
+.dubx #chat LI.chat-system-loading,
+.dubx #chat LI.system,
+.dubx #chat LI.system-error,
+.dubx #chat LI.chat-me-command-joined{
+  padding-top: 0px;
 }
 
 #addToPlaylistFloatContainer .create-playlist-header SPAN{
@@ -721,13 +733,14 @@ HEADER FIGURE,
   border: none !important;
 }
 
+HEADER FIGURE,
+#chat LI:not(.user-562323b2f31fff200030c322) .image_row,
+#private-messages FIGURE,
+.pictureContainer,
+.updatePictureGif,
+#user_popover FIGURE,
 #user_popover .ban INPUT{
-  border-left: none !Important;
-  border-right: none !Important;
-  border-top: none !Important;
-  padding-left: 0px !Important;
-  padding-right: 0px !Important;
-  width: 38px !Important;
+  border-radius: 0px !Important;
 }
 
 *{
