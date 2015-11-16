@@ -14,7 +14,7 @@
    Most of the basic styling elements and colour language from it has been
    transferred to this theme for DubTrack.
    
-   version 2.17 (11/16/15)
+   version 2.18 (11/16/15)
 */
 
 #main-loading,
@@ -266,7 +266,7 @@ A.dubdown:hover SPAN,
 }
 
 #main-menu-left,
-#chat LI:not(.user-562323b2f31fff200030c322) P,
+#chat LI P,
 #chat .chat-welcome-message,
 #chat .system,
 #chat .chat-system-loading,
@@ -282,7 +282,7 @@ A.dubdown:hover SPAN,
                0px 0px 6px rgb(30, 41, 66) !important;
 }
 
-#chat LI .user-562323b2f31fff200030c322 P{
+#chat LI.user-562323b2f31fff200030c322 P{
   text-shadow: 0px 0px 6px rgb(29, 69, 110),
                0px 0px 6px rgb(29, 69, 110),
                0px 0px 6px rgb(29, 69, 110) !important;
@@ -695,6 +695,20 @@ A.dubdown.voted,
 #d3vs-playlist-import-btn{
   padding-top: 5px !Important;
   padding-bottom: 4px !Important;
+}
+
+/* User-specific colours */
+  /* Look RC, I know. Just let him have it okay? */
+#chat .user-5601698c2d5038030094db14 .username{
+  color: rgb(143, 74, 143) !Important;
+}
+#chat LI.user-5601698c2d5038030094db14 P{
+  text-shadow: 0px 0px 6px rgb(49, 31, 66),
+               0px 0px 6px rgb(49, 31, 66),
+               0px 0px 6px rgb(49, 31, 66) !important;
+}
+#chat LI.user-5601698c2d5038030094db14{
+  background-color: rgba(49, 31, 66, 0.80) !Important;
 }
 
 .chat-option-header{
