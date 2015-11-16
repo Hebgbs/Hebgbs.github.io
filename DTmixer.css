@@ -14,7 +14,7 @@
    Most of the basic styling elements and colour language from it has been
    transferred to this theme for DubTrack.
    
-   version 2.13 (11/16/15)
+   version 2.14 (11/16/15)
 */
 
 #main-loading,
@@ -681,11 +681,6 @@ A.dubdown.voted,
   width: 38px !Important;
 }
 
-.playerPreview .progressContainer,
-.playerPreview .volume-control{
-  border-color: transparent !Important;
-}
-
 #d3vs-playlist-import-code{
   margin-top: 7px !important;
   margin-bottom: 5px !important;
@@ -705,15 +700,7 @@ A.dubdown.voted,
   padding: 0px !Important;
 }
 
-.dubx #chat .chat-container .chat-messages .chat-main LI .stream-item-content .image_row,
-.dubx #chat .chat-container .chat-messages .chat-main LI .chatDelete{
-  top: 0px;
-}
-
-.dubx #chat .chat-container .chat-messages .chat-main LI .activity-row{
-  padding-top: 0px;
-}
-
+.dubx #chat .chat-container .chat-messages .chat-main LI .activity-row
 .dubx #chat .chat-container .chat-messages .chat-main LI.chat-system-loading,
 .dubx #chat .chat-container .chat-messages .chat-main LI.system,
 .dubx #chat .chat-container .chat-messages .chat-main LI.system-error,
@@ -721,8 +708,22 @@ A.dubdown.voted,
   padding-top: 0px;
 }
 
+.dubx #chat .chat-container .chat-messages .chat-main LI .stream-item-content .image_row,
+.dubx #chat .chat-container .chat-messages .chat-main LI .chatDelete{
+  top: 0px;
+}
+
+.dubx .chat-main.splitChat li:nth-child(2n) .chatDelete{
+  right: 0px !important;
+}
+
 #addToPlaylistFloatContainer .create-playlist-header SPAN{
   text-shadow: none !Important;
+}
+
+.playerPreview .progressContainer,
+.playerPreview .volume-control{
+  border-color: transparent !Important;
 }
 
 #warning BUTTON,
