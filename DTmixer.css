@@ -14,7 +14,7 @@
    Most of the basic styling elements and colour language from it has been
    transferred to this theme for DubTrack.
    
-   version 2.15 (11/16/15)
+   version 2.16 (11/16/15)
 */
 
 #main-loading,
@@ -194,7 +194,8 @@ SPAN.import-playlist,
 #player-controller A.add-to-playlist:hover .icon-heart:before,
 .content-videos .actions .add_to_playlist:hover .icon-heart:before,
 :not(.creator):not(.co-owner):not(.manager):not(.mod):not(.vip):not(.resident-dj).currentDJ .username,
-:not(.creator):not(.co-owner):not(.manager):not(.mod):not(.vip):not(.resident-dj).currentDJ .username:after,
+:not(.creator):not(.co-owner):not(.manager):not(.mod):not(.vip):not(.resident-dj).currentDJ,
+.username:after,
 .vip .username,
 .vip .username:after,
 .resident-dj .username,
