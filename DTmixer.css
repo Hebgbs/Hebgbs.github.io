@@ -617,13 +617,14 @@ A.dubdown.voted,
   margin-right: 16px !Important;
 }
 
+#chat .stream-item-content,
 #chat .image_row,
 #chat .chatDelete{
   margin-top: 16px !Important;
 }
 
-#chat .stream-item-content{
-  margin-top: 16px !Important;
+#chat .chat-me-command-joined .chatDelete{
+  margin-top: 13px !Important;
 }
 
 #chat .chat-options{
