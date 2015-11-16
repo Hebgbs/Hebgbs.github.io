@@ -14,7 +14,7 @@
    Most of the basic styling elements and colour language from it has been
    transferred to this theme for DubTrack.
    
-   version 2.14 (11/16/15)
+   version 2.15 (11/16/15)
 */
 
 #main-loading,
@@ -599,10 +599,6 @@ A.dubdown.voted,
   min-height: auto !Important;
 }
 
-#chat .stream-item-content{
-  padding-top: 16px !Important;
-}
-
 #chat .image_row{
   margin-left: 16px !Important;
 }
@@ -615,6 +611,10 @@ A.dubdown.voted,
 #chat .image_row,
 #chat .chatDelete{
   margin-top: 16px !Important;
+}
+
+#chat .stream-item-content{
+  margin-top: 7px !Important;
 }
 
 #chat .chat-options{
