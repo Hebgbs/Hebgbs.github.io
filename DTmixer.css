@@ -14,7 +14,7 @@
    Most of the basic styling elements and colour language from it has been
    transferred to this theme for DubTrack.
    
-   version 2.12 (11/16/15)
+   version 2.13 (11/16/15)
 */
 
 #main-loading,
@@ -605,12 +605,16 @@ A.dubdown.voted,
 
 #chat .image_row{
   margin-left: 16px !Important;
-  margin-top: 16px !Important;
 }
 
 #chat .timeago,
 #chat .chatDelete{
   margin-right: 16px !Important;
+}
+
+#chat .image_row,
+#chat .chatDelete{
+  margin-top: 16px !Important;
 }
 
 #chat .chat-options{
@@ -692,24 +696,28 @@ A.dubdown.voted,
   padding-bottom: 4px !Important;
 }
 
-.dubx LI .stream-item-content .image_row,
-.dubx LI .chatDelete{
-  top: 0px;
-}
-
 .chat-option-header{
   margin-top: 0px !Important;
 }
 
-#chat UL{
+#chat UL,
+#chat .system{
   padding: 0px !Important;
 }
 
-.dubx #chat LI .activity-row,
-.dubx #chat LI.chat-system-loading,
-.dubx #chat LI.system,
-.dubx #chat LI.system-error,
-.dubx #chat LI.chat-me-command-joined{
+.dubx #chat .chat-container .chat-messages .chat-main LI .stream-item-content .image_row,
+.dubx #chat .chat-container .chat-messages .chat-main LI .chatDelete{
+  top: 0px;
+}
+
+.dubx #chat .chat-container .chat-messages .chat-main LI .activity-row{
+  padding-top: 0px;
+}
+
+.dubx #chat .chat-container .chat-messages .chat-main LI.chat-system-loading,
+.dubx #chat .chat-container .chat-messages .chat-main LI.system,
+.dubx #chat .chat-container .chat-messages .chat-main LI.system-error,
+.dubx #chat .chat-container .chat-messages .chat-main LI.chat-me-command-joined{
   padding-top: 0px;
 }
 
