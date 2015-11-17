@@ -14,7 +14,7 @@
    Most of the basic styling elements and colour language from it has been
    transferred to this theme for DubTrack.
    
-   version 2.20 (11/16/15)
+   version 2.21 (11/16/15)
 */
 
 #main-loading,
@@ -189,6 +189,7 @@ SPAN.import-playlist,
 #user_popover .ban INPUT,
 #addToPlaylistFloatContainer .create-playlist-header,
 #addToPlaylistFloatContainer .playlist-list-action LI:hover,
+#chat .user-562323b2f31fff200030c322 .timeago,
 .for_content_ver,
 .for_content_c,
 .tinner A{
@@ -212,12 +213,12 @@ SPAN.import-playlist,
   color: rgb(74, 108, 143) !important;
 }
 
-.timeago,
 A.dubup:hover SPAN{
   color: rgb(50, 60, 83) !important;
 }
 
-#chat .chat-system-loading{
+#chat .chat-system-loading,
+.timeago{
   color: rgb(29, 69, 110) !important;
 }
 
@@ -285,7 +286,7 @@ A.dubdown:hover SPAN,
                0px 0px 6px rgb(30, 41, 66) !important;
 }
 
-#chat LI.user-562323b2f31fff200030c322 P{
+#chat .user-562323b2f31fff200030c322 P{
   text-shadow: 0px 0px 6px rgb(29, 69, 110),
                0px 0px 6px rgb(29, 69, 110),
                0px 0px 6px rgb(29, 69, 110) !important;
@@ -394,7 +395,7 @@ A.dubup.voted,
 }
 .player_header SPAN:hover,
 .edit-btn:hover,
-#chat LI.user-562323b2f31fff200030c322,
+#chat .user-562323b2f31fff200030c322,
 #metamod-btn:hover{
   background-color: rgba(29, 69, 110, 0.80) !Important;
 }
@@ -713,12 +714,15 @@ A.dubdown.voted,
 #chat .user-5601698c2d5038030094db14.isVip .username{
   color: rgb(143, 74, 143) !Important;
 }
+#chat .user-5601698c2d5038030094db14 .timeago{
+  color: rgb(143, 109, 143) !Important;
+}
 #chat .user-5601698c2d5038030094db14 P{
   text-shadow: 0px 0px 6px rgb(49, 31, 66),
                0px 0px 6px rgb(49, 31, 66),
                0px 0px 6px rgb(49, 31, 66) !important;
 }
-#chat .user-5601698c2d5038030094db14{
+#chat LI.user-5601698c2d5038030094db14{
   background-color: rgba(49, 31, 66, 0.80) !Important;
 }
   /* hoarse */
@@ -731,13 +735,20 @@ A.dubdown.voted,
 #chat .user-55ff8382c1bc060300c708d3.isVip .username{
   color: rgb(74, 143, 74) !Important;
 }
+#chat .user-55ff8382c1bc060300c708d3 .timeago{
+  color: rgb(109, 143, 109) !Important;
+}
 #chat .user-55ff8382c1bc060300c708d3 P{
   text-shadow: 0px 0px 6px rgb(31, 66, 38),
                0px 0px 6px rgb(31, 66, 38),
                0px 0px 6px rgb(31, 66, 38) !important;
 }
-#chat .user-55ff8382c1bc060300c708d3{
+#chat LI.user-55ff8382c1bc060300c708d3{
   background-color: rgba(31, 66, 38, 0.80) !Important;
+}
+  /* clever_nevers */
+#chat LI.user-55ff9768196f170300cc0c12{
+  background-color: rgba(22, 31, 49, 0.80) !important;
 }
 
 .chat-option-header{
