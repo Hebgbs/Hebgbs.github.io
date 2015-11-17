@@ -4,17 +4,18 @@
    so specific users and bots can stand out in your community theme.
 */
 
-/* Spacing test for debugging */
+/* Spacing test for debugging *//*
 #chat LI{
   border: 1px solid white !Important;
-}
+}*/
 
 /* Background colour */
 #main_player,
 .play-song-link,
 .chat_tools,
 #chat LI,
-.pusher-chat-widget-input{
+.pusher-chat-widget-input,
+.chat-options{
   background-color: rgba(0, 0, 0, 0.70) !important;
 }
   /* Cover for last post */
