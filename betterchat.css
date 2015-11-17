@@ -1,0 +1,150 @@
+/* The aim of this code is to vastly improve the right section and apply specific user
+   colour in an easy and convenient way. You'll want to use this if you don't care for
+   DubX's default settings, and if you are intending to add any colour for highlight
+   so specific users and bots can stand out in your community theme.
+*/
+
+/* Spacing test for debugging */
+#chat LI{
+  border: 1px solid white !Important;
+}
+
+/* Background colour */
+#main_player,
+.play-song-link,
+.chat_tools,
+#chat LI,
+.pusher-chat-widget-input{
+  background-color: rgba(0, 0, 0, 0.70) !important;
+}
+  /* Cover for last post */
+    /* This only applies for the first few messages but is always in use */
+#chat LI:last-child{
+  box-shadow: 0px 1500px 0px 1500px rgba(0, 0, 0 , 0.70) !important;
+                                    /* Must match #chat LI! */
+}
+
+/* Positioning and sizing */
+  /* text */
+#chat .chat-welcome-message,
+#chat .system,
+#chat .chat-system-loading{
+  text-align: center !Important;
+}
+  /* Chat avatars and delete button */
+.dubx #chat .chat-container .chat-messages .chat-main LI .stream-item-content .image_row,
+.dubx #chat .chat-container .chat-messages .chat-main LI .chatDelete{
+  top: 0px;
+}
+  /* Chat message object positioning */
+#chat .stream-item-content,
+#chat .image_row,
+#chat .chatDelete{
+  margin-top: 16px !Important;
+}
+#chat .image_row{
+  margin-left: 16px !Important;
+}
+
+#chat .timeago,
+#chat .chatDelete{
+  margin-right: 16px !Important;
+}
+
+#chat .chat-me-command-joined .chatDelete{
+  margin-top: 13px !Important;
+}
+
+.chat-welcome-message,
+#chat .chat-me-command-joined{
+  padding-top: 8px !Important;
+  padding-bottom: 8px !Important;
+}
+
+#chat .stream-item-content,
+.chat-welcome-message,
+#chat .system,
+#chat .chat-me-command-joined,
+#chat .chat-system-loading{
+  padding-left: 16px !important;
+  padding-right: 16px !important;
+}
+
+.chat-welcome-message,
+#chat .chat-me-command-joined{
+  padding-top: 8px !Important;
+  padding-bottom: 8px !Important;
+}
+    /* Emote height override */
+#chat .chat-me-command-joined{
+  min-height: auto !Important;
+}
+  /* Chat options section */
+#chat .chat-options{
+  height: 100% !Important;
+}
+  /* Chat and PM gap removal */
+#chat .ps-container{
+  top: -3px !Important;
+  height: calc(100% + 3px) !important;
+}
+
+#private-messages .ps-container{
+  top: -7px !Important;
+  height: calc(100% + 22px) !important;
+}
+  /* Undoing DubX defaults */
+.dubx #chat .chat-container .chat-messages .chat-main LI .stream-item-content .image_row,
+.dubx #chat .chat-container .chat-messages .chat-main LI .chatDelete{
+  top: 0px;
+}
+.dubx .chat-main.splitChat li:nth-child(2n) .chatDelete{
+  right: 0px !important;
+}
+
+/* Border radius */
+.chat_tools{
+  border-radius: 16px 16px 0px 0px !important;
+}
+
+.pusher-chat-widget-input,
+#main_avatar_room,
+#chat .chat-options{
+  border-radius: 0px 0px 16px 16px !Important;
+}
+
+/* Remove / Hide */
+  /* Hide right-side colour (enables selective user colouring) */
+.right_section{
+  background-color: transparent !important;
+}
+  /* Chat padding */
+#chat UL,
+#chat .system{
+  padding: 0px !Important;
+}
+  /* Undoing DubX defaults */
+.dubx #chat .chat-container .chat-messages .chat-main LI .activity-row,
+.dubx #chat .chat-container .chat-messages .chat-main LI.chat-system-loading,
+.dubx #chat .chat-container .chat-messages .chat-main LI.system,
+.dubx #chat .chat-container .chat-messages .chat-main LI.system-error,
+.dubx #chat .chat-container .chat-messages .chat-main LI.chat-me-command-joined{
+  padding-top: 0px;
+}
+
+/* User-specific colours
+     Below you can specify colours for specific users. While placement of this code doesn't
+     necessarily matter, keeping user-specific changes in a single place makes finding them
+     a bit easier than otherwise. Use whatever colours, gradients and images you want!
+
+     Below are example selectors, commented for obvious reasons.
+  */
+/* #chat LI.user-1ARANDOMUSERIDENTNUMBER0 *//* Whole chat item */
+/* #chat LI .is? *//* Ranked users when DubX is used. Replace "?" with:
+                      Vip, Dj, Resident-dj, Mod, Manager, Co-owner */
+/* .user-1ARANDOMUSERIDENTNUMBER0 .username *//* Chat username */
+/* .user-1ARANDOMUSERIDENTNUMBER0 P *//* Chat text */
+/* .user-1ARANDOMUSERIDENTNUMBER0 .timeago *//* Chat since when */
+.dummy{
+  display: none;
+}
