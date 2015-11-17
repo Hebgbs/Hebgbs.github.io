@@ -22,8 +22,16 @@
     /* This only applies for the first few messages but is always in use */
 #chat LI:last-child{
   box-shadow: 0px 1500px 0px 1500px rgba(0, 0, 0 , 0.70) !important;
-                                    /* Must match #chat LI! */
-}
+}                                   /* Must match #chat LI! */
+
+  /* Settings for avatar list */
+    /* Necessary because background color can't be adjusted for it. */
+#main_avatar_room{
+  background-image: linear-gradient(to bottom,
+                                      transparent 50px,
+                                    rgba(0, 0, 0, 0.70) 50px,
+                                    rgba(0, 0, 0, 0.70) 100%) !important;
+}                                   /* Must match #chat LI! */
 
 /* Positioning and sizing */
   /* text */
@@ -133,19 +141,15 @@
   padding-top: 0px;
 }
 
-/* User-specific colours
-     Below you can specify colours for specific users. While placement of this code doesn't
-     necessarily matter, keeping user-specific changes in a single place makes finding them
-     a bit easier than otherwise. Use whatever colours, gradients and images you want!
-
-     Below are example selectors, commented for obvious reasons.
-  */
-/* #chat LI.user-1ARANDOMUSERIDENTNUMBER0 *//* Whole chat item */
-/* #chat LI .is? *//* Ranked users when DubX is used. Replace "?" with:
-                      Vip, Dj, Resident-dj, Mod, Manager, Co-owner */
-/* .user-1ARANDOMUSERIDENTNUMBER0 .username *//* Chat username */
-/* .user-1ARANDOMUSERIDENTNUMBER0 P *//* Chat text */
-/* .user-1ARANDOMUSERIDENTNUMBER0 .timeago *//* Chat since when */
-.dummy{
-  display: none;
+/* User-specific colours */
+#chat .user-560338dfb585d003001b2b09{
+  background-color: rgba(0, 64, 128, 0.80) !important;
+}
+#chat .user-560338dfb585d003001b2b09 .username{
+  color: rgb(0, 128, 255) !Important;
+}
+#chat .user-560338dfb585d003001b2b09 P{
+  text-shadow: 0px 0px 6px rgb(0, 64, 128),
+               0px 0px 6px rgb(0, 64, 128),
+               0px 0px 6px rgb(0, 64, 128) !important;
 }
