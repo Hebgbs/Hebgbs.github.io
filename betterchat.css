@@ -141,15 +141,19 @@
   padding-top: 0px;
 }
 
-/* User-specific colours */
-#chat .user-560338dfb585d003001b2b09{
-  background-color: rgba(0, 64, 128, 0.80) !important;
-}
-#chat .user-560338dfb585d003001b2b09 .username{
-  color: rgb(0, 128, 255) !Important;
-}
-#chat .user-560338dfb585d003001b2b09 P{
-  text-shadow: 0px 0px 6px rgb(0, 64, 128),
-               0px 0px 6px rgb(0, 64, 128),
-               0px 0px 6px rgb(0, 64, 128) !important;
+/* User-specific colours
+     Below you can specify colours for specific users. While placement of this code doesn't
+     necessarily matter, keeping user-specific changes in a single place makes finding them
+     a bit easier than otherwise. Use whatever colours, gradients and images you want!
+
+     Below are example selectors, commented for obvious reasons.
+  */
+/* #chat LI.user-1ARANDOMUSERIDENTNUMBER0 *//* Whole chat item */
+/* #chat LI .is? *//* Ranked users when DubX is used. Replace "?" with:
+                      Vip, Dj, Resident-dj, Mod, Manager, Co-owner */
+/* .user-1ARANDOMUSERIDENTNUMBER0 .username *//* Chat username */
+/* .user-1ARANDOMUSERIDENTNUMBER0 P *//* Chat text */
+/* .user-1ARANDOMUSERIDENTNUMBER0 .timeago *//* Chat since when */
+.dummy{
+  display: none;
 }
