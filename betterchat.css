@@ -2,6 +2,10 @@
    colour in an easy and convenient way. You'll want to use this if you don't care for
    DubX's default settings, and if you are intending to add any colour for highlight
    so specific users and bots can stand out in your community theme.
+
+   This update resolves the issue with the userlist. Planned future changes:
+   > Removal of the background gradient hack in favour for background colour
+   > Selective userlist colour
 */
 
 /* Spacing test for debugging *//*
@@ -15,7 +19,7 @@
 .chat_tools,
 #chat LI,
 .pusher-chat-widget-input,
-.chat-options{
+.right_section #main_avatar_room{
   background-color: rgba(0, 0, 0, 0.70) !important;
 }
   /* Cover for last post */
@@ -26,7 +30,7 @@
 
   /* Settings for avatar list */
     /* Necessary because background color can't be adjusted for it. */
-#main_avatar_room{
+.chat-options{
   background-image: linear-gradient(to bottom,
                                       transparent 50px,
                                     rgba(0, 0, 0, 0.70) 50px,
