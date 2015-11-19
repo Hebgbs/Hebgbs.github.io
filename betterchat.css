@@ -2,10 +2,6 @@
    colour in an easy and convenient way. You'll want to use this if you don't care for
    DubX's default settings, and if you are intending to add any colour for highlight
    so specific users and bots can stand out in your community theme.
-
-   This update resolves the issue with the userlist. Planned future changes:
-   > Removal of the background gradient hack in favour for background colour
-   > Selective userlist colour
 */
 
 /* Spacing test for debugging *//*
@@ -30,12 +26,12 @@
 
   /* Settings for avatar list */
     /* Necessary because background color can't be adjusted for it. */
-.chat-options{
+/*#main_avatar_room{
   background-image: linear-gradient(to bottom,
                                       transparent 50px,
                                     rgba(0, 0, 0, 0.70) 50px,
                                     rgba(0, 0, 0, 0.70) 100%) !important;
-}                                   /* Must match #chat LI! */
+}*/                                   /* Must match #chat LI! */
 
 /* Positioning and sizing */
   /* text */
@@ -43,6 +39,10 @@
 #chat .system,
 #chat .chat-system-loading{
   text-align: center !Important;
+}
+  /* Chat tools */
+.chat_tools SPAN{
+  height: 51px !Important;
 }
   /* Chat avatars and delete button */
 .dubx #chat .chat-container .chat-messages .chat-main LI .stream-item-content .image_row,
@@ -91,6 +91,16 @@
     /* Emote height override */
 #chat .chat-me-command-joined{
   min-height: auto !Important;
+}
+  /* User list section */
+.avatar_tools{
+  top: 13px !Important;
+}
+
+#main_avatar_room{
+  margin-top: 51px !Important;
+  padding-top: 53px !Important;
+  height: calc(100% - 51px) !important;
 }
   /* Chat options section */
 #chat .chat-options{
@@ -158,6 +168,3 @@
 /* .user-1ARANDOMUSERIDENTNUMBER0 .username *//* Chat username */
 /* .user-1ARANDOMUSERIDENTNUMBER0 P *//* Chat text */
 /* .user-1ARANDOMUSERIDENTNUMBER0 .timeago *//* Chat since when */
-.dummy{
-  display: none;
-}
