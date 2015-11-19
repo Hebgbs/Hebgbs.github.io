@@ -24,14 +24,14 @@
   box-shadow: 0px 1500px 0px 1500px rgba(0, 0, 0 , 0.70) !important;
 }                                   /* Must match #chat LI! */
 
-  /* Settings for avatar list */
+  /* Settings for chat options */
     /* Necessary because background color can't be adjusted for it. */
-/*#main_avatar_room{
+.chat-options{
   background-image: linear-gradient(to bottom,
-                                      transparent 50px,
-                                    rgba(0, 0, 0, 0.70) 50px,
+                                      transparent 51px,
+                                    rgba(0, 0, 0, 0.70) 51px,
                                     rgba(0, 0, 0, 0.70) 100%) !important;
-}*/                                   /* Must match #chat LI! */
+}                                   /* Must match #chat LI! */
 
 /* Positioning and sizing */
   /* text */
@@ -106,6 +106,7 @@
 #chat .chat-options{
   height: 100% !Important;
 }
+
   /* Chat and PM gap removal */
 #chat .ps-container{
   top: -3px !Important;
@@ -168,3 +169,6 @@
 /* .user-1ARANDOMUSERIDENTNUMBER0 .username *//* Chat username */
 /* .user-1ARANDOMUSERIDENTNUMBER0 P *//* Chat text */
 /* .user-1ARANDOMUSERIDENTNUMBER0 .timeago *//* Chat since when */
+.dummy{
+  display: none;
+}
