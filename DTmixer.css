@@ -14,7 +14,7 @@
    Most of the basic styling elements and colour language from it has been
    transferred to this theme for DubTrack.
    
-   version 2.26 (11/24/15)
+   version 2.28 (11/24/15)
 */
 
 #main-loading,
@@ -85,9 +85,6 @@ P,
 .videoquality-el.active-hd,
 .mod-controllers-headers A.active,
 .mods-controller-container .chat-command-list .actions,
-#chat .user-562323b2f31fff200030c322 .username,
-#avatar-list .userid-562323b2f31fff200030c322 .username,
-#avatar-list .userid-562323b2f31fff200030c322 .username:after,
 .mods-controller-container H2,
 .room-info-display-container H2,
 .room-info-display-container .description,
@@ -116,6 +113,12 @@ SPAN.import-playlist,
 .currentTime,
 .icon-heart:before,
 .container *,
+#chat .user-562323b2f31fff200030c322 .username,
+#chat .user-560354e8e863210300468f71 .username,
+#avatar-list .userid-562323b2f31fff200030c322 .username,
+#avatar-list .userid-560354e8e863210300468f71 .username,
+#avatar-list .userid-562323b2f31fff200030c322 .username:after,
+#avatar-list .userid-560354e8e863210300468f71 .username:after,
 .tinner H1,
 .tinner H2,
 .tinner P
@@ -189,7 +192,9 @@ SPAN.import-playlist,
 #addToPlaylistFloatContainer .create-playlist-header,
 #addToPlaylistFloatContainer .playlist-list-action LI:hover,
 #chat .user-562323b2f31fff200030c322 .timeago,
+#chat .user-560354e8e863210300468f71 .timeago,
 #avatar-list .userid-562323b2f31fff200030c322 .dubs,
+#avatar-list .userid-560354e8e863210300468f71 .dubs,
 .for_content_ver,
 .for_content_c,
 .tinner A{
@@ -368,7 +373,9 @@ A.dubup.voted,
 .player_header SPAN:hover,
 .edit-btn:hover,
 #chat .user-562323b2f31fff200030c322,
+#chat .user-560354e8e863210300468f71,
 #avatar-list .userid-562323b2f31fff200030c322,
+#avatar-list .userid-560354e8e863210300468f71,
 #metamod-btn:hover{
   background-color: rgba(29, 69, 110, 0.80) !Important;
 }
