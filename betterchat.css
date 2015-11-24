@@ -2,12 +2,11 @@
    colour in an easy and convenient way. You'll want to use this if you don't care for
    DubX's default settings, and if you are intending to add any colour for highlight
    so specific users and bots can stand out in your community theme.
-*/
 
-/* Spacing test for debugging *//*
-#chat LI{
-  border: 1px solid white !Important;
-}*/
+   Thanks to the people who haunt forum.userstyles.org for helping me better
+   understand how box-shadow works. You can view that entire discussion here:
+   https://forum.userstyles.org/discussion/comment/100659
+*/
 
 /* Background colour */
 #main_player,
@@ -15,52 +14,59 @@
 .chat_tools,
 #chat LI,
 .pusher-chat-widget-input,
-.right_section #main_avatar_room{
+.avatar_tools,
+#main_avatar_room LI,
+.chat-option-header,
+.chat-option-buttons SPAN{
   background-color: rgba(0, 0, 0, 0.70) !important;
 }
-  /* Cover for last post */
-    /* This only applies for the first few messages but is always in use */
-#chat LI:last-child{
-  box-shadow: 0px 1500px 0px 1500px rgba(0, 0, 0 , 0.70) !important;
-}                                   /* Must match #chat LI! */
-
-  /* Settings for chat options */
-    /* Necessary because background color can't be adjusted for it. */
+  /* Color-match the below with the above */
+    /* Bottom filler */
+#chat LI:last-child,
+#avatar-list LI:last-child{
+  box-shadow: 0 1500px 0 1500px rgba(0, 0, 0, 0.70) !Important;
+}
+    /* Bottom for user list */
+#main_avatar_room{
+  border-bottom: 16px solid rgba(0, 0, 0, 0.70) !important;
+}
+    /* Background hack for options */
 .chat-options{
   background-image: linear-gradient(to bottom,
-                                      transparent 51px,
-                                    rgba(0, 0, 0, 0.70) 51px,
-                                    rgba(0, 0, 0, 0.70) 100%) !important;
-}                                   /* Must match #chat LI! */
+                                    transparent 240px,
+                                    rgba(0, 0, 0, 0.70) 240px,
+                                    rgba(0, 0, 0, 0.70) 100%) !Important;
+}
 
 /* Positioning and sizing */
-  /* text */
 #chat .chat-welcome-message,
 #chat .system,
 #chat .chat-system-loading{
   text-align: center !Important;
 }
-  /* Chat tools */
+
 .chat_tools SPAN{
-  height: 51px !Important;
+  height: 50px !Important;
 }
-  /* Chat avatars and delete button */
+
 .dubx #chat .chat-container .chat-messages .chat-main LI .stream-item-content .image_row,
-.dubx #chat .chat-container .chat-messages .chat-main LI .chatDelete{
-  top: 0px;
+.dubx #chat .chat-container .chat-messages .chat-main LI .chatDelete,
+.avatar_tools{
+  top: 0px !Important;
 }
-  /* Chat message object positioning */
 #chat .stream-item-content,
 #chat .image_row,
 #chat .chatDelete{
   margin-top: 16px !Important;
 }
-#chat .image_row{
+#chat .image_row,
+#main_avatar_room .username{
   margin-left: 16px !Important;
 }
 
 #chat .timeago,
-#chat .chatDelete{
+#chat .chatDelete,
+#main_avatar_room .dubs{
   margin-right: 16px !Important;
 }
 
@@ -69,9 +75,21 @@
 }
 
 .chat-welcome-message,
-#chat .chat-me-command-joined{
+#chat .chat-me-command-joined,
+.avatar_tools,
+.chat-option-header{
   padding-top: 8px !Important;
   padding-bottom: 8px !Important;
+}
+
+#main_avatar_room LI{
+  padding-top: 4px !Important;
+  padding-bottom: 4px !Important;
+}
+
+#main_avatar_room UL{
+  padding-left: 0px !important;
+  padding-right: 0px !Important;
 }
 
 #chat .stream-item-content,
@@ -83,40 +101,53 @@
   padding-right: 16px !important;
 }
 
-.chat-welcome-message,
-#chat .chat-me-command-joined{
-  padding-top: 8px !Important;
-  padding-bottom: 8px !Important;
-}
-    /* Emote height override */
-#chat .chat-me-command-joined{
-  min-height: auto !Important;
-}
-  /* User list section */
 .avatar_tools{
-  top: 13px !Important;
+  margin-bottom: 8px !Important;
+}
+
+#main_avatar_room LI{
+  margin-bottom: 0px !Important;
 }
 
 #main_avatar_room{
   margin-top: 51px !Important;
-  padding-top: 53px !Important;
+  padding-top: 41px !Important;
   height: calc(100% - 51px) !important;
 }
-  /* Chat options section */
+
 #chat .chat-options{
   height: 100% !Important;
 }
 
-  /* Chat and PM gap removal */
+  /* Gap removal */
 #chat .ps-container{
   top: -3px !Important;
   height: calc(100% + 3px) !important;
+}
+
+#main_avatar_room{
+  padding-bottom: 0px !Important;
+}
+
+.chat-option-header,
+.chat-option-buttons{
+  position: relative !Important;
+  top: -5px !Important;
+}
+.chat-option-header{
+  margin-top: 0px !important;
 }
 
 #private-messages .ps-container{
   top: -7px !Important;
   height: calc(100% + 22px) !important;
 }
+
+  /* Emote height override */
+#chat .chat-me-command-joined{
+  min-height: 0px !Important;
+}
+
   /* Undoing DubX defaults */
 .dubx #chat .chat-container .chat-messages .chat-main LI .stream-item-content .image_row,
 .dubx #chat .chat-container .chat-messages .chat-main LI .chatDelete{
@@ -137,7 +168,7 @@
   border-radius: 0px 0px 16px 16px !Important;
 }
 
-/* Remove / Hide */
+/* Remove / Hide other stuff */
   /* Hide right-side colour (enables selective user colouring) */
 .right_section{
   background-color: transparent !important;
@@ -156,6 +187,15 @@
   padding-top: 0px;
 }
 
+/* Other border settings */
+.avatar_tools INPUT{
+  border: none !Important;
+}
+
+.avatar_tools{
+  border-bottom: 1px solid rgb(135, 140, 142) !important;
+}
+
 /* User-specific colours
      Below you can specify colours for specific users. While placement of this code doesn't
      necessarily matter, keeping user-specific changes in a single place makes finding them
@@ -169,6 +209,4 @@
 /* .user-1ARANDOMUSERIDENTNUMBER0 .username *//* Chat username */
 /* .user-1ARANDOMUSERIDENTNUMBER0 P *//* Chat text */
 /* .user-1ARANDOMUSERIDENTNUMBER0 .timeago *//* Chat since when */
-.dummy{
-  display: none;
-}
+/* #avatar-list .userid.1ARANDOMUSERIDENTNUMBER0 *//* User list item */
