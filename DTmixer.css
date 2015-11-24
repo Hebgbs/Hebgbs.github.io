@@ -14,7 +14,7 @@
    Most of the basic styling elements and colour language from it has been
    transferred to this theme for DubTrack.
    
-   version 2.25 (11/24/15)
+   version 2.26 (11/24/15)
 */
 
 #main-loading,
@@ -86,6 +86,8 @@ P,
 .mod-controllers-headers A.active,
 .mods-controller-container .chat-command-list .actions,
 #chat .user-562323b2f31fff200030c322 .username,
+#avatar-list .userid-562323b2f31fff200030c322 .username,
+#avatar-list .userid-562323b2f31fff200030c322 .username:after,
 .mods-controller-container H2,
 .room-info-display-container H2,
 .room-info-display-container .description,
@@ -187,6 +189,7 @@ SPAN.import-playlist,
 #addToPlaylistFloatContainer .create-playlist-header,
 #addToPlaylistFloatContainer .playlist-list-action LI:hover,
 #chat .user-562323b2f31fff200030c322 .timeago,
+#avatar-list .userid-562323b2f31fff200030c322 .dubs,
 .for_content_ver,
 .for_content_c,
 .tinner A{
@@ -365,6 +368,7 @@ A.dubup.voted,
 .player_header SPAN:hover,
 .edit-btn:hover,
 #chat .user-562323b2f31fff200030c322,
+#avatar-list .userid-562323b2f31fff200030c322,
 #metamod-btn:hover{
   background-color: rgba(29, 69, 110, 0.80) !Important;
 }
@@ -391,6 +395,9 @@ A.dubup.voted,
 }
 .player_header SPAN.active{
   background-color: rgba(74, 108, 143, 0.80) !important;
+}
+.loading-el-wrapper svg.uil-spin circle[fill="#00ffff"]{
+  fill: rgb(74, 108, 143) !important;
 }
 
 #roomFormUpdate BUTTON.cancel:hover,
@@ -847,12 +854,6 @@ HEADER FIGURE,
     /* Look RC, I know. Just let them have it, okay? :-) */
     /* dionysu5 */
 #chat .user-5601698c2d5038030094db14 .username,
-#chat .user-5601698c2d5038030094db14.isCo-owner .username,
-#chat .user-5601698c2d5038030094db14.isManager .username,
-#chat .user-5601698c2d5038030094db14.isMod .username,
-#chat .user-5601698c2d5038030094db14.isResident-dj .username,
-#chat .user-5601698c2d5038030094db14.isDj .username,
-#chat .user-5601698c2d5038030094db14.isVip .username,
 #avatar-list .userid-5601698c2d5038030094db14 .username,
 #avatar-list .userid-5601698c2d5038030094db14 .username:after{
   color: rgb(143, 74, 143) !Important;
@@ -867,12 +868,6 @@ HEADER FIGURE,
 }
     /* hoarse */
 #chat .user-55ff8382c1bc060300c708d3 .username,
-#chat .user-55ff8382c1bc060300c708d3.isCo-owner .username,
-#chat .user-55ff8382c1bc060300c708d3.isManager .username,
-#chat .user-55ff8382c1bc060300c708d3.isMod .username,
-#chat .user-55ff8382c1bc060300c708d3.isResident-dj .username,
-#chat .user-55ff8382c1bc060300c708d3.isDj .username,
-#chat .user-55ff8382c1bc060300c708d3.isVip .username,
 #avatar-list .userid-55ff8382c1bc060300c708d3 .username,
 #avatar-list .userid-55ff8382c1bc060300c708d3 .username:after{
   color: rgb(74, 143, 74) !Important;
