@@ -14,9 +14,10 @@
    Most of the basic styling elements and colour language from it has been
    transferred to this theme for DubTrack.
    
-   version 2.28 (11/24/15)
+   version 2.27 (11/24/15)
 */
 
+/* Opacity settings */
 #main-loading,
 .loading,
 #new-messages-counter,
@@ -41,6 +42,7 @@
   opacity: 0.7 !Important;
 }
 
+/* text stuff */
 #user_popover .ban INPUT{
   text-align: center !Important;
 }
@@ -62,6 +64,7 @@
   font-size: 18px !important;
 }
 
+  /* Colors */
 INPUT,
 TEXTAREA,
 P,
@@ -185,6 +188,7 @@ SPAN.import-playlist,
 #browser .sidebar LI SPAN,
 #browser .sidebar LI,
 .content-videos LI .preview,
+.content-videos LI .dubs-display,
 #browser .playlist-type-select SPAN,
 #user_popover .usercontent H3,
 #user_popover A:hover,
@@ -274,6 +278,8 @@ A.dubdown:hover SPAN,
   color: rgb(28, 173, 235) !Important;
 }
 
+/* Backgrounds */
+  /* Colors */
 .ui-slider-handle{
   background-color: rgb(238, 238, 238) !important;
 }
@@ -416,6 +422,7 @@ A.dubdown.voted,
   background-color: rgb(255, 45, 49) !important;
 }
 
+  /* Images & gradients */
 .room-item{
   background-image: linear-gradient(to bottom,
                                     rgba(30, 41, 66, 0.80) calc(100% - 36px),
@@ -449,6 +456,7 @@ A.dubdown.voted,
               rgb(30, 41, 66) url(https://mediadubtrackfm.s3.amazonaws.com/assets/images/backgrounds/pattern-stripes.png) !important;
 }
 
+/* Border settings */
 #warning{
   border: 1px solid rgb(255, 45, 49) !important;
 }
@@ -531,7 +539,16 @@ A.dubdown.voted,
 #d3vs-playlist-import-div TEXTAREA{
   border-radius: 8px !important;
 }
+  /* Faux-borders */
+#avatar-list LI.updub{
+  box-shadow: inset 0px 0px 0px 1px rgb(50, 60, 83) !Important;
+}
 
+#avatar-list LI.downdub{
+  box-shadow: inset 0px 0px 0px 1px rgb(255, 45, 49) !Important;
+}
+
+/* Position and sizing */
 #private-messages .search-results:before{
   content: '';
   width: 100%;
@@ -602,6 +619,8 @@ A.dubdown.voted,
   padding-bottom: 4px !Important;
 }
 
+/* Remove / Hide */
+
 .playerPreview .progressContainer,
 .playerPreview .volume-control{
   border-color: transparent !Important;
@@ -668,7 +687,7 @@ HEADER FIGURE,
   display: none !Important;
 }
 
-/* "Better chat" code */
+/* === "Better chat" code begins here === */
   /* Background colour */
 #main_player,
 .play-song-link,
@@ -892,3 +911,4 @@ HEADER FIGURE,
 #avatar-list LI.userid-55ff9768196f170300cc0c12{
   background-color: rgba(22, 31, 49, 0.80) !important;
 }
+/* === "Better chat" code ends here === */   
