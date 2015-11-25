@@ -445,7 +445,7 @@ A.dubdown.voted,
 }
 
 #browser .content-videos{
-  background: url(https://mediadubtrackfm.s3.amazonaws.com/assets/images/backgrounds/pattern-stripes.png),
+  background: url(http://i.imgur.com/0sxhBUn.png),
               url(https://i.imgur.com/nQu4KMz.jpg) center center/529px 434px no-repeat !important;
 }
 
@@ -453,7 +453,7 @@ A.dubdown.voted,
 .SCplayerImage{
   background: url(http://i.imgur.com/NxKiWSL.png) center center/80% 80% no-repeat,
               linear-gradient(to top, rgba(30, 41, 66, 0.70) 0%, rgba(30, 41, 66, 0.70) 100%),
-              rgb(30, 41, 66) url(https://mediadubtrackfm.s3.amazonaws.com/assets/images/backgrounds/pattern-stripes.png) !important;
+              rgb(30, 41, 66) url(http://i.imgur.com/0sxhBUn.png) !important;
 }
 
 /* Border settings */
@@ -885,48 +885,48 @@ HEADER FIGURE,
     /* heebeejeebees */
 @keyframes hebgbs{
   0%{
-      text-shadow: 0px 0px 0px #f00;
+      text-shadow: 0px 0px 0px #d22;
   }
   9.09%{
-      text-shadow: 0px 0px 0px #f80;
+      text-shadow: 0px 0px 0px #d72;
   }
   18.18%{
-      text-shadow: 0px 0px 0px #ff0;
+      text-shadow: 0px 0px 0px #dd2;
   }
   25%{
-      text-shadow: 0px 0px 0px #8f0;
+      text-shadow: 0px 0px 0px #7d2;
   }
   33.3%{
-      text-shadow: 0px 0px 0px #0f0;
+      text-shadow: 0px 0px 0px #2d2;
   }
   41.6%{
-      text-shadow: 0px 0px 0px #0f8;
+      text-shadow: 0px 0px 0px #2d7;
   }
   50%{
-      text-shadow: 0px 0px 0px #0ff;
+      text-shadow: 0px 0px 0px #2dd;
   }
   58.3%{
-      text-shadow: 0px 0px 0px #08f;
+      text-shadow: 0px 0px 0px #27d;
   }
   66.6%{
-      text-shadow: 0px 0px 0px #00f;
+      text-shadow: 0px 0px 0px #22d;
   }
   75%{
-      text-shadow: 0px 0px 0px #80f;
+      text-shadow: 0px 0px 0px #72d;
   }
   83.3%{
-      text-shadow: 0px 0px 0px #f0f;
+      text-shadow: 0px 0px 0px #d2d;
   }
   91.6%{
-      text-shadow: 0px 0px 0px #f08;
+      text-shadow: 0px 0px 0px #d27;
   }
   100%{
-      text-shadow: 0px 0px 0px #f00;
+      text-shadow: 0px 0px 0px #d22;
   }
 }
 LI.user-560338dfb585d003001b2b09 .username,
 #avatar-list LI.userid-560338dfb585d003001b2b09 .username{
-  animation: 7s hebgbs !important;
+  animation: 6.3s hebgbs !important;
   animation-iteration-count: infinite !Important;
 }
 LI.user-560338dfb585d003001b2b09 .username,
