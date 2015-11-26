@@ -14,7 +14,7 @@
    Most of the basic styling elements and colour language from it has been
    transferred to this theme for DubTrack.
    
-   version 2.28 (11/25/15)
+   version 2.30 (11/25/15)
 */
 
 /* Opacity settings */
@@ -43,6 +43,14 @@
 }
 
 /* text stuff */
+SPAN.import-playlist.icon-inbox{
+  font-family: proxima nova, sans-serif !Important;
+}
+
+SPAN.import-playlist.icon-inbox:before{
+  font-family: icomoon !Important;
+}
+
 #user_popover .ban INPUT{
   text-align: center !Important;
 }
@@ -103,9 +111,10 @@ P,
 #browser .actions .remove_icon:not(:hover) SPAN,
 #browser .display-success,
 #browser .import-playlist *,
-SPAN.import-playlist,
+SPAN.import-playlist, 
 .icon-createplaylist,
 #import-playlist-container H3,
+#import-playlist-container SELECT,
 #player-controller .currentSong,
 #player-controller .icon-playlist,
 #player-controller A.voted SPAN,
@@ -337,6 +346,8 @@ A.dubup.voted,
 #browser .queue_info A,
 #browser .sidebar .create-playlist,
 #browser .import-playlist,
+#import-playlist-container DIV INPUT,
+#import-playlist-container SELECT,
 .playerPreview .loaded,
 .container .title,
 .container .control DIV,
@@ -474,6 +485,7 @@ A.dubdown.voted,
 
 .chat-option-buttons *,
 #addToPlaylistFloatContainer .playlist-list-action LI,
+#addToPlaylistFloatContainer #playlist-input,
 .chat_tools,
 .chat_tools SPAN:after,
 .pusher-chat-widget-input,
@@ -485,7 +497,6 @@ A.dubdown.voted,
 #addToPlaylistFloatContainer{
   border: 1px solid rgb(29, 69, 110) !important;
 }
-
 .chat-option-header,
 .hideImagesToggle,
 .chat-option-buttons-sound SPAN:first-child{
@@ -499,6 +510,9 @@ A.dubdown.voted,
 }
 #user_popover A{
   border-top: 1px solid rgb(29, 69, 110) !important;
+}
+#addToPlaylistFloatContainer .create-playlist-header{
+  border-bottom: 1px solid rgb(29, 69, 110) !important;
 }
 
 #new-message-input{
@@ -523,6 +537,7 @@ A.dubdown.voted,
 
 #warning BUTTON,
 .mods-controller-container .skip-el,
+SPAN.import-playlist.icon-inbox,
 #d3vs-playlist-import-btn{
   border-radius: 20px !Important;
 }
@@ -535,9 +550,29 @@ A.dubdown.voted,
   border-radius: 16px !Important;
 }
 
+#new-message-input,
+.music-type-dropdown,
+#import-playlist-container DIV INPUT,
+#import-playlist-container SELECT,
 #d3vs-playlist-import-name,
 #d3vs-playlist-import-div TEXTAREA{
   border-radius: 8px !important;
+}
+
+.browser-content-header INPUT{
+  border-radius: 8px 0px 0px 8px !Important;
+}
+
+.music-type-select{
+  border-radius: 0px 8px 8px 0px !Important;
+}
+
+#browser .music-type-dropdown SPAN:first-child{
+  border-radius: 8px 8px 0px 0px !Important;
+}
+
+#browser .music-type-dropdown SPAN:last-child{
+  border-radius: 0px 0px 8px 8px !Important;
 }
   /* Faux-borders */
 #avatar-list LI.updub{
@@ -573,6 +608,10 @@ A.dubdown.voted,
   top: 1px !Important;
 }
 
+#addToPlaylistFloatContainer .icon-add{
+  top: 4px !Important;
+}
+
 .playerPreview .close{
   top: 24px !important;
   right: 24px !Important;
@@ -594,6 +633,11 @@ A.dubdown.voted,
   padding-bottom: 7px !Important;
   padding-left: 0px !Important;
   padding-right: 0px !Important;
+}
+
+#import-playlist-container DIV INPUT{
+  padding-left: 8px !Important;
+  padding-right: 8px !Important;
 }
 
 #private-messages #message-input{
@@ -637,6 +681,7 @@ A.dubdown.voted,
 .edit-btn,
 #browser .actions A,
 .create-playlist INPUT,
+#import-playlist-container DIV INPUT,
 #d3vs-playlist-import-btn,
 .tinner{
   border: none !important;
@@ -687,284 +732,284 @@ HEADER FIGURE,
   display: none !Important;
 }
 
-/* === "Better chat" code begins here === */
-  /* Background colour */
-#main_player,
-.play-song-link,
-.chat_tools,
-#chat LI,
-.pusher-chat-widget-input,
-.avatar_tools,
-#main_avatar_room LI,
-.chat-option-header,
-.chat-option-buttons SPAN{
-  background-color: rgba(30, 41, 66, 0.80) !important;
-}
-    /* Color-match the below with the above */
-      /* Bottom filler */
-#chat LI:last-child,
-#avatar-list LI:last-child{
-  box-shadow: 0 1500px 0 1500px rgba(30, 41, 66, 0.80) !Important;
-}
-      /* Bottom for user list */
-#main_avatar_room{
-  border-bottom: 16px solid rgba(30, 41, 66, 0.80) !important;
-}
-      /* Background hack for options */
-.chat-options{
-  background-image: linear-gradient(to bottom,
-                                    transparent 240px,
-                                    rgba(30, 41, 66, 0.80) 240px,
-                                    rgba(30, 41, 66, 0.80) 100%) !Important;
-}
-
-  /* Positioning and sizing */
-#chat .chat-welcome-message,
-#chat .system,
-#chat .chat-system-loading{
-  text-align: center !Important;
-}
-
-.chat_tools SPAN{
-  height: 50px !Important;
-}
-
-.dubx #chat .chat-container .chat-messages .chat-main LI .stream-item-content .image_row,
-.dubx #chat .chat-container .chat-messages .chat-main LI .chatDelete,
-.avatar_tools{
-  top: 0px !Important;
-}
-#chat .stream-item-content,
-#chat .image_row,
-#chat .chatDelete{
-  margin-top: 16px !Important;
-}
-#chat .image_row,
-#main_avatar_room .username{
-  margin-left: 16px !Important;
-}
-
-#chat .timeago,
-#chat .chatDelete,
-#main_avatar_room .dubs{
-  margin-right: 16px !Important;
-}
-
-#chat .chat-me-command-joined .chatDelete{
-  margin-top: 13px !Important;
-}
-
-.chat-welcome-message,
-#chat .chat-me-command-joined,
-.avatar_tools,
-.chat-option-header{
-  padding-top: 8px !Important;
-  padding-bottom: 8px !Important;
-}
-
-#main_avatar_room LI{
-  padding-top: 4px !Important;
-  padding-bottom: 4px !Important;
-}
-
-#main_avatar_room UL{
-  padding-left: 0px !important;
-  padding-right: 0px !Important;
-}
-
-#chat .stream-item-content,
-.chat-welcome-message,
-#chat .system,
-#chat .chat-me-command-joined,
-#chat .chat-system-loading{
-  padding-left: 16px !important;
-  padding-right: 16px !important;
-}
-
-.avatar_tools{
-  margin-bottom: 8px !Important;
-}
-
-#main_avatar_room LI{
-  margin-bottom: 0px !Important;
-}
-
-#main_avatar_room{
-  margin-top: 51px !Important;
-  padding-top: 41px !Important;
-  height: calc(100% - 51px) !important;
-}
-
-#chat .chat-options{
-  height: 100% !Important;
-}
-
-    /* Gap removal */
-#chat .ps-container{
-  top: -3px !Important;
-  height: calc(100% + 3px) !important;
-}
-
-#main_avatar_room{
-  padding-bottom: 0px !Important;
-}
-
-.chat-option-header,
-.chat-option-buttons{
-  position: relative !Important;
-  top: -5px !Important;
-}
-.chat-option-header{
-  margin-top: 0px !important;
-}
-
-#private-messages .ps-container{
-  top: -7px !Important;
-  height: calc(100% + 22px) !important;
-}
-
-    /* Emote height override */
-#chat .chat-me-command-joined{
-  min-height: 0px !Important;
-}
-
-    /* Undoing DubX defaults */
-.dubx #chat .chat-container .chat-messages .chat-main LI .stream-item-content .image_row,
-.dubx #chat .chat-container .chat-messages .chat-main LI .chatDelete{
-  top: 0px;
-}
-.dubx .chat-main.splitChat li:nth-child(2n) .chatDelete{
-  right: 0px !important;
-}
-
-  /* Border radius */
-.chat_tools{
-  border-radius: 16px 16px 0px 0px !important;
-}
-
-.pusher-chat-widget-input,
-#main_avatar_room,
-#chat .chat-options{
-  border-radius: 0px 0px 16px 16px !Important;
-}
-
-  /* Remove / Hide other stuff */
-    /* Hide right-side colour (enables selective user colouring) */
-.right_section{
-  background-color: transparent !important;
-}
-    /* Chat padding */
-#chat UL,
-#chat .system{
-  padding: 0px !Important;
-}
-    /* Skip button */
-.player_header .skip-el{
-  margin-right: 0px !Important;
-}
-    /* Undoing DubX defaults */
-.dubx #chat .chat-container .chat-messages .chat-main LI .activity-row,
-.dubx #chat .chat-container .chat-messages .chat-main LI.chat-system-loading,
-.dubx #chat .chat-container .chat-messages .chat-main LI.system,
-.dubx #chat .chat-container .chat-messages .chat-main LI.system-error,
-.dubx #chat .chat-container .chat-messages .chat-main LI.chat-me-command-joined{
-  padding-top: 0px;
-}
-
-  /* Other border settings */
-.avatar_tools INPUT{
-  border: none !Important;
-}
-
-.avatar_tools{
-  border-bottom: 1px solid rgb(29, 69, 110) !important;
-}
-
-  /* User-specific colours */
-    /* Look RC, I know. Just let them have it, okay? :-) */
-    /* heebeejeebees */
-@keyframes hebgbs{
-  0%{
-      text-shadow: 0px 0px 0px #d22;
-  }
-  9.09%{
-      text-shadow: 0px 0px 0px #d72;
-  }
-  18.18%{
-      text-shadow: 0px 0px 0px #dd2;
-  }
-  25%{
-      text-shadow: 0px 0px 0px #7d2;
-  }
-  33.3%{
-      text-shadow: 0px 0px 0px #2d2;
-  }
-  41.6%{
-      text-shadow: 0px 0px 0px #2d7;
-  }
-  50%{
-      text-shadow: 0px 0px 0px #2dd;
-  }
-  58.3%{
-      text-shadow: 0px 0px 0px #27d;
-  }
-  66.6%{
-      text-shadow: 0px 0px 0px #22d;
-  }
-  75%{
-      text-shadow: 0px 0px 0px #72d;
-  }
-  83.3%{
-      text-shadow: 0px 0px 0px #d2d;
-  }
-  91.6%{
-      text-shadow: 0px 0px 0px #d27;
-  }
-  100%{
-      text-shadow: 0px 0px 0px #d22;
-  }
-}
-LI.user-560338dfb585d003001b2b09 .username,
-#avatar-list LI.userid-560338dfb585d003001b2b09 .username{
-  animation: 6.3s hebgbs !important;
-  animation-iteration-count: infinite !Important;
-}
-LI.user-560338dfb585d003001b2b09 .username,
-#avatar-list LI.userid-560338dfb585d003001b2b09 .username,
-#avatar-list LI.userid-560338dfb585d003001b2b09 .username:after{
-  color: rgba(74, 108, 143, 0.50) !Important;
-}
-    /* dionysu5 */
-#chat .user-5601698c2d5038030094db14 .username,
-#avatar-list .userid-5601698c2d5038030094db14 .username,
-#avatar-list .userid-5601698c2d5038030094db14 .username:after{
-  color: rgb(143, 74, 143) !Important;
-}
-#chat .user-5601698c2d5038030094db14 .timeago,
-#avatar-list .userid-5601698c2d5038030094db14 .dubs{
-  color: rgb(143, 109, 143) !Important;
-}
-#chat LI.user-5601698c2d5038030094db14,
-#avatar-list LI.userid-5601698c2d5038030094db14{
-  background-color: rgba(49, 31, 66, 0.80) !Important;
-}
-    /* hoarse */
-#chat .user-55ff8382c1bc060300c708d3 .username,
-#avatar-list .userid-55ff8382c1bc060300c708d3 .username,
-#avatar-list .userid-55ff8382c1bc060300c708d3 .username:after{
-  color: rgb(74, 143, 74) !Important;
-}
-#chat .user-55ff8382c1bc060300c708d3 .timeago,
-#avatar-list .userid-55ff8382c1bc060300c708d3 .dubs{
-  color: rgb(109, 143, 109) !Important;
-}
-#chat LI.user-55ff8382c1bc060300c708d3,
-#avatar-list LI.userid-55ff8382c1bc060300c708d3{
-  background-color: rgba(31, 66, 38, 0.80) !Important;
-}
-    /* clever_nevers */
-#chat LI.user-55ff9768196f170300cc0c12,
-#avatar-list LI.userid-55ff9768196f170300cc0c12{
-  background-color: rgba(22, 31, 49, 0.80) !important;
-}
-/* === "Better chat" code ends here === */
+/**/ /* === "Better chat" code begins here === */
+/**/   /* Background colour */
+/**/ #main_player,
+/**/ .play-song-link,
+/**/ .chat_tools,
+/**/ #chat LI,
+/**/ .pusher-chat-widget-input,
+/**/ .avatar_tools,
+/**/ #main_avatar_room LI,
+/**/ .chat-option-header,
+/**/ .chat-option-buttons SPAN{
+/**/   background-color: rgba(30, 41, 66, 0.80) !important;
+/**/ }
+/**/     /* Color-match the below with the above */
+/**/       /* Bottom filler */
+/**/ #chat LI:last-child,
+/**/ #avatar-list LI:last-child{
+/**/   box-shadow: 0 1500px 0 1500px rgba(30, 41, 66, 0.80) !Important;
+/**/ }
+/**/       /* Bottom for user list */
+/**/ #main_avatar_room{
+/**/   border-bottom: 16px solid rgba(30, 41, 66, 0.80) !important;
+/**/ }
+/**/       /* Background hack for options */
+/**/ .chat-options{
+/**/   background-image: linear-gradient(to bottom,
+/**/                                     transparent 240px,
+/**/                                     rgba(30, 41, 66, 0.80) 240px,
+/**/                                     rgba(30, 41, 66, 0.80) 100%) !Important;
+/**/ }
+/**/ 
+/**/   /* Positioning and sizing */
+/**/ #chat .chat-welcome-message,
+/**/ #chat .system,
+/**/ #chat .chat-system-loading{
+/**/   text-align: center !Important;
+/**/ }
+/**/ 
+/**/ .chat_tools SPAN{
+/**/   height: 50px !Important;
+/**/ }
+/**/ 
+/**/ .dubx #chat .chat-container .chat-messages .chat-main LI .stream-item-content .image_row,
+/**/ .dubx #chat .chat-container .chat-messages .chat-main LI .chatDelete,
+/**/ .avatar_tools{
+/**/   top: 0px !Important;
+/**/ }
+/**/ #chat .stream-item-content,
+/**/ #chat .image_row,
+/**/ #chat .chatDelete{
+/**/   margin-top: 16px !Important;
+/**/ }
+/**/ #chat .image_row,
+/**/ #main_avatar_room .username{
+/**/   margin-left: 16px !Important;
+/**/ }
+/**/ 
+/**/ #chat .timeago,
+/**/ #chat .chatDelete,
+/**/ #main_avatar_room .dubs{
+/**/   margin-right: 16px !Important;
+/**/ }
+/**/ 
+/**/ #chat .chat-me-command-joined .chatDelete{
+/**/   margin-top: 13px !Important;
+/**/ }
+/**/ 
+/**/ .chat-welcome-message,
+/**/ #chat .chat-me-command-joined,
+/**/ .avatar_tools,
+/**/ .chat-option-header{
+/**/   padding-top: 8px !Important;
+/**/   padding-bottom: 8px !Important;
+/**/ }
+/**/ 
+/**/ #main_avatar_room LI{
+/**/   padding-top: 4px !Important;
+/**/   padding-bottom: 4px !Important;
+/**/ }
+/**/ 
+/**/ #main_avatar_room UL{
+/**/   padding-left: 0px !important;
+/**/   padding-right: 0px !Important;
+/**/ }
+/**/ 
+/**/ #chat .stream-item-content,
+/**/ .chat-welcome-message,
+/**/ #chat .system,
+/**/ #chat .chat-me-command-joined,
+/**/ #chat .chat-system-loading{
+/**/   padding-left: 16px !important;
+/**/   padding-right: 16px !important;
+/**/ }
+/**/ 
+/**/ .avatar_tools{
+/**/   margin-bottom: 8px !Important;
+/**/ }
+/**/ 
+/**/ #main_avatar_room LI{
+/**/   margin-bottom: 0px !Important;
+/**/ }
+/**/ 
+/**/ #main_avatar_room{
+/**/   margin-top: 51px !Important;
+/**/   padding-top: 41px !Important;
+/**/   height: calc(100% - 51px) !important;
+/**/ }
+/**/ 
+/**/ #chat .chat-options{
+/**/   height: 100% !Important;
+/**/ }
+/**/ 
+/**/     /* Gap removal */
+/**/ #chat .ps-container{
+/**/   top: -3px !Important;
+/**/   height: calc(100% + 3px) !important;
+/**/ }
+/**/ 
+/**/ #main_avatar_room{
+/**/   padding-bottom: 0px !Important;
+/**/ }
+/**/ 
+/**/ .chat-option-header,
+/**/ .chat-option-buttons{
+/**/   position: relative !Important;
+/**/   top: -5px !Important;
+/**/ }
+/**/ .chat-option-header{
+/**/   margin-top: 0px !important;
+/**/ }
+/**/ 
+/**/ #private-messages .ps-container{
+/**/   top: -7px !Important;
+/**/   height: calc(100% + 22px) !important;
+/**/ }
+/**/ 
+/**/     /* Emote height override */
+/**/ #chat .chat-me-command-joined{
+/**/   min-height: 0px !Important;
+/**/ }
+/**/ 
+/**/     /* Undoing DubX defaults */
+/**/ .dubx #chat .chat-container .chat-messages .chat-main LI .stream-item-content .image_row,
+/**/ .dubx #chat .chat-container .chat-messages .chat-main LI .chatDelete{
+/**/   top: 0px;
+/**/ }
+/**/ .dubx .chat-main.splitChat li:nth-child(2n) .chatDelete{
+/**/   right: 0px !important;
+/**/ }
+/**/ 
+/**/   /* Border radius */
+/**/ .chat_tools{
+/**/   border-radius: 16px 16px 0px 0px !important;
+/**/ }
+/**/ 
+/**/ .pusher-chat-widget-input,
+/**/ #main_avatar_room,
+/**/ #chat .chat-options{
+/**/   border-radius: 0px 0px 16px 16px !Important;
+/**/ }
+/**/ 
+/**/   /* Remove / Hide other stuff */
+/**/     /* Hide right-side colour (enables selective user colouring) */
+/**/ .right_section{
+/**/   background-color: transparent !important;
+/**/ }
+/**/     /* Chat padding */
+/**/ #chat UL,
+/**/ #chat .system{
+/**/   padding: 0px !Important;
+/**/ }
+/**/     /* Skip button */
+/**/ .player_header .skip-el{
+/**/   margin-right: 0px !Important;
+/**/ }
+/**/     /* Undoing DubX defaults */
+/**/ .dubx #chat .chat-container .chat-messages .chat-main LI .activity-row,
+/**/ .dubx #chat .chat-container .chat-messages .chat-main LI.chat-system-loading,
+/**/ .dubx #chat .chat-container .chat-messages .chat-main LI.system,
+/**/ .dubx #chat .chat-container .chat-messages .chat-main LI.system-error,
+/**/ .dubx #chat .chat-container .chat-messages .chat-main LI.chat-me-command-joined{
+/**/   padding-top: 0px;
+/**/ }
+/**/ 
+/**/   /* Other border settings */
+/**/ .avatar_tools INPUT{
+/**/   border: none !Important;
+/**/ }
+/**/ 
+/**/ .avatar_tools{
+/**/   border-bottom: 1px solid rgb(29, 69, 110) !important;
+/**/ }
+/**/ 
+/**/   /* User-specific colours */
+/**/     /* Look RC, I know. Just let them have it, okay? :-) */
+/**/     /* heebeejeebees */
+/**/ @keyframes hebgbs{
+/**/   0%{
+/**/       text-shadow: 0px 0px 0px #d22;
+/**/   }
+/**/   9.09%{
+/**/       text-shadow: 0px 0px 0px #d72;
+/**/   }
+/**/   18.18%{
+/**/       text-shadow: 0px 0px 0px #dd2;
+/**/   }
+/**/   25%{
+/**/       text-shadow: 0px 0px 0px #7d2;
+/**/   }
+/**/   33.3%{
+/**/       text-shadow: 0px 0px 0px #2d2;
+/**/   }
+/**/   41.6%{
+/**/       text-shadow: 0px 0px 0px #2d7;
+/**/   }
+/**/   50%{
+/**/       text-shadow: 0px 0px 0px #2dd;
+/**/   }
+/**/   58.3%{
+/**/       text-shadow: 0px 0px 0px #27d;
+/**/   }
+/**/   66.6%{
+/**/       text-shadow: 0px 0px 0px #22d;
+/**/   }
+/**/   75%{
+/**/       text-shadow: 0px 0px 0px #72d;
+/**/   }
+/**/   83.3%{
+/**/       text-shadow: 0px 0px 0px #d2d;
+/**/   }
+/**/   91.6%{
+/**/       text-shadow: 0px 0px 0px #d27;
+/**/   }
+/**/   100%{
+/**/       text-shadow: 0px 0px 0px #d22;
+/**/   }
+/**/ }
+/**/ LI.user-560338dfb585d003001b2b09 .username,
+/**/ #avatar-list LI.userid-560338dfb585d003001b2b09 .username{
+/**/   animation: 6.3s hebgbs !important;
+/**/   animation-iteration-count: infinite !Important;
+/**/ }
+/**/ LI.user-560338dfb585d003001b2b09 .username,
+/**/ #avatar-list LI.userid-560338dfb585d003001b2b09 .username,
+/**/ #avatar-list LI.userid-560338dfb585d003001b2b09 .username:after{
+/**/   color: rgba(74, 108, 143, 0.50) !Important;
+/**/ }
+/**/     /* dionysu5 */
+/**/ #chat .user-5601698c2d5038030094db14 .username,
+/**/ #avatar-list .userid-5601698c2d5038030094db14 .username,
+/**/ #avatar-list .userid-5601698c2d5038030094db14 .username:after{
+/**/   color: rgb(143, 74, 143) !Important;
+/**/ }
+/**/ #chat .user-5601698c2d5038030094db14 .timeago,
+/**/ #avatar-list .userid-5601698c2d5038030094db14 .dubs{
+/**/   color: rgb(143, 109, 143) !Important;
+/**/ }
+/**/ #chat LI.user-5601698c2d5038030094db14,
+/**/ #avatar-list LI.userid-5601698c2d5038030094db14{
+/**/   background-color: rgba(49, 31, 66, 0.80) !Important;
+/**/ }
+/**/     /* hoarse */
+/**/ #chat .user-55ff8382c1bc060300c708d3 .username,
+/**/ #avatar-list .userid-55ff8382c1bc060300c708d3 .username,
+/**/ #avatar-list .userid-55ff8382c1bc060300c708d3 .username:after{
+/**/   color: rgb(74, 143, 74) !Important;
+/**/ }
+/**/ #chat .user-55ff8382c1bc060300c708d3 .timeago,
+/**/ #avatar-list .userid-55ff8382c1bc060300c708d3 .dubs{
+/**/   color: rgb(109, 143, 109) !Important;
+/**/ }
+/**/ #chat LI.user-55ff8382c1bc060300c708d3,
+/**/ #avatar-list LI.userid-55ff8382c1bc060300c708d3{
+/**/   background-color: rgba(31, 66, 38, 0.80) !Important;
+/**/ }
+/**/     /* clever_nevers */
+/**/ #chat LI.user-55ff9768196f170300cc0c12,
+/**/ #avatar-list LI.userid-55ff9768196f170300cc0c12{
+/**/   background-color: rgba(22, 31, 49, 0.80) !important;
+/**/ }
+/**/ /* === "Better chat" code ends here === */
