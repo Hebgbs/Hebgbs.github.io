@@ -14,7 +14,7 @@
    Most of the basic styling elements and colour language from it has been
    transferred to this theme for DubTrack.
    
-   version 2.30 (11/25/15)
+   version 2.31 (11/27/15)
 */
 
 /* Opacity settings */
@@ -927,58 +927,6 @@ HEADER FIGURE,
 /**/ 
 /**/   /* User-specific colours */
 /**/     /* Look RC, I know. Just let them have it, okay? :-) */
-/**/     /* heebeejeebees */
-/**/ @keyframes hebgbs{
-/**/   0%{
-/**/       text-shadow: 0px 0px 0px #d22;
-/**/   }
-/**/   9.09%{
-/**/       text-shadow: 0px 0px 0px #d72;
-/**/   }
-/**/   18.18%{
-/**/       text-shadow: 0px 0px 0px #dd2;
-/**/   }
-/**/   25%{
-/**/       text-shadow: 0px 0px 0px #7d2;
-/**/   }
-/**/   33.3%{
-/**/       text-shadow: 0px 0px 0px #2d2;
-/**/   }
-/**/   41.6%{
-/**/       text-shadow: 0px 0px 0px #2d7;
-/**/   }
-/**/   50%{
-/**/       text-shadow: 0px 0px 0px #2dd;
-/**/   }
-/**/   58.3%{
-/**/       text-shadow: 0px 0px 0px #27d;
-/**/   }
-/**/   66.6%{
-/**/       text-shadow: 0px 0px 0px #22d;
-/**/   }
-/**/   75%{
-/**/       text-shadow: 0px 0px 0px #72d;
-/**/   }
-/**/   83.3%{
-/**/       text-shadow: 0px 0px 0px #d2d;
-/**/   }
-/**/   91.6%{
-/**/       text-shadow: 0px 0px 0px #d27;
-/**/   }
-/**/   100%{
-/**/       text-shadow: 0px 0px 0px #d22;
-/**/   }
-/**/ }
-/**/ LI.user-560338dfb585d003001b2b09 .username,
-/**/ #avatar-list LI.userid-560338dfb585d003001b2b09 .username{
-/**/   animation: 6.3s hebgbs !important;
-/**/   animation-iteration-count: infinite !Important;
-/**/ }
-/**/ LI.user-560338dfb585d003001b2b09 .username,
-/**/ #avatar-list LI.userid-560338dfb585d003001b2b09 .username,
-/**/ #avatar-list LI.userid-560338dfb585d003001b2b09 .username:after{
-/**/   color: rgba(74, 108, 143, 0.50) !Important;
-/**/ }
 /**/     /* dionysu5 */
 /**/ #chat .user-5601698c2d5038030094db14 .username,
 /**/ #avatar-list .userid-5601698c2d5038030094db14 .username,
