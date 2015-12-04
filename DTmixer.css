@@ -14,7 +14,10 @@
    Most of the basic styling elements and colour language from it has been
    transferred to this theme for DubTrack.
    
-   version 2.31 (11/27/15)
+   === Other credits ===
+   @null: Little changes in main player footer, help in other places
+   
+   version 2.50 (12/04/15)
 */
 
 /* Opacity settings */
@@ -40,6 +43,10 @@
 .tcontent P:nth-child(2) A:not(:hover),
 .tcontent P:last-child A:not(:first-child):not(:hover){
   opacity: 0.7 !Important;
+}
+
+.deleted-message IMG{
+  opacity: 0.5 !Important;
 }
 
 /* text stuff */
@@ -148,9 +155,7 @@ SPAN.import-playlist,
 .message-list LI H3,
 .manager .username,
 .isManager .username,
-.manager .currentDJ,
 .manager .username:after,
-.manager .currentDJ:after,
 .mod .username,
 .isMod .username,
 .mod .currentDJ,
@@ -246,6 +251,7 @@ A.dubup:hover SPAN{
 .icon-eye-blocked:hover,
 A.close-menu SPAN,
 .system,
+.deleted-message P,
 A.dubdown:hover SPAN,
 #browser .queue_info A:hover.icon-unlocked,
 .content-videos .actions .remove_icon:hover SPAN,
@@ -389,8 +395,8 @@ A.dubup.voted,
 }
 .player_header SPAN:hover,
 .edit-btn:hover,
-#chat .user-562323b2f31fff200030c322,
-#chat .user-560354e8e863210300468f71,
+#chat .user-562323b2f31fff200030c322:not(.deleted-message),
+#chat .user-560354e8e863210300468f71:not(.deleted-message),
 #avatar-list .userid-562323b2f31fff200030c322,
 #avatar-list .userid-560354e8e863210300468f71,
 #metamod-btn:hover{
@@ -770,6 +776,20 @@ HEADER FIGURE,
 /**/   text-align: center !Important;
 /**/ }
 /**/ 
+/**/ LI[class^='user'].deleted-message{
+/**/   padding-bottom: 16px !Important;
+/**/ }
+/**/ 
+/**/ #chat LI[class^='user'].deleted-message P.deleted,
+/**/ #chat .chat-me-command-joined P.deleted{
+/**/   padding-top: 18px !Important;
+/**/   padding-bottom: 22px !Important;
+/**/ }
+/**/ 
+/**/ #chat LI[class^='user']:not(.deleted-message) P.deleted{
+/**/   padding-top: 8px !Important;
+/**/ }
+/**/ 
 /**/ .chat_tools SPAN{
 /**/   height: 50px !Important;
 /**/ }
@@ -898,16 +918,19 @@ HEADER FIGURE,
 /**/ .right_section{
 /**/   background-color: transparent !important;
 /**/ }
-/**/     /* Chat padding */
+/**/  /* Chat padding */
 /**/ #chat UL,
 /**/ #chat .system{
 /**/   padding: 0px !Important;
 /**/ }
-/**/     /* Skip button */
-/**/ .player_header .skip-el{
-/**/   margin-right: 0px !Important;
+/**/ 
+/**/ LI.deleted-message{
+/**/   padding-top: 0px !Important;
+/**/   padding-bottom: 0px !Important;
+/**/   line-height: 0px !Important;
 /**/ }
-/**/     /* Undoing DubX defaults */
+/**/ 
+/**/   /* Undoing DubX defaults */
 /**/ .dubx #chat .chat-container .chat-messages .chat-main LI .activity-row,
 /**/ .dubx #chat .chat-container .chat-messages .chat-main LI.chat-system-loading,
 /**/ .dubx #chat .chat-container .chat-messages .chat-main LI.system,
@@ -916,13 +939,17 @@ HEADER FIGURE,
 /**/   padding-top: 0px;
 /**/ }
 /**/ 
-/**/   /* Other border settings */
+/**/ /* Other border settings */
 /**/ .avatar_tools INPUT{
 /**/   border: none !Important;
 /**/ }
 /**/ 
 /**/ .avatar_tools{
-/**/   border-bottom: 1px solid rgb(29, 69, 110) !important;
+/**/   border-bottom: 1px solid rgb(135, 140, 142) !important;
+/**/ }
+/**/ 
+/**/ .deleted-message .timeago{
+/**/   display: none !Important;
 /**/ }
 /**/ 
 /**/   /* User-specific colours */
@@ -937,7 +964,7 @@ HEADER FIGURE,
 /**/ #avatar-list .userid-5601698c2d5038030094db14 .dubs{
 /**/   color: rgb(143, 109, 143) !Important;
 /**/ }
-/**/ #chat LI.user-5601698c2d5038030094db14,
+/**/ #chat LI.user-5601698c2d5038030094db14:not(.deleted-message),
 /**/ #avatar-list LI.userid-5601698c2d5038030094db14{
 /**/   background-color: rgba(49, 31, 66, 0.80) !Important;
 /**/ }
@@ -951,13 +978,125 @@ HEADER FIGURE,
 /**/ #avatar-list .userid-55ff8382c1bc060300c708d3 .dubs{
 /**/   color: rgb(109, 143, 109) !Important;
 /**/ }
-/**/ #chat LI.user-55ff8382c1bc060300c708d3,
+/**/ #chat LI.user-55ff8382c1bc060300c708d3:not(.deleted-message),
 /**/ #avatar-list LI.userid-55ff8382c1bc060300c708d3{
 /**/   background-color: rgba(31, 66, 38, 0.80) !Important;
 /**/ }
 /**/     /* clever_nevers */
-/**/ #chat LI.user-55ff9768196f170300cc0c12,
+/**/ #chat LI.user-55ff9768196f170300cc0c12:not(.deleted-message),
 /**/ #avatar-list LI.userid-55ff9768196f170300cc0c12{
 /**/   background-color: rgba(22, 31, 49, 0.80) !important;
 /**/ }
 /**/ /* === "Better chat" code ends here === */
+/**/ /* === "Better player header" code begins here === */
+/**/   /* Match button radius */
+/**/ .player_header SPAN{
+/**/   border-radius: 18px !Important;
+/**/ }
+/**/ 
+/**/   /* Match other buttons to skip button */
+/**/ .player_header SPAN:nth-child(n+2):nth-child(-n+4){
+/**/   display: inline !Important;
+/**/ }
+/**/ 
+/**/ .player_header SPAN:not(.skip-el){
+/**/   float: left !important;
+/**/ }
+/**/ 
+/**/   /* Room settings button */
+/**/ .player_header .edit-room{
+/**/   padding: 0px !Important;
+/**/   padding-left: 6px !Important;
+/**/   padding-right: 6px !Important;
+/**/ }
+/**/     /* Button icon */  
+/**/ .player_header .edit-room:before{
+/**/   width: 36px;
+/**/   height: 36px;
+/**/   font-family: icomoon;
+/**/   content: '\e805';
+/**/   font-size: 24px !Important;
+/**/ }
+/**/ 
+/**/ .player_header .icon-chatsettings{
+/**/   display: none !Important;
+/**/ }
+/**/ 
+/**/   /* Skip button */
+/**/ .player_header .skip-el{
+/**/   margin-right: 0px !Important;
+/**/ }
+/**/ /* === "Better player header" code ends here === */
+/**/ /* === "Chat ranks" code begins here === */
+/**/   /* Pseudochild */
+/**/ #chat LI .username:after{
+/**/   font-family: proxima-nova,sans-serif;
+/**/   text-align: right !Important;
+/**/   font-weight: bold;
+/**/   color: rgb(180, 201, 222);
+/**/   position: absolute !Important;
+/**/   right: 32px !Important;
+/**/   opacity: 0.15 !Important;
+/**/ }
+/**/ 
+/**/   /* Rank settings */
+/**/ #chat .isVip .username:after{
+/**/   content: "VIP";
+/**/ }
+/**/ 
+/**/ #chat .isDj .username:after{
+/**/   content: "DJ";
+/**/ }
+/**/ 
+/**/ #chat .isResident-dj .username:after{
+/**/   content: "Resident DJ";
+/**/ }
+/**/ 
+/**/ #chat .isMod .username:after{
+/**/   content: "Mod";
+/**/ }
+/**/ 
+/**/ #chat .isManager .username:after{
+/**/   content: "Manager";
+/**/ }
+/**/ 
+/**/ #chat .isCo-owner .username:after{
+/**/   content: "Co-owner";
+/**/ }
+/**/ 
+/**/ #chat .user-55ff1994e75c5f0300e395d5 .username:after{
+/**/   content: "Creator";
+/**/ }
+/**/ 
+/**/   /* User-specific settings */
+/**/     /* Bots */
+/**/ #chat .user-562323b2f31fff200030c322 .username:after{
+/**/   content: "Bot" !Important;
+/**/   color: rgb(238, 238, 238) !important;
+/**/ }
+/**/     /* heebeejeebees */
+/**/ #chat .user-560338dfb585d003001b2b09 .username:after{
+/**/   content: "Theme author" !important;
+/**/ }
+/**/     /* dionysu5 */
+/**/ #chat .user-5601698c2d5038030094db14 .username:after{
+/**/   color: rgb(143, 109, 143) !important;
+/**/ }
+/**/     /* hoarse */
+/**/ #chat .user-55ff8382c1bc060300c708d3 .username:after{
+/**/   color: rgb(109, 143, 109) !important;
+/**/ }
+/**/ /* === "Chat ranks" code ends here === */
+/**/ /* === "@null" code begins here === */
+/**/   /* Make pointer show over avatar in footer */
+/**/ #player-controller .left .imgEl{
+/**/   cursor: pointer;
+/**/ }
+/**/   /* Swap eye icon in player controls */
+/**/ #main_player .player_sharing .hideVideo-el span.icon-eye-blocked:before{
+/**/   content: "\e90b";
+/**/ }
+/**/ #main_player .player_sharing .hideVideo-el span.icon-eye-unblocked:before{
+/**/   content: "\e90a";
+/**/ }
+/**/ /* === "null" code ends here === */
