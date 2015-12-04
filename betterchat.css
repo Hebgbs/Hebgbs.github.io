@@ -6,6 +6,8 @@
    Thanks to the people who haunt forum.userstyles.org for helping me better
    understand how box-shadow works. You can view that entire discussion here:
    https://forum.userstyles.org/discussion/comment/100659
+   
+   Thanks to user "null" for helping me out.
 */
 
 /* Background colour */
@@ -49,9 +51,14 @@ LI[class^='user'].deleted-message{
   padding-bottom: 16px !Important;
 }
 
-P.deleted{
-  padding-top: 20px !Important;
-  padding-bottom: 20px !Important;
+#chat LI[class^='user'].deleted-message P.deleted,
+#chat .chat-me-command-joined P.deleted{
+  padding-top: 18px !Important;
+  padding-bottom: 22px !Important;
+}
+
+#chat LI[class^='user']:not(.deleted-message) P.deleted{
+  padding-top: 8px !Important;
 }
 
 .chat_tools SPAN{
@@ -114,6 +121,8 @@ P.deleted{
   margin-bottom: 8px !Important;
 }
 
+#chat .chat-me-command-joined,
+#chat .chat-me-command-joined P.deleted,
 #main_avatar_room LI{
   margin-bottom: 0px !Important;
 }
@@ -210,6 +219,10 @@ LI.deleted-message{
 
 .avatar_tools{
   border-bottom: 1px solid rgb(135, 140, 142) !important;
+}
+
+.deleted-message .timeago{
+  display: none !Important;
 }
 
 /* User-specific colours
