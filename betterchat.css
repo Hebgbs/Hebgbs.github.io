@@ -45,6 +45,15 @@
   text-align: center !Important;
 }
 
+LI[class^='user'].deleted-message{
+  padding-bottom: 16px !Important;
+}
+
+P.deleted{
+  padding-top: 20px !Important;
+  padding-bottom: 20px !Important;
+}
+
 .chat_tools SPAN{
   height: 50px !Important;
 }
@@ -178,6 +187,13 @@
 #chat .system{
   padding: 0px !Important;
 }
+
+LI.deleted-message{
+  padding-top: 0px !Important;
+  padding-bottom: 0px !Important;
+  line-height: 0px !Important;
+}
+
   /* Undoing DubX defaults */
 .dubx #chat .chat-container .chat-messages .chat-main LI .activity-row,
 .dubx #chat .chat-container .chat-messages .chat-main LI.chat-system-loading,
