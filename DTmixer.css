@@ -17,7 +17,7 @@
    === Other credits ===
    @null: Little changes in main player footer, help in other places
    
-   version 2.50 (12/04/15)
+   version 2.52 (12/04/15)
 */
 
 /* Opacity settings */
@@ -83,6 +83,7 @@ SPAN.import-playlist.icon-inbox:before{
 INPUT,
 TEXTAREA,
 P,
+#header_login A,
 #main-loading,
 .loading,
 .buffering,
@@ -311,7 +312,6 @@ A.dubdown:hover SPAN,
 #warning,
 .loading-el,
 #private-messages .search-results:before,
-#player-controller .left,
 #browser .browser-content,
 #browser .playlist_info,
 #browser .queue_info,
@@ -441,15 +441,15 @@ A.dubdown.voted,
 
   /* Images & gradients */
 .room-item{
-  background-image: linear-gradient(to bottom,
-                                    rgba(30, 41, 66, 0.80) calc(100% - 36px),
-                                    rgba(50, 60, 83, 0.80) calc(100% - 36px),
-                                    rgba(50, 60, 83, 0.80) 100%) !Important;
+  background-image: linear-gradient(to top,
+                                    rgba(50, 60, 83, 0.80) 36px,
+                                    rgba(30, 41, 66, 0.80) 36px,
+                                    rgba(30, 41, 66, 0.80) 100%) !Important;
 }
 
 #main-menu-left,
 #main-menu-right{
-  background-image: linear-gradient(to bottom,
+  background-image: linear-gradient(to top,
                                     rgb(30, 41, 66) 58px,
                                     rgba(30, 41, 66, 0.70) 58px,
                                     rgba(30, 41, 66, 0.70) calc(100% - 56px),
@@ -461,6 +461,13 @@ A.dubdown.voted,
   background-image: url(http://i.imgur.com/451A0RO.png) !important;
 }
 
+#player-controller .left{
+  background-image: linear-gradient(to top,
+                                    rgb(22, 31, 49) 5px,
+                                    rgb(30, 41, 66) 5px,
+                                    rgb(30, 41, 66) 100%) !important;
+}
+
 #browser .content-videos{
   background: url(http://i.imgur.com/0sxhBUn.png),
               url(https://i.imgur.com/nQu4KMz.jpg) center center/529px 434px no-repeat !important;
@@ -469,8 +476,10 @@ A.dubdown.voted,
 #room-main-player-container-soundcloud,
 .SCplayerImage{
   background: url(http://i.imgur.com/NxKiWSL.png) center center/80% 80% no-repeat,
-              linear-gradient(to top, rgba(30, 41, 66, 0.70) 0%, rgba(30, 41, 66, 0.70) 100%),
-              rgb(30, 41, 66) url(http://i.imgur.com/0sxhBUn.png) !important;
+              linear-gradient(to top,
+                              rgba(30, 41, 66, 0.70) 0%,
+                              rgba(30, 41, 66, 0.70) 100%),
+                              rgb(30, 41, 66) url(http://i.imgur.com/0sxhBUn.png) !important;
 }
 
 /* Border settings */
@@ -718,6 +727,7 @@ HEADER FIGURE,
 .message-header,
 .message-details,
 #main-message-list,
+#player-controller .left,
 #browser .browser-content-header,
 #browser .actions A,
 .close-import-playlist,
@@ -945,7 +955,7 @@ HEADER FIGURE,
 /**/ }
 /**/ 
 /**/ .avatar_tools{
-/**/   border-bottom: 1px solid rgb(135, 140, 142) !important;
+/**/   border-bottom: 1px solid rgb(29, 69, 110) !important;
 /**/ }
 /**/ 
 /**/ .deleted-message .timeago{
@@ -1099,4 +1109,4 @@ HEADER FIGURE,
 /**/ #main_player .player_sharing .hideVideo-el span.icon-eye-unblocked:before{
 /**/   content: "\e90a";
 /**/ }
-/**/ /* === "null" code ends here === */
+/**/ /* === "@null" code ends here === */
