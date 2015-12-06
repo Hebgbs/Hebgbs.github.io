@@ -17,7 +17,7 @@
    === Other credits ===
    @null: Little changes in main player footer, help in other places
    
-   version 2.53 (12/05/15)
+   version 2.54 (12/06/15)
 */
 
 /* Opacity settings */
@@ -754,7 +754,7 @@ HEADER FIGURE,
 /**/ #main_player,
 /**/ .play-song-link,
 /**/ .chat_tools,
-/**/ #chat LI[class^='user'],
+/**/ #chat .chat-messages LI,
 /**/ .pusher-chat-widget-input,
 /**/ .avatar_tools,
 /**/ #main_avatar_room LI,
