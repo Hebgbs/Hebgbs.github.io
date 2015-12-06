@@ -17,7 +17,7 @@
    === Other credits ===
    @null: Little changes in main player footer, help in other places
    
-   version 2.52 (12/04/15)
+   version 2.53 (12/05/15)
 */
 
 /* Opacity settings */
@@ -368,7 +368,7 @@ A.dubup.voted,
 #metamod-btn{
   background-color: rgba(50, 60, 83, 0.80) !important;
 }
-#emoji-preview LI{
+#autocomplete-preview LI{
   background-color: rgba(50, 60, 83, 0.70) !important;
 }
 
@@ -402,8 +402,8 @@ A.dubup.voted,
 #metamod-btn:hover{
   background-color: rgba(29, 69, 110, 0.80) !Important;
 }
-#emoji-preview LI:hover,
-#emoji-preview LI.selected,
+#autocomplete-preview LI:hover,
+#autocomplete-preview LI.selected,
 #browser .content-videos LI.selected{
   background-color: rgba(29, 69, 110, 0.70) !Important;
 }
@@ -687,8 +687,8 @@ SPAN.import-playlist.icon-inbox,
 
 #warning BUTTON,
 #roomFormUpdate *,
-#emoji-preview,
-#emoji-preview UL,
+#autocomplete-preview,
+#autocomplete-preview UL,
 #private-messages #message-input,
 .mods-controller-container .skip-el,
 #browser .content-videos LI,
@@ -732,7 +732,8 @@ HEADER FIGURE,
 #browser .actions A,
 .close-import-playlist,
 #user_popover DIV,
-#user_popover .ban INPUT{
+#user_popover .ban INPUT,
+#autocomplete-preview{
   background-color: transparent !Important;
 }
 
@@ -753,7 +754,7 @@ HEADER FIGURE,
 /**/ #main_player,
 /**/ .play-song-link,
 /**/ .chat_tools,
-/**/ #chat LI,
+/**/ #chat LI[class^='user'],
 /**/ .pusher-chat-widget-input,
 /**/ .avatar_tools,
 /**/ #main_avatar_room LI,
@@ -974,8 +975,8 @@ HEADER FIGURE,
 /**/ #avatar-list .userid-5601698c2d5038030094db14 .dubs{
 /**/   color: rgb(143, 109, 143) !Important;
 /**/ }
-/**/ #chat LI.user-5601698c2d5038030094db14:not(.deleted-message),
-/**/ #avatar-list LI.userid-5601698c2d5038030094db14{
+/**/ #chat .user-5601698c2d5038030094db14:not(.deleted-message),
+/**/ #avatar-list .userid-5601698c2d5038030094db14{
 /**/   background-color: rgba(49, 31, 66, 0.80) !Important;
 /**/ }
 /**/     /* hoarse */
@@ -988,14 +989,30 @@ HEADER FIGURE,
 /**/ #avatar-list .userid-55ff8382c1bc060300c708d3 .dubs{
 /**/   color: rgb(109, 143, 109) !Important;
 /**/ }
-/**/ #chat LI.user-55ff8382c1bc060300c708d3:not(.deleted-message),
-/**/ #avatar-list LI.userid-55ff8382c1bc060300c708d3{
+/**/ #chat .user-55ff8382c1bc060300c708d3:not(.deleted-message),
+/**/ #avatar-list .userid-55ff8382c1bc060300c708d3{
 /**/   background-color: rgba(31, 66, 38, 0.80) !Important;
 /**/ }
 /**/     /* clever_nevers */
-/**/ #chat LI.user-55ff9768196f170300cc0c12:not(.deleted-message),
-/**/ #avatar-list LI.userid-55ff9768196f170300cc0c12{
+/**/ #chat .user-55ff9768196f170300cc0c12:not(.deleted-message),
+/**/ #avatar-list .userid-55ff9768196f170300cc0c12{
 /**/   background-color: rgba(22, 31, 49, 0.80) !important;
+/**/ }
+/**/     /* leafyr */
+/**/ #chat .user-560f0ffae2c36f03006b3b51 .username,
+/**/ #avatar .userid-560f0ffae2c36f03006b3b51 .username,
+/**/ #avatar .userid-560f0ffae2c36f03006b3b51 .username:after{
+/**/   color: rgb(110, 143, 74) !Important;
+/**/ }
+/**/
+/**/ #chat .user-560f0ffae2c36f03006b3b51 .timeago,
+/**/ #avatar .userid-560f0ffae2c36f03006b3b51 .dubs{
+/**/   color: rgb(126, 143, 109) !Important;
+/**/ }
+/**/ 
+/**/ #chat .user-560f0ffae2c36f03006b3b51:not(.deleted-message),
+/**/ #avatar .userid-560f0ffae2c36f03006b3b51{
+/**/   background-color: rgba(49, 66, 31, 0.80) !important;
 /**/ }
 /**/ /* === "Better chat" code ends here === */
 /**/ /* === "Better player header" code begins here === */
@@ -1095,6 +1112,11 @@ HEADER FIGURE,
 /**/     /* hoarse */
 /**/ #chat .user-55ff8382c1bc060300c708d3 .username:after{
 /**/   color: rgb(109, 143, 109) !important;
+/**/ }
+/**/     /* leafyr */
+/**/ #chat .user-560f0ffae2c36f03006b3b51 .username:after{
+/**/   content: 'Orbital foliage';
+/**/   color: rgb(126, 143, 109) !Important;
 /**/ }
 /**/ /* === "Chat ranks" code ends here === */
 /**/ /* === "@null" code begins here === */
