@@ -17,7 +17,7 @@
    === Other credits ===
    @null: Little changes in main player footer, help in other places
    
-   version 2.54 (12/06/15)
+   version 2.55 (12/07/15)
 */
 
 /* Opacity settings */
@@ -133,12 +133,6 @@ SPAN.import-playlist,
 .currentTime,
 .icon-heart:before,
 .container *,
-#chat .user-562323b2f31fff200030c322 .username,
-#chat .user-560354e8e863210300468f71 .username,
-#avatar-list .userid-562323b2f31fff200030c322 .username,
-#avatar-list .userid-560354e8e863210300468f71 .username,
-#avatar-list .userid-562323b2f31fff200030c322 .username:after,
-#avatar-list .userid-560354e8e863210300468f71 .username:after,
 .tinner H1,
 .tinner H2,
 .tinner P
@@ -209,11 +203,7 @@ SPAN.import-playlist,
 #user_popover A:hover,
 #user_popover .ban INPUT,
 #addToPlaylistFloatContainer .create-playlist-header,
-#addToPlaylistFloatContainer .playlist-list-action LI:hover,
-#chat .user-562323b2f31fff200030c322 .timeago,
-#chat .user-560354e8e863210300468f71 .timeago,
-#avatar-list .userid-562323b2f31fff200030c322 .dubs,
-#avatar-list .userid-560354e8e863210300468f71 .dubs,
+#addToPlaylistFloatContainer .playlist-list-action LI:hover
 .for_content_ver,
 .for_content_c,
 .tinner A{
@@ -395,10 +385,6 @@ A.dubup.voted,
 }
 .player_header SPAN:hover,
 .edit-btn:hover,
-#chat .user-562323b2f31fff200030c322:not(.deleted-message),
-#chat .user-560354e8e863210300468f71:not(.deleted-message),
-#avatar-list .userid-562323b2f31fff200030c322,
-#avatar-list .userid-560354e8e863210300468f71,
 #metamod-btn:hover{
   background-color: rgba(29, 69, 110, 0.80) !Important;
 }
@@ -962,58 +948,6 @@ HEADER FIGURE,
 /**/ .deleted-message .timeago{
 /**/   display: none !Important;
 /**/ }
-/**/ 
-/**/   /* User-specific colours */
-/**/     /* Look RC, I know. Just let them have it, okay? :-) */
-/**/     /* dionysu5 */
-/**/ #chat .user-5601698c2d5038030094db14 .username,
-/**/ #avatar-list .userid-5601698c2d5038030094db14 .username,
-/**/ #avatar-list .userid-5601698c2d5038030094db14 .username:after{
-/**/   color: rgb(143, 74, 143) !Important;
-/**/ }
-/**/ #chat .user-5601698c2d5038030094db14 .timeago,
-/**/ #avatar-list .userid-5601698c2d5038030094db14 .dubs{
-/**/   color: rgb(143, 109, 143) !Important;
-/**/ }
-/**/ #chat .user-5601698c2d5038030094db14:not(.deleted-message),
-/**/ #avatar-list .userid-5601698c2d5038030094db14{
-/**/   background-color: rgba(49, 31, 66, 0.80) !Important;
-/**/ }
-/**/     /* hoarse */
-/**/ #chat .user-55ff8382c1bc060300c708d3 .username,
-/**/ #avatar-list .userid-55ff8382c1bc060300c708d3 .username,
-/**/ #avatar-list .userid-55ff8382c1bc060300c708d3 .username:after{
-/**/   color: rgb(74, 143, 74) !Important;
-/**/ }
-/**/ #chat .user-55ff8382c1bc060300c708d3 .timeago,
-/**/ #avatar-list .userid-55ff8382c1bc060300c708d3 .dubs{
-/**/   color: rgb(109, 143, 109) !Important;
-/**/ }
-/**/ #chat .user-55ff8382c1bc060300c708d3:not(.deleted-message),
-/**/ #avatar-list .userid-55ff8382c1bc060300c708d3{
-/**/   background-color: rgba(31, 66, 38, 0.80) !Important;
-/**/ }
-/**/     /* clever_nevers */
-/**/ #chat .user-55ff9768196f170300cc0c12:not(.deleted-message),
-/**/ #avatar-list .userid-55ff9768196f170300cc0c12{
-/**/   background-color: rgba(22, 31, 49, 0.80) !important;
-/**/ }
-/**/     /* leafyr */
-/**/ #chat .user-560f0ffae2c36f03006b3b51 .username,
-/**/ #avatar .userid-560f0ffae2c36f03006b3b51 .username,
-/**/ #avatar .userid-560f0ffae2c36f03006b3b51 .username:after{
-/**/   color: rgb(110, 143, 74) !Important;
-/**/ }
-/**/
-/**/ #chat .user-560f0ffae2c36f03006b3b51 .timeago,
-/**/ #avatar .userid-560f0ffae2c36f03006b3b51 .dubs{
-/**/   color: rgb(126, 143, 109) !Important;
-/**/ }
-/**/ 
-/**/ #chat .user-560f0ffae2c36f03006b3b51:not(.deleted-message),
-/**/ #avatar .userid-560f0ffae2c36f03006b3b51{
-/**/   background-color: rgba(49, 66, 31, 0.80) !important;
-/**/ }
 /**/ /* === "Better chat" code ends here === */
 /**/ /* === "Better player header" code begins here === */
 /**/   /* Match button radius */
@@ -1054,71 +988,6 @@ HEADER FIGURE,
 /**/   margin-right: 0px !Important;
 /**/ }
 /**/ /* === "Better player header" code ends here === */
-/**/ /* === "Chat ranks" code begins here === */
-/**/   /* Pseudochild */
-/**/ #chat LI .username:after{
-/**/   font-family: proxima-nova,sans-serif;
-/**/   text-align: right !Important;
-/**/   font-weight: bold;
-/**/   color: rgb(180, 201, 222);
-/**/   position: absolute !Important;
-/**/   right: 32px !Important;
-/**/   opacity: 0.15 !Important;
-/**/ }
-/**/ 
-/**/   /* Rank settings */
-/**/ #chat .isVip .username:after{
-/**/   content: "VIP";
-/**/ }
-/**/ 
-/**/ #chat .isDj .username:after{
-/**/   content: "DJ";
-/**/ }
-/**/ 
-/**/ #chat .isResident-dj .username:after{
-/**/   content: "Resident DJ";
-/**/ }
-/**/ 
-/**/ #chat .isMod .username:after{
-/**/   content: "Mod";
-/**/ }
-/**/ 
-/**/ #chat .isManager .username:after{
-/**/   content: "Manager";
-/**/ }
-/**/ 
-/**/ #chat .isCo-owner .username:after{
-/**/   content: "Co-owner";
-/**/ }
-/**/ 
-/**/ #chat .user-55ff1994e75c5f0300e395d5 .username:after{
-/**/   content: "Creator";
-/**/ }
-/**/ 
-/**/   /* User-specific settings */
-/**/     /* Bots */
-/**/ #chat .user-562323b2f31fff200030c322 .username:after{
-/**/   content: "Bot" !Important;
-/**/   color: rgb(238, 238, 238) !important;
-/**/ }
-/**/     /* heebeejeebees */
-/**/ #chat .user-560338dfb585d003001b2b09 .username:after{
-/**/   content: "Theme author" !important;
-/**/ }
-/**/     /* dionysu5 */
-/**/ #chat .user-5601698c2d5038030094db14 .username:after{
-/**/   color: rgb(143, 109, 143) !important;
-/**/ }
-/**/     /* hoarse */
-/**/ #chat .user-55ff8382c1bc060300c708d3 .username:after{
-/**/   color: rgb(109, 143, 109) !important;
-/**/ }
-/**/     /* leafyr */
-/**/ #chat .user-560f0ffae2c36f03006b3b51 .username:after{
-/**/   content: 'Orbital foliage';
-/**/   color: rgb(126, 143, 109) !Important;
-/**/ }
-/**/ /* === "Chat ranks" code ends here === */
 /**/ /* === "@null" code begins here === */
 /**/   /* Make pointer show over avatar in footer */
 /**/ #player-controller .left .imgEl{
@@ -1132,3 +1001,22 @@ HEADER FIGURE,
 /**/   content: "\e90a";
 /**/ }
 /**/ /* === "@null" code ends here === */
+/**/ /* === "User-specific colours" begins here === */
+/**/   /* Woots */
+/**/ #chat .user-562323b2f31fff200030c322:not(.deleted-message),
+/**/ #avatar-list .userid-562323b2f31fff200030c322{
+/**/   background-color: rgba(29, 69, 110, 0.80) !Important;
+/**/ }
+/**/ 
+/**/ #chat .user-562323b2f31fff200030c322 .username,
+/**/ #avatar-list .userid-562323b2f31fff200030c322 .username,
+/**/ #avatar-list .userid-562323b2f31fff200030c322 .username:after
+/**/ {
+/**/   color: rgb(238, 238, 238) !important;
+/**/ }
+/**/ 
+/**/ #chat .user-562323b2f31fff200030c322 .timeago
+/**/ #avatar-list .userid-562323b2f31fff200030c322 .dubs{
+/**/   color: rgb(180, 201, 222) !important;
+/**/ }
+/**/ /* === "User-specific colours" ends here === */
