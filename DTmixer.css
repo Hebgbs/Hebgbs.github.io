@@ -17,7 +17,7 @@
    === Other credits ===
    @null: Little changes in main player footer, help in other places
    
-   version 2.57 (12/07/15)
+   version 2.60 (12/11/15)
 */
 
 /* Opacity settings */
@@ -240,6 +240,9 @@ A.dubup:hover SPAN{
 .icon-close,
 #main-menu-left A.logout-link:hover,
 .icon-eye-blocked:hover,
+.icon-eye-unblocked,
+.icon-sound-alt:hover,
+.icon-mute,
 A.close-menu SPAN,
 .system,
 .deleted-message P,
@@ -417,6 +420,7 @@ A.dubup.voted,
 }
 
 #roomFormUpdate BUTTON.cancel:hover,
+.ui-slider-handle[style="left: 0%;"],
 .player_header SPAN.skip-el:hover,
 A.dubdown.voted,
 .mods-controller-container .skip-el:hover,
@@ -665,7 +669,6 @@ SPAN.import-playlist.icon-inbox,
 }
 
 /* Remove / Hide */
-
 .playerPreview .progressContainer,
 .playerPreview .volume-control{
   border-color: transparent !Important;
@@ -738,7 +741,6 @@ HEADER FIGURE,
 /**/ /* === "Better chat" code begins here === */
 /**/   /* Background colour */
 /**/ #main_player,
-/**/ .play-song-link,
 /**/ .chat_tools,
 /**/ #chat LI,
 /**/ .pusher-chat-widget-input,
@@ -999,10 +1001,10 @@ HEADER FIGURE,
 /**/   cursor: pointer;
 /**/ }
 /**/   /* Swap eye icon in player controls */
-/**/ #main_player .player_sharing .hideVideo-el span.icon-eye-blocked:before{
+/**/ .icon-eye-blocked:before{
 /**/   content: "\e90b";
 /**/ }
-/**/ #main_player .player_sharing .hideVideo-el span.icon-eye-unblocked:before{
+/**/ .icon-eye-unblocked:before{
 /**/   content: "\e90a";
 /**/ }
 /**/ /* === "@null" code ends here === */
