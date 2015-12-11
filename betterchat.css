@@ -12,7 +12,6 @@
 
 /* Background colour */
 #main_player,
-.play-song-link,
 .chat_tools,
 #chat LI,
 .pusher-chat-widget-input,
@@ -21,6 +20,10 @@
 .chat-option-header,
 .chat-option-buttons SPAN{
   background-color: rgba(0, 0, 0, 0.70) !important;
+}
+  /* By default this is 10% more than the above. */
+.play-song-link{
+  background-color: rgba(0, 0, 0, 0.80) !important;
 }
   /* Color-match the below with the above */
     /* Bottom filler */
