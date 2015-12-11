@@ -748,6 +748,9 @@ HEADER FIGURE,
 /**/ .chat-option-buttons SPAN{
 /**/   background-color: rgba(30, 41, 66, 0.80) !important;
 /**/ }
+/**/ .play-song-link{
+/**/   background-color: rgba(30, 41, 66, 0.90) !important;
+/**/ }
 /**/     /* Color-match the below with the above */
 /**/       /* Bottom filler */
 /**/ #chat LI:last-child,
