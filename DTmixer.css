@@ -17,7 +17,7 @@
    === Other credits ===
    @null: Little changes in main player footer, help in other places
    
-   version 2.60 (12/11/15)
+   version 2.61 (12/12/15)
 */
 
 /* Opacity settings */
@@ -1010,20 +1010,20 @@ HEADER FIGURE,
 /**/ /* === "@null" code ends here === */
 /**/ /* === "User-specific colours" begins here === */
 /**/   /* Woots */
-/**/ /*#chat .user-562323b2f31fff200030c322:not(.deleted-message),*/
-/**/ /*#avatar-list .userid-562323b2f31fff200030c322{*/
-/**/ /*  background-color: rgba(29, 69, 110, 0.80) !Important;*/
-/**/ /*}*/
-/**/ /**/
-/**/ /*#chat .user-562323b2f31fff200030c322 .username,*/
-/**/ /*#avatar-list .userid-562323b2f31fff200030c322 .username,*/
-/**/ /*#avatar-list .userid-562323b2f31fff200030c322 .username:after*/
-/**/ /*{*/
-/**/ /*  color: rgb(238, 238, 238) !important;*/
-/**/ /*}*/
-/**/ /**/
-/**/ /*#chat .user-562323b2f31fff200030c322 .timeago*/
-/**/ /*#avatar-list .userid-562323b2f31fff200030c322 .dubs{*/
-/**/ /*  color: rgb(180, 201, 222) !important;*/
-/**/ /*}*/
+/**/ #chat .user-562323b2f31fff200030c322:not(.deleted-message),
+/**/ #avatar-list .userid-562323b2f31fff200030c322{
+/**/   background-color: rgba(29, 69, 110, 0.80) !Important;
+/**/ }
+/**/ 
+/**/ #chat .user-562323b2f31fff200030c322 .username,
+/**/ #avatar-list .userid-562323b2f31fff200030c322 .username,
+/**/ #avatar-list .userid-562323b2f31fff200030c322 .username:after
+/**/ {
+/**/   color: rgb(238, 238, 238) !important;
+/**/ }
+/**/ 
+/**/ #chat .user-562323b2f31fff200030c322 .timeago
+/**/ #avatar-list .userid-562323b2f31fff200030c322 .dubs{
+/**/   color: rgb(180, 201, 222) !important;
+/**/ }
 /**/ /* === "User-specific colours" ends here === */
