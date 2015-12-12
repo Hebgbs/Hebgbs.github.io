@@ -17,7 +17,7 @@
    === Other credits ===
    @null: Little changes in main player footer, help in other places
    
-   version 2.63 (12/12/15)
+   version 2.64 (12/12/15)
 */
 
 /* Opacity settings */
@@ -148,16 +148,28 @@ SPAN.import-playlist,
 .room-item .room-user,
 .message-header A,
 .message-list LI H3,
+.isVip .username,
+.vip .username,
+.vip .username:after,
+.isResdient-dj .username,
+.resident-dj .username,
+.resident-dj .username:after,
 .manager .username,
 .isManager .username,
 .manager .username:after,
 .mod .username,
 .isMod .username,
-.mod .currentDJ,
 .mod .username:after,
-.mod .currentDJ:after,
 .for_content_version{
   color: rgb(92, 135, 179) !important;
+}
+
+.creator .username,
+.creator .username:after,
+.co-owner .username,
+.isCo-owner .username,
+.co-owner .username:after{
+  color: rgb(107, 160, 214) !Important;
 }
 
 .room-item HEADER .name,
@@ -167,15 +179,6 @@ SPAN.import-playlist,
 #main-room-active-link .icon-chevron,
 .room-info-display-container SPAN I,
 .username-handle,
-.creator .username,
-.creator .currentDJ,
-.creator .username:after,
-.creator .currentDJ :after,
-.co-owner .username,
-.isCo-owner .username,
-.co-owner .currentDJ,
-.co-owner .username:after,
-.currentDJ .username:after,
 .videoquality-el,
 .mod-controllers-headers A,
 .mods-controller-container H2 SPAN,
@@ -221,8 +224,6 @@ SPAN.import-playlist,
 .content-videos .actions .add_to_playlist:hover .icon-heart:before,
 :not(.creator):not(.co-owner):not(.manager):not(.mod).currentDJ .username:after,
 .dj P:after,
-.vip .username:after,
-.resident-dj .username:after,
 .username{
   color: rgb(74, 108, 143) !important;
 }
