@@ -17,7 +17,7 @@
    === Other credits ===
    @null: Little changes in main player footer, help in other places
    
-   version 2.62 (12/12/15)
+   version 2.63 (12/12/15)
 */
 
 /* Opacity settings */
@@ -692,7 +692,7 @@ SPAN.import-playlist.icon-inbox,
 }
 
 HEADER FIGURE,
-#chat LI:not(.user-562323b2f31fff200030c322) .image_row,
+#chat LI:not(.user-566ba5dfc459e11d0044b68e) .image_row,
 #private-messages FIGURE,
 .pictureContainer,
 .updatePictureGif,
@@ -1009,21 +1009,21 @@ HEADER FIGURE,
 /**/ }
 /**/ /* === "@null" code ends here === */
 /**/ /* === "User-specific colours" begins here === */
-/**/   /* Woots */
-/**/ #chat .user-562323b2f31fff200030c322:not(.deleted-message),
-/**/ #avatar-list .userid-562323b2f31fff200030c322{
+/**/   /* mixerbot */
+/**/ #chat .user-566ba5dfc459e11d0044b68e:not(.deleted-message),
+/**/ #avatar-list .userid-566ba5dfc459e11d0044b68e{
 /**/   background-color: rgba(29, 69, 110, 0.80) !Important;
 /**/ }
 /**/ 
-/**/ #chat .user-562323b2f31fff200030c322 .username,
-/**/ #avatar-list .userid-562323b2f31fff200030c322 .username,
-/**/ #avatar-list .userid-562323b2f31fff200030c322 .username:after
+/**/ #chat .user-566ba5dfc459e11d0044b68e .username,
+/**/ #avatar-list .userid-566ba5dfc459e11d0044b68e .username,
+/**/ #avatar-list .userid-566ba5dfc459e11d0044b68e .username:after
 /**/ {
 /**/   color: rgb(238, 238, 238) !important;
 /**/ }
 /**/ 
-/**/ #chat .user-562323b2f31fff200030c322 .timeago
-/**/ #avatar-list .userid-562323b2f31fff200030c322 .dubs{
+/**/ #chat .user-566ba5dfc459e11d0044b68e .timeago
+/**/ #avatar-list .userid-566ba5dfc459e11d0044b68e .dubs{
 /**/   color: rgb(180, 201, 222) !important;
 /**/ }
 /**/ /* === "User-specific colours" ends here === */
