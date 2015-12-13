@@ -1,7 +1,3 @@
-@namespace url(http://www.w3.org/1999/xhtml);
-
-@-moz-document domain("dubtrack.fm") {
-
 /* Animation constants */
   /* Animation types
      ! Match BG pos first value with
@@ -110,6 +106,4 @@
      above the footer overlay pseudochild */
 #player-controller *{
   z-index: 1 !Important;
-}
-
 }
