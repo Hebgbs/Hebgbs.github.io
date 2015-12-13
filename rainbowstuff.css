@@ -1,0 +1,69 @@
+/* Animation settings and constants */
+@keyframes rainbowProg{
+  from{background-position: 0px 0px}
+  to{background-position: 800px 0px}
+}
+@keyframes rainbowVol{
+  from{background-position: 0px 0px}
+  to{background-position: 200px 0px}
+}
+
+#player-controller .left,
+.ui-slider-range-min{
+  background-repeat: repeat-x !Important;
+}
+
+/* Colours and settings for footer right side */
+  /* Alpha used for animated gradient to show through
+     ! Code would be less bloated if I used a pseudochild for top colour layer, didn't bother. */
+#player-controller .progressBg{
+  background-color: rgba(47, 47, 47, 0.75) !Important;
+}
+
+#player-controller .left{
+  /* Overlay to supplant background colour
+     ! This won't appear to be moving unless direction is changed
+     ! The five pixels is for the progress bar at the very bottom */
+  background-image: linear-gradient(to top,
+                                    transparent 5px,
+                                    #2f2f2f 5px,
+                                    #2f2f2f 100%),
+  /* Rainbow background */
+                    linear-gradient(to left,
+                                    #ff0000 0%,
+                                    #ff8000 8.34%,
+                                    #ffff00 16.67%,
+                                    #80ff00 25%,
+                                    #00ff00 33.34%,
+                                    #00ff80 41.67%,
+                                    #00ffff 50%,
+                                    #0080ff 58.33%,
+                                    #0000ff 66.67%,
+                                    #8000ff 75%,
+                                    #ff00ff 83.33%,
+                                    #ff0080 91.67%,
+                                    #ff0000 100%) !Important;
+  background-size: 800px 100% !Important;
+  animation: rainbowProg 5s linear infinite !Important;
+}
+
+/* Colours and settings for volume slider */
+  /* ! Only for left side of volume slider for now */
+.ui-slider-range-min{
+  background-image: linear-gradient(to left,
+                                    #ff0000 0%,
+                                    #ff8000 8.34%,
+                                    #ffff00 16.67%,
+                                    #80ff00 25%,
+                                    #00ff00 33.34%,
+                                    #00ff80 41.67%,
+                                    #00ffff 50%,
+                                    #0080ff 58.33%,
+                                    #0000ff 66.67%,
+                                    #8000ff 75%,
+                                    #ff00ff 83.33%,
+                                    #ff0080 91.67%,
+                                    #ff0000 100%) !Important;
+  background-size: 200px 100% !Important;
+  animation: rainbowVol 5s linear infinite !Important;
+}
