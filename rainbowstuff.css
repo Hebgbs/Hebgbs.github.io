@@ -17,8 +17,9 @@
 #player-controller .left,
 #player-controller .progressBg,
 .ui-slider-range-min,
-.volume-container *:not(.ui-slider-handle),
-.playerPreview .progressContainer *{
+.ui-slider,
+.playerPreview .loaded,
+.playerPreview .progress{
   animation-duration: 5s !Important;
   animation-timing-function: linear !important;
   animation-iteration-count: infinite !important;
