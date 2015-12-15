@@ -61,8 +61,8 @@
     /* ! Match to your present theme where applicable */
   background-image: linear-gradient(to top,
                                     transparent 5px,
-                                    rgb(47, 47, 47) 5px,
-                                    rgb(47, 47, 47) 100%);
+                                    rgb(30, 41, 66) 5px,
+                                    rgb(30, 41, 66) 100%);
 }
   /* Volume slider */
 .ui-slider-handle{
@@ -73,39 +73,41 @@
 #player-controller .progressBg,
 .ui-slider-range-min,
 .playerPreview .progress{
+  background-color: rgb(74, 108, 143) !important;
   background-image: linear-gradient(to left,
-                                    rgb(255, 0, 0) 0%,
-                                    rgb(255, 128, 0) 8.34%,
-                                    rgb(255, 255, 0) 16.67%,
-                                    rgb(128, 255, 0) 25%,
-                                    rgb(0, 255, 0) 33.34%,
-                                    rgb(0, 255, 128) 41.67%,
-                                    rgb(0, 255, 255) 50%,
-                                    rgb(0, 128, 255) 58.33%,
-                                    rgb(0, 0, 255) 66.67%,
-                                    rgb(128, 0, 255) 75%,
-                                    rgb(255, 0, 255) 83.33%,
-                                    rgb(255, 0, 128) 91.67%,
-                                    rgb(255, 0, 0) 100%) !Important;
+                                    rgba(255, 0, 0, 0.75) 0%,
+                                    rgba(255, 128, 0, 0.75) 8.34%,
+                                    rgba(255, 255, 0, 0.75) 16.67%,
+                                    rgba(128, 255, 0, 0.75) 25%,
+                                    rgba(0, 255, 0, 0.75) 33.34%,
+                                    rgba(0, 255, 128, 0.75) 41.67%,
+                                    rgba(0, 255, 255, 0.75) 50%,
+                                    rgba(0, 128, 255, 0.75) 58.33%,
+                                    rgba(0, 0, 255, 0.75) 66.67%,
+                                    rgba(128, 0, 255, 0.75) 75%,
+                                    rgba(255, 0, 255, 0.75) 83.33%,
+                                    rgba(255, 0, 128, 0.75) 91.67%,
+                                    rgba(255, 0, 0, 0.75) 100%, 0.75) !Important;
 }
     /* Dark */
 #player-controller .left,
 .ui-slider,
 .playerPreview .loaded{
+  background-color: rgb(30, 41, 66) !Important;
   background-image: linear-gradient(to left,
-                                    rgb(47, 0, 0) 0%,
-                                    rgb(47, 23, 0) 8.34%,
-                                    rgb(47, 47, 0) 16.67%,
-                                    rgb(23, 47, 0) 25%,
-                                    rgb(0, 47, 0) 33.34%,
-                                    rgb(0, 47, 23) 41.67%,
-                                    rgb(0, 47, 47) 50%,
-                                    rgb(0, 23, 47) 58.33%,
-                                    rgb(0, 0, 47) 66.67%,
-                                    rgb(23, 0, 47) 75%,
-                                    rgb(47, 0, 47) 83.33%,
-                                    rgb(47, 0, 23) 91.67%,
-                                    rgb(47, 0, 0) 100%) !Important;
+                                    rgba(47, 0, 0, 0.50) 0%,
+                                    rgba(47, 23, 0, 0.50) 8.34%,
+                                    rgba(47, 47, 0, 0.50) 16.67%,
+                                    rgba(23, 47, 0, 0.50) 25%,
+                                    rgba(0, 47, 0, 0.50) 33.34%,
+                                    rgba(0, 47, 23, 0.50) 41.67%,
+                                    rgba(0, 47, 47, 0.50) 50%,
+                                    rgba(0, 23, 47, 0.50) 58.33%,
+                                    rgba(0, 0, 47, 0.50) 66.67%,
+                                    rgba(23, 0, 47, 0.50) 75%,
+                                    rgba(47, 0, 47, 0.50) 83.33%,
+                                    rgba(47, 0, 23, 0.50) 91.67%,
+                                    rgba(47, 0, 0, 0.50) 100%, 0.50) !Important;
 }
 
 /* Animation size and type */
