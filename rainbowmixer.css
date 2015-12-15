@@ -87,7 +87,7 @@
                                     rgba(128, 0, 255, 0.75) 75%,
                                     rgba(255, 0, 255, 0.75) 83.33%,
                                     rgba(255, 0, 128, 0.75) 91.67%,
-                                    rgba(255, 0, 0, 0.75) 100%, 0.75) !Important;
+                                    rgba(255, 0, 0, 0.75) 100%) !Important;
 }
     /* Dark */
 #player-controller .left,
@@ -107,7 +107,7 @@
                                     rgba(23, 0, 47, 0.50) 75%,
                                     rgba(47, 0, 47, 0.50) 83.33%,
                                     rgba(47, 0, 23, 0.50) 91.67%,
-                                    rgba(47, 0, 0, 0.50) 100%, 0.50) !Important;
+                                    rgba(47, 0, 0, 0.50) 100%) !Important;
 }
 
 /* Animation size and type */
