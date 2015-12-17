@@ -17,7 +17,7 @@
    === Other credits ===
    @null: Little changes in main player footer, help in other places
    
-   version 2.64 (12/12/15)
+   version 2.66 (12/17/15)
 */
 
 /* Opacity settings */
@@ -25,6 +25,7 @@
 .loading,
 #new-messages-counter,
 .player_header SPAN,
+.eta_tooltip,
 .message-item,
 #browser .browser-content,
 .playerPreview .progressContainer *{
@@ -101,6 +102,7 @@ P,
 #mobile-room-menu A,
 .player_header SPAN,
 .player_sharing,
+.eta_tooltip,
 .videoquality-el.active-hd,
 .mod-controllers-headers A.active,
 .mods-controller-container .chat-command-list .actions,
@@ -125,6 +127,7 @@ SPAN.import-playlist,
 #import-playlist-container SELECT,
 #player-controller .currentSong,
 #player-controller .icon-playlist,
+#player-controller .display-browser *,
 #player-controller A.voted SPAN,
 #player-controller A.dubup:not(:hover):not(.voted) .icon-arrow-up,
 #player-controller A.dubup:not(:hover),
@@ -388,6 +391,7 @@ A.dubup.voted,
   background-color: rgb(29, 69, 110) !important;
 }
 .player_header SPAN:hover,
+.eta_tooltip,
 .edit-btn:hover,
 #metamod-btn:hover{
   background-color: rgba(29, 69, 110, 0.80) !Important;
