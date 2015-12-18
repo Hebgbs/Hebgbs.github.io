@@ -17,7 +17,7 @@
    === Other credits ===
    @null: Little changes in main player footer, help in other places
    
-   version 2.66 (12/17/15)
+   version 2.67 (12/18/15)
 */
 
 /* Opacity settings */
@@ -89,7 +89,7 @@ P,
 .loading,
 .buffering,
 #warning BUTTON,
-.room-loby-header A,
+.room-lobby-header A,
 .room-item .user-count *,
 .room-item .current-song,
 #roomFormUpdate H3,
@@ -271,21 +271,21 @@ A.dubdown:hover SPAN,
   color: rgb(0, 155, 255) !important;
 }
 
-.room-loby-header .facebook,
-.room-loby-header .twitter,
+.room-lobby-header .facebook,
+.room-lobby-header .twitter,
 .player_sharing .icon-facebook,
 .player_sharing .icon-twitter,
 #main-menu-left .social-links SPAN{
   color: rgba(134, 148, 178, 0.30) !important;
 }
 
-.room-loby-header .facebook:hover,
+.room-lobby-header .facebook:hover,
 .player_sharing .icon-facebook:hover,
 #main-menu-left .icon-facebook:hover{
   color: rgb(59, 87, 157) !Important;
 }
 
-.room-loby-header .twitter:hover,
+.room-lobby-header .twitter:hover,
 .player_sharing .icon-twitter:hover,
 #main-menu-left .icon-twitter:hover{
   color: rgb(28, 173, 235) !Important;
@@ -373,7 +373,7 @@ A.dubup.voted,
 .loading,
 .buffering,
 .playerPreview .player:hover .replay,
-.room-loby-header,
+.room-lobby-header,
 #warning BUTTON:hover,
 #roomFormUpdate BUTTON:hover,
 #mobile-room-menu,
