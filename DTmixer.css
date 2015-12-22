@@ -71,7 +71,7 @@ SPAN.import-playlist.icon-inbox:before{
 }
 
 .room-info-display-container SPAN I,
-#user_popover .ban G,
+#user_popover .ban,
 #addToPlaylistFloatContainer .playlist-list-action LI{
   font-weight: bold !Important;
 }
