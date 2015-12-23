@@ -17,7 +17,7 @@
    === Other credits ===
    @null: Little changes in main player footer, help in other places
    
-   version 2.67 (12/18/15)
+   version 2.68 (12/23/15)
 */
 
 /* Opacity settings */
@@ -114,7 +114,7 @@ P,
 #user_popover .dubs,
 .browser-content-header *:not(.close-browser),
 #browser .playlist_info A,
-#browser .queue-info A,
+#browser .queue_info A,
 #results_video_api,
 #browser .text-button,
 #browser .actions A:not(.remove_icon) SPAN,
@@ -128,11 +128,8 @@ SPAN.import-playlist,
 #player-controller .currentSong,
 #player-controller .icon-playlist,
 #player-controller .display-browser *,
-#player-controller A.voted SPAN,
-#player-controller A.dubup:not(:hover):not(.voted) .icon-arrow-up,
-#player-controller A.dubup:not(:hover),
-#player-controller A.dubdown:not(:hover):not(.voted) .icon-arrow-down,
-#player-controller A.dubdown:not(:hover),
+#player-controller A:not(:hover),
+#player-controller A:not(:hover) SPAN,
 .currentTime,
 .icon-heart:before,
 .container *,
@@ -141,6 +138,10 @@ SPAN.import-playlist,
 .tinner P
 {
   color: rgb(238, 238, 238) !important;
+}
+  /* Colour for DubX button */
+.header-right-navigation .for IMG{
+  filter: brightness(93.33%) !Important;
 }
 
 .create-playlist-form .icon-createplaylist,
@@ -223,7 +224,8 @@ SPAN.import-playlist,
 }
 
 .room-info-display-container SPAN,
-#player-controller A.add-to-playlist:hover .icon-heart:before,
+#player-controller A.add-to-playlist-button:hover .icon-heart:before,
+#player-controller A.add-to-playlist-button:hover .grab-counter,
 .content-videos .actions .add_to_playlist:hover .icon-heart:before,
 :not(.creator):not(.co-owner):not(.manager):not(.mod).currentDJ .username:after,
 .dj P:after,
