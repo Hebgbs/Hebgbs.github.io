@@ -1,0 +1,11 @@
+/* Make pointer show over avatar in footer */
+#player-controller .left .imgEl{
+  cursor: pointer;
+}
+/* Swap eye icon in player controls */
+.icon-eye-blocked:before{
+  content: "\e90b";
+}
+.icon-eye-unblocked:before{
+  content: "\e90a";
+}
