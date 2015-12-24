@@ -17,7 +17,7 @@
    === Other credits ===
    @null: Little changes in main player footer, help in other places
    
-   version 2.68 (12/23/15)
+   version 2.69 (12/24/15)
 */
 
 /* Opacity settings */
@@ -1015,6 +1015,11 @@ HEADER FIGURE,
 /**/   content: "\e90a";
 /**/ }
 /**/ /* === "@null" code ends here === */
+/**/ /* === "PMs always on top" code begins here === */
+/**/ #player-controller{
+/**/   z-index: 1 !important;
+/**/ }
+/**/ /* === "PMs always on top" code ends here */
 /**/ /* === "User-specific colours" begins here === */
 /**/   /* mixerbot */
 /**/ #chat .user-566ba5dfc459e11d0044b68e:not(.deleted-message),
