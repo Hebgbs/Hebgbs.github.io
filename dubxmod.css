@@ -1,7 +1,7 @@
-.for_content.ps-container}
-  box-sahdow: none !Important;
+.for_content.ps-container{
+  box-shadow: none !Important;
 }
 
-.for_content LI {
+.for_content P{
   color: #fff !Important;
 }
