@@ -30,8 +30,3 @@
 .player_header .icon-chatsettings{
   display: none !Important;
 }
-
-/* Skip button */
-.player_header .skip-el{
-  margin-right: 0px !Important;
-}
