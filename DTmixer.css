@@ -17,7 +17,7 @@
    === Other credits ===
    @null: Little changes in main player footer, help in other places
    
-   version 2.71 (12/27/15)
+   version 2.72 (12/27/15)
 */
 
 /* Opacity settings */
@@ -377,7 +377,6 @@ A.dubup.voted,
   background-color: rgba(50, 60, 83, 0.70) !important;
 }
 
-#main-loading,
 .loading,
 .buffering,
 .playerPreview .player:hover .replay,
@@ -444,6 +443,12 @@ A.dubdown.voted,
 }
 
   /* Images & gradients */
+#main-loading{
+  background-image: linear-gradient(to bottom,
+                                    transparent 66px,
+                                    rgb(29, 69, 110) 66px,
+                                    rgb(29, 69, 110) 100%) !important;
+
 .room-item{
   background-image: linear-gradient(to top,
                                     rgba(50, 60, 83, 0.80) 36px,
@@ -719,6 +724,7 @@ HEADER FIGURE,
   outline-style: none !Important;
 }
 
+#main-loading,
 .loading-el,
 .room-item,
 .room-item .current-song,
