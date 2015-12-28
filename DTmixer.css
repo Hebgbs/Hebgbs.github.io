@@ -17,7 +17,7 @@
    === Other credits ===
    @null: Little changes in main player footer, help in other places
    
-   version 2.70 (12/25/15)
+   version 2.71 (12/27/15)
 */
 
 /* Opacity settings */
@@ -307,7 +307,6 @@ A.dubdown:hover SPAN,
 }
 
 #roomFormUpdate,
-#header-global,
 #warning,
 .loading-el,
 #private-messages .search-results:before,
@@ -321,6 +320,10 @@ A.dubdown:hover SPAN,
 .tinner{
   background-color: rgb(30, 41, 66) !important;
 }
+.infoContainerInner,
+#player-controller .left .imgEl{
+  background-color: rgba(30, 41, 66, 0.60) !important;
+}
 .for_content,
 A.close-menu,
 #browser .content-videos LI{
@@ -331,6 +334,9 @@ A.close-menu,
 .playerPreview,
 .playerPreview .close{
   background-color: rgba(30, 41, 66, 0.80) !Important;
+}
+#header-global{
+  background-color: rgba(30, 41, 66, 0.90) !Important;
 }
 
 .ps-scrollbar-y,
@@ -462,8 +468,8 @@ A.dubdown.voted,
 #player-controller .left{
   background-image: linear-gradient(to top,
                                     rgb(22, 31, 49) 5px,
-                                    rgb(30, 41, 66) 5px,
-                                    rgb(30, 41, 66) 100%) !important;
+                                    transparent 5px,
+                                    transparent 100%) !important;
 }
 
 #browser .content-videos{
@@ -724,6 +730,7 @@ HEADER FIGURE,
 .message-header,
 .message-details,
 #main-message-list,
+#player-controller,
 #player-controller .left,
 #browser .browser-content-header,
 #browser .actions A,
@@ -998,10 +1005,6 @@ HEADER FIGURE,
 /**/   display: none !Important;
 /**/ }
 /**/ 
-/**/   /* Skip button */
-/**/ .player_header .skip-el{
-/**/   margin-right: 0px !Important;
-/**/ }
 /**/ /* === "Better player header" code ends here === */
 /**/ /* === "@null" code begins here === */
 /**/   /* Make pointer show over avatar in footer */
