@@ -1,0 +1,72 @@
++--------------------------------------------------------+
+|                === Theming modules ===                 |
+| These things are intended to be used as part of a more |
+| cohesive set of imports for custom CSS, but most of it |
+| can be installed via userstyles.org if you see no need |
+|  to utilize third-party scripts for the same purpose.  |
++--------------------------------------------------------+
+
+> Better chat
+  A comprehensive set of changes mostly affecting the right section and
+  PM box. The intent of this style is to allow for highlighting of rows
+  in chat and people, and fix some gaps that occur because of the right
+  section not having a background colour.
+  - GitHub: https://hebgbs.github.io/betterchat.css
+  - Userstyle: https://hebgbs.github.io/betterchat.css
+
+> Better player header
+  A small style intended for the playlist header, when no other styles
+  which affect it are in use. This style makes it so all buttons are
+  the same size, instead of the strangeness that is seen right now.
+  - GitHub: http://hebgbs.github.io/betterplayhead.css
+  - Userstyle: https://userstyles.org/styles/121433
+
+> PMs always on top
+  A very small adendum that probably is not necessary anymore, so the
+  PM box is on top of the now playing bar when Duntrack is in mini-mode.
+  - GitHub: https://hebgbs.github.io/pmontop.css
+  - Userstyle: https://userstyles.org/styles/122299
+
+> Thinner text
+  Made as an attempt to make DubTrack look more "Modern" with reduced
+  font weights. Makes most text go on a diet.
+  - GitHub: https://hebgbs.github.io/thintext.css
+  - Userstyle: https://userstyles.org/styles/121878
+
+> Rainbow sliders and progress bars
+  Because why not? This style affects the volume sliders, progress bar
+  in content preview and the now playing bar, going so far as to include
+  additional content at the bottom to fake progress remaining. Animated!
+  - GitHub: https://hebgbs.gthub.io/rainbowstuff.css
+  - Userstyle: https://userstyles.org/styles/121863
+
+> Rainbow stuff for Chillout Mixer
+  Same as above, except a bit muted to go with the chilly blue theme
+  for Chillout Mixer.
+  - GitHub: https://hebgbs.github.io/rainbowmixer.css
+
++---------------------------------------------------------------+
+|                  === Complete theme sets ===                  |
+| These are themes I have done for other communities and people |
+| who have requested my services as a front-end hobbiest. These |
+|  styles will most likely have derivative code from the above  |
+| or use derivative code from elsewhere as necessary to fulfill |
+| their requests. Most of these themes imply you'll abandon use |
+|   of a community's theme in favour of your own preferences.   |
++---------------------------------------------------------------+
+
+> Chillout Mixer
+  A smoky blue theme indended to calm both mind and spirit in a bid to
+  encourage the playing of slow, down-tempo ambiance.
+  - GitHub: https://hebgbs.github.io/DTmixer.css
+  - Userstyle: https://userstyles.org/styles/121878
+
+> Frosolf's custom theme
+  Using the same colour scheme as Chillout Mixer, except with a lot of
+  stuff for NightBlue3 by netox005 as well.
+  - GitHub: https://frosolf.github.io/frosolf.css
+
+> Personal theme
+  My own changes to Dubtrack. It's not too extreme, but you can use it
+  as the base of your own theme!
+  - GitHub: https://hebgbs.github.io/hebgbs.css
