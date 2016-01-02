@@ -17,7 +17,7 @@
    === Other credits ===
    @null: Little changes in main player footer, help in other places
    
-   version 2.72 (12/27/15)
+   version 2.74 (01/02/16)
 */
 
 /* Opacity settings */
@@ -324,6 +324,11 @@ A.dubdown:hover SPAN,
 #player-controller .left .imgEl{
   background-color: rgba(30, 41, 66, 0.60) !important;
 }
+
+.infoContainerInner{
+  box-shadow: 0px -8px 0px 0px rgba(30, 41, 66, 0.60) !Important;
+}
+
 .for_content,
 A.close-menu,
 #browser .content-videos LI{
@@ -481,15 +486,6 @@ A.dubdown.voted,
 #browser .content-videos{
   background: url(http://i.imgur.com/0sxhBUn.png),
               url(https://i.imgur.com/nQu4KMz.jpg) center center/529px 434px no-repeat !important;
-}
-
-#room-main-player-container-soundcloud,
-.SCplayerImage{
-  background: url(http://i.imgur.com/NxKiWSL.png) center center/80% 80% no-repeat,
-              linear-gradient(to top,
-                              rgba(30, 41, 66, 0.70) 0%,
-                              rgba(30, 41, 66, 0.70) 100%),
-                              rgb(30, 41, 66) url(http://i.imgur.com/0sxhBUn.png) !important;
 }
 
 /* Border settings */
@@ -754,7 +750,6 @@ HEADER FIGURE,
 }
 
 #main-loading .spinner,
-.soundcloud IMG,
 .chat-option-buttons i,
 .playerPreview:not(:hover) .close{
   display: none !Important;
@@ -1013,6 +1008,22 @@ HEADER FIGURE,
 /**/ }
 /**/ 
 /**/ /* === "Better player header" code ends here === */
+/**/ /* === "SoundCloud images" code begins here === */
+/**/ #room-main-player-container-soundcloud,
+/**/ .playerPreview .SCplayerImage{
+/**/   background: url(http://i.imgur.com/NxKiWSL.png) center center/80% 80% no-repeat,
+/**/               linear-gradient(to top,
+/**/                               rgba(30, 41, 66, 0.70) 0%,
+/**/                               rgba(30, 41, 66, 0.70) 100%),
+/**/                               rgb(30, 41, 66) url(http://i.imgur.com/0sxhBUn.png) !important;
+/**/ }
+/**/ 
+/**/   /* Make default image disappear */
+/**/ .soundcloud IMG[src="https://d3byct92ei5n7c.cloudfront.net/hhberclba/image/upload/c_fill,h_460,w_900/tiqxlzynh3rxrkwvzeak.jpg"],
+/**/ .playerPreview .soundcloud IMG{
+/**/   display: none !Important;
+/**/ }
+/**/ /* === "SoundCloud images" code ends here === */
 /**/ /* === "@null" code begins here === */
 /**/   /* Make pointer show over avatar in footer */
 /**/ #player-controller .left .imgEl{
