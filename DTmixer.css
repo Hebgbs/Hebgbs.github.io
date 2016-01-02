@@ -17,7 +17,7 @@
    === Other credits ===
    @null: Little changes in main player footer, help in other places
    
-   version 2.74 (01/02/16)
+   version 2.75 (01/02/16)
 */
 
 /* Opacity settings */
@@ -324,7 +324,7 @@ A.dubdown:hover SPAN,
 #player-controller .left .imgEl{
   background-color: rgba(30, 41, 66, 0.60) !important;
 }
-
+  /* Must match with above */
 .infoContainerInner{
   box-shadow: 0px -8px 0px 0px rgba(30, 41, 66, 0.60) !Important;
 }
@@ -966,7 +966,7 @@ HEADER FIGURE,
 /**/ }
 /**/ 
 /**/ .avatar_tools{
-/**/   border-bottom: 1px solid rgb(135, 140, 142) !important;
+/**/   border-bottom: 1px solid rgb(29, 69, 110) !important;
 /**/ }
 /**/ 
 /**/ .deleted-message .timeago{
