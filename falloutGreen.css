@@ -1,0 +1,41 @@
+/* Fallout terminal UI v0.1
+   ! Requires installation of Monofonto font. Google it.
+   ! This is a VERY rough release to show the idea off;
+     It is nowhere near complete.
+*/
+
+INPUT,
+OPTION,
+BUTTON,
+.loading,
+#main-loading,
+#header-global A,
+#header-global .header-right-navigation SPAN:not(.icon-message),
+#roomFormUpdate *:not(.icon-close),
+.player_header SPAN,
+#main_player H5,
+.videoquality-el,
+.play-song-link,
+.left_section DIV DIV:not(SECTION) DIV :not(SPAN) *:not(I),
+.display-room-users.icon-people I,
+.right_section LI *:not(.icon-close),
+.right_section LI *:after,
+#new-messages-counter,
+.chat-options *:not(I),
+#main-menu-left *:not(.icon-close):not(SPAN),
+#main-menu-right *:not(.icon-close),
+#player-controller *:not(SPAN),
+#playlists-scroll *:not(SPAN),
+#browser .title,
+#browser .text-button,
+#browser LI *:not(SPAN),
+.timeDisplay,
+#browser DIV DIV DIV DIV,
+#profileMainSection *:not(.icon-close),
+#warning *{
+  font-family: Monofonto !Important;
+  font-weight: 400 !important;
+  text-decoration: none !Important;
+  color: lime !Important;
+  text-shadow: 0px 0px 6px lime !important;
+}
