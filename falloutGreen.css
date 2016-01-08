@@ -1,8 +1,9 @@
-/* Fallout terminal UI v0.61
+/* Fallout terminal UI v0.62
    ! Requires installation of Monofonto font. Google it.
    ! This is a VERY rough release to show the idea off;
      It is nowhere near complete.
 */
+
 /* Animations */
 @keyframes rm {
   0% {
@@ -31,7 +32,7 @@
   background-color: #021002 !Important;
 }
 .player_header SPAN,
-.left_section,
+#main_player,
 .right_section,
 .play-song-link{
   background-color: rgba(2, 16, 2, 0.70) !important;
@@ -110,6 +111,9 @@ BUTTON,
 .icon-heart:before{
   color: #2f2 !Important;
 }
+/*.header-right-navigation .for IMG{
+  filter: brightness(93.33%) !Important;
+}*/
   /* Highlighted */
 #mobile-room-menu A:hover,
 .message-counter,
@@ -188,7 +192,7 @@ INPUT,
 /* Pseudochildren */
   /* Message */
 .main-page-container:before{
-  content: 'Immediate front-end\a nearly complete.\a\a Problems? View the sheet.\a\a FallOut Theme green v0.61\a\a This message will disappear\a in 60 seconds.';
+  content: 'Immediate front-end\a nearly complete.\a\a Problems? View the sheet.\a\a FallOut Theme green v0.62\a\a This message will disappear\a in 60 seconds.';
   width: auto;
   height: auto;
   white-space: pre-wrap;
