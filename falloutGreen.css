@@ -1,12 +1,25 @@
-@namespace url(http://www.w3.org/1999/xhtml);
-
-@-moz-document domain("dubtrack.fm") {
-
-/* Fallout terminal UI v0.5
+/* Fallout terminal UI v0.6
    ! Requires installation of Monofonto font. Google it.
    ! This is a VERY rough release to show the idea off;
      It is nowhere near complete.
 */
+/* Animations */
+@keyframes rm {
+  0% {
+    opacity: 1;
+    display: block;
+  }
+  99% {
+    opacity: 0;
+    display: block;
+  }
+  100% {
+    opacity: 0;
+    width: 0px;
+    height: 0px;
+    display: none;
+  }
+}
 
 /* Background colors */
 #mobile-room-menu,
@@ -16,16 +29,29 @@
 #addToPlaylistFloatContainer{
   background-color: #021002 !Important;
 }
+.player_header SPAN,
+.left_section,
+.right_section,
+.play-song-link{
+  background-color: rgba(2, 16, 2, 0.70) !important;
+}
 .main-page-container:before{
   background-color: rgba(32, 255, 32, 0.30) !important;
 }
+.player_header SPAN:hover{
+  background-color: rgba(32, 255, 32, 0.70) !important;
+}
 #mobile-room-menu A:hover,
+.ui-slider-handle,
+.message-counter,
 #player-controller A:hover,
 .progressBg,
 #addToPlaylistFloatContainer .icon-add:hover,
 .icon-close:hover{
   background-color: #2f2 !important;
 }
+.ui-slider,
+.ui-slider-range-min,
 #player-controller .right,
 #player-controller .voted,
 #player-controller .grabbed,
@@ -53,7 +79,7 @@ BUTTON,
 .left_section DIV DIV:not(SECTION) DIV :not(SPAN) *:not(I),
 .display-room-users.icon-people I,
 .right_section LI *:not(.icon-close),
-#chat :not(.chat_tools) *:not(.icon-close):not(.icon-camera),
+#chat :not(.chat_tools) *:not(.icon-close):not(.icon-camera):not(I),
 .right_section LI *:after,
 #new-messages-counter,
 .chat-options *:not(I),
@@ -75,6 +101,7 @@ BUTTON,
   /* Global settings */
 *{
   color: #2f2 !Important;
+  opacity: 1 !important;
   text-shadow: 0px 0px 3px #2f2 !important;
   border-radius: 0px !Important;
   border: none !Important;
@@ -84,6 +111,8 @@ BUTTON,
 }
   /* Highlighted */
 #mobile-room-menu A:hover,
+.message-counter,
+.player_header SPAN:hover,
 #player-controller A:hover SPAN,
 #player-controller A:hover .icon-heart:before,
 #addToPlaylistFloatContainer .icon-add:hover,
@@ -99,17 +128,22 @@ INPUT,
 }
 
 /* Fancy glowing borders */
+.message-counter,
+.ui-slider-handle,
 .progressBg{
-  box-shadow: 0px 0px 4px 1px rgba(32, 255, 23, 0.30);
+  box-shadow: 0px 0px 4px 1px rgba(32, 255, 23, 0.30) !important;
 }
 
 #player-controller .right{
   z-index: 1 !Important;
 }
 
+.player_header SPAN.active,
+.player_header SPAN:hover,
 #player-controller .voted,
 #player-controller .grabbed,
-#player-controller A:hover{
+#player-controller A:hover,
+.ui-slider-range-min:before{
   box-shadow: inset 0px 0px 0px 1px #2f2,
               inset 0px 0px 4px 1px rgba(32, 255, 32, 0.30),
               0px 0px 3px 1px rgba(32, 255, 32, 0.30);
@@ -136,38 +170,57 @@ INPUT,
 /* Position and size */
 #volume-div{
   width: 80px !Important;
-  margin-left: 8px !Important;
+  margin-left: 15px !Important;
+  top: -4px !important;
+}
+.ui-slider{
+  height: 13px !Important;
+}
+.ui-slider-handle{
+  top: -4px !Important;
+  width: 4px !Important;
+  height: 21px !Important;
+  margin-left: -2px !Important;
 }
 
 /* Pseudochildren */
   /* Message */
 .main-page-container:before{
-  content: 'Incomplete; It\'s very rough.\a Problems? View the sheet.\a FallOut Theme green v0.5';
-  width: auto !important;
-  height: auto !important;
-  white-space: pre-wrap !important;
+  content: 'Immediate front-end\a nearly complete.\a\a Problems? View the sheet.\a\a FallOut Theme green v0.6\a\a This message will disappear\a in 60 seconds.';
+  width: auto;
+  height: auto;
+  white-space: pre-wrap;
   position: absolute;
-  padding: 4px !Important;
-  animation: rm 0s ease-in 5s forwards;
+  padding: 4px;
+  animation: rm 0s ease 60s forwards;
 }
-  /* Triangles */
-    /* Global */
+  /* Volume */
+    /* Triangles */
+      /* Global */
 .ui-slider:before,
 .ui-slider:after{
   width: 0px !Important;
   height: 0px !Important;
   position: absolute !Important;
+  top: -5px !Important;
   transform: scalex(0.70) !Important;
-}
+}     /* Left */
 .ui-slider:before{
   content: '\25c0';
-  top: -10px !Important;
-  left: -9px !important;
-}
+  left: -11px !important;
+}     /* Right */
 .ui-slider:after{
   content: '\25b6';
-  top: -10px !Important;
-  right: 0px !important;
+  right: -1px !important;
+}
+    /* Slider */
+.ui-slider-range-min:before{
+  content: '';
+  width: calc(100% + 6px);
+  height: 13px;
+  position: absolute;
+  top: 0px;
+  left: -3px;
 }
   /* Faux borders */
     /* Global */
@@ -202,4 +255,6 @@ INPUT,
 #player-controller .right:before{
   bottom: -3px !Important;
 }
-}
+
+.spinner{
+  display: none !Important;
