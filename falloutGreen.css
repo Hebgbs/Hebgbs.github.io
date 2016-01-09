@@ -1,11 +1,14 @@
+/* Fallout terminal UI v0.64
+   ! Requires installation of Monofonto font. Google it.
+   ! This is a VERY rough release to show the idea off;
+     It is nowhere near complete.
+*/
 /* Animations */
-@keyframes rm {
+@keyframes rm{
   0% {
     opacity: 1;
-    display: block;
-  }
-  99% {
-    opacity: 0;
+    width: initial;
+    height: initial;
     display: block;
   }
   100% {
@@ -35,7 +38,8 @@
 .main-page-container:before{
   background-color: rgba(32, 255, 32, 0.30) !important;
 }
-.player_header SPAN:hover{
+.player_header SPAN:hover,
+.play-song-link:hover{
   background-color: rgba(32, 255, 32, 0.70) !important;
 }
 #mobile-room-menu A:hover,
@@ -75,7 +79,7 @@ BUTTON,
 #main_player H5,
 .videoquality-el,
 .play-song-link,
-.left_section DIV DIV:not(SECTION) DIV :not(SPAN) *:not(I),
+.left_section DIV DIV:not(SECTION) DIV :not(SPAN) *,
 .display-room-users.icon-people I,
 .right_section LI *:not(.icon-close),
 #chat :not(.chat_tools) *:not(.icon-close):not(.icon-camera):not(I),
@@ -113,6 +117,7 @@ BUTTON,
   height: 0px !Important;
   padding-left: 21px !Important;
   padding-top: 21px !Important;
+  /* ! This should match text colour and have blur, should come soon */
   background-image: url(https://hebgbs.github.io/paramsGreen.svg) !Important;
 }
   /* Highlighted */
@@ -120,6 +125,8 @@ BUTTON,
 .message-counter,
 .player_header SPAN:hover,
 .videoquality-el:hover,
+.play-song-link:hover,
+.play-song-link:hover *,
 #player-controller A:hover SPAN,
 #player-controller A:hover .icon-heart:before,
 #addToPlaylistFloatContainer .icon-add:hover,
@@ -138,6 +145,7 @@ INPUT,
 /* Fancy glowing borders */
 .message-counter,
 .ui-slider-handle,
+.play-song-link:hover,
 .progressBg,
 .videoquality-el:not(.active-hd):hover,
 #warning BUTTON:hover{
@@ -152,9 +160,7 @@ INPUT,
 .player_header SPAN:hover,
 #new-messages-counter,
 .videoquality-el.active-hd,
-#player-controller .voted,
-#player-controller .grabbed,
-#player-controller A:hover,
+.play-song-link,
 .ui-slider-range-min:before,
 #warning,
 #main_player,
@@ -166,7 +172,10 @@ INPUT,
 }
 
 #mobile-room-menu A.active,
-#mobile-room-menu A:hover{
+#mobile-room-menu A:hover,
+#player-controller .voted,
+#player-controller .grabbed,
+#player-controller A:hover{
   box-shadow: inset 1px 0px 0px 0px rgb(32, 255, 32),
               inset 1px 0px 4px 0px rgba(32, 255, 23, 0.30),
                     -1px 0px 3px 0px rgba(32, 255, 23, 0.30),
@@ -181,6 +190,10 @@ INPUT,
 /* Some padding to make things look neat */
 .icon-close{
   padding: 3px !Important;
+}
+
+.chatDelete{
+  margin-top: 3px !Important;
 }
 
 /* Position and size */
@@ -207,13 +220,17 @@ INPUT,
 /* Pseudochildren */
   /* Message */
 .main-page-container:before{
-  content: 'Immediate front-end\a nearly complete.\a\a Problems? View the sheet.\a\a FallOut Theme green v0.61\a\a This message will disappear\a in 60 seconds.';
+  content: 'Immediate front-end\a nearly complete.\a\a Problems? View the sheet.\a\a FallOut Theme green v0.64\a\a This message should disappear\a in 60 seconds.';
   width: auto;
   height: auto;
   white-space: pre-wrap;
   position: absolute;
   padding: 4px;
-  animation: rm 0s ease 60s forwards;
+  /* ! Ideally, this should all be in one line. */
+  animation-fill-mode: forwards; /* so animation stops on last frame and doesn't reset */
+  animation-name: rm;
+  animation-duration: 0s; /* how long the animation should last */
+  animation-delay: 60s; /* how long to wait before stating the animation */
 }
   /* Volume */
     /* Triangles */
