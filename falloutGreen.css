@@ -1,9 +1,3 @@
-/* Fallout terminal UI v0.62
-   ! Requires installation of Monofonto font. Google it.
-   ! This is a VERY rough release to show the idea off;
-     It is nowhere near complete.
-*/
-
 /* Animations */
 @keyframes rm {
   0% {
@@ -28,8 +22,9 @@
 #new-messages-counter,
 #player-controller,
 #player-controller .left,
-#addToPlaylistFloatContainer{
-  background-color: #021002 !Important;
+#addToPlaylistFloatContainer,
+#warning{
+  background-color: rgb(2, 16, 2) !Important;
 }
 .player_header SPAN,
 #main_player,
@@ -46,11 +41,13 @@
 #mobile-room-menu A:hover,
 .ui-slider-handle,
 .message-counter,
+.videoquality-el:hover,
 #player-controller A:hover,
 .progressBg,
 #addToPlaylistFloatContainer .icon-add:hover,
-.icon-close:hover{
-  background-color: #2f2 !important;
+.icon-close:hover,
+#warning BUTTON:hover{
+  background-color: rgb(32, 255, 32) !important;
 }
 .ui-slider,
 .ui-slider-range-min,
@@ -102,26 +99,32 @@ BUTTON,
 }
   /* Global settings */
 *{
-  color: #2f2 !Important;
+  color: rgb(32, 255, 32) !Important;
   opacity: 1 !important;
-  text-shadow: 0px 0px 3px #2f2 !important;
+  text-shadow: 0px 0px 3px rgb(32, 255, 32) !important;
   border-radius: 0px !Important;
   border: none !Important;
 }
 .icon-heart:before{
-  color: #2f2 !Important;
+  color: rgb(32, 255, 32) !Important;
 }
-/*.header-right-navigation .for IMG{
-  filter: brightness(93.33%) !Important;
-}*/
+.header-right-navigation .for IMG{
+  width: 0px !Important;
+  height: 0px !Important;
+  padding-left: 21px !Important;
+  padding-top: 21px !Important;
+  background-image: url(https://hebgbs.github.io/paramsGreen.svg) !Important;
+}
   /* Highlighted */
 #mobile-room-menu A:hover,
 .message-counter,
 .player_header SPAN:hover,
+.videoquality-el:hover,
 #player-controller A:hover SPAN,
 #player-controller A:hover .icon-heart:before,
 #addToPlaylistFloatContainer .icon-add:hover,
-.icon-close:hover{
+.icon-close:hover,
+#warning BUTTON:hover{
   color: #012001 !Important;
   text-shadow: 0px 0px 3px #012001 !important;
 }
@@ -135,7 +138,9 @@ INPUT,
 /* Fancy glowing borders */
 .message-counter,
 .ui-slider-handle,
-.progressBg{
+.progressBg,
+.videoquality-el:not(.active-hd):hover,
+#warning BUTTON:hover{
   box-shadow: 0px 0px 4px 1px rgba(32, 255, 23, 0.30) !important;
 }
 
@@ -146,24 +151,29 @@ INPUT,
 .player_header SPAN.active,
 .player_header SPAN:hover,
 #new-messages-counter,
+.videoquality-el.active-hd,
 #player-controller .voted,
 #player-controller .grabbed,
 #player-controller A:hover,
-.ui-slider-range-min:before{
-  box-shadow: inset 0px 0px 0px 1px #2f2,
+.ui-slider-range-min:before,
+#warning,
+#main_player,
+.right_section,
+#warning BUTTON{
+  box-shadow: inset 0px 0px 0px 1px rgb(32, 255, 32),
               inset 0px 0px 4px 1px rgba(32, 255, 32, 0.30),
               0px 0px 3px 1px rgba(32, 255, 32, 0.30);
 }
 
 #mobile-room-menu A.active,
 #mobile-room-menu A:hover{
-  box-shadow: inset 1px 0px 0px 0px #2f2,
+  box-shadow: inset 1px 0px 0px 0px rgb(32, 255, 32),
               inset 1px 0px 4px 0px rgba(32, 255, 23, 0.30),
                     -1px 0px 3px 0px rgba(32, 255, 23, 0.30),
-              inset 0px -1px 0px 0px #2f2,
+              inset 0px -1px 0px 0px rgb(32, 255, 32),
               inset 0px -1px 4px 0px rgba(32, 255, 23, 0.30),
                     0px 1px 3px 0px rgba(32, 255, 23, 0.30),
-              inset -1px 0px 0px 0px #2f2,
+              inset -1px 0px 0px 0px rgb(32, 255, 32),
               inset -1px 0px 4px 0px rgba(32, 255, 23, 0.30),
                     1px 0px 3px 0px rgba(32, 255, 23, 0.30);
 }
@@ -189,10 +199,15 @@ INPUT,
   margin-left: -2px !Important;
 }
 
+.videoquality-el{
+  padding-left: 7px !important;
+  padding-right: 6px !Important;
+}
+
 /* Pseudochildren */
   /* Message */
 .main-page-container:before{
-  content: 'Immediate front-end\a nearly complete.\a\a Problems? View the sheet.\a\a FallOut Theme green v0.62\a\a This message will disappear\a in 60 seconds.';
+  content: 'Immediate front-end\a nearly complete.\a\a Problems? View the sheet.\a\a FallOut Theme green v0.61\a\a This message will disappear\a in 60 seconds.';
   width: auto;
   height: auto;
   white-space: pre-wrap;
@@ -246,7 +261,17 @@ INPUT,
                               transparent 7px),
               linear-gradient(to bottom,
                               transparent 3px,
-                              #2f2 4px,
+                              rgb(32, 255, 32) 4px,
+                              transparent 4px,
+                              transparent 5px),
+              linear-gradient(to bottom,
+                              transparent 3px,
+                              rgb(32, 255, 32) 4px,
+                              transparent 4px,
+                              transparent 5px),
+              linear-gradient(to bottom,
+                              transparent 3px,
+                              rgb(32, 255, 32) 4px,
                               transparent 4px,
                               transparent 5px);
 }
