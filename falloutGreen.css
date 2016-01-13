@@ -333,8 +333,8 @@ INPUT{
 }
 #chat .chat-options .chat-option-buttons-sound .setMentionChatNotifications.active:after,
 #chat .chat-options .chat-option-buttons-sound .setMentionChatNotifications:hover:after{
-  width: calc(33% + 1%) !Important;
-  left: 33% !important;
+  width: calc(33% + 1.25%) !Important;
+  left: calc(33% - 0.25%) !important;
 }
 #chat .chat-options .chat-option-buttons-sound .setOffChatNotifications.active:after,
 #chat .chat-options .chat-option-buttons-sound .setOffChatNotifications:hover:after{
