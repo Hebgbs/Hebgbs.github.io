@@ -1,26 +1,50 @@
-/* Fallout terminal UI v0.64
+/* Fallout terminal UI v0.80
    ! Requires installation of Monofonto font. Google it.
-   ! This is a VERY rough release to show the idea off;
-     It is nowhere near complete.
+   ! The code's a right mess at the moment because of
+     the major complexity chat options presented.
 */
+/* Import for Better Chat Lite */
+@import url("https://hebgbs.github.io/betterchatlite.css"); 
+
 /* Animations */
 @keyframes rm{
   0% {
-    opacity: 1;
     width: initial;
     height: initial;
-    display: block;
   }
   100% {
-    opacity: 0;
     width: 0px;
     height: 0px;
-    display: none;
   }
 }
 
 /* Background colors */
+  /* Bright */
+#mobile-room-menu A:hover,
+.ui-slider-handle,
+.message-counter,
+.videoquality-el:hover,
+#new-messages-counter:hover,
+.avatar-list .username:after,
+.chat-option-buttons-sound SPAN:hover,
+#player-controller A:hover,
+.progressBg,
+#addToPlaylistFloatContainer .icon-add:hover,
+.icon-close:hover,
+#warning BUTTON:hover{
+  background-color: rgb(32, 255, 32) !important;
+}
+.player_header SPAN:hover,
+.play-song-link:hover{
+  background-color: rgba(32, 255, 32, 0.70) !important;
+}
+.main-page-container:before{
+  background-color: rgba(32, 255, 32, 0.30) !important;
+}
+  /* Dark */
 #mobile-room-menu,
+#main-menu-left,
+#main-menu-right,
 #header-global,
 #new-messages-counter,
 #player-controller,
@@ -35,24 +59,7 @@
 .play-song-link{
   background-color: rgba(2, 16, 2, 0.70) !important;
 }
-.main-page-container:before{
-  background-color: rgba(32, 255, 32, 0.30) !important;
-}
-.player_header SPAN:hover,
-.play-song-link:hover{
-  background-color: rgba(32, 255, 32, 0.70) !important;
-}
-#mobile-room-menu A:hover,
-.ui-slider-handle,
-.message-counter,
-.videoquality-el:hover,
-#player-controller A:hover,
-.progressBg,
-#addToPlaylistFloatContainer .icon-add:hover,
-.icon-close:hover,
-#warning BUTTON:hover{
-  background-color: rgb(32, 255, 32) !important;
-}
+  /* Disappear */
 .ui-slider,
 .ui-slider-range-min,
 #player-controller .right,
@@ -73,13 +80,14 @@ BUTTON,
 #header-global A,
 #header-global .header-right-navigation SPAN:not(.icon-message),
 #mobile-room-menu *,
-#room-list *:not(.icon-search):not(.icon-people),
+#room-list .room-item *:not(.icon-people),
+.create-room,
 #roomFormUpdate *:not(.icon-close),
 .player_header SPAN,
 #main_player H5,
 .videoquality-el,
 .play-song-link,
-.left_section DIV DIV:not(SECTION) DIV :not(SPAN) *,
+.left_section DIV DIV:not(SECTION) DIV :not(SPAN) *:not(.icon-play),
 .display-room-users.icon-people I,
 .right_section LI *:not(.icon-close),
 #chat :not(.chat_tools) *:not(.icon-close):not(.icon-camera):not(I),
@@ -107,9 +115,9 @@ BUTTON,
   opacity: 1 !important;
   text-shadow: 0px 0px 3px rgb(32, 255, 32) !important;
   border-radius: 0px !Important;
-  border: none !Important;
 }
-.icon-heart:before{
+.icon-heart:before,
+#chat .chat-options .chat-option-buttons-sound SPAN.active{
   color: rgb(32, 255, 32) !Important;
 }
 .header-right-navigation .for IMG{
@@ -127,6 +135,11 @@ BUTTON,
 .videoquality-el:hover,
 .play-song-link:hover,
 .play-song-link:hover *,
+#new-messages-counter:hover SPAN,
+.avatar-list .username:after,
+.chat-option-buttons-sound SPAN:hover,
+.chat-option-buttons-sound SPAN:hover *,
+#chat .chat-options .chat-option-buttons-sound SPAN.active:hover,
 #player-controller A:hover SPAN,
 #player-controller A:hover .icon-heart:before,
 #addToPlaylistFloatContainer .icon-add:hover,
@@ -142,52 +155,7 @@ INPUT,
   font-style: normal !Important;
 }
 
-/* Fancy glowing borders */
-.message-counter,
-.ui-slider-handle,
-.play-song-link:hover,
-.progressBg,
-.videoquality-el:not(.active-hd):hover,
-#warning BUTTON:hover{
-  box-shadow: 0px 0px 4px 1px rgba(32, 255, 23, 0.30) !important;
-}
-
-#player-controller .right{
-  z-index: 1 !Important;
-}
-
-.player_header SPAN.active,
-.player_header SPAN:hover,
-#new-messages-counter,
-.videoquality-el.active-hd,
-.play-song-link,
-.ui-slider-range-min:before,
-#warning,
-#main_player,
-.right_section,
-#warning BUTTON{
-  box-shadow: inset 0px 0px 0px 1px rgb(32, 255, 32),
-              inset 0px 0px 4px 1px rgba(32, 255, 32, 0.30),
-              0px 0px 3px 1px rgba(32, 255, 32, 0.30);
-}
-
-#mobile-room-menu A.active,
-#mobile-room-menu A:hover,
-#player-controller .voted,
-#player-controller .grabbed,
-#player-controller A:hover{
-  box-shadow: inset 1px 0px 0px 0px rgb(32, 255, 32),
-              inset 1px 0px 4px 0px rgba(32, 255, 23, 0.30),
-                    -1px 0px 3px 0px rgba(32, 255, 23, 0.30),
-              inset 0px -1px 0px 0px rgb(32, 255, 32),
-              inset 0px -1px 4px 0px rgba(32, 255, 23, 0.30),
-                    0px 1px 3px 0px rgba(32, 255, 23, 0.30),
-              inset -1px 0px 0px 0px rgb(32, 255, 32),
-              inset -1px 0px 4px 0px rgba(32, 255, 23, 0.30),
-                    1px 0px 3px 0px rgba(32, 255, 23, 0.30);
-}
-
-/* Some padding to make things look neat */
+/* Position and size */
 .icon-close{
   padding: 3px !Important;
 }
@@ -196,14 +164,13 @@ INPUT,
   margin-top: 3px !Important;
 }
 
-/* Position and size */
 #volume-div{
-  width: 80px !Important;
-  margin-left: 15px !Important;
-  top: -4px !important;
+  margin-left: 6px !Important;
+  top: -5px !important;
 }
-.ui-slider{
-  height: 13px !Important;
+.ui-slider,
+.ui-slider-range-min{
+  height: 15px !Important;
 }
 .ui-slider-handle{
   top: -4px !Important;
@@ -212,25 +179,256 @@ INPUT,
   margin-left: -2px !Important;
 }
 
-.videoquality-el{
+.videoquality-el,
+.avatar-list .username:after{
   padding-left: 7px !important;
   padding-right: 6px !Important;
 }
 
+/* Fancy glowing borders */
+#mobile-room-menu .player-button,
+#room-list .room-search,
+.pusher-chat-widget-input,
+.chat_tools,
+.chat-options *,
+INPUT{
+  border-color: rgb(32, 255, 32) !important;
+}
+
+.message-counter,
+#new-messages-counter,
+.ui-slider,
+#player-controller A.voted,
+#player-controller A.grabbed,
+#player-controller A:hover,
+#warning BUTTON{
+  border: 1px solid rgb(32, 255, 32) !important;
+}
+
+#main-menu-left{
+  border-right: 1px solid rgb(32, 255, 32);
+}
+
+#main-menu-right{
+  border-left: 1px solid rgb(32, 255, 32);
+}
+
+.room-item HEADER,
+.room-item .current-song,
+#player-controller .left,
+#player-controller .right
+{
+  border-top: 1px solid rgb(32, 255, 32) !important;
+}
+
+#header-global,
+#mobile-room-menu,
+.avatar_tools{
+  border-bottom: 1px solid rgb(32, 255, 32) !important;
+}
+
+#player-controller A.voted,
+#player-controller A.grabbed,
+#player-controller A:hover{
+  border-top: none !Important;
+}
+
+#chat .chat-options .chat-option-buttons-sound *:not(.active){
+  border-bottom-color: transparent !Important;
+  border-right-color: transparent !Important;
+}
+
+#player-controller .right{
+  z-index: 1 !Important;
+}
+
+.message-counter,
+#new-messages-counter,
+.ui-slider,
+.progressBg,
+.avatar-list .username:after,
+#warning BUTTON{
+  box-shadow: 0px 0px 4px 1px rgba(32, 255, 23, 0.30),
+              inset 0px 0px 4px 1px rgba(32, 255, 23, 0.30) !important;
+}
+
+.player_header SPAN.active,
+.player_header SPAN:hover,
+.ui-slider-handle,
+.videoquality-el.active-hd,
+.videoquality-el:hover{
+  box-shadow: inset 0px 0px 0px 1px rgb(32, 255, 32),
+              0px 0px 3px 1px rgba(32, 255, 23, 0.30),
+              inset 0px 0px 4px 1px rgba(32, 255, 23, 0.30) !important;
+}
+
+#main_player,
+.play-song-link,
+.right_section{
+  box-shadow: inset 0px 0px 0px 1px rgb(32, 255, 32),
+              inset 0px 0px 4px 1px rgba(32, 255, 32, 0.30),
+              0px 0px 3px 1px rgba(32, 255, 32, 0.30);
+}
+
+#chat .chat-options .chat-option-buttons-sound .setMentionChatNotifications.active,
+#chat .chat-options .chat-option-buttons-sound .setMentionChatNotifications:hover,
+#chat .chat-options .chat-option-buttons-sound .setOffChatNotifications.active,
+#chat .chat-options .chat-option-buttons-sound .setOffChatNotifications:hover{
+  box-shadow: -1px 0px 0px 0px rgb(32, 255, 32);
+}
+
 /* Pseudochildren */
+  /* Border accents */
+    /* Horizontal */
+#header-global:after,
+#mobile-room-menu:after,
+.room-lobby-header:after,
+.room-item HEADER:before,
+.room-item .current-song:before,
+.chat_tools:after,
+.chat-option-header:first-child:after,
+.chat-option-buttons-display SPAN:nth-child(2):after,
+.chat-option-header:nth-child(3):after,
+#chat .chat-options .chat-option-buttons-sound .setOnChatNotifications.active:after,
+#chat .chat-options .chat-option-buttons-sound .setOnChatNotifications:hover:after,
+#chat .chat-options .chat-option-buttons-sound .setMentionChatNotifications.active:after,
+#chat .chat-options .chat-option-buttons-sound .setMentionChatNotifications:hover:after,
+#chat .chat-options .chat-option-buttons-sound .setOffChatNotifications.active:after,
+#chat .chat-options .chat-option-buttons-sound .setOffChatNotifications:hover:after,
+.input-room-users-search:after,
+.pusher-chat-widget-input:before,
+#player-controller .left .cursor-pointer:before,
+.infoContainerInner:before,
+#player-controller .right:before{
+  content: '';
+  height: 7px;
+  width: 100%;
+  position: absolute;
+  left: 0px;
+  background: linear-gradient(to bottom,
+                              transparent 0px,
+                              rgba(32, 255, 32, 0.30) 4px,
+                              transparent 7px);
+  pointer-events: none;
+}
+      /* Top */
+.pusher-chat-widget-input:before,
+#player-controller .left .imgEl:before,
+.infoContainerInner:before,
+#player-controller .right:before{
+  top: -4px !Important;
+}
+.room-item HEADER:before{
+  bottom: 111px;
+}
+.room-item .current-song:before{
+  bottom: 33px;
+}
+#chat .chat-options .chat-option-buttons-sound .setOnChatNotifications.active:after,
+#chat .chat-options .chat-option-buttons-sound .setOnChatNotifications:hover:after,
+#chat .chat-options .chat-option-buttons-sound .setOffChatNotifications.active:after,
+#chat .chat-options .chat-option-buttons-sound .setOffChatNotifications:hover:after{
+  width: calc(33% + 5px) !Important;
+}
+#chat .chat-options .chat-option-buttons-sound .setMentionChatNotifications.active:after,
+#chat .chat-options .chat-option-buttons-sound .setMentionChatNotifications:hover:after{
+  width: calc(33% + 7px) !Important;
+  left: 33% !important;
+}
+#chat .chat-options .chat-option-buttons-sound .setOffChatNotifications.active:after,
+#chat .chat-options .chat-option-buttons-sound .setOffChatNotifications:hover:after{
+  left: calc(66% + 2px) !Important;
+}
+      /* Bottom */
+#header-global:after,
+#mobile-room-menu:after,
+.room-lobby-header:after,
+.chat_tools:after,
+.chat-option-header:first-child:after,
+.chat-option-buttons-display SPAN:nth-child(2):after,
+.chat-option-header:nth-child(3):after{
+  bottom: -4px;
+}
+#chat .chat-options .chat-option-buttons-sound .setOnChatNotifications.active:after,
+#chat .chat-options .chat-option-buttons-sound .setOnChatNotifications:hover:after,
+#chat .chat-options .chat-option-buttons-sound .setMentionChatNotifications.active:after,
+#chat .chat-options .chat-option-buttons-sound .setMentionChatNotifications:hover:after,
+#chat .chat-options .chat-option-buttons-sound .setOffChatNotifications.active:after,
+#chat .chat-options .chat-option-buttons-sound .setOffChatNotifications:hover:after{
+  bottom: -3px !Important;
+}
+    /* Vertical */          
+#mobile-room-menu .player-button:after,
+#room-list .room-search:before,
+#main-menu-left:after,
+#main-menu-right:before,
+.chat-option-buttons-display SPAN:first-child:after,
+#chat .chat-options .chat-option-buttons-sound .setOnChatNotifications.active:before,
+#chat .chat-options .chat-option-buttons-sound .setOnChatNotifications:hover:before,
+#chat .chat-options .chat-option-buttons-sound .setMentionChatNotifications.active:before,
+#chat .chat-options .chat-option-buttons-sound .setMentionChatNotifications:hover:before,
+#chat .chat-options .chat-option-buttons-sound .setOffChatNotifications.active:before,
+#chat .chat-options .chat-option-buttons-sound .setOffChatNotifications:hover:before{
+  content: '';
+  width: 7px;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  background: linear-gradient(to right,
+                              transparent 0px,
+                              rgba(32, 255, 32, 0.30) 4px,
+                              transparent 7px);
+  pointer-events: none;
+}
+      /* Left */
+#main-menu-right:before{
+  left: -4px !Important;
+}
+#chat .chat-options .chat-option-buttons-sound .setOnChatNotifications.active:before,
+#chat .chat-options .chat-option-buttons-sound .setOnChatNotifications:hover:before{
+  left: calc(33% - 1px) !Important;
+}
+      /* Middle */
+#mobile-room-menu .player-button:after{
+  left: calc(50% - 4px);
+}
+#chat .chat-options .chat-option-buttons-sound .setMentionChatNotifications.active:before,
+#chat .chat-options .chat-option-buttons-sound .setMentionChatNotifications:hover:before{
+  width: calc(33% + 9px) !important;
+  left: calc(33% - 1px);
+  background: linear-gradient(to left,
+                              transparent 0%,
+                              rgba(32, 255, 32, 0.30) 4px,
+                              transparent 7px,
+                              transparent calc(100% - 7px),
+                              rgba(32, 255, 32, 0.30) calc(100% - 4px),
+                              transparent 100%);
+}
+      /* Right */
+#main-menu-left:after,
+#room-list .room-search:before{
+  right: -4px;
+}
+.chat-option-buttons-display SPAN:first-child:after{
+  right: calc(50% - 3px);
+}
+#chat .chat-options .chat-option-buttons-sound .setOffChatNotifications.active:before,
+#chat .chat-options .chat-option-buttons-sound .setOffChatNotifications:hover:before{
+  right: 33% !Important;
+}
+      
   /* Message */
 .main-page-container:before{
-  content: 'Immediate front-end\a nearly complete.\a\a Problems? View the sheet.\a\a FallOut Theme green v0.64\a\a This message should disappear\a in 60 seconds.';
-  width: auto;
-  height: auto;
+  content: 'FallOut Theme green v0.80 | This message should disappear in 60 seconds.';
   white-space: pre-wrap;
   position: absolute;
+  bottom: calc(0px + 56px);
   padding: 4px;
   /* ! Ideally, this should all be in one line. */
-  animation-fill-mode: forwards; /* so animation stops on last frame and doesn't reset */
+  animation-fill-mode: forwards;
   animation-name: rm;
-  animation-duration: 0s; /* how long the animation should last */
-  animation-delay: 60s; /* how long to wait before stating the animation */
+  animation-duration: 0s;
+  animation-delay: 60s;
 }
   /* Volume */
     /* Triangles */
@@ -245,63 +443,11 @@ INPUT,
 }     /* Left */
 .ui-slider:before{
   content: '\25c0';
-  left: -11px !important;
+  left: -10px !important;
 }     /* Right */
 .ui-slider:after{
   content: '\25b6';
-  right: -1px !important;
-}
-    /* Slider */
-.ui-slider-range-min:before{
-  content: '';
-  width: calc(100% + 6px);
-  height: 13px;
-  position: absolute;
-  top: 0px;
-  left: -3px;
-}
-  /* Faux borders */
-    /* Global */
-#header-global:before,
-.pusher-chat-widget-input:before,
-.infoContainerInner:before,
-#player-controller .left:before,
-#player-controller .right:before{
-  content: '';
-  width: 100%;
-  height: 7px;
-  position: absolute;
-  left: 0px;
-  background: linear-gradient(to bottom,
-                              transparent 0px,
-                              rgba(32, 255, 32, 0.30) 4px,
-                              transparent 7px),
-              linear-gradient(to bottom,
-                              transparent 3px,
-                              rgb(32, 255, 32) 4px,
-                              transparent 4px,
-                              transparent 5px),
-              linear-gradient(to bottom,
-                              transparent 3px,
-                              rgb(32, 255, 32) 4px,
-                              transparent 4px,
-                              transparent 5px),
-              linear-gradient(to bottom,
-                              transparent 3px,
-                              rgb(32, 255, 32) 4px,
-                              transparent 4px,
-                              transparent 5px);
-}
-    /* Top */
-#player-controller .left:before,
-.pusher-chat-widget-input:before{
-  top: -3px !Important;
-}
-    /* Bottom */
-#header-global:before,
-.infoContainerInner:before,
-#player-controller .right:before{
-  bottom: -3px !Important;
+  right: 0px !important;
 }
 
 .spinner{
