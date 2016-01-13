@@ -1,8 +1,9 @@
-/* Fallout terminal UI v0.80
+/* Fallout terminal UI v0.81
    ! Requires installation of Monofonto font. Google it.
    ! The code's a right mess at the moment because of
      the major complexity chat options presented.
 */
+
 /* Import for Better Chat Lite */
 @import url("https://hebgbs.github.io/betterchatlite.css"); 
 
@@ -328,16 +329,17 @@ INPUT{
 #chat .chat-options .chat-option-buttons-sound .setOnChatNotifications:hover:after,
 #chat .chat-options .chat-option-buttons-sound .setOffChatNotifications.active:after,
 #chat .chat-options .chat-option-buttons-sound .setOffChatNotifications:hover:after{
-  width: calc(33% + 5px) !Important;
+  width: calc(33% + 0.50%) !Important;
 }
 #chat .chat-options .chat-option-buttons-sound .setMentionChatNotifications.active:after,
 #chat .chat-options .chat-option-buttons-sound .setMentionChatNotifications:hover:after{
-  width: calc(33% + 7px) !Important;
+  width: calc(33% + 1%) !Important;
   left: 33% !important;
 }
 #chat .chat-options .chat-option-buttons-sound .setOffChatNotifications.active:after,
 #chat .chat-options .chat-option-buttons-sound .setOffChatNotifications:hover:after{
-  left: calc(66% + 2px) !Important;
+  width: calc(33% + 1.5%) !Important;
+  left: 66% !Important;
 }
       /* Bottom */
 #header-global:after,
@@ -386,7 +388,7 @@ INPUT{
 }
 #chat .chat-options .chat-option-buttons-sound .setOnChatNotifications.active:before,
 #chat .chat-options .chat-option-buttons-sound .setOnChatNotifications:hover:before{
-  left: calc(33% - 1px) !Important;
+  left: calc(33% - 0.50%) !Important;
 }
       /* Middle */
 #mobile-room-menu .player-button:after{
@@ -394,8 +396,8 @@ INPUT{
 }
 #chat .chat-options .chat-option-buttons-sound .setMentionChatNotifications.active:before,
 #chat .chat-options .chat-option-buttons-sound .setMentionChatNotifications:hover:before{
-  width: calc(33% + 9px) !important;
-  left: calc(33% - 1px);
+  width: calc(33% + 1.75%) !important;
+  left: calc(33% - 0.50%);
   background: linear-gradient(to left,
                               transparent 0%,
                               rgba(32, 255, 32, 0.30) 4px,
@@ -414,22 +416,22 @@ INPUT{
 }
 #chat .chat-options .chat-option-buttons-sound .setOffChatNotifications.active:before,
 #chat .chat-options .chat-option-buttons-sound .setOffChatNotifications:hover:before{
-  right: 33% !Important;
+  right: calc(33% - 0.35%) !Important;
 }
       
   /* Message */
-.main-page-container:before{
+/*.main-page-container:before{
   content: 'FallOut Theme green v0.80 | This message should disappear in 60 seconds.';
   white-space: pre-wrap;
   position: absolute;
   bottom: calc(0px + 56px);
   padding: 4px;
-  /* ! Ideally, this should all be in one line. */
+
   animation-fill-mode: forwards;
   animation-name: rm;
   animation-duration: 0s;
   animation-delay: 60s;
-}
+}*/
   /* Volume */
     /* Triangles */
       /* Global */
