@@ -287,6 +287,7 @@ INPUT{
 .room-item HEADER:before,
 .room-item .current-song:before,
 .chat_tools:after,
+.input-room-users-search:after,
 .chat-option-header:first-child:after,
 .chat-option-buttons-display SPAN:nth-child(2):after,
 .chat-option-header:nth-child(3):after,
@@ -296,7 +297,6 @@ INPUT{
 #chat .chat-options .chat-option-buttons-sound .setMentionChatNotifications:hover:after,
 #chat .chat-options .chat-option-buttons-sound .setOffChatNotifications.active:after,
 #chat .chat-options .chat-option-buttons-sound .setOffChatNotifications:hover:after,
-.input-room-users-search:after,
 .pusher-chat-widget-input:before,
 #player-controller .left .cursor-pointer:before,
 .infoContainerInner:before,
@@ -346,6 +346,7 @@ INPUT{
 #mobile-room-menu:after,
 .room-lobby-header:after,
 .chat_tools:after,
+.input-room-users-search:after,
 .chat-option-header:first-child:after,
 .chat-option-buttons-display SPAN:nth-child(2):after,
 .chat-option-header:nth-child(3):after{
