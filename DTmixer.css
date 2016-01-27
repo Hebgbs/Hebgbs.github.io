@@ -17,7 +17,7 @@
    === Other credits ===
    @null: Little changes in main player footer, help in other places
    
-   version 2.75 (01/02/16)
+   version 2.76 (01/27/16)
 */
 
 /* Opacity settings */
@@ -52,7 +52,7 @@
 
 /* text stuff */
 SPAN.import-playlist.icon-inbox{
-  font-family: proxima nova, sans-serif !Important;
+  font-family: geomanist, sans-serif !Important;
 }
 
 SPAN.import-playlist.icon-inbox:before{
