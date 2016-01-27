@@ -6,7 +6,7 @@
   font-weight: 200 !important;
   letter-spacing: 0.2px !Important;
 }
-  /* Exceptions */
+  /* Other exceptions not specified in global */
 .videoquality-el{
   font-weight: 700 !Important;
 }
@@ -20,7 +20,7 @@
      (or sans-serif default if not installed)
   */
 SPAN.import-playlist.icon-inbox{
-  font-family: proxima nova, sans-serif !Important;
+  font-family: geomanist, sans-serif !Important;
 }
   /* Make button icon use Dubtrack's icon font */
 SPAN.import-playlist.icon-inbox:before{
