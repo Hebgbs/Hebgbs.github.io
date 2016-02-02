@@ -17,7 +17,7 @@
    === Other credits ===
    @null: Little changes in main player footer, help in other places
    
-   version 2.76 (01/27/16)
+   version 2.77 (02/02/16)
 */
 
 /* Opacity settings */
@@ -110,7 +110,7 @@ P,
 .room-info-display-container H2,
 .room-info-display-container .description,
 .play-song-link .queue-info,
-.play-song-link *,
+.play-song-link-container *,
 #user_popover .dubs,
 .browser-content-header *:not(.close-browser),
 #browser .playlist_info A,
@@ -446,6 +446,9 @@ A.dubdown.voted,
 .edit-btn.cancelUsername:hover{
   background-color: rgb(255, 45, 49) !important;
 }
+.play-song-link.leave-button.active-queue-display:hover{
+  background-color: rgba(255, 45, 49, 0.90) !Important;
+}
 
   /* Images & gradients */
 #main-loading{
@@ -623,6 +626,13 @@ SPAN.import-playlist.icon-inbox,
   height: calc(100% + 16px) !Important;
 }
 
+.play-song-link-browser I{
+  position: relative !Important;
+  float: left !Important;
+  left: -2px !Important;
+  top: 6px !Important;
+}
+
 #browser .playlist_filter{
   width: calc(100% - 46px) !Important;
   position: relative !Important;
@@ -767,7 +777,7 @@ HEADER FIGURE,
 /**/ .chat-option-buttons SPAN{
 /**/   background-color: rgba(30, 41, 66, 0.80) !important;
 /**/ }
-/**/ .play-song-link{
+/**/ .play-song-link-container *:not(I){
 /**/   background-color: rgba(30, 41, 66, 0.90) !important;
 /**/ }
 /**/     /* Color-match the below with the above */
