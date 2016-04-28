@@ -17,7 +17,7 @@
    === Other credits ===
    @null: Little changes in main player footer, help in other places
    
-   version 2.77 (02/02/16)
+   version 2.78 (04/27/16)
 */
 
 /* Opacity settings */
@@ -694,6 +694,10 @@ SPAN.import-playlist.icon-inbox,
   padding-bottom: 4px !Important;
 }
 
+.queue-info-contains-notice{
+  padding-bottom: 2px !Important;
+}
+
 /* Remove / Hide */
 .playerPreview .progressContainer,
 .playerPreview .volume-control{
@@ -761,7 +765,8 @@ HEADER FIGURE,
 
 #main-loading .spinner,
 .chat-option-buttons i,
-.playerPreview:not(:hover) .close{
+.playerPreview:not(:hover) .close,
+.queue-join-info{
   display: none !Important;
 }
 
@@ -801,7 +806,8 @@ HEADER FIGURE,
 /**/   /* Positioning and sizing */
 /**/ #chat .chat-welcome-message,
 /**/ #chat .system,
-/**/ #chat .chat-system-loading{
+/**/ #chat .chat-system-loading,
+/**/ #chat .chat-system-joined{
 /**/   text-align: center !Important;
 /**/ }
 /**/ 
