@@ -17,7 +17,7 @@
    === Other credits ===
    @null: Little changes in main player footer, help in other places
    
-   version 2.78 (04/27/16)
+   version 2.79 (05/27/16)
 */
 
 /* Opacity settings */
@@ -51,6 +51,7 @@
 }
 
 /* text stuff */
+.icon-mute.snooze_btn:after,
 SPAN.import-playlist.icon-inbox{
   font-family: geomanist, sans-serif !Important;
 }
@@ -102,7 +103,9 @@ P,
 #mobile-room-menu A,
 .player_header SPAN,
 .player_sharing,
+.icon-mute.snooze_btn:not(:hover),
 .eta_tooltip,
+.snooze_tooltip,
 .videoquality-el.active-hd,
 .mod-controllers-headers A.active,
 .mods-controller-container .chat-command-list .actions,
@@ -352,6 +355,7 @@ TEXTAREA,
 #roomFormUpdate INPUT,
 #roomFormUpdate SELECT,
 #roomFormUpdate BUTTON,
+.header-donate A,
 A.dubup.voted,
 #new-message-input,
 .browser-content-header INPUT,
@@ -386,6 +390,7 @@ A.dubup.voted,
 .buffering,
 .playerPreview .player:hover .replay,
 .room-lobby-header,
+.header-donate A:hover,
 #warning BUTTON:hover,
 #roomFormUpdate BUTTON:hover,
 #mobile-room-menu,
@@ -445,6 +450,9 @@ A.dubdown.voted,
 #browser .text-button.clear-queue:hover,
 .edit-btn.cancelUsername:hover{
   background-color: rgb(255, 45, 49) !important;
+}
+.snooze_tooltip{
+  background-color: rgba(255, 45, 49, 0.80) !important;
 }
 .play-song-link.leave-button.active-queue-display:hover{
   background-color: rgba(255, 45, 49, 0.90) !Important;
@@ -699,6 +707,7 @@ SPAN.import-playlist.icon-inbox,
 }
 
 /* Remove / Hide */
+.header-donate A,
 .playerPreview .progressContainer,
 .playerPreview .volume-control{
   border-color: transparent !Important;
