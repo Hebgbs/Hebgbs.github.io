@@ -17,7 +17,7 @@
    === Other credits ===
    @null: Little changes in main player footer, help in other places
    
-   version 2.79 (05/27/16)
+   version 2.80 (06/17/16)
 */
 
 /* Opacity settings */
@@ -157,14 +157,17 @@ SPAN.import-playlist,
 .message-list LI H3,
 .isVip .username,
 .vip .username,
+.vip .user-role,
 .vip .username:after,
 .isResdient-dj .username,
 .resident-dj .username,
 .resident-dj .username:after,
 .manager .username,
+.manager .user-role,
 .isManager .username,
 .manager .username:after,
 .mod .username,
+.mod .user-role,
 .isMod .username,
 .mod .username:after,
 .for_content_version{
@@ -172,8 +175,10 @@ SPAN.import-playlist,
 }
 
 .creator .username,
+.creator .user-role,
 .creator .username:after,
 .co-owner .username,
+.co-owner .user-role,
 .isCo-owner .username,
 .co-owner .username:after{
   color: rgb(107, 160, 214) !Important;
@@ -311,6 +316,7 @@ A.dubdown:hover SPAN,
 
 #roomFormUpdate,
 #warning,
+#addToPlaylistFloatContainer,
 .loading-el,
 #private-messages .search-results:before,
 #browser .browser-content,
@@ -338,7 +344,6 @@ A.close-menu,
   background-color: rgba(30, 41, 66, 0.70) !important;
 }
 
-#addToPlaylistFloatContainer,
 .playerPreview,
 .playerPreview .close{
   background-color: rgba(30, 41, 66, 0.80) !Important;
