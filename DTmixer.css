@@ -17,7 +17,7 @@
    === Other credits ===
    @null: Little changes in main player footer, help in other places
    
-   version 2.80 (06/17/16)
+   version 2.82 (07/31/16)
 */
 
 /* Opacity settings */
@@ -73,7 +73,7 @@ SPAN.import-playlist.icon-inbox:before{
 
 .room-info-display-container SPAN I,
 #user_popover .ban,
-#addToPlaylistFloatContainer .playlist-list-action LI{
+#addToPlaylistFloatContainer .create-playlist-header{
   font-weight: bold !Important;
 }
 
@@ -136,6 +136,7 @@ SPAN.import-playlist,
 .currentTime,
 .icon-heart:before,
 .container *,
+.playerPreview .song-info-wrapper .below SPAN,
 .tinner H1,
 .tinner H2,
 .tinner P
@@ -218,7 +219,7 @@ SPAN.import-playlist,
 #user_popover A:hover,
 #user_popover .ban INPUT,
 #addToPlaylistFloatContainer .create-playlist-header,
-#addToPlaylistFloatContainer .playlist-list-action LI:hover
+#addToPlaylistFloatContainer .playlist-list-action LI:hover,
 .for_content_ver,
 .for_content_c,
 .tinner A{
@@ -317,6 +318,7 @@ A.dubdown:hover SPAN,
 #roomFormUpdate,
 #warning,
 #addToPlaylistFloatContainer,
+#addToPlaylistFloatContainer .create-playlist-header,
 .loading-el,
 #private-messages .search-results:before,
 #browser .browser-content,
@@ -344,8 +346,7 @@ A.close-menu,
   background-color: rgba(30, 41, 66, 0.70) !important;
 }
 
-.playerPreview,
-.playerPreview .close{
+.playerPreview{
   background-color: rgba(30, 41, 66, 0.80) !Important;
 }
 #header-global{
@@ -356,7 +357,7 @@ A.close-menu,
 TEXTAREA,
 #warning BUTTON,
 #room-search,
-.playerPreview .player .replay,
+.playerPreview .song-info-wrapper .below SPAN,
 #roomFormUpdate INPUT,
 #roomFormUpdate SELECT,
 #roomFormUpdate BUTTON,
@@ -391,9 +392,6 @@ A.dubup.voted,
   background-color: rgba(50, 60, 83, 0.70) !important;
 }
 
-.loading,
-.buffering,
-.playerPreview .player:hover .replay,
 .room-lobby-header,
 .header-donate A:hover,
 #warning BUTTON:hover,
@@ -409,6 +407,7 @@ A.dubup.voted,
 #browser .import-playlist:hover,
 #player-controller .right,
 .container .control .cancel:hover,
+.playerPreview .song-info-wrapper .below SPAN:hover,
 #d3vs-playlist-import-btn:hover{
   background-color: rgb(29, 69, 110) !important;
 }
@@ -463,6 +462,11 @@ A.dubdown.voted,
   background-color: rgba(255, 45, 49, 0.90) !Important;
 }
 
+.playerPreview .loading,
+.playerPreview .buffering{
+  background-color: rgba(0, 0, 0, 0.6) !important;
+}
+
   /* Images & gradients */
 #main-loading{
   background-image: linear-gradient(to bottom,
@@ -503,6 +507,11 @@ A.dubdown.voted,
   background: url(http://i.imgur.com/0sxhBUn.png),
               url(https://i.imgur.com/nQu4KMz.jpg) center center/529px 434px no-repeat !important;
 }
+.playerPreview .replay,
+.playerPreview .loading,
+.playerPreview .buffering{
+  background-image: url(http://i.imgur.com/0sxhBUn.png) !Important;
+}
 
 /* Border settings */
 #warning{
@@ -522,7 +531,7 @@ A.dubdown.voted,
 
 .chat-option-buttons *,
 #addToPlaylistFloatContainer .playlist-list-action LI,
-#addToPlaylistFloatContainer #playlist-input,
+#addToPlaylistFloatContainer .create-playlist-input,
 .chat_tools,
 .chat_tools SPAN:after,
 .pusher-chat-widget-input,
@@ -548,7 +557,8 @@ A.dubdown.voted,
 #user_popover A{
   border-top: 1px solid rgb(29, 69, 110) !important;
 }
-#addToPlaylistFloatContainer .create-playlist-header{
+#browser DIV LI:not(:last-child),
+#addToPlaylistFloatContainer .playlist-list-action LI:not(:last-child){
   border-bottom: 1px solid rgb(29, 69, 110) !important;
 }
 
@@ -663,9 +673,20 @@ SPAN.import-playlist.icon-inbox,
   padding-top: 6px !Important;
 }
 
+.playerPreview .song-info-wrapper .below SPAN{
+  padding: 4px !important;
+  position: relative !Important;
+  top: 8px !Important;
+  border-radius: 4px !Important;
+}
+
 .playerPreview .controlContainer .buttons{
   position: relative !Important;
   top: 2px !Important;
+}
+
+.playerPreview .timer{
+  top: -1px !important;
 }
 
 .playerPreview .controlContainer{
@@ -697,6 +718,10 @@ SPAN.import-playlist.icon-inbox,
   width: 38px !Important;
 }
 
+.playerPreview .song-info .song-info-wrapper{
+  padding-left: 0px !Important;
+}
+
 #d3vs-playlist-import-code{
   margin-top: 7px !important;
   margin-bottom: 5px !important;
@@ -712,6 +737,10 @@ SPAN.import-playlist.icon-inbox,
 }
 
 /* Remove / Hide */
+.playerPreview .song-info-wrapper .below{
+  color: transparent !Important;
+}
+
 .header-donate A,
 .playerPreview .progressContainer,
 .playerPreview .volume-control{
@@ -765,6 +794,7 @@ HEADER FIGURE,
 #player-controller .left,
 #browser .browser-content-header,
 #browser .actions A,
+.playerPreview .close,
 .close-import-playlist,
 #user_popover DIV,
 #user_popover .ban INPUT,
@@ -780,7 +810,9 @@ HEADER FIGURE,
 #main-loading .spinner,
 .chat-option-buttons i,
 .playerPreview:not(:hover) .close,
-.queue-join-info{
+.playerPreview .song-info FIGURE,
+.queue-join-info,
+#main_player .artwork[src="https://res.cloudinary.com/hhberclba/image/upload/c_fill,fl_lossy,f_auto,w_900,h_460/default.png"]{
   display: none !Important;
 }
 
