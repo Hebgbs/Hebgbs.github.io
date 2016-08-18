@@ -825,7 +825,7 @@ HEADER FIGURE,
 /**/ .avatar_tools,
 /**/ #main_avatar_room LI,
 /**/ .chat-option-header,
-/**/ .chat-option-buttons SPAN{
+/**/ .chat-options > DIV{
 /**/   background-color: rgba(30, 41, 66, 0.80) !important;
 /**/ }
 /**/ .play-song-link-container *:not(I){
@@ -968,6 +968,10 @@ HEADER FIGURE,
 /**/ }
 /**/ .chat-option-header{
 /**/   margin-top: 0px !important;
+/**/ }
+/**/
+/**/ .chat-option-buttons-sound{
+/**/   padding-bottom: 14px !Important;
 /**/ }
 /**/ 
 /**/ #private-messages .ps-container{
