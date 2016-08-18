@@ -124,6 +124,10 @@ LI[class^='user'].deleted-message{
   margin-bottom: 8px !Important;
 }
 
+.avatar_tools .filter-toggle{
+  top: 7px !Important;
+}
+
 #chat .chat-me-command-joined,
 #chat .chat-me-command-joined P.deleted,
 #main_avatar_room LI{
