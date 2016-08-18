@@ -17,7 +17,7 @@
    === Other credits ===
    @null: Little changes in main player footer, help in other places
    
-   version 2.82 (07/31/16)
+   version 2.82 (08/18/16)
 */
 
 /* Opacity settings */
@@ -548,7 +548,6 @@ A.dubdown.voted,
 .chat-option-buttons-sound SPAN:first-child{
   border-left: 1px solid rgb(29, 69, 110) !Important;
 }
-.chat-option-header,
 .clearChatToggle,
 .chat-option-buttons-sound SPAN:last-child,
 #user_popover .send-pm-message{
