@@ -2,7 +2,7 @@
    > For use without DubX (active in every community)
       1. Go to https://userstyles.org/styles/119287
       2. Follow other instructions from userstyles.org
-   > For use in chillout-mixer only
+   > For use in chillout-mixer onlybetter
       1. Install DubX via dubx.net and execute it
       2. Access the DubX menu and click on "Community theme"
    > For use everywhere in DubTrack (without Stylish)
@@ -929,6 +929,10 @@ HEADER FIGURE,
 /**/ 
 /**/ .avatar_tools{
 /**/   margin-bottom: 8px !Important;
+/**/ }
+/**/
+/**/ .avatar_tools .filter-toggle{
+/**/   top: 7px !important;
 /**/ }
 /**/ 
 /**/ #chat .chat-me-command-joined,
