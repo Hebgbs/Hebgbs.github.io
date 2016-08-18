@@ -18,7 +18,7 @@
 .avatar_tools,
 #main_avatar_room LI,
 .chat-option-header,
-.chat-option-buttons SPAN{
+.chat-options > DIV{
   background-color: rgba(0, 0, 0, 0.70) !important;
 }
   /* By default this is 10% more than the above. */
@@ -163,9 +163,8 @@ LI[class^='user'].deleted-message{
   margin-top: 0px !important;
 }
 
-#private-messages .ps-container{
-  top: -7px !Important;
-  height: calc(100% + 22px) !important;
+.chat-option-buttons-sound{
+  padding-bottom: 14px !Important;
 }
 
   /* Emote height override */
