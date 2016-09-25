@@ -17,7 +17,7 @@
    === Other credits ===
    @null: Little changes in main player footer, help in other places
    
-   version 2.82 (08/18/16)
+   version 2.85 (09/25/16)
 */
 
 /* Opacity settings */
@@ -86,11 +86,11 @@ INPUT,
 TEXTAREA,
 P,
 #header_login A,
+#header-global .left-menu-toggle *,
 #main-loading,
 .loading,
 .buffering,
 #warning BUTTON,
-.room-lobby-header A,
 .room-item .user-count *,
 .room-item .current-song,
 #roomFormUpdate H3,
@@ -185,6 +185,8 @@ SPAN.import-playlist,
   color: rgb(107, 160, 214) !Important;
 }
 
+.room-lobby-header A:hover,
+.room-lobby-header A SPAN:hover,
 .room-item HEADER .name,
 .room-item .room-user A,
 #roomFormUpdate LABEL,
@@ -225,6 +227,9 @@ SPAN.import-playlist,
 .tinner A{
   color: rgb(180, 201, 222) !important;
 }
+  
+.room-lobby-header A,
+.room-lobby-header A SPAN,
 .chat-option-buttons *,
 .mods-controller-container .user-list *,
 #user_popover A,
@@ -282,23 +287,18 @@ A.dubdown:hover SPAN,
   color: rgb(0, 155, 255) !important;
 }
 
-.room-lobby-header .facebook,
-.room-lobby-header .twitter,
 .player_sharing .icon-facebook,
-.player_sharing .icon-twitter,
-#main-menu-left .social-links SPAN{
+.player_sharing .icon-twitter{
   color: rgba(134, 148, 178, 0.30) !important;
 }
 
 .room-lobby-header .facebook:hover,
-.player_sharing .icon-facebook:hover,
-#main-menu-left .icon-facebook:hover{
+.player_sharing .icon-facebook:hover{
   color: rgb(59, 87, 157) !Important;
 }
 
 .room-lobby-header .twitter:hover,
-.player_sharing .icon-twitter:hover,
-#main-menu-left .icon-twitter:hover{
+.player_sharing .icon-twitter:hover{
   color: rgb(28, 173, 235) !Important;
 }
 
@@ -319,7 +319,7 @@ A.dubdown:hover SPAN,
 #warning,
 #addToPlaylistFloatContainer,
 #addToPlaylistFloatContainer .create-playlist-header,
-.loading-el,
+.loading,
 #private-messages .search-results:before,
 #browser .browser-content,
 #browser .playlist_info,
@@ -340,8 +340,9 @@ A.dubdown:hover SPAN,
   box-shadow: 0px -8px 0px 0px rgba(30, 41, 66, 0.60) !Important;
 }
 
+#main-menu-left NAV,
 .for_content,
-A.close-menu,
+#main-menu-right A.close-menu,
 #browser .content-videos LI{
   background-color: rgba(30, 41, 66, 0.70) !important;
 }
@@ -482,18 +483,22 @@ A.dubdown.voted,
                                     rgba(30, 41, 66, 0.80) 100%) !Important;
 }
 
-#main-menu-left,
 #main-menu-right{
   background-image: linear-gradient(to top,
-                                    rgb(30, 41, 66) 58px,
-                                    rgba(30, 41, 66, 0.70) 58px,
-                                    rgba(30, 41, 66, 0.70) calc(100% - 56px),
-                                    rgb(30, 41, 66) calc(100% - 56px),
-                                    rgb(30, 41, 66) 100%) !Important;
+                                    rgb(30, 41, 66) 56px,
+                                    rgba(30, 41, 66, 0.70) 56px,
+                                    rgba(30, 41, 66, 0.70) calc(100% - 58px),
+                                    transparent calc(100% - 58px),
+                                    transparent 100%) !Important;
 }
 
-#header-global H1{
+    /* Center logo */
+IMG[src="https://res.cloudinary.com/hhberclba/image/upload/c_lpad,h_100,w_100/v1400351432/dubtrack_new_logo_fvpxa6.png"]{
   background-image: url(http://i.imgur.com/451A0RO.png) !important;
+  width: 0px !IMportant;
+  Height: 0px !Important;
+  padding-left: 32px !Important;
+  padding-bottom: 32px !important;
 }
 
 #player-controller .left{
@@ -783,6 +788,7 @@ HEADER FIGURE,
 .room-item .current-song,
 .modal-header,
 .modal-footer,
+A.close-menu,
 #main-menu-left,
 #main-menu-right,
 .right_section,
@@ -1112,21 +1118,21 @@ HEADER FIGURE,
 /**/ }
 /**/ /* === "PMs always on top" code ends here */
 /**/ /* === "User-specific colours" begins here === */
-/**/   /* mixerbot */
-/**/ #chat .user-566ba5dfc459e11d0044b68e:not(.deleted-message),
-/**/ #avatar-list .userid-566ba5dfc459e11d0044b68e{
+/**/   /* derpybot */
+/**/ #chat .user-577fdf23ad83c20a007e2983:not(.deleted-message),
+/**/ #avatar-list .userid-577fdf23ad83c20a007e2983{
 /**/   background-color: rgba(29, 69, 110, 0.80) !Important;
 /**/ }
 /**/ 
-/**/ #chat .user-566ba5dfc459e11d0044b68e .username,
-/**/ #avatar-list .userid-566ba5dfc459e11d0044b68e .username,
-/**/ #avatar-list .userid-566ba5dfc459e11d0044b68e .username:after
+/**/ #chat .user-577fdf23ad83c20a007e2983 .username,
+/**/ #avatar-list .userid-577fdf23ad83c20a007e2983 .username,
+/**/ #avatar-list .userid-577fdf23ad83c20a007e2983 .username:after
 /**/ {
 /**/   color: rgb(238, 238, 238) !important;
 /**/ }
 /**/ 
-/**/ #chat .user-566ba5dfc459e11d0044b68e .timeago
-/**/ #avatar-list .userid-566ba5dfc459e11d0044b68e .dubs{
+/**/ #chat .user-577fdf23ad83c20a007e2983 .timeago
+/**/ #avatar-list .userid-577fdf23ad83c20a007e2983 .dubs{
 /**/   color: rgb(180, 201, 222) !important;
 /**/ }
 /**/ /* === "User-specific colours" ends here === */
