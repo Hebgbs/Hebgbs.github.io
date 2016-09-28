@@ -17,7 +17,7 @@
    === Other credits ===
    @null: Little changes in main player footer, help in other places
    
-   version 2.85 (09/25/16)
+   version 2.87 (09/28/16)
 */
 
 /* Opacity settings */
@@ -26,6 +26,7 @@
 #new-messages-counter,
 .player_header SPAN,
 .eta_tooltip,
+.nc-container,
 .message-item,
 #browser .browser-content,
 .playerPreview .progressContainer *{
@@ -97,6 +98,8 @@ P,
 #roomFormUpdate .mid *:not(LABEL),
 #roomFormUpdate BUTTON,
 .message-counter,
+#chat DIV DIV .nc-container .tip-container SPAN,
+#chat DIV DIV .nc-container UL LI SPAN,
 .lobby-link,
 #main-room-active-link,
 .header-right-navigation SPAN,
@@ -162,6 +165,7 @@ SPAN.import-playlist,
 .vip .username:after,
 .isResdient-dj .username,
 .resident-dj .username,
+.resident-dj .user-role,
 .resident-dj .username:after,
 .manager .username,
 .manager .user-role,
@@ -240,6 +244,7 @@ SPAN.import-playlist,
 .room-info-display-container SPAN,
 #player-controller A.add-to-playlist-button:hover .icon-heart:before,
 #player-controller A.add-to-playlist-button:hover .grab-counter,
+.chat-text-box-icons SPAN,
 .content-videos .actions .add_to_playlist:hover .icon-heart:before,
 :not(.creator):not(.co-owner):not(.manager):not(.mod).currentDJ .username:after,
 .dj P:after,
@@ -252,7 +257,7 @@ A.dubup:hover SPAN{
 }
 
 #chat .chat-system-loading,
-.timeago{
+TIME{
   color: rgb(29, 69, 110) !important;
 }
 
@@ -279,6 +284,7 @@ A.dubdown:hover SPAN,
 }
 
 .admin .username,
+.admin .user-role,
 .admin .username:after{
   color: rgb(0, 255, 255) !important;
 }
@@ -332,6 +338,8 @@ A.dubdown:hover SPAN,
   background-color: rgb(30, 41, 66) !important;
 }
 .infoContainerInner,
+#chat DIV DIV .nc-container .tip-container,
+#chat DIV DIV .nc-container UL LI,
 #player-controller .left .imgEl{
   background-color: rgba(30, 41, 66, 0.60) !important;
 }
@@ -422,6 +430,10 @@ A.dubup.voted,
 #autocomplete-preview LI.selected,
 #browser .content-videos LI.selected{
   background-color: rgba(29, 69, 110, 0.70) !Important;
+}
+#chat DIV DIV .nc-container UL LI.nc-active,
+#chat DIV DIV .nc-container UL LI:hover{
+  background-color: rgba(29, 69, 110, 0.60) !important;
 }
 
 #new-messages-counter,
@@ -540,10 +552,15 @@ IMG[src="https://res.cloudinary.com/hhberclba/image/upload/c_lpad,h_100,w_100/v1
 .chat_tools,
 .chat_tools SPAN:after,
 .pusher-chat-widget-input,
+#chat DIV DIV .nc-container,
+#chat DIV DIV .nc-container .tip-container,
+#chat DIV DIV .nc-container UL,
+#chat DIV DIV .nc-container UL LI,
 #private-messages .message-header,
 #private-messages .input-container{
   border-color: rgb(29, 69, 110) !important;
 }
+
 #user_popover,
 #addToPlaylistFloatContainer{
   border: 1px solid rgb(29, 69, 110) !important;
@@ -651,6 +668,10 @@ SPAN.import-playlist.icon-inbox,
 
 .message-list-wrapper-inner{
   height: calc(100% + 16px) !Important;
+}
+
+#chat DIV DIV .nc-container{
+  bottom: 55px !important;
 }
 
 .play-song-link-browser I{
@@ -767,9 +788,13 @@ SPAN.import-playlist.icon-inbox,
 .tinner{
   border: none !important;
 }
+#chat DIV DIV .nc-container UL{
+  border-bottom: none !Important;
+}
 
 HEADER FIGURE,
 #chat LI:not(.user-566ba5dfc459e11d0044b68e) .image_row,
+.nc-container,
 #private-messages FIGURE,
 .pictureContainer,
 .updatePictureGif,
@@ -795,6 +820,7 @@ A.close-menu,
 .message-header,
 .message-details,
 #main-message-list,
+.nc-container,
 #player-controller,
 #player-controller .left,
 #browser .browser-content-header,
@@ -830,7 +856,7 @@ A.close-menu,
 /**/ .avatar_tools,
 /**/ #main_avatar_room LI,
 /**/ .chat-option-header,
-/**/ .chat-options > DIV{
+/**/ .chat-options >  DIV{
 /**/   background-color: rgba(30, 41, 66, 0.80) !important;
 /**/ }
 /**/ .play-song-link-container *:not(I){
@@ -849,8 +875,8 @@ A.close-menu,
 /**/       /* Background hack for options */
 /**/ .chat-options{
 /**/   background-image: linear-gradient(to bottom,
-/**/                                     transparent 240px,
-/**/                                     rgba(30, 41, 66, 0.80) 240px,
+/**/                                     transparent 290px,
+/**/                                     rgba(30, 41, 66, 0.80) 290px,
 /**/                                     rgba(30, 41, 66, 0.80) 100%) !Important;
 /**/ }
 /**/ 
@@ -895,7 +921,7 @@ A.close-menu,
 /**/   margin-left: 16px !Important;
 /**/ }
 /**/ 
-/**/ #chat .timeago,
+/**/ #chat TIME,
 /**/ #chat .chatDelete,
 /**/ #main_avatar_room .dubs{
 /**/   margin-right: 16px !Important;
@@ -1044,10 +1070,11 @@ A.close-menu,
 /**/   border-bottom: 1px solid rgb(29, 69, 110) !important;
 /**/ }
 /**/ 
-/**/ .deleted-message .timeago{
+/**/ .deleted-message TIME,
+/**/ .user-role-icon{
 /**/   display: none !Important;
 /**/ }
-/**/ /* === "Better chat" code begins here === */
+/**/ /* === "Better chat" code ends here === */
 /**/ /* === "Better player header" code begins here === */
 /**/   /* Match button radius */
 /**/ .player_header SPAN{
@@ -1126,13 +1153,13 @@ A.close-menu,
 /**/ 
 /**/ #chat .user-577fdf23ad83c20a007e2983 .username,
 /**/ #avatar-list .userid-577fdf23ad83c20a007e2983 .username,
+/**/ #avatar-list .userid-577fdf23ad83c20a007e2983 .user-role,
 /**/ #avatar-list .userid-577fdf23ad83c20a007e2983 .username:after
 /**/ {
 /**/   color: rgb(238, 238, 238) !important;
 /**/ }
 /**/ 
-/**/ #chat .user-577fdf23ad83c20a007e2983 .timeago
-/**/ #avatar-list .userid-577fdf23ad83c20a007e2983 .dubs{
+/**/ #chat .user-577fdf23ad83c20a007e2983 TIME{
 /**/   color: rgb(180, 201, 222) !important;
 /**/ }
 /**/ /* === "User-specific colours" ends here === */
