@@ -167,6 +167,11 @@ LI[class^='user'].deleted-message{
   padding-bottom: 14px !Important;
 }
 
+#private-messages .ps-container{
+  top: -7px !Important;
+  height: calc(100% + 22px) !important;
+}
+
   /* Emote height override */
 #chat .chat-me-command-joined{
   min-height: 0px !Important;
@@ -181,7 +186,7 @@ LI[class^='user'].deleted-message{
   right: 0px !important;
 }
 
-/* Border radius */
+  /* Border radius */
 .chat_tools{
   border-radius: 16px 16px 0px 0px !important;
 }
@@ -192,11 +197,6 @@ LI[class^='user'].deleted-message{
   border-radius: 0px 0px 16px 16px !Important;
 }
 
-/* Remove / Hide other stuff */
-  /* Hide right-side colour (enables selective user colouring) */
-.right_section{
-  background-color: transparent !important;
-}
   /* Chat padding */
 #chat UL,
 #chat .system{
@@ -229,6 +229,12 @@ LI.deleted-message{
 
 .deleted-message .timeago{
   display: none !Important;
+}
+
+/* Remove / Hide other stuff */
+  /* Hide right-side colour (enables selective user colouring) */
+.right_section{
+  background-color: transparent !important;
 }
 
 /* User-specific colours
