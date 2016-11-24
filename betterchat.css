@@ -55,7 +55,7 @@ LI[class^='user'].deleted-message{
 }
 
 #chat LI[class^='user'].deleted-message P.deleted,
-#chat .chat-me-command-joined P.deleted{
+#chat .chat-system-joined P.deleted{
   padding-top: 18px !Important;
   padding-bottom: 22px !Important;
 }
@@ -89,12 +89,12 @@ LI[class^='user'].deleted-message{
   margin-right: 16px !Important;
 }
 
-#chat .chat-me-command-joined .chatDelete{
+#chat .chat-system-joined .chatDelete{
   margin-top: 13px !Important;
 }
 
 .chat-welcome-message,
-#chat .chat-me-command-joined,
+#chat .chat-system-joined,
 .avatar_tools,
 .chat-option-header{
   padding-top: 8px !Important;
@@ -114,7 +114,7 @@ LI[class^='user'].deleted-message{
 #chat .stream-item-content,
 .chat-welcome-message,
 #chat .system,
-#chat .chat-me-command-joined,
+#chat .chat-system-joined,
 #chat .chat-system-loading{
   padding-left: 16px !important;
   padding-right: 16px !important;
@@ -128,8 +128,8 @@ LI[class^='user'].deleted-message{
   top: 7px !Important;
 }
 
-#chat .chat-me-command-joined,
-#chat .chat-me-command-joined P.deleted,
+#chat .chat-system-joined,
+#chat .chat-system-joined P.deleted,
 #main_avatar_room LI{
   margin-bottom: 0px !Important;
 }
@@ -173,7 +173,7 @@ LI[class^='user'].deleted-message{
 }
 
   /* Emote height override */
-#chat .chat-me-command-joined{
+#chat .chat-system-joined{
   min-height: 0px !Important;
 }
 
@@ -214,7 +214,7 @@ LI.deleted-message{
 .dubx #chat .chat-container .chat-messages .chat-main LI.chat-system-loading,
 .dubx #chat .chat-container .chat-messages .chat-main LI.system,
 .dubx #chat .chat-container .chat-messages .chat-main LI.system-error,
-.dubx #chat .chat-container .chat-messages .chat-main LI.chat-me-command-joined{
+.dubx #chat .chat-container .chat-messages .chat-main LI.chat-system-joined{
   padding-top: 0px;
 }
 
