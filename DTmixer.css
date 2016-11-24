@@ -17,7 +17,7 @@
    === Other credits ===
    @null: Little changes in main player footer, help in other places
    
-   version 2.89 (09/30/16)
+   version 2.91 (11/24/16)
 */
 
 /* Opacity settings */
@@ -502,6 +502,9 @@ A.dubdown.voted,
 .mods-controller-container TR:nth-child(n+8):nth-child(-n+11) TD:nth-child(-n+4){
   background-color: rgba(255, 45, 49, 0.60) !important;
 }
+#chat .deleted{
+  background-color: rgba(255, 45, 49, 0.40) !Important;
+}
 
 .playerPreview .loading,
 .playerPreview .buffering{
@@ -857,6 +860,7 @@ A.close-menu,
 #player-controller,
 #player-controller .left,
 #browser .browser-content-header,
+#browser .actions,
 #browser .actions A,
 .playerPreview .close,
 .close-import-playlist,
@@ -887,9 +891,7 @@ A.close-menu,
 /**/ #chat LI,
 /**/ .pusher-chat-widget-input,
 /**/ .avatar_tools,
-/**/ #main_avatar_room LI,
-/**/ .chat-option-header,
-/**/ .chat-options >  DIV{
+/**/ #main_avatar_room LI{
 /**/   background-color: rgba(30, 41, 66, 0.80) !important;
 /**/ }
 /**/ .play-song-link-container *:not(I){
@@ -908,16 +910,15 @@ A.close-menu,
 /**/       /* Background hack for options */
 /**/ .chat-options{
 /**/   background-image: linear-gradient(to bottom,
-/**/                                     transparent 290px,
-/**/                                     rgba(30, 41, 66, 0.80) 290px,
+/**/                                     transparent 50px,
+/**/                                     rgba(30, 41, 66, 0.80) 50px,
 /**/                                     rgba(30, 41, 66, 0.80) 100%) !Important;
 /**/ }
 /**/ 
 /**/   /* Positioning and sizing */
 /**/ #chat .chat-welcome-message,
 /**/ #chat .system,
-/**/ #chat .chat-system-loading,
-/**/ #chat .chat-system-joined{
+/**/ #chat .chat-system-loading{
 /**/   text-align: center !Important;
 /**/ }
 /**/ 
@@ -926,7 +927,7 @@ A.close-menu,
 /**/ }
 /**/ 
 /**/ #chat LI[class^='user'].deleted-message P.deleted,
-/**/ #chat .chat-me-command-joined P.deleted{
+/**/ #chat .chat-system-joined P.deleted{
 /**/   padding-top: 18px !Important;
 /**/   padding-bottom: 22px !Important;
 /**/ }
@@ -960,12 +961,12 @@ A.close-menu,
 /**/   margin-right: 16px !Important;
 /**/ }
 /**/ 
-/**/ #chat .chat-me-command-joined .chatDelete{
+/**/ #chat .chat-system-joined .chatDelete{
 /**/   margin-top: 13px !Important;
 /**/ }
 /**/ 
 /**/ .chat-welcome-message,
-/**/ #chat .chat-me-command-joined,
+/**/ #chat .chat-system-joined,
 /**/ .avatar_tools,
 /**/ .chat-option-header{
 /**/   padding-top: 8px !Important;
@@ -985,7 +986,8 @@ A.close-menu,
 /**/ #chat .stream-item-content,
 /**/ .chat-welcome-message,
 /**/ #chat .system,
-/**/ #chat .chat-me-command-joined,
+/**/ #chat .chat-system-joined,
+/**/ #chat .chat-system-joined,
 /**/ #chat .chat-system-loading{
 /**/   padding-left: 16px !important;
 /**/   padding-right: 16px !important;
@@ -999,8 +1001,8 @@ A.close-menu,
 /**/   top: 7px !important;
 /**/ }
 /**/ 
-/**/ #chat .chat-me-command-joined,
-/**/ #chat .chat-me-command-joined P.deleted,
+/**/ #chat .chat-system-joined,
+/**/ #chat .chat-system-joined P.deleted,
 /**/ #main_avatar_room LI{
 /**/   margin-bottom: 0px !Important;
 /**/ }
@@ -1044,7 +1046,7 @@ A.close-menu,
 /**/ }
 /**/ 
 /**/     /* Emote height override */
-/**/ #chat .chat-me-command-joined{
+/**/ #chat .chat-system-joined{
 /**/   min-height: 0px !Important;
 /**/ }
 /**/ 
@@ -1068,21 +1070,10 @@ A.close-menu,
 /**/   border-radius: 0px 0px 16px 16px !Important;
 /**/ }
 /**/ 
-/**/   /* Remove / Hide other stuff */
-/**/     /* Hide right-side colour (enables selective user colouring) */
-/**/ .right_section{
-/**/   background-color: transparent !important;
-/**/ }
 /**/     /* Chat padding */
 /**/ #chat UL,
 /**/ #chat .system{
 /**/   padding: 0px !Important;
-/**/ }
-/**/ 
-/**/ LI.deleted-message{
-/**/   padding-top: 0px !Important;
-/**/   padding-bottom: 0px !Important;
-/**/   line-height: 0px !Important;
 /**/ }
 /**/ 
 /**/     /* Undoing DubX defaults */
@@ -1090,7 +1081,7 @@ A.close-menu,
 /**/ .dubx #chat .chat-container .chat-messages .chat-main LI.chat-system-loading,
 /**/ .dubx #chat .chat-container .chat-messages .chat-main LI.system,
 /**/ .dubx #chat .chat-container .chat-messages .chat-main LI.system-error,
-/**/ .dubx #chat .chat-container .chat-messages .chat-main LI.chat-me-command-joined{
+/**/ .dubx #chat .chat-container .chat-messages .chat-main LI.chat-system-joined{
 /**/   padding-top: 0px;
 /**/ }
 /**/ 
@@ -1106,6 +1097,12 @@ A.close-menu,
 /**/ .deleted-message TIME,
 /**/ .user-role-icon{
 /**/   display: none !Important;
+/**/ }
+/**/
+/**/   /* Remove / Hide other stuff */
+/**/     /* Hide right-side colour (enables selective user colouring) */
+/**/ .right_section{
+/**/   background-color: transparent !important;
 /**/ }
 /**/ /* === "Better chat" code ends here === */
 /**/ /* === "Better player header" code begins here === */
