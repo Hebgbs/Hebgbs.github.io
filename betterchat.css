@@ -96,7 +96,8 @@ LI[class^='user'].deleted-message{
 .chat-welcome-message,
 #chat .chat-system-joined,
 .avatar_tools,
-.chat-option-header{
+.chat-option-header,
+#chat .dubx-chat-system{
   padding-top: 8px !Important;
   padding-bottom: 8px !Important;
 }
@@ -116,7 +117,8 @@ LI[class^='user'].deleted-message{
 #chat .system,
 #chat .chat-system-joined,
 #chat .chat-me-command-joined,
-#chat .chat-system-loading{
+#chat .chat-system-loading,
+#chat .dubx-chat-system{
   padding-left: 16px !important;
   padding-right: 16px !important;
 }
