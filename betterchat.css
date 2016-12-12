@@ -115,6 +115,7 @@ LI[class^='user'].deleted-message{
 .chat-welcome-message,
 #chat .system,
 #chat .chat-system-joined,
+#chat .chat-me-command-joined,
 #chat .chat-system-loading{
   padding-left: 16px !important;
   padding-right: 16px !important;
