@@ -17,7 +17,7 @@
    === Other credits ===
    @null: Little changes in main player footer, help in other places
    
-   version 2.91 (11/24/16)
+   version 2.92 (12/12/16)
 */
 
 /* Opacity settings */
@@ -257,11 +257,13 @@ SPAN.import-playlist,
 .content-videos .actions .add_to_playlist:hover .icon-heart:before,
 :not(.creator):not(.co-owner):not(.manager):not(.mod).currentDJ .username:after,
 .dj P:after,
+#dubinfo-preview.dubx-no-grabs,
 .username{
   color: rgb(74, 108, 143) !important;
 }
 
-A.dubup:hover SPAN{
+A.dubup:hover SPAN,
+#dubinfo-preview.dubx-updubs-hover.dubx-no-dubs{
   color: rgb(50, 60, 83) !important;
 }
 
@@ -285,11 +287,14 @@ A.dubdown:hover SPAN,
 .content-videos .actions .remove_icon:hover SPAN,
 #browser .playlist_info A:hover.icon-trash,
 #browser .display-error,
+#browser .skipped,
 #user_popover .actions A:hover:nth-child(-n+3),
 #user_popover .ban:hover,
 #user_popover .ban:hover INPUT,
 .check_username_info.error,
-.container .cancel:hover P{
+.container .cancel:hover P,
+#dubinfo-preview.dubx-downdubs-unauthorized,
+#dubinfo-preview.dubx-downdubs-hover.dubx-no-dubs{
   color: rgb(255, 45, 49) !important;
 }
 
@@ -327,7 +332,8 @@ A.dubdown:hover SPAN,
 .ps-scrollbar-y-rail,
 .ui-slider-horizontal,
 #player-controller A:hover,
-.playerPreview .progressContainer{
+.playerPreview .progressContainer,
+#dubinfo-preview.dubinfo-show{
   background-color: rgb(22, 31, 49) !important;
 }
 
@@ -337,6 +343,7 @@ A.dubdown:hover SPAN,
 #addToPlaylistFloatContainer .create-playlist-header,
 .loading,
 #private-messages .search-results:before,
+#private-messages .search-results .result-item,
 #browser .browser-content,
 #browser .playlist_info,
 #browser .queue_info,
@@ -394,6 +401,7 @@ A.dubup.voted,
 .playerPreview .loaded,
 .container .title,
 .container .control DIV,
+#dubinfo-preview.dubx-updubs-hover LI:hover,
 #d3vs-playlist-import-name,
 #d3vs-playlist-import-code,
 #d3vs-playlist-import-btn{
@@ -462,6 +470,7 @@ A.dubup.voted,
 .play-song-link .queue-info,
 .progressBg,
 .playerPreview .progress,
+#dubinfo-preview.dubx-grabs-hover LI:hover,
 .container .control DIV:hover{
   background-color: rgb(74, 108, 143) !important;
 }
@@ -489,6 +498,7 @@ A.dubdown.voted,
 .mods-controller-container .skip-el:hover,
 #browser .text-button.clear-queue:hover,
 .edit-btn.cancelUsername:hover,
+#dubinfo-preview.dubx-downdubs-hover LI:hover,
 .unfollow.follow-btn:hover{
   background-color: rgb(255, 45, 49) !important;
 }
@@ -591,6 +601,7 @@ IMG[src="https://res.cloudinary.com/hhberclba/image/upload/c_lpad,h_100,w_100/v1
 #chat DIV DIV .nc-container .tip-container,
 #chat DIV DIV .nc-container UL,
 #chat DIV DIV .nc-container UL LI,
+#dubinfo-preview.dubinfo-show,
 #private-messages .message-header,
 #private-messages .input-container{
   border-color: rgb(29, 69, 110) !important;
@@ -690,11 +701,25 @@ SPAN.import-playlist.icon-inbox,
 #private-messages .search-results:before{
   content: '';
   width: 100%;
-  height: 198px;
+  height: 57px;
   position: absolute;
   top: 0px;
   left: 0px;
   z-index: -1 !Important;
+}
+
+#private-messages HEADER.message-header{
+  padding-left: 0px !Important;
+  padding-right: 0px !Important;
+}
+
+#private-messages HEADER *{
+  margin-left: 16px !Important;
+  width: calc(100% - 32px) !important;
+}
+
+#private-messages .search-results .result-item{
+  padding-left: 16px !Important;
 }
 
 .message-item.new-message:before{
@@ -988,6 +1013,7 @@ A.close-menu,
 /**/ #chat .system,
 /**/ #chat .chat-system-joined,
 /**/ #chat .chat-system-joined,
+/**/ #chat .chat-me-command-joined,
 /**/ #chat .chat-system-loading{
 /**/   padding-left: 16px !important;
 /**/   padding-right: 16px !important;
@@ -1174,6 +1200,29 @@ A.close-menu,
 /**/   z-index: 1 !important;
 /**/ }
 /**/ /* === "PMs always on top" code ends here */
+/**/ /* === "Queue count on thumbnail" code begins here */
+/**/   /* Row count position */
+/**/ #browser .place{
+/**/   color: rgb(238, 238, 238) !important;
+/**/   margin: 0px !Important;
+/**/   left: 19px !important; /* 16px + (psx * -1) */
+/**/   top: 10px !Important; /* 8px + (psy * -1) */
+/**/   text-align: left !Important;
+/**/   font-weight: bold !Important;
+/**/   z-index: 1 !Important;
+/**/ }
+/**/ 
+/**/   /* Pseudochild for fake earmark / overlay */
+/**/ #browser .place:before{
+/**/   content: '';
+/**/   position: absolute;
+/**/   left /* psx */: -3px;
+/**/   top /* psy */: -2px;
+/**/   border-top: 36px rgba(74, 108, 143, 0.70) solid !Important;
+/**/   border-right: 31px transparent solid !Important;
+/**/   z-index: -1 !Important;
+/**/ }
+/**/ /* === "Queue count on thumbnail" code ends here */
 /**/ /* === "User-specific colours" begins here === */
 /**/   /* derpybot */
 /**/ #chat .user-577fdf23ad83c20a007e2983:not(.deleted-message),
