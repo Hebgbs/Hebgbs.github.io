@@ -26,7 +26,6 @@
   top /* psy */: -2px;
   /* Both size integers must match for intended effect;
      this draws the triangle over each thumbnail. */
-  /*mixer*/ /*border-top: 36px rgba(74, 108, 143, 0.70) solid !Important;*/
   border-top: 31px rgba(0, 255, 255, 0.70) solid !Important;
   border-right: 31px transparent solid !Important;
   z-index: -1 !Important;
