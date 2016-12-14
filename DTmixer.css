@@ -17,7 +17,7 @@
    === Other credits ===
    @null: Little changes in main player footer, help in other places
    
-   version 2.92 (12/12/16)
+   version 2.93 (12/14/16)
 */
 
 /* Opacity settings */
@@ -148,10 +148,14 @@ SPAN.import-playlist,
 .playerPreview .song-info-wrapper .below SPAN,
 .tinner H1,
 .tinner H2,
-.tinner P
-{
+.tinner P{
   color: rgb(238, 238, 238) !important;
 }
+
+#chat .dubx-chat-system-updub{
+  color: rgb(135, 140, 142);
+}
+
   /* Colour for DubX button */
 .header-right-navigation .for IMG{
   filter: brightness(93.33%) !Important;
@@ -257,6 +261,7 @@ SPAN.import-playlist,
 .content-videos .actions .add_to_playlist:hover .icon-heart:before,
 :not(.creator):not(.co-owner):not(.manager):not(.mod).currentDJ .username:after,
 .dj P:after,
+#chat .dubx-chat-system-grab,
 #dubinfo-preview.dubx-no-grabs,
 .username{
   color: rgb(74, 108, 143) !important;
@@ -293,6 +298,7 @@ A.dubdown:hover SPAN,
 #user_popover .ban:hover INPUT,
 .check_username_info.error,
 .container .cancel:hover P,
+#chat .dubx-chat-system-downdub,
 #dubinfo-preview.dubx-downdubs-unauthorized,
 #dubinfo-preview.dubx-downdubs-hover.dubx-no-dubs{
   color: rgb(255, 45, 49) !important;
@@ -992,8 +998,10 @@ A.close-menu,
 /**/ 
 /**/ .chat-welcome-message,
 /**/ #chat .chat-system-joined,
+/**/ #chat .chat-system-left,
 /**/ .avatar_tools,
-/**/ .chat-option-header{
+/**/ .chat-option-header,
+/**/ #chat .dubx-chat-system{
 /**/   padding-top: 8px !Important;
 /**/   padding-bottom: 8px !Important;
 /**/ }
@@ -1012,9 +1020,10 @@ A.close-menu,
 /**/ .chat-welcome-message,
 /**/ #chat .system,
 /**/ #chat .chat-system-joined,
-/**/ #chat .chat-system-joined,
 /**/ #chat .chat-me-command-joined,
-/**/ #chat .chat-system-loading{
+/**/ #chat .chat-system-left,
+/**/ #chat .chat-system-loading,
+/**/ #chat .dubx-chat-system{
 /**/   padding-left: 16px !important;
 /**/   padding-right: 16px !important;
 /**/ }
@@ -1202,24 +1211,31 @@ A.close-menu,
 /**/ /* === "PMs always on top" code ends here */
 /**/ /* === "Queue count on thumbnail" code begins here */
 /**/   /* Row count position */
+/**/ #browser .place:nth-child(-n+99){
+/**/   padding-left: 1px !Important;
+  }
 /**/ #browser .place{
 /**/   color: rgb(238, 238, 238) !important;
 /**/   margin: 0px !Important;
-/**/   left: 19px !important; /* 16px + (psx * -1) */
-/**/   top: 10px !Important; /* 8px + (psy * -1) */
-/**/   text-align: left !Important;
+/**/   left: 20px !important; /* 16px + (psx * -1) */
+/**/   top: 16px !Important; /* 8px + (psy * -1) */
+/**/   text-align: center !Important;
 /**/   font-weight: bold !Important;
+/**/   font-size: 8pt !Important;
+/**/   transform: rotate(-45deg);
 /**/   z-index: 1 !Important;
+/**/   background-color: black !Important;
 /**/ }
 /**/ 
 /**/   /* Pseudochild for fake earmark / overlay */
 /**/ #browser .place:before{
 /**/   content: '';
 /**/   position: absolute;
-/**/   left /* psx */: -3px;
-/**/   top /* psy */: -2px;
-/**/   border-top: 36px rgba(74, 108, 143, 0.70) solid !Important;
-/**/   border-right: 31px transparent solid !Important;
+/**/   left /* psx */: -17px;
+/**/   bottom /* psy */: -3px;
+/**/   border-left: 26px solid transparent;
+/**/   border-bottom: 26px rgba(74, 108, 143, 0.70) solid;
+/**/   border-right: 26px transparent solid;
 /**/   z-index: -1 !Important;
 /**/ }
 /**/ /* === "Queue count on thumbnail" code ends here */
