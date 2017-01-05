@@ -17,7 +17,7 @@
    === Other credits ===
    @null: Little changes in main player footer, help in other places
    
-   version 2.93 (12/14/16)
+   version 2.94 (01/04/17)
 */
 
 /* Opacity settings */
@@ -72,6 +72,7 @@ SPAN.import-playlist.icon-inbox:before{
   font-weight: normal !important;
 }
 
+#warning LEGEND,
 .room-info-display-container SPAN I,
 #user_popover .ban,
 #addToPlaylistFloatContainer .create-playlist-header{
@@ -92,7 +93,9 @@ P,
 .loading,
 .buffering,
 #profileMainSection *:not(.icon-close),
+#warning SPAN,
 #warning BUTTON,
+#warning A,
 .room-item .user-count *,
 .room-item .current-song,
 #roomFormUpdate H3,
@@ -277,7 +280,7 @@ TIME{
   color: rgb(29, 69, 110) !important;
 }
 
-#warning H3,
+#warning LEGEND,
 .icon-close,
 #main-menu-left A.logout-link:hover,
 .icon-eye-blocked:hover,
@@ -386,6 +389,7 @@ A.dubdown:hover SPAN,
 .ps-scrollbar-y,
 TEXTAREA,
 #warning BUTTON,
+#warning .contact-buttons A,
 #room-search,
 .playerPreview .song-info-wrapper .below SPAN,
 #roomFormUpdate INPUT,
@@ -429,6 +433,7 @@ A.dubup.voted,
 .room-lobby-header,
 .header-donate A:hover,
 #warning BUTTON:hover,
+#warning .contact-buttons A:first-child:hover,
 #roomFormUpdate BUTTON:hover,
 #mobile-room-menu,
 #playlists-scroll LI.selected,
@@ -496,6 +501,21 @@ A.dubup.voted,
   background-color: rgba(92, 135, 179, 0.60) !important;
 }
 */
+
+  /* Contact button hover coloures */
+    /* E-Mail: Same as other buttons */
+    /* Discord */
+#warning .contact-buttons A:nth-child(2):hover{
+  background-color: rgb(114, 137, 218) !important;
+}
+    /* Twitter */
+#warning .contact-buttons A:nth-child(3):hover{
+  background-color: rgb(28, 173, 235) !important;
+}
+    /* Facebook */
+#warning .contact-buttons A:last-child:hover{
+  background-color: rgb(59, 87, 157) !important;
+}
 
 #roomFormUpdate BUTTON.cancel:hover,
 .ui-slider-handle[style="left: 0%;"],
@@ -642,6 +662,10 @@ IMG[src="https://res.cloudinary.com/hhberclba/image/upload/c_lpad,h_100,w_100/v1
   border: 1px solid rgb(50, 60, 83) !important;
 }
 
+#warning LEGEND{
+  border-color: rgb(74, 108, 143) !important;
+}
+
 #user_popover .ban INPUT{
   border-color: rgb(180, 201, 222) !important;
 }
@@ -666,6 +690,7 @@ SPAN.import-playlist.icon-inbox,
   border-radius: 17px !Important;
 }
 
+#warning .contact-buttons A,
 .tinner{
   border-radius: 16px !Important;
 }
@@ -844,6 +869,7 @@ SPAN.import-playlist.icon-inbox,
 #autocomplete-preview UL,
 #private-messages #message-input,
 .mods-controller-container .skip-el,
+#warning .contact-buttons A,
 #browser .content-videos LI,
 #browser .text-button,
 .edit-btn,
