@@ -2,8 +2,8 @@
    > For use without DubX (active in every community)
       1. Go to https://userstyles.org/styles/119287
       2. Follow other instructions from userstyles.org
-   > For use in chillout-mixer onlybetter
-      1. Install DubX via dubx.net and execute it
+   > For use in chillout-mixer only
+      1. Install either DubX or Dub+
       2. Access the DubX menu and click on "Community theme"
    > For use everywhere in DubTrack (without Stylish)
       1. Install DubX via dubx.net and execute it
@@ -17,7 +17,7 @@
    === Other credits ===
    @null: Little changes in main player footer, help in other places
    
-   version 2.94 (01/04/17)
+   version 2.96 (02/26/17)
 */
 
 /* Opacity settings */
@@ -151,17 +151,14 @@ SPAN.import-playlist,
 .playerPreview .song-info-wrapper .below SPAN,
 .tinner H1,
 .tinner H2,
-.tinner P{
+.tinner P,
+.dubplus-menu-label,
+.dubplus-menu-icon .fa{
   color: rgb(238, 238, 238) !important;
 }
 
 #chat .dubx-chat-system-updub{
   color: rgb(135, 140, 142);
-}
-
-  /* Colour for DubX button */
-.header-right-navigation .for IMG{
-  filter: brightness(93.33%) !Important;
 }
 
 .create-playlist-form .icon-createplaylist,
@@ -245,7 +242,8 @@ SPAN.import-playlist,
 #addToPlaylistFloatContainer .playlist-list-action LI:hover,
 .for_content_ver,
 .for_content_c,
-.tinner A{
+.tinner A,
+.dubplus-menu-section-header P{
   color: rgb(180, 201, 222) !important;
 }
   
@@ -380,9 +378,10 @@ A.dubdown:hover SPAN,
   background-color: rgba(30, 41, 66, 0.80) !Important;
 }
 #main-menu-left NAV,
-.for_content,
 #main-menu-right A.close-menu,
-#browser .content-videos LI{
+#browser .content-videos LI,
+.for_content,
+.dubplus-menu{
   background-color: rgba(30, 41, 66, 0.70) !important;
 }
 
@@ -412,6 +411,7 @@ A.dubup.voted,
 .container .title,
 .container .control DIV,
 #dubinfo-preview.dubx-updubs-hover LI:hover,
+.dubplus-menu-section-header,
 #d3vs-playlist-import-name,
 #d3vs-playlist-import-code,
 #d3vs-playlist-import-btn{
@@ -447,7 +447,9 @@ A.dubup.voted,
 #player-controller .right,
 .container .control .cancel:hover,
 .playerPreview .song-info-wrapper .below SPAN:hover,
-#d3vs-playlist-import-btn:hover{
+.dubplus-menu-section-header:hover,
+#d3vs-playlist-import-btn:hover
+{
   background-color: rgb(29, 69, 110) !important;
 }
 .player_header SPAN:hover,
@@ -482,7 +484,8 @@ A.dubup.voted,
 .progressBg,
 .playerPreview .progress,
 #dubinfo-preview.dubx-grabs-hover LI:hover,
-.container .control DIV:hover{
+.container .control DIV:hover,
+.dubplus-menu .dubplus-switch.dubplus-switch-on .dubplus-switcher{
   background-color: rgb(74, 108, 143) !important;
 }
 .player_header SPAN.active{
@@ -525,7 +528,8 @@ A.dubdown.voted,
 #browser .text-button.clear-queue:hover,
 .edit-btn.cancelUsername:hover,
 #dubinfo-preview.dubx-downdubs-hover LI:hover,
-.unfollow.follow-btn:hover{
+.unfollow.follow-btn:hover,
+.dubplus-menu .dubplus-switch .dubplus-switcher{
   background-color: rgb(255, 45, 49) !important;
 }
 .play-song-link.leave-button.active-queue-display:hover{
@@ -662,7 +666,8 @@ IMG[src="https://res.cloudinary.com/hhberclba/image/upload/c_lpad,h_100,w_100/v1
   border: 1px solid rgb(50, 60, 83) !important;
 }
 
-#warning LEGEND{
+#warning LEGEND,
+.dubplus-menu .dubplus-switch.dubplus-switch-on .dubplus-switcher{
   border-color: rgb(74, 108, 143) !important;
 }
 
@@ -670,7 +675,8 @@ IMG[src="https://res.cloudinary.com/hhberclba/image/upload/c_lpad,h_100,w_100/v1
   border-color: rgb(180, 201, 222) !important;
 }
 
-#user_popover .ban:hover INPUT{
+#user_popover .ban:hover INPUT,
+.dubplus-menu .dubplus-switch .dubplus-switcher{
   border-color: rgb(255, 45, 49) !important;
 }
 
@@ -852,9 +858,29 @@ SPAN.import-playlist.icon-inbox,
   padding-bottom: 2px !Important;
 }
 
+.dubplus-menu-section-header{
+  margin-bottom: 1px !Important;
+}
+
+.dubplus-menu .dubplus-switch.dubplus-switch .dubplus-switcher{
+  right: 11px !Important;
+}
+.dubplus-menu .dubplus-switch.dubplus-switch-on .dubplus-switcher{
+  right: 10px !Important;
+}
+
 /* Remove / Hide */
 .playerPreview .song-info-wrapper .below{
   color: transparent !Important;
+}
+
+.dubplus-menu-header,
+.dubplus-menu .dubplus-menu-section{
+  border-bottom: 1px solid transparent !Important;
+}
+.dubplus-menu-section-header,
+.dubplus-menu .dubplus-menu-section-closed{
+  border-bottom: none !Important;
 }
 
 .header-donate A,
@@ -939,6 +965,18 @@ A.close-menu,
 .queue-join-info,
 #main_player .artwork[src="https://res.cloudinary.com/hhberclba/image/upload/c_fill,fl_lossy,f_auto,w_900,h_460/default.png"]{
   display: none !Important;
+}
+
+/* Misc. third-party colour stuff */
+  /* DubX button */
+.header-right-navigation .for IMG{
+  filter: brightness(93.33%) !Important;
+}
+  
+  /* Dub+ switches */
+.dubplus-menu .dubplus-switch.dubplus-switch-on .dubplus-switch-bg{
+  background-color: rgb(51, 51, 51) !important;
+  border-color: rgb(68, 68, 68) !important;
 }
 
 /**/ /* === "Better chat" code begins here === */
