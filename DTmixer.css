@@ -17,7 +17,7 @@
    === Other credits ===
    @null: Little changes in main player footer, help in other places
    
-   version 2.96 (02/26/17)
+   version 2.97 (02/26/17)
 */
 
 /* Opacity settings */
@@ -301,7 +301,8 @@ A.dubdown:hover SPAN,
 .container .cancel:hover P,
 #chat .dubx-chat-system-downdub,
 #dubinfo-preview.dubx-downdubs-unauthorized,
-#dubinfo-preview.dubx-downdubs-hover.dubx-no-dubs{
+#dubinfo-preview.dubx-downdubs-hover.dubx-no-dubs,
+.dp-modal-buttons #dp-modal-cancel:hover{
   color: rgb(255, 45, 49) !important;
 }
 
@@ -414,7 +415,8 @@ A.dubup.voted,
 .dubplus-menu-section-header,
 #d3vs-playlist-import-name,
 #d3vs-playlist-import-code,
-#d3vs-playlist-import-btn{
+#d3vs-playlist-import-btn,
+.dp-modal-buttons BUTTON{
   background-color: rgb(50, 60, 83) !important;
 }
 .player_header SPAN,
@@ -448,7 +450,8 @@ A.dubup.voted,
 .container .control .cancel:hover,
 .playerPreview .song-info-wrapper .below SPAN:hover,
 .dubplus-menu-section-header:hover,
-#d3vs-playlist-import-btn:hover
+#d3vs-playlist-import-btn:hover,
+.dp-modal-buttons #dp-modal-cancel:hover
 {
   background-color: rgb(29, 69, 110) !important;
 }
@@ -485,7 +488,8 @@ A.dubup.voted,
 .playerPreview .progress,
 #dubinfo-preview.dubx-grabs-hover LI:hover,
 .container .control DIV:hover,
-.dubplus-menu .dubplus-switch.dubplus-switch-on .dubplus-switcher{
+.dubplus-menu .dubplus-switch.dubplus-switch-on .dubplus-switcher,
+.dp-modal-buttons #dp-modal-confirm:hover{
   background-color: rgb(74, 108, 143) !important;
 }
 .player_header SPAN.active{
@@ -966,6 +970,10 @@ A.close-menu,
 #main_player .artwork[src="https://res.cloudinary.com/hhberclba/image/upload/c_fill,fl_lossy,f_auto,w_900,h_460/default.png"]{
   display: none !Important;
 }
+
+  .dubplus-menu-icon .fa{
+    left: 7px !Important;
+  }
 
 /* Misc. third-party colour stuff */
   /* DubX button */
