@@ -61,7 +61,8 @@ SPAN.import-playlist.icon-inbox:before{
   font-family: icomoon !Important;
 }
 
-#user_popover .ban INPUT{
+#user_popover .ban INPUT,
+.dubplus-menu-icon .fa{
   text-align: center !Important;
 }
 
@@ -970,10 +971,6 @@ A.close-menu,
 #main_player .artwork[src="https://res.cloudinary.com/hhberclba/image/upload/c_fill,fl_lossy,f_auto,w_900,h_460/default.png"]{
   display: none !Important;
 }
-
-  .dubplus-menu-icon .fa{
-    left: 7px !Important;
-  }
 
 /* Misc. third-party colour stuff */
   /* DubX button */
