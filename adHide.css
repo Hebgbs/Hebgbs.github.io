@@ -1,0 +1,30 @@
+/* Ad box height */
+#taboola-browser-container:not(:hover){
+  height: 25px !Important;
+}
+#taboola-browser-container:hover{
+  height: 192px !important;
+}
+
+/* Top banner textbox */
+#taboola-browser-container:hover .trc_rbox_header_span:after,
+#taboola-browser-container:not(:hover) .trc_rbox_header_span:after{
+  height: auto;
+  width: auto;
+  position: absolute;
+  left: 0px;
+  padding-left: 5px;
+  padding-bottom: 2px !Important;
+  color: white !Important;
+} /* Inactive */
+#taboola-browser-container:not(:hover) .trc_rbox_header_span:after{
+  content: "You May Like... (Hover to See Offers)"
+} /* Hover */
+#taboola-browser-container:hover .trc_rbox_header_span:after{
+  content: "You May Like"
+}
+
+/* Disappear */
+#taboola-browser-container .trc_rbox_header_span{
+  color: transparent !Important;
+}
