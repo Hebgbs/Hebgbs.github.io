@@ -88,6 +88,7 @@ echo
 echo --- Finishing up ---
 cd $HOME/.config/betterdiscord/BetterDiscordApp-stable16/lib
 sudo mv Utils.js utils.js
+mv ~/BetterDiscord/bdstorage.json ~/BetterDiscord/bdStorage.json #Added to rename bdStorage.json so BetterDiscord can find it
 echo
 echo \#####################
 echo \# Launching Discord \#
