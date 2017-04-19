@@ -88,7 +88,6 @@ echo
 echo --- Finishing up ---
 cd $HOME/.config/betterdiscord/BetterDiscordApp-stable16/lib
 sudo mv Utils.js utils.js
-mv ~/BetterDiscord/bdstorage.json ~/BetterDiscord/bdStorage.json #Added to rename bdStorage.json so BetterDiscord can find it
 echo
 echo \#####################
 echo \# Launching Discord \#
@@ -96,7 +95,8 @@ echo \#####################
 cd $HOME
 ### Enable if using Canary build; it's just for compatibility. Use "discord-canary" after. 
 ## alias discord="discord-canary"
-discord &
+discord
+ln -f -s ~/BetterDiscord/bdStorage.json ~/BetterDiscord/bdstorage.json #So it can read your saved settings despite BetterDiscord, mistakenly saving this file as bdstorage.json but trying to read as bdStorage.json at startup.
 echo
 echo --- Script end ---
 exit
