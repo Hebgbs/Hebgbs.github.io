@@ -87,7 +87,7 @@ sudo ./node_modules/.bin/electron ./src
 echo
 echo --- Finishing up ---
 cd $HOME/.config/betterdiscord/BetterDiscordApp-stable16/lib
-sudo mv Utils.js utils.js
+sudo ln -f -s utils.js Utils.js #Symlink as it's safer than renaming files.
 echo
 echo \#####################
 echo \# Launching Discord \#
