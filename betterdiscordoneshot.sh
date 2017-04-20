@@ -95,6 +95,7 @@ echo \#####################
 cd $HOME
 ### Enable if using Canary build; it's just for compatibility. Use "discord-canary" after. 
 ## alias discord="discord-canary"
+echo -e "Don't exit this script yet, wait for better discord to finish loading, and close Discord, than the script will finish setting up"
 discord
 ln -f -s ~/BetterDiscord/bdStorage.json ~/BetterDiscord/bdstorage.json #So it can read your saved settings despite BetterDiscord, mistakenly saving this file as bdstorage.json but trying to read as bdStorage.json at startup.
 echo
