@@ -65,8 +65,8 @@ echo
 echo --- Doing other user-enhancing things... ---
 mkdir -p $HOME/.config/betterdiscord
 # Since script will be ran as sudo, this has to be done so permission issues are prevented.
-mkdir -p $HOME/BetterDiscord
-sudo ln -s $HOME/BetterDiscord /var/local/BetterDiscord
+# Method changed to giving read/write access to everyone.
+sudo chmod -R 777 /var/local/BetterDiscord/
 echo
 echo --- Launching BetterDiscord Installer ---
 echo -e "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
