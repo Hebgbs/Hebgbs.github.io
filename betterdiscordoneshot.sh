@@ -97,7 +97,9 @@ cd $HOME
 ## alias discord="discord-canary"
 echo -e "Don't exit this script yet, wait for better discord to finish loading, and close Discord, than the script will finish setting up"
 discord
-ln -f -s /var/local/BetterDiscord/bdStorage.json /var/local/BetterDiscord/bdstorage.json #So it can read your saved settings despite BetterDiscord, mistakenly saving this file as bdstorage.json but trying to read as bdStorage.json at startup.
+cd /var/local/BetterDiscord
+ln -f -s bdStorage.json bdstorage.json #So it can read your saved settings despite BetterDiscord, mistakenly saving this file as bdstorage.json but trying to read as bdStorage.json at startup.
+cd $HOME
 sudo chmod -R 777 ~/.config/betterdiscord/BetterDiscordApp-stable16/
 echo
 echo --- Script end ---
