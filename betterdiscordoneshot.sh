@@ -62,8 +62,6 @@ cd ./betterdiscordapp/Installers/Electron
 npm install
 npm install --save-dev electron
 echo
-echo --- Doing other user-enhancing things... ---
-mkdir -p $HOME/.config/betterdiscord
 # Since script will be ran as sudo, this has to be done so permission issues are prevented.
 # Method changed to giving read/write access to everyone.
 sudo chmod -R 777 /var/local/BetterDiscord
