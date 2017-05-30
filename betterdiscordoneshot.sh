@@ -86,6 +86,8 @@ echo -e "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 sudo ./node_modules/.bin/electron ./src
 echo
 echo --- Finishing up ---
+cd /var/local/BetterDiscord
+sudo mv bdstorage.json bdStorage.json
 cd $HOME/.config/betterdiscord/BetterDiscordApp-stable16/lib
 sudo mv Utils.js utils.js
 echo
