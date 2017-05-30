@@ -63,8 +63,12 @@ npm install
 npm install --save-dev electron
 echo
 echo --- Doing other user-enhancing things... ---
+### ! Discord now has a default path for user files. You may omit this line and use that path instead.
+###   Default path is /usr/local/share/BetterDiscord
+###   Make damn certain if you do this, to not blindly follow my advice in the echo lines below.
 mkdir -p $HOME/.config/betterdiscord
 # Since script will be ran as sudo, this has to be done so permission issues are prevented.
+# There are other (and arguably better) ways of doing it, but this is the most simple means I can figure.
 mkdir -p $HOME/BetterDiscord
 sudo ln -s $HOME/BetterDiscord /var/local/BetterDiscord
 echo
