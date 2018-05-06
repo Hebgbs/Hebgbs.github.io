@@ -1,0 +1,387 @@
+<html>
+<title>Seedminer Boot9Strap CFW the easy way</title>
+<head>
+  <link href="https://rawgit.com/Hebgbs/plugthemes/master/fonts/MyraidPro.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root {
+      --boxop: 0.25;}
+
+    BUTTON {
+      border: none;}
+
+    BODY,
+    .headc,
+    .head {
+      background: black;
+      color: white;
+      font-family: Myraid Pro;}
+
+    .sec {
+      background-color: #222;}
+
+    .warn,
+    .info,
+    .good {
+      font-weight: bold;}
+
+    .warn {
+      background-color: #400505;
+      border-top: 2px solid #f22;}
+
+    .info {
+      background-color: #050540;
+      border-top: 2px solid #22f;}
+
+    .good {
+      background-color: #054005;
+      border-top: 2px solid #2f2;}
+
+    .text {
+      background-color: #555;}
+
+    .headc,
+    .head {
+      cursor: pointer;
+      text-align: left;
+      outline: none;
+      font-size: 15px;}
+
+    .headc {
+      width: 100%;
+      padding: 0 5px;}
+
+    .head {
+      width: calc(100% - 16px);}
+      padding: 1px 8px;}
+
+    .msg {
+      padding: 5px 8px;}
+
+    .body {
+      padding: 0 18px;
+      overflow: hidden;}
+
+    .a,
+    .headc:hover {
+      background-color: #333;}
+
+    .hidden {
+      display: none;}
+
+    li.success {
+      list-style-image: url(https://i.imgur.com/X8670Cs.png);}
+
+    li.failure {
+      list-style-image: url(https://i.imgur.com/rpSQgsn.png);}
+  </style>
+
+  <title>Seedminer Boot9Strap CFW the easy way</title>
+</head>
+<body>
+  <h1>Seedminer Boot9Strap CFW the easy way<br><small>A tutorial for people who just want to <i>get it done.</i></small></h1>
+  <h2><small>Guide and poor HTML coding by Heebeejeebees.</small></h2>
+  <div class="info msg">For help with most Nintendo Homebrew things, there's a Discord guild for that. This guide is not associated with them, but you can join there anyway for general inqueries.</div> <br>
+  <div class="info msg">Can you keep a secret? There is another small guild which openly discusses piracy, and in a bid to prevent trouble for either, the two should be considered mutually-exclusive and unaffiliated with one another. If your intention is to use this guide for downloading retail titles freely, you might want to join there instead. </div> <br>
+  <div class="text">
+    <div class="head sec">
+      <h2>Preface and summary</h2>
+    </div>
+    <div class="warn msg">This guide is intended for use with 3DS firmware 11.4 - 11.6.0-39. Any future firmware may cause the console to brick and become unusable when applying these instructions to a stock console.</div> <br>
+    <div class="info msg">Any reference to 3DS also applies for 2DS, meaning that regardless of model these instructions will apply.</div> <br>
+    <div class="good msg">After completing these instructions, it is safe to update Boot9Strap, Luma3DS and the console firmware.</div>
+    <div class="body">
+      <p>The reason this guide exists is because I grew tired of telling people the same turns of phrase which serve to do nothing more than waste time and confuse people who cannot keep up with what I am saying, and for me to link so people can follow along with the same series of instructions which haven't failed any persons I had assisted as of yet. As this is a very straight-forward and to-the-point guide for people who just want to <i>get it done</i>, these instructions are optimized for speed and limited handling of media. </p>
+      <h4>After having followed these instructions, you will have the following in your 3DS' SD card:</h4>
+      <ul>
+        <li><span style="font-weight: bold;">Boot9Strap</span>, a loader for ARM9 / ARM11</li>
+        <li><span style="font-weight: bold;">Luma3DS</span>, a custom firmware (hereon: <span style="font-style: italic;">CFW</span>) which depends upon Boot9Strap (hereon: <span style="font-style: italic;">B9S</span>) or ARM9LoaderHax (hereon: <span style="font-style: italic;">A9LH</span>)</li>
+        <li><span style="font-weight: bold;">GodMode9</span>, a pre-boot file manager and root-level script executor dependent on Luma3DS' payload execution </li>
+        <li><span style="font-weight: bold;">DSP1</span>, a dumping utility to support sound for homebrew applications</li>
+        <li><span style="font-weight: bold;">Luma3DS Updater</span>, a utility for updating Luma3DS through the console when new releases are available </li>
+        <li><span style="font-weight: bold;">Homebrew Launcher</span>, a utility for launching programs compiled as <span style="font-family: monospace;">.3dsx</span> binaries</li>
+        <li><span style="font-weight: bold;">FBI</span>, a utility for using CTR Importable Archive binaries (hereon: <span style="font-style: italic;">CIA</span>) to install games and applications </li>
+        <li><span style="font-weight: bold;">Anemone Theme Manager</span>, an open-source utility for installing themes and bootsplashes</li>
+        <li><span style="font-weight: bold;">Checkpoint</span>, a save manager for 3DS and DSiWare titles</li>
+      </ul>
+      </h3>
+      <h4>The following GodMode9 scripts may also be executed</h4>
+      <ul>
+        <li><span style="font-family: monospace;">setup_ctrnand_luma3ds</span>, a script which will copy Luma3DS into system memory so the console isn't dependent on the presence of an SD card</li>
+        <li><span style="font-family: monospace;">cleanup_sd_card</span>, a script to delete unnecessary files for operation, including the cias directory which will be included with the archive provided</li>
+        <li>The built-in script for backing up the system memory entirely as a file on SD card</li>
+      </ul>
+      <h4>The following additional steps can also be performed after installation of CFW</h4>
+      <ul>
+        <li>Installation of <span style="font-weight: bold;">FTPD</span>, an FTP server for 3DS through FBI's access to TitleDB</li>
+        <li>Installation of <span style="font-weight: bold;">Freeshop</span>, an open-source clone of Nintendo's eShop with title management</li>
+        <li>Installation of <span style="font-weight: bold;">InputRedirectionQt</span> for use of Luma3DS' input redirection, a feature to use controllers attached to a PC</li>
+        <li>Installation of <span style="font-weight: bold;">Snickerstream</span> for casting video from the console onto PC</li>
+      </ul>
+    </div>
+  </div> <br>
+  <div class="info msg">Further sections of this guide are hidden for convenience. Click on their headings to expand sections of this guide as you follow along.</div> <br>
+  <div class="info msg">This guide also assumes you are using Microsoft Windows, however for Mac OS X and other open-source systems seedminer is also avalable, and web services used during the course of this guide are available to everybody.</div> <br>
+  <div class="warn msg">Everything shown in this guide is procedural and top-down. This means steps should be followed in the order as shown for the best chance of success.</div> <br>
+  <div> <button class="sec headc">
+        <h2>Section 1 — Preparation</h2>
+      </button>
+    <div class="hidden body text">
+      <h3>You will need the following</h3>
+      <ul>
+        <li>$3 in your Nintendo eShop account</li>
+        <li> A friend with homebrew
+          <ul>
+            <li>Ask someone in Nintendo Homebrew or Black Bag<br> </li>
+          </ul>
+          <li>A stock 3DS, old or new</li>
+      </ul>
+      <h3>Optionally, this may help</h3>
+      <ul>
+        <li>A computer with a good GPU</li>
+        <li>Python 3.6 (preferably) or 2.7</li>
+        <li>An Amazon gift card worth $5</li>
+      </ul>
+      <p>If you lack any of this, you may be in for a bad time. Fulfill the necessary requirements above and you will have <span style="font-style: italic;">enough</span> to get by.</p>
+    </div>
+  </div> <br>
+  <div> <button class="sec headc">
+      <h2>Section 2 — Initial steps</h2>
+    </button>
+    <div class="hidden text">
+      <div class="info msg"> If you have to, go into Windows Explorer's options and disable hiding of known file extensions. As it is beyond the scope of this guide, search for this information yourself. </div>
+      <div class="body">
+        <h3>On the console</h3>
+        <ol>
+          <li>Open the Nintendo eShop </li>
+          <li> <a href="https:3ds.hacks.guideinstalling-boot9strap-dsiware-game-injection-list">
+            Purchase an injectable game from this list</a> </li>
+          <li style="list-style: none; display: inline">
+            <ul>
+              <li><b>Keep this page open for later.</b> Information from it may help you later.</li>
+              <li>If you aren't sure, purchase SUDOKU. The file generated with the process below will be <span style="font-family: monospace;">4B344445.bin</span> (USA) or <span style="font-family: monospace;">4B344456.bin</span> (EUR). There is no SUDOKU equivalent for JPN but any of the listed games for that region will work. </li>
+            </ul>
+          </li>
+          <li>Exit the eShop and open System Settings; Go to Data Management, DSiWare. </li>
+          <li>Find SUDOKU and copy it onto the SD card. <span style="font-style: italic;">Permit this operation in the following
+            prompt.</span> </li>
+          <li>Power off the Nintendo 3DS and remove the SD card. </li>
+          <li style="list-style: none; display: inline">
+            <ul>
+              <li>If you own a console with the "new" wordmark, you can do one better: Go into microSD Management and connect with your PC instead. </li>
+            </ul>
+          </li>
+        </ol>
+        <h3> On the computer </h3>
+        <ol>
+          <li><a href="https://hebgbs.github.io/seedkit.zip">Download this archived suite of files.</a>
+            <ul>
+              <li>All files in this archive were obtained from 3ds.hacks.guide and have already been assembled in the correct fashion for execution on the 3DS.</li>
+            </ul>
+            <li>Extract the contents of the archive onto the root of the SD card.
+              <ul>
+                <li>This means all folders and files should be <i>alongside</i> Nintendo 3DS, not <i>inside</i> of it, and especially <i>not</i> in its own directory.</li>
+              </ul>
+            </li>
+            <li>Navigate to <span style="font-family: monospace;">Nintendo 3DS</span>; you should see two directories.
+              <ul>
+                <li>If you see more than two, search for the filename of the game you had copied, per the list you may had previously obtained it from. Results should show one entry in <span style="font-family: monospace;">Nintendo 3DS/[id0]/[id1]/Nintendo DSiWare</span>.</li>
+              </ul>
+            </li>
+            <li>The id0 is shown as a unique 32-character directory. Use your file manager's rename function to copy this directory's name.</li>
+        </ol>
+      </div>
+    </div>
+  </div> <br>
+  <div> <button class="sec headc">
+      <h2>Section 3 — Seedminer</h2>
+    </button>
+    <div class="hidden text">
+      <div class="warn msg"> If you do not have a good GPU (anything around 2008) inside your machine by nVidia, AMD or an AIB using either company's hardware, you may not be able to mine your seed quickly. </div> <br>
+      <div class="good msg"> <a href="https://seedhelper.figgyc.uk">Fortunately, there is an
+        altenative to doing it yourself via Seedhelper.</a> Your <span style="font-family: monospace;">movable_part1.sed</span> can still be obtained from another person if you are wary about feeding your friend code into something you have less control of. </div>
+      <div class="body">
+        <h3> Requirements for installing and using seedminer </h3>
+        <ul>
+          <li>Python 3.6 (preferred) or 2.7, from <a href="https://python.org">Python Software Foundation's landing page</a>. </li>
+          <li style="list-style: none; display: inline">
+            <ul>
+              <li>If you have 2.7, replace any instance of <span style="font-family: monospace;">py -3</span> with <span style="font-family: monospace;">%systemdrive%\python27\python.exe</span>. </li>
+            </ul>
+          </li>
+          <li><a href="https://github.com/zoogie/seedminer/releases">Seedminer itself</a>. </li>
+          <li>Your console's <span style="font-family: monospace;">movable_part1.sed</span> (hereon: <span style="font-style: italic;">part1</span>), detailed below. </li>
+          <li>The console's first 32 characters of its SHA256 hash (hereon: <span style="font-style: italic;">id0</span>), detailed below. <br> </li>
+        </ul>
+        <h3> Obtaining your part1<br> </h3>
+      </div>
+      <div class="good msg"> Seedhelper can aid with this, the provided instructions below are for when the service is down. Instead of these instructions, you can use it to obtain your <span style="font-family: monospace;">movable_part1.sed</span> </div>
+      <div class="body">
+        <ol>
+          <li> Befriend someone with a modified console from either of the Discord guilds provided
+            <ul>
+              <li>Seedstarter <span style="font-style: italic;">does
+                not work</span> with provisonally added friends: Both sides must friend one another. </li>
+            </ul>
+          </li>
+          <li>Whoever is assisting you also needs to have <span style="font-family: monospace;">seedstarter.3dsx</span> from the <a href="https://github.com/zoogie/seedminer/releases">seedminer Github repository</a>. </li>
+          <li>Your assistant then needs to open seedstarter on their console </li>
+          <li>Assistant then follows the prompts, pressing <span style="font-family: monospace;">B</span>, <span style="font-family: monospace;">A</span>, then <span style="font-family: monospace;">Start</span> in seedstarter. </li>
+          <li>After obtaining all friend's seeds, assistant then needs to access the <span style="font-family: monospace;">seedstarter</span> directory on their console's SD card. </li>
+          <li>Assistant must find the <span style="font-family: monospace;">.sed</span> file with the friend code of the user they are assisting and rename it to <span style="font-family: monospace;">movable_part1.sed</span>.
+            <ul>
+              <li><span style="font-style: italic;">Example</span>: <span style="font-family: monospace;">0_<span style=
+              "color: rgb(0, 255, 255);">1234_4567_7890</span>.sed</span> becomes <span style="font-family: monospace;">movable_part1.sed</span> for use with whoever has friend code <span style="color: rgb(0, 255, 255);">1234-4567-7890</span>.</li>
+            </ul>
+          </li>
+          <li>Assistant needs to deliver <span style="font-family: monospace;">movable_part1.sed</span> to you for mining. </li>
+          </ul>
+        </ol>
+        <h3> Mining your seed </h3>
+      </div>
+      <div class="info msg"> If somebody else needs to do the mining, your id0 needs to be provided to them for a successful operation.</div><br>
+      <div class="info msg">Using Python 2.7? These following details change:<br>
+        <ul>
+          <li>Instead of <span style="font-family: monospace;">seedminer_launcher3.py</span>, <span style="font-family: monospace;">seedminer_launcher.py</span> is used. </li>
+          <li>If <span style="font-family: monospace;">py -2</span> shorthand is not an option, use <span style="font-family: monospace;">%systemdrive%\Python27\python.exe</span> instead. </li>
+        </ul>
+      </div>
+      <div class="body">
+        <ol>
+          <li>Locate <span style="font-family: monospace;">movable_part1.sed</span>; Where seedminer was extracted, navigate to where <span style="font-family: monospace;">seedminer_launcher3.py</span> is and move it there. </li>
+          <li> Hold <span style="font-family: monospace;">Right Shift</span> while opening the context menu to access additional options; choose to open command prompt / powershell.
+            <ul>
+              <li>This does <i>not</i> mean to execute the Ppython shell environment! The remaining instructions are performed outside of an executed command-line program.</li>
+            </ul>
+          </li>
+          <li>Execute <span style="font-family: monospace;">py -3
+            seedminer_launcher3.py update-db</span> </li>
+          <li>Execute <span style="font-family: monospace;">py -3
+            seedminer_launcher3.py id0 [id0]</span>
+            <ul>
+              <li> <span style="font-style: italic;">Example:</span> <span style="font-family: monospace;">py -3
+            seedminer_launcher3.py id0
+            a0b1c2d3e4f5061728394a5b6c7d8e9f</span> </li>
+            </ul>
+          </li>
+          <li>Execute <span style="font-family: monospace;">py -3
+            seedminer_launcher3.py gpu</span>
+            <ul>
+              <li> <span style="font-family: monospace;">cpu</span> is a possible argument as well. Also possible: You waiting up to a day or more for CPU mining.
+                <li>If errors <span style="font-style: italic;">did</span> occur, try opening <span style="font-family: monospace;">cmd</span> as an administrator, rinse and repeat for multiple seeds. </li>
+            </ul>
+            </li>
+            <li>If nothing produced fatal errors, multiple <span style="font-family: monospace;">cmd</span> instances will open: <span style="font-weight: bold;">Do not close them.</span> </li>
+            <li>Obtain your movable.sed from the directory seedminer was executed in.<br> </li>
+        </ol>
+      </div>
+    </div>
+  </div> <br>
+  <div> <button class="sec headc">
+      <h2>Section 4 — DSiWare injection</h2>
+    </button>
+    <div class="hidden text">
+      <div class="warn msg">None of these steps are of any use without your movable.sed. Acquire it from seedhelper or make it yourself in seedminer.</div>
+      <div class="body">
+        <h2>At your computer</h2>
+        <ol>
+          <li><a href="https://jenkins.nelthorya.net/job/DSIHaxInjector">Go to this
+  website to build your patched bin.</a></li>
+          <li>The fields shown refer to the following:
+            <ul>
+          </li>
+          <li>Unique identifier for the patched <span style="font-family: monospace;">.bin</span> file</li>
+          <li>Region of your console (usually shown on your console)</li>
+          <li>Location of your copied DSiWare <span style="font-family: monospace;">.bin</span></li>
+          <li>Location of your <span style="font-family: monospace;">movable.sed</span></li>
+          <li>You can skip E-Mail: Build will not take long.</li>
+          </ul>
+          </li>
+          <li>Hit the big blue <span style="font-weight: bold;">Build</span> button and watch the left side for your build to complete.
+            <ul>
+              <li class="success">means build completed with a usable artifact</li>
+              <li class="failure">means the <span style="font-family: monospace;">movable.sed</span> or <span style="font-family: monospace;">.bin</span> file was bad and needs to be remade.</li>
+            </ul>
+          </li>
+          <li>If you see your build is successful, click it and download the artifact made onto your SD card in <span style="font-family: monospace;">Nintendo DSiWare</span>.</li>
+          <li>Rename, move or delete the the original, untouched <span style="font-family: monospace;">.bin</span> file.</li>
+          <li>Rename the <span style="font-family: monospace;">.patched</span> file so it ends in <span style="font-family: monospace;">.bin</span> instead. </li>
+          <li><span style="font-style: italic;">Properly</span> eject the SD card from your PC and put it in the console.</li>
+        </ol>
+        <h2>At your console</h2>
+        <ol>
+          <li>Open System Settings, Data Management, DSiWare.</li>
+          <li>In the SD Card tab, choose to copy the patched bin to System Memory. <span style="font-style: italic;">Permit this operation in the following prompt.</span</li>
+<li>When finished, exit to Home Menu and open the
+  patched game.</li>
+    </ol>
+    </div>
+  </div>
+</div>
+  </br>
+  <div>
+    <button class="sec headc">
+      <h2>Section 5 — CFW installation</h2>
+    </button>
+    <div class="hidden text">
+        <div class="info msg">Instructions shamelessly ripped off from <a href="https://jisagi.github.io/SeedminerGuide/injection/#section4">Jisagi's seedminer guide</a>.</div>
+      <div class="body">
+        <ol>
+          <li>Launch b9sTool by starting your DSiWare game<ul>
+            <li>It is alright if it loads SUDOKU, just proceed when allowed.</li></ul>
+            </li>
+          <li>Launch b9sTool by starting your DSiWare game</li>
+          <li>Select <span style="font-family: monospace;">Dump F0F1</span> to backup the 3DS FIRM</li>
+          <li>Select <span style="font-family: monospace;">Install boot9strap</span> and confirm</li>
+          <li>Wait for it to say <span style="font-family: monospace;">done!</span>. Exit b9sTool and power off your 3DS
+            <ul>
+              <li> You may need to force power off by holding the power button </li>
+            </ul>
+          </li>
+          <li>Boot up your 3DS while holding <span style="font-family: monospace;">Select</span> to launch the Luma3DS configuration menu
+            <ul>
+              <li>If your 3DS boots normally to the HOME Menu then boot9strap did not install correctly. Replace your prep files with freshly downloaded files and restore the F0F1 backup in b9sTool. Do not create a new F0F1 backup! Then try reinstalling boot9strap again</li>
+            </ul>
+          </li>
+          <li>Use the <span style="font-family: monospace;">A</span> button and the D-pad to enable the following options:
+            <ul>
+              <li><span style="font-family: monospace;">Splashes</span> (before or after payloads, for Anemone Theme Manager's splashes function).</li>
+              <li><span style="font-family: monospace;">Enable Game Patching</span> (for soft-patching via Luma3DS).</li>
+              <li><span style="font-family: monospace;">Show NAND or User String in System Settings</span> (to confirm CFW is loaded).</li>
+            </ul>
+          </li>
+          <li style="height: 2em;">Press <span style="font-family: monospace;">Start</span> to save and reboot</li>
+          <li><a href="https://3ds.hacks.guide/finalizing-setup"><b>Continue here to finish installing your CFW.</a></b>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+  <!-- Template for future sections
+<br>
+<div>
+    <button class="sec headc">
+      <h2>TEMPLATE - DO NOT REMOVE UNTIL FINISHED</h2>
+    </button>
+    <div class="hidden body text">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+  </div>
+-->
+  <script>
+    var coll = document.getElementsByClassName("headc");
+    var i;
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        }
+        else {
+          content.style.display = "block";
+        }
+      });}
+  </script>
+</body>
+</html>
