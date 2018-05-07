@@ -168,10 +168,6 @@
       <h3>You will need the following</h3>
       <ul>
         <li>USD3 in your Nintendo eShop account.</li>
-        <li>A friend with homebrew
-          <ul>
-            <li>Ask someone who already had their console modified.</li>
-          </ul>
         </li>
         <li>A stock 3DS, old or new.</li>
       </ul>
@@ -179,9 +175,13 @@
       <ul>
         <li>A computer with a good GPU.</li>
         <li>Python 3.6 (preferably) or 2.7.</li>
+		<li>Another person to assist with their modified console.
+          <ul>
+            <li>Ask someone who already had their console modified.</li>
+          </ul>
         <li>An Amazon gift card worth USD5 if lacking funds.</li>
-        <li>An SD card larger than 4GB</ul>
-      <li>Only if it's full of save data already: A system memory backup requires 1.2GB.</li>
+        <li>An SD card larger than 4GB.</ul>
+      <li>Only if it's full of save data already: A system memory backup requires <b>1.2GB</b>.</li>
       </ul>
       </li>
       </ul>
@@ -199,9 +199,9 @@
         <ol>
           <li>Open the Nintendo eShop.</li>
           <li><a href="https://3ds.hacks.guide/installing-boot9strap-(dsiware-game-injection-list)">
-Purchase an injectable game from this list</a></li>
+Purchase an injectable game from this list.</a></li>
           <ul>
-            <li><b>Keep this page open for later.</b> Information from it may help you later.</li>
+            <li><b>Keep that page open;</b> Information from it may help you later.</li>
             <li>If you aren't sure, purchase SUDOKU. The file generated with the process below will be <code>4B344445.bin</code> (USA) or <code>4B344456.bin</code> (EUR). There is no SUDOKU equivalent for JPN but any of the listed games for that region will work.</li>
           </ul>
           </li>
@@ -225,10 +225,10 @@ Purchase an injectable game from this list</a></li>
             </li>
             <li>Navigate to <code>Nintendo 3DS</code>; you should see two directories.
               <ul>
-                <li>If you see more than two, search for the filename of the game you had copied, per the list you may had previously obtained it from. Results should show one entry in <code>Nintendo 3DS/[id0]/[id1]/Nintendo DSiWare</code></li>
+                <li>If you see more than two, search for the filename of the game you had copied, per the list you may had previously obtained it from. Results should show one entry in <code>Nintendo 3DS/[id0]/[id1]/Nintendo DSiWare</code>.</li>
               </ul>
             </li>
-            <li>The id0 is shown as a unique 32-character directory. Use your file manager's rename function to copy this directory's name.</li>
+            <li>The id0 is shown as a unique 32-character directory; Use your file manager's rename function to copy this directory's name.</li>
         </ol>
       </div>
     </div>
@@ -241,7 +241,7 @@ Purchase an injectable game from this list</a></li>
       <div class="warn msg"> If you do not have a good GPU (anything around 2008) inside your machine by nVidia, AMD or an AIB using either company's hardware, you may not be able to mine your seed quickly.</div>
 	  <br>
       <div class="good msg"> <a href="https://seedhelper.figgyc.uk">Fortunately, there is an
-altenative to doing it yourself via Seedhelper.</a> Your <code>movable_part1.sed</code> can still be obtained from another person if you are wary about feeding your friend code into something you have less control of.</div>
+alternative to doing it yourself via Seedhelper.</a> Your <code>movable_part1.sed</code> can still be obtained from another person if you are wary about feeding your friend code into something you have less control of.</div>
       <div class="body">
         <p>This process is necessary for decrypting a special file on the 3DS for later use with a service for compiling your CFW entrypoint. Without it, you may not be able to install CFW into the 3DS without using a different method.</p>
         <h3> Requirements for installing and using seedminer</h3>
@@ -256,14 +256,13 @@ altenative to doing it yourself via Seedhelper.</a> Your <code>movable_part1.sed
           <li>The console's first 32 characters of its SHA256 hash (hereon: <i>id0</i>), detailed below.</li>
         </ul>
         <h3> Obtaining your part1</h3>
-		<br>
       </div>
       <div class="good msg"> Seedhelper can aid with this, the provided instructions below are for when the service is down. Instead of these instructions, you can use it to obtain your <code>movable_part1.sed</code></div>
       <div class="body">
         <ol>
           <li>Befriend someone with a modified console from either of the Discord guilds provided
             <ul>
-              <li>Seedstarter <i>does not work</i> with provisonally added friends: Both sides must friend one another.</li>
+              <li>Seedstarter <i>does not work</i> with provisionally added friends: Both sides must friend one another.</li>
             </ul>
           </li>
           <li>Whoever is assisting you also needs to have <code>seedstarter.3dsx</code> from the <a href="https://github.com/zoogie/seedminer/releases">seedminer Github repository</a></li>
@@ -321,7 +320,7 @@ altenative to doing it yourself via Seedhelper.</a> Your <code>movable_part1.sed
     <div class="hidden text">
       <div class="warn msg">None of these steps are of any use without your movable.sed. Acquire it from seedhelper or make it yourself in seedminer.</div>
 	  <br>
-      <div class="warn msg">Until the steps in the next section are followed, the console will be dependent on your SD card with the presence of Luma3DS's <code>boot.firm</code> on the SD card upon completion.</div>
+      <div class="warn msg">Until the steps in the next section are followed, the console will be dependent on your SD card with Luma3DS's <code>boot.firm</code> present upon completion.</div>
       <div class="body">
         <p>These series of steps are necessary for producing your CFW entrypoint. Without it, the additional software on your SD card is rendered useless.</p>
         <h2>At your computer</h2>
