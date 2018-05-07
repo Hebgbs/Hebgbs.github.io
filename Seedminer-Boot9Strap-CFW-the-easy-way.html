@@ -4,15 +4,16 @@
 
 <head>
   <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin-ext" rel="stylesheet">
   <link href="https://rawgit.com/Hebgbs/plugthemes/master/fonts/MyraidPro.css" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-  :root {
-    --boxop: 0.25;
-  }
-
   BUTTON {
     border: none;
+  }
+  
+  CODE {
+    font-family: Inconsolata;
   }
 
   BODY,
@@ -255,35 +256,35 @@ Purchase an injectable game from this list.</a></li>
       <div class="good msg"> <a href="https://seedhelper.figgyc.uk">Fortunately, there is an
 alternative to doing it yourself via Seedhelper.</a> Your <code>movable_part1.sed</code> can still be obtained from another person if you are wary about feeding your friend code into something you have less control of.</div>
       <div class="body">
-        <p>This process is necessary for decrypting a special file on the 3DS for later use with a service for compiling your CFW entrypoint. Without it, you may not be able to install CFW into the 3DS without using a different method.</p>
-        <h3> Requirements for installing and using seedminer</h3>
+        <p>This process is necessary for decrypting a special file on the 3DS later used with a service for compiling your CFW entrypoint. Without it, you may not be able to install CFW into the 3DS without using a different method.</p>
+        <h3> Requirements for installing and using seedminer.</h3>
         <ul>
-          <li>Python 3.6 (preferred) or 2.7, from <a href="https://python.org">Python Software Foundation's landing page</a></li>
+          <li>Python 3.6 (preferred) or 2.7, from <a href="https://python.org">Python Software Foundation's landing page.</a></li>
           <ul>
-            <li>If you have 2.7, replace any instance of <code>py -3</code> with <code>%systemdrive%\python27\python.exe</code></li>
+            <li>If you have 2.7, replace any instance of <code>py -3</code> with <code>%systemdrive%\python27\python.exe.</code></li>
           </ul>
           </li>
-          <li><a href="https://github.com/zoogie/seedminer/releases">Seedminer itself</a></li>
+          <li><a href="https://github.com/zoogie/seedminer/releases">Seedminer itself.</a></li>
           <li>Your console's <code>movable_part1.sed</code> (hereon: <i>part1</i>), detailed below.</li>
-          <li>The console's first 32 characters of its SHA256 hash (hereon: <i>id0</i>), detailed below.</li>
+          <li>The console's first 32 characters of its SHA-256 hash (hereon: <i>id0</i>), detailed below.</li>
         </ul>
         <h3> Obtaining your part1</h3>
       </div>
       <div class="good msg"> Seedhelper can aid with this, the provided instructions below are for when the service is down. Instead of these instructions, you can use it to obtain your <code>movable_part1.sed</code></div>
       <div class="body">
         <ol>
-          <li>Befriend someone with a modified console from either of the Discord guilds provided
+          <li>Befriend someone with a modified console.
             <ul>
               <li>Seedstarter <i>does not work</i> with provisionally added friends: Both sides must friend one another.</li>
             </ul>
           </li>
-          <li>Whoever is assisting you also needs to have <code>seedstarter.3dsx</code> from the <a href="https://github.com/zoogie/seedminer/releases">seedminer Github repository</a></li>
+          <li>Whoever is assisting you also needs to have <code>seedstarter.3dsx</code> from the <a href="https://github.com/zoogie/seedminer/releases">seedminer Github repository.</a></li>
           <li>Your assistant then needs to open seedstarter on their console.</li>
           <li>Assistant then follows the prompts, pressing <code>B</code>, <code>A</code>, then <code>Start</code> in seedstarter.</li>
           <li>After obtaining all friend's seeds, assistant then needs to access the <code>seedstarter</code> directory on their console's SD card.</li>
           <li>Assistant must find the <code>.sed</code> file with the friend code of the user they are assisting and rename it to <code>movable_part1.sed</code>.
             <ul>
-              <li><i>Example</i>: <code>0_<span style="color: rgb(0, 255, 255);">1234_4567_7890</span>.sed</code> becomes <code>movable_part1.sed</code> for use with whoever has friend code <span style="color: rgb(0, 255, 255);">1234-4567-7890</span></li>
+              <li><i>Example</i>: <code>0_<span style="color: rgb(0, 255, 255);">1234_4567_7890</span>.sed</code> becomes <code>movable_part1.sed</code> for use with whoever has friend code <span style="color: rgb(0, 255, 255);">1234-4567-7890</span>.	</li>
             </ul>
           </li>
           <li>Assistant needs to deliver <code>movable_part1.sed</code> to you for mining.</li>
@@ -306,13 +307,13 @@ alternative to doing it yourself via Seedhelper.</a> Your <code>movable_part1.se
               <li>This does <i>not</i> mean to execute the Ppython shell environment! The remaining instructions are performed outside of an executed command-line program.</li>
             </ul>
           </li>
-          <li>Execute <code>py -3 seedminer_launcher3.py update-db</code></li>
-          <li>Execute <code>py -3 seedminer_launcher3.py id0 [id0]</code>
+          <li>Execute <code>py -3 seedminer_launcher3.py update-db</code>.</li>
+          <li>Execute <code>py -3 seedminer_launcher3.py id0 [id0]</code>.
             <ul>
-              <li><i>Example:</i> <code>py -3 seedminer_launcher3.py id0 a0b1c2d3e4f5061728394a5b6c7d8e9f</code></li>
+              <li><i>Example:</i> <code>py -3 seedminer_launcher3.py id0 a0b1c2d3e4f5061728394a5b6c7d8e9f</code>.</li>
             </ul>
           </li>
-          <li>Execute <code>py -3 seedminer_launcher3.py gpu</code>
+          <li>Execute <code>py -3 seedminer_launcher3.py gpu</code>.
             <ul>
               <li><code>cpu</code> is a possible argument as well. Also possible: You waiting up to a day or more for CPU mining.
                 <li>If errors <i>did</i> occur, try opening <code>cmd</code> as an administrator, rinse and repeat for multiple seeds.</li>
@@ -341,18 +342,18 @@ website to build your patched bin.</a></li>
           </li>
           <li>Unique identifier for the patched <code>.bin</code> file.</li>
           <li>Region of your console (usually shown on your console).</li>
-          <li>Location of your copied DSiWare <code>.bin</code></li>
-          <li>Location of your <code>movable.sed</code></li>
+          <li>Location of your copied DSiWare <code>.bin</code>.</li>
+          <li>Location of your <code>movable.sed</code>.</li>
           <li>You can skip E-Mail: Build will not take long.</li>
           </ul>
           </li>
-          <li>Hit the big blue<b>Build</b> button and watch the left side for your build to complete.
+          <li>Hit the big blue <b>Build</b> button and watch the left side for your build to complete.
             <ul>
               <li class="txtli">🔵 means build completed with a usable artifact.</li>
               <li class="txtli">🔴 means the <code>movable.sed</code> or <code>.bin</code> file was bad and needs to be remade.</li>
             </ul>
           </li>
-          <li>If you see your build is successful, click it and download the artifact made onto your SD card in <code>Nintendo DSiWare</code></li>
+          <li>If you see your build is successful, click it and download the artifact made onto your SD card in <code>Nintendo DSiWare</code>.</li>
           <li>Rename, move or delete the the original, untouched <code>.bin</code> file.</li>
           <li>Rename the <code>.patched</code> file so it ends in <code>.bin</code> instead.</li>
           <li><i>Properly</i> eject the SD card from your PC and put it in the console.</li>
@@ -383,12 +384,12 @@ website to build your patched bin.</a></li>
           <li>Launch b9sTool by starting your DSiWare game.</li>
           <li>Select <code>Dump F0F1</code> to backup the 3DS FIRM.</li>
           <li>Select <code>Install boot9strap</code> and confirm.</li>
-          <li>Wait for it to say <code>done!</code>. Exit b9sTool and power off your 3DS
+          <li>Wait for it to say <code>done!</code>. Exit b9sTool and power off your 3DS.
             <ul>
               <li>You may need to force power off by holding the power button.</li>
             </ul>
           </li>
-          <li>Boot up your 3DS while holding <code>Select</code> to launch the Luma3DS configuration menu
+          <li>Boot up your 3DS while holding <code>Select</code> to launch the Luma3DS configuration menu.
             <ul>
               <li>If your 3DS boots normally to the HOME Menu then boot9strap did not install correctly. Replace your prep files with freshly downloaded files and restore the F0F1 backup in b9sTool. Do not create a new F0F1 backup! Then try reinstalling boot9strap again.</li>
             </ul>
@@ -401,7 +402,7 @@ website to build your patched bin.</a></li>
             </ul>
           </li>
           <li style="height: 2em;">Press <code>Start</code> to save and reboot.</li>
-          <li><a href="https://3ds.hacks.guide/finalizing-setup"><b>Continue here to finish installing your CFW</a></b>
+          <li><a href="https://3ds.hacks.guide/finalizing-setup"><b>Continue here to finish installing your CFW.</a></b>
           </li>
         </ol>
       </div>
@@ -438,7 +439,7 @@ website to build your patched bin.</a></li>
       </ol>
       <h2>Freeshop configuration</h2>
       <ol>
-        <li>Open Freeshop
+        <li>Open Freeshop.
           <ul>
             <li>As TitleDB installs 4.1.0 which was released around Halloween, Bernard Herrmann's <i>The Murder</i> score from Psycho plays instead of Freeshop's default splash music.</li>
           </ul>
@@ -454,13 +455,13 @@ website to build your patched bin.</a></li>
         <li>Once finished, select <code>Refresh Cache</code> and enjoy unfettered access to over 4000 games.</li>
       </ol> Or, you can continue to look in settings at the following tabs:
       <ul>
-        <li class="txtli"><code>Filter</code>: Adjust what titles are displayed based on region, genre, language, origin platform and publisher
+        <li class="txtli"><code>Filter</code>: Adjust what titles are displayed based on region, genre, language, origin platform and publisher.
           <ul>
             <li>The <code>Feature</code> tab has nothing, and crashes the console. Don't bother.</li>
           </ul>
         </li>
-        <li class="txtli"><code>Sort</code>: Adjust how games are sorted by release date, name, size, rating or vote tally</li>
-        <li class="txtli"><code>Inactivity</code>: Adjust which screens and features are disabled after a specified timeout</li>
+        <li class="txtli"><code>Sort</code>: Adjust how games are sorted by release date, name, size, rating or vote tally.</li>
+        <li class="txtli"><code>Inactivity</code>: Adjust which screens and features are disabled after a specified timeout.</li>
       </ul>
       <h2>Wireless transfer via FTP</h2>
       <ol>
@@ -509,7 +510,7 @@ website to build your patched bin.</a></li>
       <div class="body">
         <ol>
           <li><a href="https://github.com/TuxSH/InputRedirectionClient-Qt/releases">Download the latest version of Input Redirection Client.</a></li>
-          <li><a href="https://github.com/RattletraPM/Snickerstream/releases">Download the latest version of Snickerstream</a></li>
+          <li><a href="https://github.com/RattletraPM/Snickerstream/releases">Download the latest version of Snickerstream.</a></li>
           <li><a href="https://github.com/Nanquitas/BootNTR/releases">Either version of BootNTR Selector from here.</a>
             <ul>
               <li><i>Not <code>Mode3</code>, nor the <code>.3dsx</code> file.</i></li>
@@ -573,7 +574,7 @@ website to build your patched bin.</a></li>
       <div class="info msg">Some better Snickerstream instructions may be provided in the future. Sorry I can't help any better than this: I only have an old 3DS but I've seen it in action so I know it works for some people.</div>
     </div>
   </div> <br>
-  <div class="good msg">If you've read this far, thank you for your time. If this guide had failed to assist you in anyway way, forward whatever concerns to whoever sent this to you. If you have a Github account and a desire to append further onto this, then by all means make modifications and contribute!</div> <br>
+  <div class="good msg">If you've read this far, thank you for your time. If this guide had failed to assist you in any way, forward whatever concerns to whoever sent this to you. If you have a Github account and a desire to append further onto this, then by all means make modifications and contribute!</div> <br>
   <div class="good msg">If you are going to use the code which renders this page for your own guide, no attribution is necessary: I hereby grant CC0 license to this work. Do whatever the hell you feel like with it!</div>
   </div>
   <!-- Template for future sections
