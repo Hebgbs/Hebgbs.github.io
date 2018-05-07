@@ -8,115 +8,133 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
   :root {
-    --boxop: 0.25;}
+    --boxop: 0.25;
+  }
 
   BUTTON {
-    border: none;}
+    border: none;
+  }
 
   BODY,
   .headc,
   .head {
     background: black;
     color: white;
-    font-family: Myraid Pro;}
+    font-family: Myraid Pro;
+  }
 
   .body A,
   .msg A:visited {
-    color: #fff;}
+    color: #fff;
+  }
 
   .body A:visited {
-    color: #000;}
+    color: #000;
+  }
 
   .warn A {
-    color: #f22;}
+    color: #f22;
+  }
 
   .info A {
-    color: #22f;}
+    color: #22f;
+  }
 
   .good A {
-    color: #2f2;}
+    color: #2f2;
+  }
 
   .sec {
-    background-color: #222;}
+    background-color: #222;
+  }
 
   .warn,
   .info,
   .good {
-    font-weight: bold;}
+    font-weight: bold;
+  }
 
   .warn {
     background-color: #400505;
-    border-top: 2px solid #f22;}
+    border-top: 2px solid #f22;
+  }
 
   .info {
     background-color: #050540;
-    border-top: 2px solid #22f;}
+    border-top: 2px solid #22f;
+  }
 
   .good {
     background-color: #054005;
-    border-top: 2px solid #2f2;}
+    border-top: 2px solid #2f2;
+  }
 
   .text {
-    background-color: #555;}
+    background-color: #555;
+  }
 
   .headc,
   .head {
     cursor: pointer;
     text-align: left;
     outline: none;
-    font-size: 15px;}
+    font-size: 15px;
+  }
 
   .headc {
     width: 100%;
-    padding: 0 5px;}
+    padding: 0 5px;
+  }
 
   .head {
     width: calc(100% - 16px);
-    padding: 1px 8px;}
+    padding: 1px 8px;
+  }
 
   .msg {
-    padding: 5px 8px;}
+    padding: 5px 8px;
+  }
 
   .body {
     padding: 0 18px;
-    overflow: hidden;}
+    overflow: hidden;
+  }
 
   .headc:hover {
-    background-color: #333;}
+    background-color: #333;
+  }
 
   .hidden {
-    display: none;}
+    display: none;
+  }
 
   LI.success {
-    list-style-image: url("https://i.imgur.com/X8670Cs.png");}
+    list-style-image: url("https://i.imgur.com/X8670Cs.png");
+  }
 
   LI.failure {
-    list-style-image: url("https://i.imgur.com/rpSQgsn.png");}
+    list-style-image: url("https://i.imgur.com/rpSQgsn.png");
+  }
 
   LI.txtli {
     list-style: none;
     position: relative;
-    left: -1em;}
+    left: -1em;
+  }
   </style>
-  <title>Seedminer Boot9Strap CFW the easy way</title>
 </head>
 
 <body>
-  <h1>Seedminer Boot9Strap CFW the easy way<br>
-  <small>A tutorial for people who just want to <i>get it done.</i></small></h1>
-  <h2><small>Guide and poor HTML coding by Heebeejeebees.</small></h2>
-  <div class="info msg">For help with most Nintendo Homebrew things, there's a Discord guild for that. This guide is not associated with them, but you can join there anyway for general inqueries.</div>
-  <br>
-  <div class="info msg">If you are interested in free games and other topics Nintendo Homebrew may outright ban you for, ask whoever gave you this page about another guild more open to that kind of discussion. Otherwise, you'll be finished with this guide at section 5.</div>
-  <br>
+  <h1>Seedminer Boot9Strap CFW the easy way<br> <small>A tutorial for people who just want to <i>get it done.</i></small></h1>
+  <h2><small>Guide and poor HTML coding by Heebeejeebees / Hebgbs.</small></h2>
+  <div class="info msg"><a href="https://discord.gg/MWxPgEp">For help with most Nintendo Homebrew things, there's a Discord guild for that.</a> This guide is not associated with them, but you can join there anyway for general inqueries.</div> <br>
+  <div class="info msg">If you are interested in free games and other topics Nintendo Homebrew may outright ban you for, ask whoever gave you this page about another guild more open to that kind of discussion. Otherwise, you'll be finished with this guide at section 5.</div> <br>
   <div class="text">
     <div class="head sec">
       <h2>Preface and summary</h2>
     </div>
-    <div class="warn msg">This guide is intended for use with <i>completely stock</i> 3DS consoles using firmware 11.4 - 11.6.0-39. Following these instructions with an Arm9LoaderHax-modifed console or with future firmware installed prior to modding will brick the console. Don't even try.</div>
-	<br>
-    <div class="info msg">Any reference to 3DS also applies for 2DS, meaning that regardless of model these instructions will apply.</div>
-	<br>
+    <div class="warn msg">This guide is intended for use with <i>completely stock</i> 3DS consoles using firmware 11.4 - 11.6.0-39. Following these instructions with an Arm9LoaderHax-modifed console or with future firmware installed prior to modding will brick the console. Don't even try.</div> <br>
+    <div class="info msg">Any reference to 3DS also applies for 2DS, meaning that regardless of model these instructions will apply.</div> <br>
     <div class="good msg">After completing these instructions, it is safe to update Boot9Strap, Luma3DS and the console firmware.</div>
     <div class="body">
       <p>The reason this guide exists is because I grew tired of telling people the same turns of phrase which serve to do nothing more than waste time and confuse people who cannot keep up with what I am saying, and for me to link so people can follow along with the same series of instructions which haven't failed any persons I had assisted as of yet. As this is a very straight-forward and to-the-point guide for people who just want to <i>get it done</i>, these instructions are optimized for speed and limited handling of media.</p>
@@ -152,14 +170,10 @@
         <li>Installation of <b>Snickerstream</b> for casting video from the console onto PC.</li>
       </ul>
     </div>
-  </div>
-  <br>
-  <div class="info msg">Further sections of this guide are hidden for convenience. Click on their headings to expand sections of this guide as you follow along.</div>
-  <br>
-  <div class="info msg">This guide assumes you are using Microsoft Windows. For Mac OS X and other open-source systems seedminer is also available, and web services used during the course of this guide are available to everybody.</div>
-  <br>
-  <div class="warn msg">Everything shown in this guide is procedural and top-down. This means steps should be followed in the order as shown for the best chance of success.</div>
-  <br>
+  </div> <br>
+  <div class="info msg">Further sections of this guide are hidden for convenience. Click on their headings to expand sections of this guide as you follow along.</div> <br>
+  <div class="info msg">This guide assumes you are using Microsoft Windows. For Mac OS X and other open-source systems seedminer is also available, and web services used during the course of this guide are available to everybody.</div> <br>
+  <div class="warn msg">Everything shown in this guide is procedural and top-down. This means steps should be followed in the order as shown for the best chance of success.</div> <br>
   <div><button class="sec headc">
 <h2>Section 1 — Preparation</h2>
 </button>
@@ -168,26 +182,26 @@
       <h3>You will need the following</h3>
       <ul>
         <li>USD3 in your Nintendo eShop account.</li>
-        </li>
         <li>A stock 3DS, old or new.</li>
       </ul>
       <h3>Optionally, this may help</h3>
       <ul>
         <li>A computer with a good GPU.</li>
         <li>Python 3.6 (preferably) or 2.7.</li>
-		<li>Another person to assist with their modified console.
+        <li>Another person to assist with their modified console.
           <ul>
             <li>Ask someone who already had their console modified.</li>
           </ul>
+        </li>
         <li>An Amazon gift card worth USD5 if lacking funds.</li>
-        <li>An SD card larger than 4GB.</ul>
-      <li>Only if it's full of save data already: A system memory backup requires <b>1.2GB</b>.</li>
-      </ul>
-      </li>
+        <li>An SD card larger than 4GB.
+          <ul>
+            <li>Only if it's full of save data already: A system memory backup requires <b>1.2GB</b>.</li>
+          </ul>
+        </li>
       </ul>
     </div>
-  </div>
-  <br>
+  </div> <br>
   <div><button class="sec headc">
 <h2>Section 2 — Initial steps</h2>
 </button>
@@ -232,14 +246,12 @@ Purchase an injectable game from this list.</a></li>
         </ol>
       </div>
     </div>
-  </div>
-  <br>
+  </div> <br>
   <div><button class="sec headc">
 <h2>Section 3 — Seedminer</h2>
 </button>
     <div class="hidden text">
-      <div class="warn msg"> If you do not have a good GPU (anything around 2008) inside your machine by nVidia, AMD or an AIB using either company's hardware, you may not be able to mine your seed quickly.</div>
-	  <br>
+      <div class="warn msg"> If you do not have a good GPU (anything around 2008) inside your machine by nVidia, AMD or an AIB using either company's hardware, you may not be able to mine your seed quickly.</div> <br>
       <div class="good msg"> <a href="https://seedhelper.figgyc.uk">Fortunately, there is an
 alternative to doing it yourself via Seedhelper.</a> Your <code>movable_part1.sed</code> can still be obtained from another person if you are wary about feeding your friend code into something you have less control of.</div>
       <div class="body">
@@ -279,8 +291,7 @@ alternative to doing it yourself via Seedhelper.</a> Your <code>movable_part1.se
         </ol>
         <h3> Mining your seed</h3>
       </div>
-      <div class="info msg"> If somebody else needs to do the mining, your id0 needs to be provided to them for a successful operation.</div>
-	  <br>
+      <div class="info msg"> If somebody else needs to do the mining, your id0 needs to be provided to them for a successful operation.</div> <br>
       <div class="info msg">Using Python 2.7? These following details change:
         <ul>
           <li>Instead of <code>seedminer_launcher3.py</code>, <code>seedminer_launcher.py</code> is used.</li>
@@ -312,14 +323,12 @@ alternative to doing it yourself via Seedhelper.</a> Your <code>movable_part1.se
         </ol>
       </div>
     </div>
-  </div>
-  <br>
+  </div> <br>
   <div><button class="sec headc">
 <h2>Section 4 — DSiWare injection</h2>
 </button>
     <div class="hidden text">
-      <div class="warn msg">None of these steps are of any use without your movable.sed. Acquire it from seedhelper or make it yourself in seedminer.</div>
-	  <br>
+      <div class="warn msg">None of these steps are of any use without your movable.sed. Acquire it from seedhelper or make it yourself in seedminer.</div> <br>
       <div class="warn msg">Until the steps in the next section are followed, the console will be dependent on your SD card with Luma3DS's <code>boot.firm</code> present upon completion.</div>
       <div class="body">
         <p>These series of steps are necessary for producing your CFW entrypoint. Without it, the additional software on your SD card is rendered useless.</p>
@@ -398,12 +407,10 @@ website to build your patched bin.</a></li>
       </div>
       <div class="good msg">If you've completed what is shown here, including this section (and the finalizing setup page in 3ds.hacks.guide) then congratulations! You've completed this guide and need to do nothing else for enjoying the fruits of your labour. Everything past this is extra stuff to enhance your console's functionality.</div>
     </div>
-  </div>
-  <br>
+  </div> <br>
   <div class="warn msg">Some things shown past this point may cause you to become banned from certain circles if discussed. As this guide isn't affiliated with any of those parties, they may not support you upon mention of this guide, or following the procedures shown after section 5. In order to cause the least amount of trouble, act like this guide doesn't exist when inquiring about any issues you may come across.</div>
   </div>
-  </div>
-  <br>
+  </div> <br>
   <div> <button class="sec headc">
 <h2>Section 6 — Other software through FBI's TitleDB</h2>
 </button>
@@ -411,9 +418,9 @@ website to build your patched bin.</a></li>
       <p>There is some other cool software you can install via FBI's TitleDB menu. As there is no additional preparation necessary, This section should be fairly straight-forward, especially compared with the long-winded process which permits the installation of such software. When finished, you will have<b>FTPD</b> and<b>Freeshop</b> made available to you.</p>
       <h2>Software installation</h2>
       <ol>
-        <li>Open FBI, and navigate to TitleDB.</li>
-        <li>Scroll to the F's to select and download Freeshop.</li>
-        <li>Scroll to the S's to select and download Super ftpd ii turbo.
+        <li>Open FBI, and navigate to <code>TitleDB</code>.</li>
+        <li>Scroll to the F's to select and download <code>Freeshop</code>.</li>
+        <li>Scroll to the S's to select and download <code>Super ftpd ii turbo</code>.
           <ul>
             <li>To navigate through the list faster, left and right act as page up and page down respectively.</li>
             <li>For multiple entries in TitleDB, the bottom-most one is usually the latest.</li>
@@ -473,18 +480,14 @@ website to build your patched bin.</a></li>
         <li>To exit after file transfers had completed, press <code>B</code> twice.</li>
       </ol>
     </div>
-  </div>
-  <br>
+  </div> <br>
   <div> <button class="sec headc">
 <h2>Section 7 — 3DS operation from PC</h2>
 </button>
     <div class="hidden text">
-      <div class="warn msg">Input redirection features, until otherwise rectified is for WIndows machines only.</div>
-	  <br>
-      <div class="warn msg">As video casting is processor-intensive, BootNTR for this purpose is only suitable for "new" consoles.</div>
-	  <br>
-      <div class="info msg">While Snickerstream is only compiled for Windows, it should run well in Wine.</div>
-	  <br>
+      <div class="warn msg">Input redirection features, until otherwise rectified is for WIndows machines only.</div> <br>
+      <div class="warn msg">As video casting is processor-intensive, BootNTR for this purpose is only suitable for "new" consoles.</div> <br>
+      <div class="info msg">While Snickerstream is only compiled for Windows, it should run well in Wine.</div> <br>
       <div class="body">
         <p>If you ever imagined about using your 3DS on your PC, well... <b>you can.</b> The overgrown asterisk in the room is the difference in processing power between consoles. If you are in possession of Nintendo's later "new" consoles you can do everything shown here. Else all you can do is use another controller attached to your PC, which may be beneficial for persons who dislike the 3DS' (lack of) ergonomics but still want to enjoy their titles.</p>
         <h2>Knowing the console's IP</h2>
@@ -544,8 +547,7 @@ website to build your patched bin.</a></li>
         </ol>
         <h3>Video casting</h3>
       </div>
-      <div class="warn msg">Some items may simply not work, and launching certain titles while casting may crash the console.</div>
-	  <br>
+      <div class="warn msg">Some items may simply not work, and launching certain titles while casting may crash the console.</div> <br>
       <div class="info msg">Crashes will not permanently disable the console; simply hold down the power button until the lights go out and power it back on.</div>
       <div class="body">
         <ol>
@@ -570,13 +572,11 @@ website to build your patched bin.</a></li>
       </div>
       <div class="info msg">Some better Snickerstream instructions may be provided in the future. Sorry I can't help any better than this: I only have an old 3DS but I've seen it in action so I know it works for some people.</div>
     </div>
-  </div>
-  <br>
-  <div class="good msg">If you've read this far, thank you for your time. If this guide had failed to assist you in anyway way, forward whatever concerns to whoever sent this to you. If you have a Github account and a desire to append further onto this, then by all means make modifications and contribute!</div>
-  <br>
+  </div> <br>
+  <div class="good msg">If you've read this far, thank you for your time. If this guide had failed to assist you in anyway way, forward whatever concerns to whoever sent this to you. If you have a Github account and a desire to append further onto this, then by all means make modifications and contribute!</div> <br>
   <div class="good msg">If you are going to use the code which renders this page for your own guide, no attribution is necessary: I hereby grant CC0 license to this work. Do whatever the hell you feel like with it!</div>
   </div>
-<!-- Template for future sections
+  <!-- Template for future sections
 <br>
 <div> <button class="sec headc">
 <h2>TEMPLATE - DO NOT REMOVE UNTIL FINISHED</h2>
@@ -599,7 +599,8 @@ website to build your patched bin.</a></li>
       else {
         content.style.display = "block";
       }
-    });}
+    });
+  }
   </script>
 </body>
 
