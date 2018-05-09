@@ -11,7 +11,7 @@
   BUTTON {
     border: none;
   }
-  
+
   CODE {
     font-family: Inconsolata, Consolas, Ubuntu Mono, monospace;
   }
@@ -25,7 +25,8 @@
   }
 
   .body A,
-  .msg A:visited, {
+  .msg A:visited,
+    {
     color: #fff;
   }
 
@@ -47,14 +48,6 @@
 
   .sec {
     background-color: #222;
-  }
-  
-  .right{
-  color: transparent; padding: 14px; text-align: right; font-weight: bold; float: right;
-  }
-
-  .headc:hover .right{
-    color: #777;
   }
 
   .warn,
@@ -94,9 +87,10 @@
     width: 100%;
     padding: 0 5px;
   }
-  
-  .headc H2{
-  float: left;}
+
+  .headc H2 {
+    float: left;
+  }
 
   .head {
     width: calc(100% - 16px);
@@ -187,7 +181,7 @@
   <div class="info msg">This guide assumes you are using Microsoft Windows. For Mac OS X and other open-source systems seedminer is also available, and web services used during the course of this guide are available to everybody.</div> <br>
   <div class="warn msg">Everything shown in this guide is procedural and top-down. This means steps should be followed in the order as shown for the best chance of success.</div> <br>
   <div><button class="sec headc">
-<h2 id="S1">Section 1 — Preparation</a></h2><div class="right">You might want<br>to read this first!</div>
+<h2>Section 1 — Preparation</h2>
 </button>
     <div class="hidden body text">
       <p>Before even beginning upon this saga that is the ritual of single-console CFW via this method, you need to make sure you have brought everything you can ever possibly need. Without any of this, you may find it impossible, or at least difficult to install custom firmware into your 3DS.</p>
@@ -215,7 +209,7 @@
     </div>
   </div> <br>
   <div><button class="sec headc">
-<h2 id="S2">Section 2 — Initial steps</a></h2><div class="right">Most of the<br>files you'll need.</div>
+<h2>Section 2 — Initial steps</h2>
 </button>
     <div class="hidden text">
       <div class="info msg"> If you have to, go into Windows Explorer's options and disable hiding of known file extensions. As it is beyond the scope of this guide, search for this information yourself.</div>
@@ -254,15 +248,18 @@ Purchase an injectable game from this list.</a></li>
                 <li>If you see more than two, search for the filename of the game you had copied, per the list you may had previously obtained it from. Results should show one entry in <code>Nintendo 3DS/[id0]/[id1]/Nintendo DSiWare</code>.</li>
               </ul>
             </li>
-            <li>Copy your id0.<ul>
-			  <li>It is <i>the name of</i> the 32-character directory alongside <code>Private</code>.</li>
-			  <li>You can use your file manager's rename function to copy it.</li></ul></li>
+            <li>Copy your id0.
+              <ul>
+                <li>It is <i>the name of</i> the 32-character directory alongside <code>Private</code>.</li>
+                <li>You can use your file manager's rename function to copy it.</li>
+              </ul>
+            </li>
         </ol>
       </div>
     </div>
   </div> <br>
   <div><button class="sec headc">
-<h2 id="S3">Section 3 — Seedminer</a></h2><div class="right">The last piece of<br>this CFW puzzle.</div>
+<h2>Section 3 — Seedminer</h2>
 </button>
     <div class="hidden text">
       <div class="warn msg"> If you do not have a good GPU (anything around 2008) inside your machine by nVidia, AMD or an AIB using either company's hardware, you may not be able to mine your seed quickly.</div> <br>
@@ -293,7 +290,7 @@ alternative to doing it yourself via Seedhelper.</a> Your <code>movable_part1.se
           <li>After obtaining all friend's seeds, assistant then needs to access the <code>seedstarter</code> directory on their console's SD card.</li>
           <li>Assistant must find the <code>.sed</code> file with the friend code of the user they are assisting and rename it to <code>movable_part1.sed</code>.
             <ul>
-              <li><i>Example</i>: <code>0_<span style="color: rgb(0, 255, 255);">1234_4567_7890</span>.sed</code> becomes <code>movable_part1.sed</code> for use with whoever has friend code <span style="color: rgb(0, 255, 255);">1234-4567-7890</span>.	</li>
+              <li><i>Example</i>: <code>0_<span style="color: rgb(0, 255, 255);">1234_4567_7890</span>.sed</code> becomes <code>movable_part1.sed</code> for use with whoever has friend code <span style="color: rgb(0, 255, 255);">1234-4567-7890</span>. </li>
             </ul>
           </li>
           <li>Assistant needs to deliver <code>movable_part1.sed</code> to you for mining.</li>
@@ -320,23 +317,22 @@ alternative to doing it yourself via Seedhelper.</a> Your <code>movable_part1.se
           <li>Execute <code>py -3 seedminer_launcher3.py id0 [id0]</code>.
             <ul>
               <li><i>Example:</i> <code>py -3 seedminer_launcher3.py id0 a0b1c2d3e4f5061728394a5b6c7d8e9f</code>.</li>
-			  <li>If you are confused about what your id0 is, see <b>section 2</b>.
-            </ul>
-          </li>
-          <li>Execute <code>py -3 seedminer_launcher3.py gpu</code>.
-            <ul>
-              <li><code>cpu</code> is a possible argument as well. Also possible: You waiting up to a day or more for CPU mining.
-                <li>If errors <i>did</i> occur, try opening <code>cmd</code> as an administrator, rinse and repeat for multiple seeds.</li>
-            </ul>
+              <li>If you are confused about what your id0 is, see <b>section 2</b>. </ul>
             </li>
-            <li>If nothing produced fatal errors, multiple <code>cmd</code> instances will open:<b>Do not close them.</b></li>
-            <li>Obtain your movable.sed from the directory seedminer was executed in.</li>
+            <li>Execute <code>py -3 seedminer_launcher3.py gpu</code>.
+              <ul>
+                <li><code>cpu</code> is a possible argument as well. Also possible: You waiting up to a day or more for CPU mining.
+                  <li>If errors <i>did</i> occur, try opening <code>cmd</code> as an administrator, rinse and repeat for multiple seeds.</li>
+              </ul>
+              </li>
+              <li>If nothing produced fatal errors, multiple <code>cmd</code> instances will open:<b>Do not close them.</b></li>
+              <li>Obtain your movable.sed from the directory seedminer was executed in.</li>
         </ol>
       </div>
     </div>
   </div> <br>
   <div><button class="sec headc">
-<h2 id="S4">Section 4 — DSiWare injection</a></h2><div class="right">Making<br>the way in.</div>
+<h2>Section 4 — DSiWare injection</h2>
 </button>
     <div class="hidden text">
       <div class="warn msg">None of these steps are of any use without your <code>movable.sed</code>. Acquire it from seedhelper or make it yourself in seedminer (see section 3).</div> <br>
@@ -365,8 +361,11 @@ website to build your patched bin.</a></li>
           </li>
           <li>If you see your build is successful, click it and download the artifact made onto your SD card in <code>Nintendo DSiWare</code>.</li>
           <li>Rename, move or delete the the original, untouched <code>.bin</code> file.</li>
-          <li>Rename the <code>.patched</code> file so it ends in <code>.bin</code> instead.<ul>
-		    <li>The previous three steps are intended to overwrite your game with a modified copy which launches b9stool.</li></ul></li>
+          <li>Rename the <code>.patched</code> file so it ends in <code>.bin</code> instead.
+            <ul>
+              <li>The previous three steps are intended to overwrite your game with a modified copy which launches b9stool.</li>
+            </ul>
+          </li>
           <li><i>Properly</i> eject the SD card from your PC and put it in the console.</li>
         </ol>
         <h2>At your console</h2>
@@ -380,7 +379,7 @@ website to build your patched bin.</a></li>
   </div>
   </br>
   <div> <button class="sec headc">
-<h2 id="S5">Section 5 — CFW installation</a></h2><div class="right">Jailbreaking<br>your console.</div>
+<h2>Section 5 — CFW installation</h2>
 </button>
     <div class="hidden text">
       <div class="info msg">Instructions shamelessly ripped off from <a href="https://jisagi.github.io/SeedminerGuide/injection/#section4">Jisagi's seedminer guide</a></div>
@@ -413,8 +412,11 @@ website to build your patched bin.</a></li>
             </ul>
           </li>
           <li style="height: 2em;">Press <code>Start</code> to save and reboot.</li>
-          <li><a href="https://3ds.hacks.guide/finalizing-setup"><b>Continue here to finish installing your CFW.</a></b><ul>
-		    <li>You will be finished at section VIII of that page.</li></ul></li>
+          <li><a href="https://3ds.hacks.guide/finalizing-setup"><b>Continue here to finish installing your CFW.</a></b>
+            <ul>
+              <li>You will be finished at section VIII of that page.</li>
+            </ul>
+          </li>
           </li>
         </ol>
       </div>
@@ -425,7 +427,7 @@ website to build your patched bin.</a></li>
   </div>
   </div> <br>
   <div> <button class="sec headc">
-<h2 id="S6">Section 6 — Other 3DS software</a></h2><div class="right">Extra goodies<br>for your console.</div>
+<h2Section 6 — Other 3DS software</h2>
 </button>
     <div class="hidden body text">
       <p>There is some other cool software you can install via FBI's TitleDB menu. As there is no additional preparation necessary, This section should be fairly straight-forward, especially compared with the long-winded process which permits the installation of such software. When finished, you will have<b>FTPD</b> and<b>Freeshop</b> made available to you. There is a <b>lot</b> of other software via TitleDB but the two mentioned are what may be considered most useful for games, patches and remote interaction with the SD card.</p>
@@ -495,7 +497,7 @@ website to build your patched bin.</a></li>
     </div>
   </div> <br>
   <div> <button class="sec headc">
-<h2 id="S7">Section 7 — 3DS operation from PC</a></h2><div class="right">Extra goodies<br>	for your PC</div>
+<h2>Section 7 — 3DS operation from PC</h2>
 </button>
     <div class="hidden text">
       <div class="warn msg">Input redirection features, until otherwise rectified is for WIndows machines only.</div> <br>
@@ -584,7 +586,7 @@ website to build your patched bin.</a></li>
         </ol>
       </div>
       <div class="info msg">Some better Snickerstream instructions may be provided in the future. Sorry I can't help any greater than this: I only have an old 3DS but I've seen it in action so I know it works for some people.</div><br>
-	  <div class="good msg">If you've read this far, thank you for your time. If this guide had failed to assist you in any way, forward whatever concerns to whoever sent this to you. If you have a Github account and a desire to append further onto this, then by all means make modifications and contribute!</div>
+      <div class="good msg">If you've read this far, thank you for your time. If this guide had failed to assist you in any way, forward whatever concerns to whoever sent this to you. If you have a Github account and a desire to append further onto this, then by all means make modifications and contribute!</div>
     </div>
   </div> <br>
   <div class="good msg">If you are going to use the code which renders this page for your own guide, no attribution is necessary: I hereby grant CC0 license to this work. Do whatever the hell you feel like with it!</div>
