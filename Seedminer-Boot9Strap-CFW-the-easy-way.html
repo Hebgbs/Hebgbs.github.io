@@ -137,7 +137,7 @@
     }
 
     .hl3 {
-      color: #f0f;
+      color: #ff0;
     }
 
     .br {
@@ -341,7 +341,7 @@ Purchase an injectable game from this list.</a></li>
               </ul>
               <li>Extract the contents of the archive onto the root of the SD card.
                 <ul>
-                  <li>This means all directories and files should be <i>alongside</i> <code>Nintendo 3DS</code>, not <i>inside</i> of it, and especially <i>not</i> in its own directory.</li>
+                  <li>This means all directories and files should be <i>alongside</i> Nintendo 3DS, not <i>inside</i> of it, and especially <i>not</i> in its own directory.</li>
                 </ul>
               </li>
               <li>Navigate to <code>Nintendo 3DS</code>; you should see two directories.
@@ -432,19 +432,19 @@ Purchase an injectable game from this list.</a></li>
                 <li>This does <i>not</i> mean to execute the Ppython shell environment! The remaining instructions are performed outside of an executed command-line program.</li>
               </ul>
             </li>
-            <li>Execute <code>py -3 seedminer_launcher3.py update-db</code></li>
-            <li>Execute <code>py -3 seedminer_launcher3.py id0 [id0]</code>
+            <li>Execute <code>py -3 seedminer_launcher3.py update-db</code>.</li>
+            <li>Execute <code>py -3 seedminer_launcher3.py id0 [id0]</code>.
               <ul>
-                <li><i>Example:</i> <code>py -3 seedminer_launcher3.py id0 <code class="hl1">4a5b6c7d8effe0d1c2b3aa9b0c1d2e3f</code></li>
+                <li><i>Example:</i> <code>py -3 seedminer_launcher3.py id0 <span class="hl1">4a5b6c7d8effe0d1c2b3aa9b0c1d2e3f</span></code>.</li>
                 <li>If you are confused about what your id0 is, see <b>section 2</b>. </ul>
               </li>
-              <li>Execute <code>py -3 seedminer_launcher3.py gpu</code>
+              <li>Execute <code>py -3 seedminer_launcher3.py gpu</code>.
                 <ul>
                   <li><code>cpu</code> is a possible argument as well. Also possible: You waiting up to a day or more for CPU mining.
                     <li>If errors <i>did</i> occur, try opening <code>cmd</code> as an administrator, rinse and repeat for multiple seeds.</li>
                 </ul>
                 </li>
-                <li>If nothing produced fatal errors, multiple <code>cmd</code> instances will open:<b>Do not close them.</b></li>
+                <li>If nothing produced fatal errors, multiple <code>cmd</code> instances will open: <b>Do not close them.</b></li>
                 <li>Obtain your movable.sed from the directory seedminer was executed in.</li>
           </ol>
         </div>
@@ -641,8 +641,7 @@ website to build your patched bin.</a></li>
           <p>With the IP address noted, you can begin installing utilities on the PC which can utilize this information to connect with the console.</p>
           <h2>Acquiring software for remote operation</h2>
         </div>
-        <div class="info msg br">Both devices needs to be on the same network for any network-based utilities to function.</div>
-        <div class="good msg">If you lack an XInput-compatible device, there is an alternative! Read on to find out.</div>
+        <div class="info msg">Both devices needs to be on the same network for any network-based utilities to function.</div>
         <div class="body">
           <ol>
             <li><a href="https://github.com/TuxSH/InputRedirectionClient-Qt/releases">Download the latest version of Input Redirection Client.</a></li>
@@ -682,10 +681,8 @@ website to build your patched bin.</a></li>
               </ul>
             </li>
           </ol>
-          <p>If you are <b>not</b> in possession of an XInput-compatible controller, there is a way to make <i>any</i> controller compatible with Microsoft's API to make it useful with the input redirection feature from Luma3DS.</p>
         </div>
-        <div class="warn msg">Hold it, before following these instructions for x360ce you should also confirm the controller functions as expected for emulating XInput before even beginning to use the software described below.</div>
-        <div class="body">
+        <div class="good msg">If you lack an XInput-compatible controller, you're in luck; there exists software which can make <i>any</i> controller compatible.
           <ol>
             <li><a href="https://www.x360ce.com/">Download the 32-bit version of DacoTaco's Xbox 360 controller emulator</a> (hereon: <i>x360ce</i>).</li>
             <li>Extract, then run the software where it had been extracted.
@@ -706,6 +703,8 @@ website to build your patched bin.</a></li>
             </li>
             <li>Run <code>InputRedirectionClient-Qt.exe</code>. If successful, you should hear a tone to confirm x360ce is emulating XInput.</li>
           </ol>
+		</div>
+		<div class="body">
           <h3>Video casting</h3>
         </div>
         <div class="warn msg br">Some items may simply not work, and launching certain titles while casting may crash the console.</div>
