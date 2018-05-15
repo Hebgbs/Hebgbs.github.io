@@ -16,27 +16,29 @@
     </script>
     <script type="text/javascript">
     ddaccordion.init({
-          headerclass: "sechead", //Shared CSS class name of headers group
-          contentclass: "sec", //Shared CSS class name of contents group
-          revealtype: "click", //Reveal content when user clicks or onmouseover the header? Valid value: "click", "clickgo", or "mouseover"
-          mouseoverdelay: 200, //if revealtype="mouseover", set delay in milliseconds before header expands onMouseover
-          collapseprev: true, //Collapse previous content (so only one open at any time)? true/false 
-          defaultexpanded: [], //index of content(s) open by default [index1, index2, etc] [] denotes no content
-          onemustopen: true, //Specify whether at least one header should be open always (so never all headers closed)
-          animatedefault: false, //Should contents open by default be animated into view?
-          persiststate: true, //persist state of opened contents within browser session?
-          toggleclass: ["", ""], //Two CSS classes to be applied to the header when it's collapsed and expanded, respectively ["class1", "class2"]
-          togglehtml: ["suffix", "<img src='plus.gif' class='statusicon' />", "<img src='minus.gif' class='statusicon' />"], //Additional HTML added to the header when it's collapsed and expanded, respectively  ["position", "html1", "html2"] (see docs)
-            animatespeed: "fast", //speed of animation: integer in milliseconds (ie: 200), or keywords "fast", "normal", or "slow"
-            oninit: function(headers, expandedindices) { //custom code to run when headers have initalized
-              //do nothing
-            },
-            onopenclose: function(header, index, state, isuseractivated) { //custom code to run whenever a header is opened or closed
-              //do nothing
-            }
-          })
+      headerclass: "sechead", //Shared CSS class name of headers group
+      contentclass: "sec", //Shared CSS class name of contents group
+      revealtype: "click", //Reveal content when user clicks or onmouseover the header? Valid value: "click", "clickgo", or "mouseover"
+      mouseoverdelay: 200, //if revealtype="mouseover", set delay in milliseconds before header expands onMouseover
+      collapseprev: true, //Collapse previous content (so only one open at any time)? true/false 
+      defaultexpanded: [], //index of content(s) open by default [index1, index2, etc] [] denotes no content
+      onemustopen: true, //Specify whether at least one header should be open always (so never all headers closed)
+      animatedefault: false, //Should contents open by default be animated into view?
+      persiststate: true, //persist state of opened contents within browser session?
+      toggleclass: ["", ""], //Two CSS classes to be applied to the header when it's collapsed and expanded, respectively ["class1", "class2"]
+      togglehtml: ["suffix", "<img src='plus.gif' class='statusicon' />", "<img src='minus.gif' class='statusicon' />"], //Additional HTML added to the header when it's collapsed and expanded, respectively  ["position", "html1", "html2"] (see docs)
+      animatespeed: "fast", //speed of animation: integer in milliseconds (ie: 200), or keywords "fast", "normal", or "slow"
+      oninit: function(headers, expandedindices) { //custom code to run when headers have initalized
+        //do nothing
+      },
+      onopenclose: function(header, index, state, isuseractivated) { //custom code to run whenever a header is opened or closed
+        //do nothing
+      }
+    })
     </script>
-    <style type="text/css"> /* Notepad++ doesn't know how to handle formatting here, so funny. -- Hebgbs */
+    <style type="text/css">
+    /* Notepad++ doesn't know how to handle formatting here, so funny. -- Hebgbs */
+
     BODY {
       background: #000;
       color: #fff;
@@ -51,6 +53,27 @@
       margin: 5px 0;
     }
 
+    .body A:visited,
+    .msg A:visited {
+      color: #fff;
+    }
+
+    .body A {
+      color: #000;
+    }
+
+    .warn A {
+      color: #f22;
+    }
+
+    .info A {
+      color: #22f;
+    }
+
+    .good A {
+      color: #2f2;
+    }
+
     .msg {
       padding: 5px 10px;
     }
@@ -60,18 +83,18 @@
     }
 
     .busy,
-	.warn,
+    .warn,
     .info,
     .good {
       font-weight: bold;
     }
 
     .busy {
-	  background-color: #404005;
-	  border-top: 2px solid #ff2;
-	}
+      background-color: #404005;
+      border-top: 2px solid #ff2;
+    }
 
-	.warn {
+    .warn {
       background-color: #400505;
       border-top: 2px solid #f22;
     }
@@ -157,7 +180,8 @@
       top: 5px;
       right: 5px;
       border: none; */
-	  display: none; /* I don't need this, btu I can't figure out how to remove it so it disappears instead. -- Hebgbs */
+      display: none;
+      /* I don't need this, btu I can't figure out how to remove it so it disappears instead. -- Hebgbs */
     }
 
     .guide a.item:hover,
@@ -177,7 +201,7 @@
   <body>
     <h1>Seedminer Boot9Strap CFW the easy way<br> <small>A tutorial for people who just want to <i>get it done.</i></small></h1>
     <div class="guide">
-	  <div class="busy msg br">This page is still undergoind construction, so some content may change in the future! The only thing really <i>all there</i> is the guide itself.</div>
+      <div class="busy msg br">This page is still undergoind construction, so some content may change in the future! The only thing really <i>all there</i> is the guide itself.</div>
       <div class="info msg br"><a href="https://discord.gg/MWxPgEp">For help with most Nintendo Homebrew things, there's a Discord guild for that.</a> This guide is not associated with them, but you can join there anyway for general inqueries.</div>
       <div class="info msg br">If you are interested in free games and other topics Nintendo Homebrew may outright ban you for, ask whoever gave you this page about another guild more open to that kind of discussion. Otherwise, you'll be finished with this guide at section 5.</div>
       <a class="item sechead">
@@ -245,13 +269,13 @@
         </div>
         <div class="warn msg">You will be performing these instructions <i>at your own risk.</i> This means any failure in following these instructions will be exclusively your fault; the author of this content, authors of related software shown and persons assisting you will <i>not</i> be at fault.</div>
       </div> <br>
-		<div class="info msg">For convenience and your own understanding, this page behaves as follows:
-		  <ul>
-		    <li>Clicking on <i>any</i> links will leave this guide. To prevent this, middle-click / open in new tab or open in new window.</li>
-			<li>This guide assumes you are using Microsoft Windows. Despite that, all web services are available to all web platforms.</li>
-			<li>Further sections of this guide are hidden for convenience. Click on each heading to reveal its contents. Limit one active.</li>
-		  </ul>
-		</div>
+      <div class="info msg">For convenience and your own understanding, this page behaves as follows:
+        <ul>
+          <li>Clicking on <i>any</i> links will leave this guide. To prevent this, middle-click / open in new tab or open in new window.</li>
+          <li>This guide assumes you are using Microsoft Windows. Despite that, all web services are available to all web platforms.</li>
+          <li>Further sections of this guide are hidden for convenience. Click on each heading to reveal its contents. Limit one active.</li>
+        </ul>
+      </div>
       <a class="item sechead">
         <h2>Section 1 — Preparation</h2>
       </a>
