@@ -1,663 +1,706 @@
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml2/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 
-<head>
-  <meta charset="utf-8">
-  <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700|PT+Sans:400,400i,700,700i&amp;subset=latin-ext" rel="stylesheet">
-  <link href="https://rawgit.com/Hebgbs/plugthemes/master/fonts/MyraidPro.css" rel="stylesheet">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style type="text/css">
-  BODY {
-    background: black;
-    color: white;
-    font-family: Myraid Pro, PT Sans, Ubuntu Sans, sans-serif;
-  }
-
-  CODE {
-    font-family: Inconsolata, Consolas, Ubuntu Mono, monospace;
-  }
-
-  HR {
-    visibility: hidden;
-  }
-
-  .body A:visited,
-  .msg A:visited {
-    color: #fff;
-  }
-
-  .body A {
-    color: #000;
-  }
-
-  .warn A {
-    color: #f22;
-  }
-
-  .info A {
-    color: #22f;
-  }
-
-  .good A {
-    color: #2f2;
-  }
-
-  .ins H2,
-  .ins H3 {
-    margin-top: 16px;
-    margin-bottom: 16px;
-  }
-
-  .btn {
-    border: none;
-    height: 50px;
-    width: 100%;
-  }
-
-  .sec {
-    vertical-align: top;
-    height: auto;
-    margin-top: -70px;
-  }
-
-  .ins {
-    background: #555;
-    margin-top: 0px;
-  }
-
-  .head {
-    background: #222;
-    padding: 10px;
-  }
-
-  IMG:hover {
-    background-color: rgba(255, 255, 255, 0.07);
-  }
-
-  .body {
-    padding: 1px 10px 0 10px;
-  }
-
-  .msg {
-    padding: 5px 10px;
-  }
-
-  .br {
-    margin: 20px 0 0 0;
-  }
-
-  .in {
-    margin: 0 0 20px 0;
-  }
-
-  .warn,
-  .info,
-  .good {
-    font-weight: bold;
-  }
-
-  .warn {
-    background-color: #400505;
-    border-top: 2px solid #f22;
-  }
-
-  .info {
-    background-color: #050540;
-    border-top: 2px solid #22f;
-  }
-
-  .good {
-    background-color: #054005;
-    border-top: 2px solid #2f2;
-  }
-
-  LI.success {
-    list-style-image: url("https://i.imgur.com/X8670Cs.png");
-  }
-
-  LI.failure {
-    list-style-image: url("https://i.imgur.com/rpSQgsn.png");
-  }
-
-  LI.txtli {
-    list-style: none;
-    position: relative;
-    left: -1em;
-  }
-
-  .hide,
-  .show:target,
-  .act {
-    display: none;
-  }
-
-  .show:target+.hide,
-  .show:target~.ins {
-    display: block;
-  }
-
-  @media print {
-    .show,
-    .hide {
-      display: none;
+  <head>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700|PT+Sans:400,400i,700,700i&amp;subset=latin-ext" rel="stylesheet">
+    <link href="https://rawgit.com/Hebgbs/plugthemes/master/fonts/MyraidPro.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="ddaccordion.js">
+    /***********************************************
+     * Accordion Content script- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
+     * Visit http://www.dynamicDrive.com for hundreds of DHTML scripts
+     * Please keep this notice intact
+     ***********************************************/
+    </script>
+    <script type="text/javascript">
+    ddaccordion.init({
+          headerclass: "sechead", //Shared CSS class name of headers group
+          contentclass: "sec", //Shared CSS class name of contents group
+          revealtype: "click", //Reveal content when user clicks or onmouseover the header? Valid value: "click", "clickgo", or "mouseover"
+          mouseoverdelay: 200, //if revealtype="mouseover", set delay in milliseconds before header expands onMouseover
+          collapseprev: true, //Collapse previous content (so only one open at any time)? true/false 
+          defaultexpanded: [], //index of content(s) open by default [index1, index2, etc] [] denotes no content
+          onemustopen: true, //Specify whether at least one header should be open always (so never all headers closed)
+          animatedefault: false, //Should contents open by default be animated into view?
+          persiststate: true, //persist state of opened contents within browser session?
+          toggleclass: ["", ""], //Two CSS classes to be applied to the header when it's collapsed and expanded, respectively ["class1", "class2"]
+          togglehtml: ["suffix", "<img src='plus.gif' class='statusicon' />", "<img src='minus.gif' class='statusicon' />"], //Additional HTML added to the header when it's collapsed and expanded, respectively  ["position", "html1", "html2"] (see docs)
+            animatespeed: "fast", //speed of animation: integer in milliseconds (ie: 200), or keywords "fast", "normal", or "slow"
+            oninit: function(headers, expandedindices) { //custom code to run when headers have initalized
+              //do nothing
+            },
+            onopenclose: function(header, index, state, isuseractivated) { //custom code to run whenever a header is opened or closed
+              //do nothing
+            }
+          })
+    </script>
+    <style type="text/css"> /* Notepad++ doesn't know how to handle formatting here, so funny. -- Hebgbs */
+    BODY {
+      background: #000;
+      color: #fff;
+      font-family: Myraid Pro, PT Sans, Ubuntu Sans, sans-serif;
     }
-  }
-  </style>
-</head>
 
-<body>
-  <h1>Seedminer Boot9Strap CFW the easy way<br> <small>A tutorial for people who just want to <i>get it done.</i></small></h1>
-  <h2><small>Guide and poor HTML coding by Heebeejeebees / Hebgbs.</small></h2>
-  <div class="info msg br"><a href="https://discord.gg/MWxPgEp">For help with most Nintendo Homebrew things, there's a Discord guild for that.</a> This guide is not associated with them, but you can join there anyway for general inqueries.</div>
-  <div class="info msg br">If you are interested in free games and other topics Nintendo Homebrew may outright ban you for, ask whoever gave you this page about another guild more open to that kind of discussion. Otherwise, you'll be finished with this guide at section 5.</div>
-  <div>
-    <h2 class="head">Preface and summary</h2>
-  </div>
-  <div class="sec">
-    <div class="btn">
-      <!-- There is no content here. -->
-    </div>
-    <div class="ins">
-      <div class="warn msg">This guide is intended for use with <i>completely stock</i> 3DS consoles using firmware 11.4 - 11.6.0-39. Following these instructions with an Arm9LoaderHax-modifed console or with future firmware installed prior to modification will brick the console. Don't even try.</div> <br>
-      <div class="info msg">Any reference to 3DS also applies for 2DS, meaning that regardless of model these instructions will apply.</div> <br>
-      <div class="good msg">After completing these instructions, it is safe to update Boot9Strap, Luma3DS and the console firmware.</div>
-      <div class="body">
-        <p>There are several guides about this particular method of custom firmware already on the Internet. If you want to see those, ask about them in Nintendo Homebrew. If you want a <i>better</i> interpretation of this method optimized for speed and limited handling of media, then read on. The reason this guide exists is because I grew tired of telling people the same turns of phrase which serve to do nothing more than waste time and confuse people who cannot keep up with what I am saying, and for me to link so people can follow along with the same series of instructions which haven't failed any persons I had assisted as of yet. As lots of people just want to <i>get it done</i>, if you find yourself in the same camp then this guide is for you.</p>
-        <h3>After having followed these instructions, you will have the following in your 3DS' SD card:</h3>
-        <ul>
-          <li><b>Boot9Strap</b>, a loader for ARM9 / ARM11.</li>
-          <li><b>Luma3DS</b>, a custom firmware (hereon: <i>CFW</i>) which depends upon Boot9Strap (hereon: <i>B9S</i>) or ARM9LoaderHax (hereon: <i>A9LH</i>).</li>
-          <li><b>GodMode9</b>, a file manager and root-level script executor dependent on Luma3DS' payload execution.</li>
-          <li><b>DSP1</b>, a dumping utility to support sound for homebrew applications.</li>
-          <li><b>Luma3DS Updater</b>, a utility for updating Luma3DS through the console when new releases are available.</li>
-          <li><b>Homebrew Launcher</b>, a utility for launching programs compiled as <code>.3dsx</code> binaries.</li>
-          <li><b>FBI</b>, a utility for using CTR Importable Archive binaries (hereon: <i>CIA</i>) to install games and applications.</li>
-          <li><b>Anemone Theme Manager</b>, an open-source utility for installing themes and bootsplashes.</li>
-          <li><b>Checkpoint</b>, a save manager for 3DS and DSiWare titles.</li>
-        </ul>
-        <h3>The following websites may be utilized:</h3>
-        <ul>
-          <li><a href="https://seedhelper.figgyc.uk"><b>Seedhelper</b></a> for remote use of seedminer using volunteer machines.</li>
-          <li><a href="https://jenkins.nelthorya.net/job/DSIHaxInjector/"><b>Jenkins (Project DSIHaxInjector)</b></a> for compiling your CFW entrypoint.</li>
-          <li><a href="https://3ds.hacks.guide/finalizing-setup"><b>3DS Hacks Guide's "Finalizing Setup"</b></a> page for finishing up and use of other software.</li>
-        </ul>
-        <h3>The following GodMode9 scripts may also be executed:</h3>
-        <ul>
-          <li><code>setup_ctrnand_luma3ds</code>, a script which will copy Luma3DS into system memory so the console isn't dependent on the presence of an SD card.</li>
-          <li><code>cleanup_sd_card</code>, a script to delete unnecessary files for operation, including the cias directory which will be included with the archive provided.</li>
-          <li>The built-in script for backing up the system memory entirely as a file on SD card.</li>
-        </ul>
-        <h3>The following additional steps can also be performed after installation of CFW:</h3>
-        <ul>
-          <li>Installation of <b>FTPD</b>, an FTP server for 3DS through FBI's access to TitleDB.</li>
-          <li>Installation of <b>Freeshop</b>, an open-source clone of Nintendo's eShop with title management.</li>
-          <li>Installation of <b>InputRedirectionQt</b> for use of Luma3DS' input redirection, a feature to use controllers attached to a PC.</li>
-          <li>Installation of <b>Snickerstream</b> for casting video from the console onto PC.</li>
-        </ul>
-      </div>
-      <div class="warn msg">You will be performing these instructions <i>at your own risk.</i> This means any failure in following these instructions will be exclusively your fault; the author of this content, authors of related software shown and persons assisting you will <i>not</i> be at fault.</div>
-    </div>
-  </div>
-  <div class="info msg br">Further sections of this guide are hidden for convenience. Click on their headings to expand sections of this guide as you follow along.</div>
-  <div class="info msg br">This guide assumes you are using Microsoft Windows. For Mac OS X and other open-source systems seedminer is also available, and web services used during the course of this guide are available to everybody.</div>
-  <div class="info msg br">Clicking on any links here will make you <i>leave this page.</i> To prevent this, open all links in new tabs.</div>
-  <div class="warn msg br">Everything shown in this guide is procedural and top-down. This means steps should be followed in the order as shown for the best chance of success.</div>
-  <div>
-    <h2 class="head"><span style="text-align: left;">Section 1 — Preparation</h2></div>
-<div class="sec">
- <a href="#S1" class="show" id="S1" title="Click to expand!"><img src="https://rawgit.com/Hebgbs/Hebgbs.github.io/master/dummy.png" class="btn"></a>
- <a href="#H1" class="hide" id="H1" title="Click to collapse."><img src="https://rawgit.com/Hebgbs/Hebgbs.github.io/master/dummy.png" class="btn"></a>
- <div class="ins act">
- <div class="body">
- <p>Before even beginning upon this saga that is the ritual of single-console CFW via this method, you need to make sure you have everything necessary for a successful installation. Without any of what is shown below, you may either not be able to perform some instructions, or embark upon this at all.</p>
-      <h3>You will need the following</h3>
-      <ul>
-        <li>USD3 in your Nintendo eShop account.</li>
-        <li>A stock 3DS, old or new.</li>
-      </ul>
-      <h3>Optionally, this may help</h3>
-      <ul>
-        <li>A computer with a good GPU.</li>
-        <li>Python 3.6 (preferably) or 2.7.</li>
-        <li>Another person to assist with their modified console.
+    CODE {
+      font-family: Inconsolata, Consolas, Ubuntu Mono, monospace;
+    }
+
+    .sechead H2 {
+      margin: 5px 0;
+    }
+
+    .msg {
+      padding: 5px 10px;
+    }
+
+    .msg H2 {
+      margin: 0px;
+    }
+
+    .warn,
+    .info,
+    .good {
+      font-weight: bold;
+    }
+
+    .warn {
+      background-color: #400505;
+      border-top: 2px solid #f22;
+    }
+
+    .info {
+      background-color: #050540;
+      border-top: 2px solid #22f;
+    }
+
+    .good {
+      background-color: #054005;
+      border-top: 2px solid #2f2;
+    }
+
+    LI.success {
+      list-style-image: url("https://i.imgur.com/X8670Cs.png");
+    }
+
+    LI.failure {
+      list-style-image: url("https://i.imgur.com/rpSQgsn.png");
+    }
+
+    LI.txtli,
+    UL.txtli LI {
+      list-style: none;
+      position: relative;
+      left: -1em;
+    }
+
+    .body {
+      padding: 0 10px;
+    }
+
+    .hl1 {
+      color: #0f0;
+    }
+
+    .hl2 {
+      color: #0ff;
+    }
+
+    .hl3 {
+      color: #f0f;
+    }
+
+    .br {
+      margin-bottom: 20px;
+    }
+
+    TD {
+      vertical-align: center;
+    }
+
+    .guide {
+      margin: 5px 0;
+      padding: 0;
+      width: 100%;
+      /*width of menu*/
+      border-bottom-width: 0;
+    }
+
+    .guide a.item {
+      background: #222;
+      color: white;
+      display: block;
+      position: relative;
+      /*To help in the anchoring of the ".statusicon" icon image*/
+      width: auto;
+      padding: .01px;
+      padding-left: 10px;
+      margin-top: 20px;
+      text-decoration: none;
+    }
+
+    .guide a.item:visited,
+    .guide .item:active {
+      color: white;
+    }
+
+    .guide a.item .statusicon {
+      /*CSS for icon image that gets dynamically added to headers*/
+      /* position: absolute;
+      top: 5px;
+      right: 5px;
+      border: none; */
+	  display: none; /* I don't need this, btu I can't figure out how to remove it so it disappears instead. -- Hebgbs */
+    }
+
+    .guide a.item:hover,
+    .guide a.item:focus {
+      background: #333;
+    }
+
+    .guide div.sec {
+      /*DIV that contains each sub menu*/
+      background: #555;
+      padding: .01px;
+      /* For some reason things look funny without any padding. -- hebgbs */
+    }
+    </style>
+  </head>
+
+  <body>
+    <h1>Seedminer Boot9Strap CFW the easy way<br> <small>A tutorial for people who just want to <i>get it done.</i></small></h1>
+    <div class="guide">
+      <div class="info msg br"><a href="https://discord.gg/MWxPgEp">For help with most Nintendo Homebrew things, there's a Discord guild for that.</a> This guide is not associated with them, but you can join there anyway for general inqueries.</div>
+      <div class="info msg br">If you are interested in free games and other topics Nintendo Homebrew may outright ban you for, ask whoever gave you this page about another guild more open to that kind of discussion. Otherwise, you'll be finished with this guide at section 5.</div>
+      <a class="item sechead">
+        <h2>Preface and summary</h2>
+      </a>
+      <div class="sec">
+        <div class="warn msg br">This guide is intended for use with <i>completely stock</i> 3DS consoles using firmware 11.4 - 11.6.0-39. Following these instructions with an Arm9LoaderHax-modifed console or with future firmware installed prior to modification will brick the console. Don't even try.</div>
+        <div class="info msg br">Any reference to 3DS also applies for 2DS, meaning that regardless of model these instructions will apply.</div>
+        <div class="good msg">After completing these instructions, it is safe to update Boot9Strap, Luma3DS and the console firmware.</div>
+        <div class="body">
+          <p>There are several guides about this particular method of custom firmware already on the Internet. If you want to see those, ask about them in Nintendo Homebrew. If you want a <i>better</i> interpretation of this method optimized for speed and limited handling of media, then read on. The reason this guide exists is because I grew tired of telling people the same turns of phrase which serve to do nothing more than waste time and confuse people who cannot keep up with what I am saying, and for me to link so people can follow along with the same series of instructions which haven't failed any persons I had assisted as of yet. As lots of people just want to <i>get it done</i>, if you find yourself in the same camp then this guide is for you.</p>
+          <h3>After having followed these instructions, these contents will be in your 3DS' SD card:</h3>
+          <h4>System software</h4>
           <ul>
-            <li>Ask someone who already had their console modified.</li>
+            <li><b>Boot9Strap</b>, a loader for ARM9 / ARM11.</li>
+            <li><b>Luma3DS</b>, a custom firmware (hereon: <i>CFW</i>) which depends upon Boot9Strap (hereon: <i>B9S</i>) or ARM9LoaderHax (hereon: <i>A9LH</i>).</li>
+            <li><b>GodMode9</b>, a file manager and root-level script executor dependent on Luma3DS' payload execution.</li>
           </ul>
-        </li>
-        <li>An Amazon gift card worth USD5 if lacking funds.</li>
-        <li>An SD card larger than 4GB.<ul>
-            <li>Only if it's full of save data already: A system memory backup requires <b>1.2GB</b>.</li></ul></li>
-			<br>
-			</div>
- </div>
- </div>
-  <div><h2 class="head">Section 2 — Initial steps</h2></div>
-<div class="sec">
- <a href="#S2" class="show" id="S2" title="Click to expand!"><img src="https://rawgit.com/Hebgbs/Hebgbs.github.io/master/dummy.png" class="btn"></a>
- <a href="#H2" class="hide" id="H2" title="Click to collapse."><img src="https://rawgit.com/Hebgbs/Hebgbs.github.io/master/dummy.png" class="btn"></a>
- <div class="ins act">
-      <div class="info msg">If you have to, go into Windows Explorer's options and disable hiding of known file extensions. As it is beyond the scope of this guide, search for this information yourself.</div>
-	        <div class="body">
-        <p>After having fulfilled everything in the above section, only <i>then</i> are you ready to begin without encountering any future difficulties. Unlike other guides online, this one provides a single archive providing a <i>universal</i> set of files <b>up to 11.6.0-39</b>.</p>
-        <h3>On the console</h3>
-        <ol>
-          <li>Open the Nintendo eShop.</li>
-          <li><a href="https://3ds.hacks.guide/installing-boot9strap-(dsiware-game-injection-list)">
+          <h4>User software</h4>
+          <table>
+            <tr>
+              <th><img src="https://api.titledb.com/images/0004000000D59100.png"></th>
+              <td><b>DSP1</b><br>a dumping utility to support sound for homebrew applications.</td>
+            </tr>
+            <tr>
+              <th><img src="https://api.titledb.com/images/00040000001DEB00.png"></th>
+              <td><b>Luma3DS Updater</b><br>a utility for updating Luma3DS through the console when new releases are available.</td>
+            </tr>
+            <tr>
+              <th><img src="https://api.titledb.com/images/000400000D921E00.png"></th>
+              <td><b>Homebrew Launcher</b><br>a utility for launching programs compiled as <code>.3dsx</code> binaries.</td>
+            </tr>
+            <tr>
+              <th><img src="https://api.titledb.com/images/000400000F800100.png"></th>
+              <td><b>FBI</b><br>a utility for using CTR Importable Archive binaries (hereon: <i>CIA</i>) to install games and applications.</td>
+            </tr>
+            <tr>
+              <th><img src="https://api.titledb.com/images/00040000000AFE00.png"></th>
+              <td><b>Anemone Theme Manager</b><br>an open-source utility for installing themes and bootsplashes.</td>
+            </tr>
+            <tr>
+              <th><img src="https://api.titledb.com/images/000400000BCFFF00.png"></th>
+              <td><b>Checkpoint</b><br>a save manager for 3DS and DSiWare titles.</td>
+            </tr>
+          </table>
+          <h3>The following websites may be utilized:</h3>
+          <ul>
+            <li><a href="https://seedhelper.figgyc.uk"><b>Seedhelper</b></a> for remote use of seedminer using volunteer machines.</li>
+            <li><a href="https://jenkins.nelthorya.net/job/DSIHaxInjector/"><b>Jenkins (Project DSIHaxInjector)</b></a> for compiling your CFW entrypoint.</li>
+            <li><a href="https://3ds.hacks.guide/finalizing-setup"><b>3DS Hacks Guide's "Finalizing Setup"</b></a> page for finishing up and use of other software.</li>
+          </ul>
+          <h3>The following GodMode9 scripts may also be executed:</h3>
+          <ul>
+            <li><code>setup_ctrnand_luma3ds</code>, a script which will copy Luma3DS into system memory so the console isn't dependent on the presence of an SD card.</li>
+            <li><code>cleanup_sd_card</code>, a script to delete unnecessary files for operation, including the cias directory which will be included with the archive provided.</li>
+            <li>The built-in script for backing up the system memory entirely as a file on SD card.</li>
+          </ul>
+          <h3>The following additional steps can also be performed after installation of CFW:</h3>
+          <ul>
+            <li>Installation of <b>FTPD</b>, an FTP server for 3DS through FBI's access to TitleDB.</li>
+            <li>Installation of <b>Freeshop</b>, an open-source clone of Nintendo's eShop with title management.</li>
+            <li>Installation of <b>InputRedirectionQt</b> for use of Luma3DS' input redirection, a feature to use controllers attached to a PC.</li>
+            <li>Installation of <b>Snickerstream</b> for casting video from the console onto PC.</li>
+          </ul>
+        </div>
+        <div class="warn msg">You will be performing these instructions <i>at your own risk.</i> This means any failure in following these instructions will be exclusively your fault; the author of this content, authors of related software shown and persons assisting you will <i>not</i> be at fault.</div>
+      </div>
+      <a class="item sechead">
+        <h2>Section 1 — Preparation</h2>
+      </a>
+      <div class="sec">
+        <div class="body">
+          <p>Before even beginning upon this saga that is the ritual of single-console CFW via this method, you need to make sure you have everything necessary for a successful installation. Without any of what is shown below, you may either not be able to perform some instructions, or embark upon this at all.</p>
+          <h3>You will need the following</h3>
+          <ul>
+            <li>USD3 (or regional equivalent) in your Nintendo eShop account.</li>
+            <li>A stock 3DS, old or new.</li>
+          </ul>
+          <h3>Optionally, this may help</h3>
+          <ul>
+            <li>A computer with a good GPU.</li>
+            <li>Python 3.6 (preferably) or 2.7.</li>
+            <li>Another person to assist with their modified console.
+              <ul>
+                <li>Ask someone who already had their console modified.</li>
+              </ul>
+            </li>
+            <li>A gift card for purchasing eCash if lacking a bank account.
+              <ul>
+                <li>This can be a Nintendo eCash card, or a gift card for services which permit purchase of Nintendo eCash.</li>
+              </ul>
+            </li>
+            <li>An SD card larger than 4GB.
+              <ul>
+                <li>Only if it's full of save data already: A system memory backup requires <b>1.2GB</b>.</li>
+              </ul>
+            </li>
+        </div>
+      </div>
+      <a class="item sechead">
+        <h2>Section 2 — Initial steps</h2>
+      </a>
+      <div class="sec">
+        <div class="info msg">If you have to, go into Windows Explorer's options and disable hiding of known file extensions. As it is beyond the scope of this guide, search for this information yourself.</div>
+        <div class="body">
+          <p>After having fulfilled everything in the above section, only <i>then</i> are you ready to begin without encountering any future difficulties. Unlike other guides online, this one provides a single archive providing a <i>universal</i> set of files <b>up to 11.6.0-39</b>.</p>
+          <h3>On the console</h3>
+          <ol>
+            <li>Open the Nintendo eShop.</li>
+            <li><a href="https://3ds.hacks.guide/installing-boot9strap-(dsiware-game-injection-list)">
 Purchase an injectable game from this list.</a></li>
-          <ul>
-            <li><b>Keep that page open;</b> Information from it may help you later.</li>
-            <li>If you aren't sure, purchase SUDOKU. The file generated with the process below will be <code>4B344445.bin</code> (USA) or <code>4B344456.bin</code> (EUR). There is no SUDOKU equivalent for JPN but any of the listed games for that region will work.</li>
-          </ul>
-          </li>
-          <li>Exit the eShop and open System Settings; Go to Data Management, DSiWare.</li>
-          <li>Find your compatible title and copy it onto the SD card. <i>Permit this operation in the following prompt.</i></li>
-          <li>Power off the Nintendo 3DS and remove the SD card.<ul>
-          <li>If you own a console with the "new" wordmark, you can do one better: Go into microSD Management and connect with your PC instead.</li>
-          </ul>
-          </li>
-        </ol>
-        <h3> On the computer</h3>
-        <ol>
-          <li><a href="https://hebgbs.github.io/seedkit.zip">Download this archived suite of files.</a>
             <ul>
-              <li>All files in this archive were obtained from 3ds.hacks.guide and have already been assembled in the correct fashion for execution on the 3DS.</li>
+              <li><b>Keep that page open;</b> Information from it may help you later.</li>
+              <li>If you aren't sure, purchase SUDOKU. The file generated with the process below will be <code>4B344445.bin</code> (USA) or <code>4B344456.bin</code> (EUR). There is no SUDOKU equivalent for JPN but any of the listed games for that region will work.</li>
             </ul>
-            <li>Extract the contents of the archive onto the root of the SD card.
+            </li>
+            <li>Exit the eShop and open System Settings; Go to Data Management, DSiWare.</li>
+            <li>Find your compatible title and copy it onto the SD card. <i>Permit this operation in the following prompt.</i></li>
+            <li>Power off the Nintendo 3DS and remove the SD card.
               <ul>
-                <li>This means all directories and files should be <i>alongside</i> Nintendo 3DS, not <i>inside</i> of it, and especially <i>not</i> in its own directory.</li>
+                <li>If you own a console with the "new" wordmark, you can do one better: Go into microSD Management and connect with your PC instead.</li>
               </ul>
             </li>
-            <li>Navigate to <code>Nintendo 3DS</code>; you should see two directories.
+          </ol>
+          <h3> On the computer</h3>
+          <ol>
+            <li><a href="https://hebgbs.github.io/seedkit.zip">Download this archived suite of files.</a>
               <ul>
-                <li>If you see more than two, search for the filename of the game you had copied, per the list you may had previously obtained it from. Results should show one entry in <code>Nintendo 3DS/[id0]/[id1]/Nintendo DSiWare</code>.</li>
+                <li>All files in this archive were obtained from 3ds.hacks.guide and have already been assembled in the correct fashion for execution on the 3DS.</li>
               </ul>
-            </li>
-            <li>Copy your id0.
-              <ul>
-                <li>It is <i>the name of</i> the 32-character directory alongside <code>Private</code>.</li>
-                <li>You can use your file manager's rename function to copy it.</li>
-              </ul>
-            </li>
-        </ol>
-		<hr>
+              <li>Extract the contents of the archive onto the root of the SD card.
+                <ul>
+                  <li>This means all directories and files should be <i>alongside</i> Nintendo 3DS, not <i>inside</i> of it, and especially <i>not</i> in its own directory.</li>
+                </ul>
+              </li>
+              <li>Navigate to <code>Nintendo 3DS</code>; you should see two directories.
+                <ul>
+                  <li>If you see more than two, search for the filename of the game you had copied, per the list you may had previously obtained it from. Results should show one entry in <code>Nintendo 3DS/[id0]/[id1]/Nintendo DSiWare</code>.</li>
+                </ul>
+              </li>
+              <li>Copy your id0.
+                <ul>
+                  <li>It is <i>the name of</i> the 32-character directory alongside <code>Private</code>.</li>
+                  <li><i>Example:</i> <code class="hl1">4a5b6c7d8effe0d1c2b3aa9b0c1d2e3f</code></li>
+                  <li>You can use your file manager's rename function to copy it. <b>Keep it somewhere in case you need to copy it multiple times.</b></li>
+                </ul>
+              </li>
+          </ol>
+        </div>
       </div>
- </div>
- </div>
-  <div><h2 class="head">Section 3 — Seedminer</h2></div>
-<div class="sec">
- <a href="#S3" class="show" id="S3" title="Click to expand!"><img src="https://rawgit.com/Hebgbs/Hebgbs.github.io/master/dummy.png" class="btn"></a>
- <a href="#H3" class="hide" id="H3" title="Click to collapse."><img src="https://rawgit.com/Hebgbs/Hebgbs.github.io/master/dummy.png" class="btn"></a>
- <div class="ins act">
-      <div class="warn msg in"> If you do not have a good GPU (anything around 2008) inside your machine by nVidia, AMD or an AIB using either company's hardware, you may not be able to mine your seed quickly.</div>
-      <div class="good msg"> <a href="https://seedhelper.figgyc.uk">Fortunately, there is an
-alternative to doing it yourself via Seedhelper.</a> Your <code>movable_part1.sed</code> can still be obtained from another person if you are wary about feeding your friend code into something you have less control of.</div>
-      <div class="body">
-        <p>This process is necessary for decrypting a special file on the 3DS later used with a service for compiling your CFW entrypoint. Without it, you may not be able to install CFW into the 3DS without using a different method.</p>
-        <h3> Requirements for installing and using seedminer.</h3>
-        <ul>
-          <li>Python 3.6 (preferred) or 2.7, from <a href="https://python.org">Python Software Foundation's landing page.</a></li>
-          <li><a href="https://github.com/zoogie/seedminer/releases">Seedminer itself.</a></li>
-          <li>Your console's <code>movable_part1.sed</code> (hereon: <i>part1</i>), detailed below.</li>
-          <li>The console's first 32 characters of its SHA-256 hash (hereon: <i>id0</i>), detailed below.</li>
-        </ul>
-        <h3> Obtaining your part1</h3>
-      </div>
-      <div class="good msg"> Seedhelper can aid with this, the provided instructions below are for when the service is down. Instead of these instructions, you can use it to obtain your <code>movable_part1.sed</code></div>
-      <div class="body">
-        <ol>
-          <li>Befriend someone with a modified console.
-            <ul>
-              <li>Seedstarter <i>does not work</i> with provisionally added friends: Both sides must friend one another.</li>
-            </ul>
-          </li>
-          <li>Whoever is assisting you also needs to have <code>seedstarter.3dsx</code> from the <a href="https://github.com/zoogie/seedminer/releases">seedminer Github repository.</a></li>
-          <li>Your assistant then needs to open seedstarter on their console.</li>
-          <li>Assistant then follows the prompts, pressing <code>B</code>, <code>A</code>, then <code>Start</code> in seedstarter.</li>
-          <li>After obtaining all friend's seeds, assistant then needs to access the <code>seedstarter</code> directory on their console's SD card.</li>
-          <li>Assistant must find the <code>.sed</code> file with the friend code of the user they are assisting and rename it to <code>movable_part1.sed</code>.
-            <ul>
-              <li><i>Example</i>: <code>0_<span style="color: rgb(0, 255, 255);">1234_4567_7890</span>.sed</code> becomes <code>movable_part1.sed</code> for use with whoever has friend code <span style="color: rgb(0, 255, 255);">1234-4567-7890</span>. </li>
-      </ul>
-      </li>
-      <li>Assistant needs to deliver <code>movable_part1.sed</code> to you for mining.</li>
-      </ul>
-      </ol>
-      <h3> Mining your seed</h3>
-  </div>
-  <div class="info msg in"> If somebody else needs to mine for you, your id0 needs to be provided to them for a successful operation.</div>
-  <div class="info msg">Using Python 2.7? These following details change:
-    <ul>
-      <li>Instead of <code>seedminer_launcher3.py</code>, <code>seedminer_launcher.py</code> is used.</li>
-      <li>If <code>py -2</code> shorthand is not an option, use <code>%systemdrive%\Python27\python.exe</code> instead.</li>
-    </ul>
-  </div>
-  <div class="body">
-    <ol>
-      <li>Locate <code>movable_part1.sed</code>; Where seedminer was extracted, navigate to where <code>seedminer_launcher3.py</code> is and move it there.</li>
-      <li>Hold <code>Right Shift</code> while opening the context menu to access additional options; choose to open command prompt / powershell.
-        <ul>
-          <li>This does <i>not</i> mean to execute the Ppython shell environment! The remaining instructions are performed outside of an executed command-line program.</li>
-        </ul>
-      </li>
-      <li>Execute <code>py -3 seedminer_launcher3.py update-db</code>.</li>
-      <li>Execute <code>py -3 seedminer_launcher3.py id0 [id0]</code>.
-        <ul>
-          <li><i>Example:</i> <code>py -3 seedminer_launcher3.py id0 a0b1c2d3e4f5061728394a5b6c7d8e9f</code>.</li>
-          <li>If you are confused about what your id0 is, see <b>section 2</b>. </ul>
-        </li>
-        <li>Execute <code>py -3 seedminer_launcher3.py gpu</code>.
+      <a class="item sechead">
+        <h2>Section 3 — Seedminer</h2>
+      </a>
+      <div class="sec">
+        <div class="good msg br">
+          <h2>If you cannot mine and are using <a href="https://seedhelpeer.figgyc.uk">Seedhelper</a>, you do not need to download seedminer.</h2>You can use that service instead of following most of this section. To use seedhelper:
+          <ol>
+            <li>Give Seedhelper your part1 and id0
+              <ul>
+                <li>Your id0 was obtained earlier; you should still have it per instructions in section 2.</li>
+              </ul>
+            </li>
+            <li>Add the firend code for user <code>figgyc</code></li>
+            <li>Download your part1, then start again.</li>
+            <li>Instead of giving your friend code, upload your part1.</li>
+            <li>Give the service your id0 again</li>
+            <li>Press <i>Start</i> and wait.</li>
+          </ol> You may be waiting a long while for this depending on queue (shown in the blue heading on top), so if you have an nVidia GTX 960 or equivalent, try mining your own seed instead! </div>
+        <div class="warn msg"> If you do not have a good GPU (anything around 2008) inside your machine by nVidia, AMD or an AIB using either company's hardware, you may not be able to mine your seed quickly.</div>
+        <div class="body">
+          <p>This process is necessary for decrypting a special file on the 3DS later used with a service for compiling your CFW entrypoint. Without it, you may not be able to install CFW into the 3DS without using a different method.</p>
+          <h3> Requirements for installing and using seedminer.</h3>
           <ul>
-            <li><code>cpu</code> is a possible argument as well. Also possible: You waiting up to a day or more for CPU mining.
-              <li>If errors <i>did</i> occur, try opening <code>cmd</code> as an administrator, rinse and repeat for multiple seeds.</li>
+            <li>Python 3.6 (preferred) or 2.7, from <a href="https://python.org">Python Software Foundation's landing page.</a></li>
+            <li><a href="https://github.com/zoogie/seedminer/releases">Seedminer itself.</a></li>
+            <li>Your console's <code>movable_part1.sed</code> (hereon: <i>part1</i>), detailed below.</li>
+            <li>The console's first 32 characters of its SHA-256 hash (hereon: <i>id0</i>), detailed below.</li>
           </ul>
-          </li>
-          <li>If nothing produced fatal errors, multiple <code>cmd</code> instances will open:<b>Do not close them.</b></li>
-          <li>Obtain your movable.sed from the directory seedminer was executed in.</li>
-    </ol>
-    <hr> </div>
-  </div>
-  </div>
-  <div>
-    <h2 class="head">Section 4 — DSiWare injection</h2>
-  </div>
-  <div class="sec"> <a href="#S4" class="show" id="S4" title="Click to expand!"><img src="https://rawgit.com/Hebgbs/Hebgbs.github.io/master/dummy.png" class="btn"></a> <a href="#H4" class="hide" id="H4" title="Click to collapse."><img src="https://rawgit.com/Hebgbs/Hebgbs.github.io/master/dummy.png" class="btn"></a>
-    <div class="ins act">
-      <div class="warn msg in">None of these steps are of any use without your <code>movable.sed</code>. Acquire it from seedhelper or make it yourself in seedminer (see section 3).</div>
-      <div class="warn msg">Until the steps in the next section are followed, the console will be dependent on your SD card with Luma3DS's <code>boot.firm</code> present upon completion.</div>
-      <div class="body">
-        <p>These series of steps are necessary for producing your CFW entrypoint. Without it, the additional software on your SD card is rendered useless.</p>
-        <h2>At your computer</h2>
-        <ol>
-          <li><a href="https://jenkins.nelthorya.net/job/DSIHaxInjector">Go to this
+          <h3> Obtaining your part1</h3>
+          <p>These instructions are for somebody else, as you cannot obtain your part1 yourself on an unmodified console. WHoever is doing this needs to do the following:</p>
+          <ol>
+            <li>Share their friend code
+              <ul>
+                <li>Seedstarter <i>does not work</i> with provisionally added friends: Both sides must add one another.</li>
+              </ul>
+            </li>
+            <li>Download on their SD card Seedstarter from the <a href="https://github.com/zoogie/seedminer/releases">seedminer Github repository</a>, if applicable.
+              <ul>
+                <li>Alternatively, they can obtain Seedstarter from FBI's TitleDB menu. (Though, it <i>may</i> show up as seedminer there.)</li>
+              </ul>
+            </li>
+            <li>Open seedstarter on their console.</li>
+            <li>Press <code>B</code>, <code>A</code>, then <code>Start</code> in seedstarter.</li>
+            <li>After obtaining all friend's seeds, access the <code>seedstarter</code> directory on their console's SD card.</li>
+            <li>Find the <code>.sed</code> file with the friend code of the user they are assisting and rename it to <code>movable_part1.sed</code>.
+              <ul>
+                <li><i>Example</i>: <code>0_<span class="hl2">1234_4567_7890</span>.sed</code> becomes <code>movable_part1.sed</code> for use with whoever has friend code <span class="hl2">1234-4567-7890</span>. </li>
+              </ul>
+            </li>
+            <li>Make use of <code>movable_part1.sed</code> for either:
+              <ul style="list-style: lower-latin;">
+                <li>Returning to you for mining.</li>
+                <li>Mine for you on their PC.</li>
+              </ul>
+            </li>
+          </ol>
+          <h3> Mining your seed</h3>
+        </div>
+        <div class="info msg br">If seedhelper is down and somebody else needs to mine for you, your id0 needs to be provided to them for a successful operation.</div>
+        <div class="info msg">Using Python 2.7? These following details change:
+          <ul>
+            <li>Instead of <code>seedminer_launcher3.py</code>, <code>seedminer_launcher.py</code> is used.</li>
+            <li>If <code>py -2</code> shorthand is not an option, use <code>%systemdrive%\Python27\python.exe</code> instead.</li>
+          </ul>
+        </div>
+        <div class="body">
+          <ol>
+            <li>Locate <code>movable_part1.sed</code>; Where seedminer was extracted, navigate to where <code>seedminer_launcher3.py</code> is and move it there.</li>
+            <li>Hold <code>Right Shift</code> while opening the context menu to access additional options; choose to open command prompt / powershell.
+              <ul>
+                <li>This does <i>not</i> mean to execute the Ppython shell environment! The remaining instructions are performed outside of an executed command-line program.</li>
+              </ul>
+            </li>
+            <li>Execute <code>py -3 seedminer_launcher3.py update-db</code>.</li>
+            <li>Execute <code>py -3 seedminer_launcher3.py id0 [id0]</code>.
+              <ul>
+                <li><i>Example:</i> <code>py -3 seedminer_launcher3.py id0 <span class="hl1">4a5b6c7d8effe0d1c2b3aa9b0c1d2e3f</span></code>.</li>
+                <li>If you are confused about what your id0 is, see <b>section 2</b>. </ul>
+              </li>
+              <li>Execute <code>py -3 seedminer_launcher3.py gpu</code>.
+                <ul>
+                  <li><code>cpu</code> is a possible argument as well. Also possible: You waiting up to a day or more for CPU mining.
+                    <li>If errors <i>did</i> occur, try opening <code>cmd</code> as an administrator, rinse and repeat for multiple seeds.</li>
+                </ul>
+                </li>
+                <li>If nothing produced fatal errors, multiple <code>cmd</code> instances will open:<b>Do not close them.</b></li>
+                <li>Obtain your movable.sed from the directory seedminer was executed in.</li>
+          </ol>
+        </div>
+      </div>
+      <a class="item sechead">
+        <h2>Section 4 — DSiWare injection</h2>
+      </a>
+      <div class="sec">
+        <div class="warn msg">None of these steps are of any use without your <code>movable.sed</code>. Acquire it from seedhelper or make it yourself in seedminer (see section 3).</div>
+        <div class="body">
+          <p>These series of steps are necessary for producing your CFW entrypoint. Without it, the additional software on your SD card is rendered useless.</p>
+          <h2>At your computer</h2>
+          <ol>
+            <li><a href="https://jenkins.nelthorya.net/job/DSIHaxInjector">Go to this
 website to build your patched bin.</a></li>
-          <li>The fields shown refer to the following:
-            <ul>
-          </li>
-          <li>Unique identifier for the patched <code>.bin</code> file.</li>
-          <li>Region of your console (usually shown on your console).</li>
-          <li>Location of your copied DSiWare <code>.bin</code>.</li>
-          <li>Location of your <code>movable.sed</code>.</li>
-          <li>You can skip E-Mail: Build will not take long.</li>
-          </ul>
-          </li>
-          <li>Hit the big blue <b>Build</b> button and watch the left side for your build to complete.
-            <ul>
-              <li class="txtli">🔵 means build completed with a usable artifact.</li>
-              <li class="txtli">🔴 means the <code>movable.sed</code> or <code>.bin</code> file was bad and needs to be remade.</li>
+            <li>The fields shown refer to the following:
+              <ul>
+            </li>
+            <li>Unique identifier for the patched <code>.bin</code> file.</li>
+            <li>Region of your console (usually shown on your console).</li>
+            <li>Location of your copied DSiWare <code>.bin</code>.</li>
+            <li>Location of your <code>movable.sed</code>.</li>
+            <li>You can skip E-Mail: Build will not take long.</li>
             </ul>
-          </li>
-          <li>If you see your build is successful, click it and download the artifact made onto your SD card in <code>Nintendo DSiWare</code>.</li>
-          <li>Rename, move or delete the the original, untouched <code>.bin</code> file.</li>
-          <li>Rename the <code>.patched</code> file so it ends in <code>.bin</code> instead.
-            <ul>
-              <li>The previous three steps are intended to overwrite your game with a modified copy which launches b9stool.</li>
-            </ul>
-          </li>
-          <li><i>Properly</i> eject the SD card from your PC and put it in the console.</li>
-        </ol>
-        <h2>At your console</h2>
-        <ol>
-          <li>Open System Settings, Data Management, DSiWare.</li>
-          <li>In the SD Card tab, choose to copy the patched bin to System Memory. <i>Permit this operation in the following prompt.</i></li>
-          <li>When finished, exit to Home Menu and open the patched game.</li>
-        </ol>
-        <hr> </div>
-    </div>
-  </div>
-  <div>
-    <h2 class="head">Section 5 — CFW installation</h2>
-  </div>
-  <div class="sec"> <a href="#S5" class="show" id="S5"><img src="https://rawgit.com/Hebgbs/Hebgbs.github.io/master/dummy.png" class="btn"></a> <a href="#H5" class="hide" id="H5"><img src="https://rawgit.com/Hebgbs/Hebgbs.github.io/master/dummy.png" class="btn"></a>
-    <div class="ins act">
-      <div class="info msg">Instructions shamelessly ripped off from <a href="https://jisagi.github.io/SeedminerGuide/injection/#section4">Jisagi's seedminer guide</a></div>
-      <div class="body">
-        <p>These instructions pertain to installing Boot9Strap, Luma3DS and GodMode9.</p>
-        <ol>
-          <li>Launch b9sTool by starting your DSiWare game
-            <ul>
-              <li>It is alright if it loads SUDOKU, just proceed when allowed.</li>
-            </ul>
-          </li>
-          <li>Launch b9sTool by starting your DSiWare game.</li>
-          <li>Select <code>Dump F0F1</code> to backup the 3DS FIRM.</li>
-          <li>Select <code>Install boot9strap</code> and confirm.</li>
-          <li>Wait for it to say <code>done!</code>. Exit b9sTool and power off your 3DS.
-            <ul>
-              <li>You may need to force power off by holding the power button.</li>
-            </ul>
-          </li>
-          <li>Boot up your 3DS while holding <code>Select</code> to launch the Luma3DS configuration menu.
-            <ul>
-              <li>If your 3DS boots normally to the HOME Menu then boot9strap did not install correctly. Replace your prep files with freshly downloaded files and restore the F0F1 backup in b9sTool. Do not create a new F0F1 backup! Then try reinstalling boot9strap again.</li>
-            </ul>
-          </li>
-          <li>Use the <code>A</code> button and the D-pad to enable the following options:
-            <ul>
-              <li><code>Splashes</code> (before or after payloads, for Anemone Theme Manager's splashes function).</li>
-              <li><code>Enable Game Patching</code> (for soft-patching via Luma3DS).</li>
-              <li><code>Show NAND or User String in System Settings</code> (to confirm CFW is loaded).</li>
-            </ul>
-          </li>
-          <li style="height: 2em;">Press <code>Start</code> to save and reboot.</li>
-          <li><a href="https://3ds.hacks.guide/finalizing-setup"><b>Continue here to finish installing your CFW.</a></b>
-            <ul>
-              <li>You will be finished at section VIII of that page.</li>
-            </ul>
-          </li>
-          </li>
-        </ol>
+            </li>
+            <li>Hit the big blue <b>Build</b> button and watch the left side for your build to complete.
+              <ul>
+                <li class="txtli">🔵 means build completed with a usable artifact.</li>
+                <li class="txtli">🔴 means the <code>movable.sed</code> or <code>.bin</code> file was bad and needs to be remade.</li>
+              </ul>
+            </li>
+            <li>If you see your build is successful, click it and download the artifact made onto your SD card in <code>Nintendo DSiWare</code>.</li>
+            <li>Rename, move or delete the the original, untouched <code>.bin</code> file.</li>
+            <li>Rename the <code>.patched</code> file so it ends in <code>.bin</code> instead.
+              <ul>
+                <li>The previous three steps are intended to overwrite your game with a modified copy which launches b9stool.</li>
+              </ul>
+            </li>
+            <li><i>Properly</i> eject the SD card from your PC and put it in the console.</li>
+          </ol>
+          <h2>At your console</h2>
+          <ol>
+            <li>Open System Settings, Data Management, DSiWare.</li>
+            <li>In the SD Card tab, choose to copy the patched bin to System Memory. <i>Permit this operation in the following prompt.</i></li>
+            <li>When finished, exit to Home Menu and open the patched game.</li>
+          </ol>
+        </div>
       </div>
-      <div class="good msg in">If you've completed what is shown here, including this section (and the finalizing setup page in 3ds.hacks.guide) then congratulations! You've completed this guide and need to do nothing else for enjoying the fruits of your labour. Everything past this is extra stuff to enhance your console's functionality.</div>
-    </div>
-    <div class="warn msg br">Some things shown past this point may cause you to become banned from certain circles if discussed. As this guide isn't affiliated with any of those parties, they may not support you upon mention of this guide, or following the procedures shown after section 5. In order to cause the least amount of trouble, act like this guide doesn't exist when inquiring about any issues you may come across.</div>
-  </div>
-  </div>
-  <div>
-    <h2 class="head">Section 6 — Other 3DS software</h2>
-  </div>
-  <div class="sec"> <a href="#S6" class="show" id="S6" title="Click to expand!"><img src="https://rawgit.com/Hebgbs/Hebgbs.github.io/master/dummy.png" class="btn"></a> <a href="#H6" class="hide" id="H6" title="Click to collapse."><img src="https://rawgit.com/Hebgbs/Hebgbs.github.io/master/dummy.png" class="btn"></a>
-    <div class="ins act">
-      <div class="body">
-        <p>There is some other cool software you can install via FBI's TitleDB menu. As there is no additional preparation necessary, This section should be fairly straight-forward, especially compared with the long-winded process which permits the installation of such software. When finished, you will have<b>FTPD</b> and<b>Freeshop</b> made available to you. There is a <b>lot</b> of other software via TitleDB but the two mentioned are what may be considered most useful for games, patches and remote interaction with the SD card.</p>
+      <a class="item sechead">
+        <h2>Section 5 — CFW installation</h2>
+      </a>
+      <div class="sec">
+        <div class="info msg">Instructions shamelessly ripped off from <a href="https://jisagi.github.io/SeedminerGuide/injection/#section4">Jisagi's seedminer guide</a></div>
+        <div class="body">
+          <p>These instructions pertain to installing Boot9Strap, Luma3DS and GodMode9.</p>
+          <ol style="margin-bottom: 0px;">
+            <li>Launch b9sTool by starting your DSiWare game
+              <ul>
+                <li>It is alright if it loads SUDOKU, just proceed when allowed.</li>
+              </ul>
+            </li>
+            <li>Launch b9sTool by starting your DSiWare game.</li>
+            <li>Select <code>Dump F0F1</code> to backup the 3DS FIRM.</li>
+            <li>Select <code>Install boot9strap</code> and confirm.</li>
+            <li>Wait for it to say <code>done!</code>. Exit b9sTool and power off your 3DS.
+              <ul>
+                <li>You may need to force power off by holding the power button.</li>
+              </ul>
+            </li>
+            <li>Boot up your 3DS while holding <code>Select</code> to launch the Luma3DS configuration menu.
+              <ul>
+                <li>If your 3DS boots normally to the HOME Menu then boot9strap did not install correctly. Replace your prep files with freshly downloaded files and restore the F0F1 backup in b9sTool. Do not create a new F0F1 backup! Then try reinstalling boot9strap again.</li>
+              </ul>
+            </li>
+            <li>Use the <code>A</code> button and the D-pad to enable the following options:
+              <ul>
+                <li><code>Splashes</code> (before or after payloads, for Anemone Theme Manager's splashes function).</li>
+                <li><code>Enable Game Patching</code> (for soft-patching via Luma3DS).</li>
+                <li><code>Show NAND or User String in System Settings</code> (to confirm CFW is loaded).</li>
+              </ul>
+            </li>
+            <li style="height: 2em;">Press <code>Start</code> to save and reboot.</li>
+          </ol>
+        </div>
+        <div class="warn msg">At this point, <code>boot.firm</code> is required to exist on the SD card. Without it, <i>the console will not boot.</i> To resolve this, follow the instructions in the page linked below. </div>
+        <div class="body">
+          <ol start="9">
+            <li><a href="https://3ds.hacks.guide/finalizing-setup"><b>Continue here to finish installing your CFW.</a></b>
+              <ul>
+                <li>You will be finished at section VIII of that page.</li>
+              </ul>
+            </li>
+            </li>
+          </ol>
+        </div>
+        <div class="good msg">If you've completed what is shown here, including this section (and the finalizing setup page in 3ds.hacks.guide) then congratulations! You've completed this guide and need to do nothing else for enjoying the fruits of your labour. Everything past this is extra stuff to enhance your console's functionality.</div>
+      </div><br>
+      <div class="warn msg br">Some things shown past this point may cause you to become banned from certain circles if discussed. As this guide isn't affiliated with any of those parties, they may not support you upon mention of this guide, or following the procedures shown after section 5. In order to cause the least amount of trouble, act like this guide doesn't exist when inquiring about any issues you may come across.</div>
+      <a class="item sechead">
+        <h2>Section 6 — Other 3DS software</h2>
+      </a>
+      <div class="sec">
+        <div class="body">
+          <p>There is some other cool software you can install via FBI's TitleDB menu. As there is no additional preparation necessary, This section should be fairly straight-forward, especially compared with the long-winded process which permits the installation of such software. When finished, you will have<b>FTPD</b> and<b>Freeshop</b> made available to you. There is a <b>lot</b> of other software via TitleDB but the two mentioned are what may be considered most useful for games, patches and remote interaction with the SD card.</p>
+        </div>
+        <div class="info msg">If you only want one of the software shown below, follow instructions explicitly for that software only.</div>
         <h2>Software installation</h2>
-        <ol>
-          <li>Open FBI, and navigate to <code>TitleDB</code>.</li>
-          <li>Scroll to the F's, select and download <code>Freeshop</code>, then <code>ftpd</code>.
-            <ul>
-              <li>If you do not see <code>ftpd</code>, scroll to the S's, select and download <code>Super ftpd ii turbo</code>.</li>
-              <li>To navigate through the list faster, left and right act as page up and page down respectively.</li>
-              <li>For multiple entries in TitleDB, the bottom-most one is usually the latest.</li>
-              <li>When prompted, FBI will provide two options for installation. As follows;
-                <ul>
-                  <li class="txtli"><code>CIA</code>: Installs to system memory and creates a shortcut in Home Menu.</li>
-                  <li class="txtli"><code>3DSX</code>: installs to <code>3ds</code> on SD card, only accessible through the Homebrew Launcher.</li>
-                </ul>
-              </li>
+        <div class="body">
+          <ol>
+            <li>Open FBI, and navigate to <code>TitleDB</code>.</li>
+            <li>Scroll to the F's, select and download <code>Freeshop</code>, then <code>ftpd</code>.
+              <ul>
+                <li>If you do not see <code>ftpd</code>, scroll to the S's, select and download <code>Super ftpd ii turbo</code>.</li>
+                <li>To navigate through the list faster, left and right act as page up and page down respectively.</li>
+                <li>For multiple entries in TitleDB, the bottom-most one is usually the latest.</li>
+                <li>When prompted, FBI will provide two options for installation. As follows;
+                  <ul>
+                    <li class="txtli"><code>CIA</code>: Installs to system memory and creates a shortcut in Home Menu.</li>
+                    <li class="txtli"><code>3DSX</code>: installs to <code>3ds</code> on SD card, only accessible through the Homebrew Launcher.</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
             </ul>
-          </li>
+            </li>
+            <li>Exit FBI and unwrap your gifts.</li>
+          </ol>
+          <h2>Freeshop configuration</h2>
+          <ol>
+            <li>Open Freeshop.
+              <ul>
+                <li>As TitleDB installs 4.1.0 which was released around Halloween, Bernard Herrmann's <i>The Murder</i> score from Psycho plays instead of Freeshop's default splash music.</li>
+              </ul>
+            </li>
+            <li>After the change log, tap on the gear (⚙️) to access settings.</li>
+            <li>Select the <code>Update</code> tab and perform the following:
+              <ol>
+                <li>Enable <code>Auto-update title keys from URL</code>.</li>
+                <li>Tap on the keyboard (⌨️) which becomes available.</li>
+                <li>Give the input box this address: <code class="hl3" ;>http://3ds.titlekeys.gq/downloadenc</code>.</li>
+              </ol>
+            </li>
+            <li>Once finished, select <code>Refresh Cache</code> and enjoy unfettered access to over 4000 games.</li>
+          </ol> Or, you can continue to look in settings at the following tabs:
+          <ul>
+            <li class="txtli"><code>Filter</code>: Adjust what titles are displayed based on region, genre, language, origin platform and publisher.
+              <ul>
+                <li>The <code>Feature</code> tab has nothing, and crashes the console. Don't bother.</li>
+              </ul>
+            </li>
+            <li class="txtli"><code>Sort</code>: Adjust how games are sorted by release date, name, size, rating or vote tally.</li>
+            <li class="txtli"><code>Inactivity</code>: Adjust which screens and features are disabled after a specified timeout.</li>
           </ul>
-          </li>
-          <li>Exit FBI and unwrap your gifts.</li>
-        </ol>
-        <h2>Freeshop configuration</h2>
-        <ol>
-          <li>Open Freeshop.
-            <ul>
-              <li>As TitleDB installs 4.1.0 which was released around Halloween, Bernard Herrmann's <i>The Murder</i> score from Psycho plays instead of Freeshop's default splash music.</li>
-            </ul>
-          </li>
-          <li>After the change log, tap on the gear (⚙️) to access settings.</li>
-          <li>Select the <code>Update</code> tab and perform the following:
-            <ol>
-              <li>Enable <code>Auto-update title keys from URL</code>.</li>
-              <li>Tap on the keyboard (⌨️) which becomes available.</li>
-              <li>Give the input box this address: <code style="color: lime;">http://3ds.titlekeys.gq/downloadenc</code>.</li>
-            </ol>
-          </li>
-          <li>Once finished, select <code>Refresh Cache</code> and enjoy unfettered access to over 4000 games.</li>
-        </ol> Or, you can continue to look in settings at the following tabs:
-        <ul>
-          <li class="txtli"><code>Filter</code>: Adjust what titles are displayed based on region, genre, language, origin platform and publisher.
-            <ul>
-              <li>The <code>Feature</code> tab has nothing, and crashes the console. Don't bother.</li>
-            </ul>
-          </li>
-          <li class="txtli"><code>Sort</code>: Adjust how games are sorted by release date, name, size, rating or vote tally.</li>
-          <li class="txtli"><code>Inactivity</code>: Adjust which screens and features are disabled after a specified timeout.</li>
-        </ul>
-        <h2>Wireless transfer via FTP</h2>
-        <ol>
-          <li>Open your computer's FTP client.
-            <ul>
-              <li>Don't have one? <a href="https://filezilla-project.org">Filezilla client</a> is a solid multi-platform choice.</li>
-              <li>If you are forced to use a less capable device such as a Smartphone, the Android platform has various FTP utilities as well. One I recommend is ES File Explorer, which makes FTP navigation a cakewalk on mobile.</li>
-            </ul>
-          </li>
-          <li>Open FTPD on the 3DS.</li>
-          <li>At the top of the screen, IP and port are shown. As follows, this information is used in the two fields on Filezilla:
-            <ul>
-              <li>IP address goes into the<b>Host</b> field.</li>
-              <li>Port goes into the<b>Port</b> field (with FTPD's default being <code>5000</code>).</li>
-            </ul>
-          </li>
-          <li>To exit after file transfers had completed, press <code>B</code> twice.</li>
-        </ol>
-        <hr> </div>
-    </div>
-  </div>
-  <div>
-    <h2 class="head">Section 7 — 3DS operation from PC</h2>
-  </div>
-  <div class="sec"> <a href="#S7" class="show" id="S7" title="Click to expand!"><img src="https://rawgit.com/Hebgbs/Hebgbs.github.io/master/dummy.png" class="btn"></a> <a href="#H7" class="hide" id="H7" title="Click to collapse."><img src="https://rawgit.com/Hebgbs/Hebgbs.github.io/master/dummy.png" class="btn"></a>
-    <div class="ins act">
-      <div class="warn msg in">Input redirection features, until otherwise rectified is for WIndows machines only.</div>
-      <div class="warn msg in">As video casting is processor-intensive, BootNTR for this purpose is only suitable for "new" consoles.</div>
-      <div class="info msg">While Snickerstream is only compiled for Windows, it should run well in Wine.</div>
-      <div class="body">
-        <p>If you ever imagined about using your 3DS on your PC, well... <b>you can.</b> The overgrown asterisk in the room is the difference in processing power between consoles. If you are in possession of Nintendo's later "new" consoles you can do everything shown here. Else all you can do is use another controller attached to your PC, which may be beneficial for persons who dislike the 3DS' (lack of) ergonomics but still want to enjoy their titles.</p>
-        <h2>Knowing the console's IP</h2>
-        <p>As follows, perform these steps to enable reception of remote inputs and reveal the console's IP address:</p>
-        <ol>
-          <li>Hold <code>L</code> and <code>Down</code> while pressing <code>Select</code> to cue Luma3DS' Rosalina menu.
-            <ul>
-              <li>If you had changed this key combination since, use whatever it was you assigned it to.</li>
-            </ul>
-          </li>
-          <li>Select <code>Miscellaneous options</code>.</li>
-          <li>Se;ect <code>Start InputRedirection</code>.</li>
-          <li>Press <code>B</code> to back out until you see the console's IP address.</li>
-        </ol>
-        <p>With the IP address noted, you can begin installing utilities on the PC which can utilize this information to connect with the console.</p>
-        <h2>Acquiring software for remote operation</h2>
+          <h2>Wireless transfer via FTP</h2>
+          <ol>
+            <li>Open your computer's FTP client.
+              <ul>
+                <li>Don't have one? <a href="https://filezilla-project.org">Filezilla client</a> is a solid multi-platform choice.</li>
+                <li>If you are forced to use a less capable device such as a Smartphone, the Android platform has various FTP utilities as well. One I recommend is ES File Explorer, which makes FTP navigation a cakewalk on mobile.</li>
+              </ul>
+            </li>
+            <li>Open FTPD on the 3DS.</li>
+            <li>At the top of the screen, IP and port are shown. As follows, this information is used in the two fields on Filezilla:
+              <ul>
+                <li>IP address goes into the<b>Host</b> field.</li>
+                <li>Port goes into the<b>Port</b> field (with FTPD's default being <code>5000</code>).</li>
+              </ul>
+            </li>
+            <li>To exit after file transfers had completed, press <code>B</code> twice.</li>
+          </ol>
+        </div>
       </div>
-      <div class="info msg in">Both devices needs to be on the same network for any network-based utilities to function.</div>
-      <div class="good msg">If you lack an XInput-compatible device, there is an alternative! Read on to find out.</div>
-      <div class="body">
-        <ol>
-          <li><a href="https://github.com/TuxSH/InputRedirectionClient-Qt/releases">Download the latest version of Input Redirection Client.</a></li>
-          <li><a href="https://github.com/RattletraPM/Snickerstream/releases">Download the latest version of Snickerstream.</a></li>
-          <li><a href="https://github.com/Nanquitas/BootNTR/releases">Either version of BootNTR Selector from here.</a>
-            <ul>
-              <li><i>Not <code>Mode3</code>, nor the <code>.3dsx</code> file.</i></li>
-              <li>Banner doesn't matter; they're both rocketships. FONZD is a long spacecraft while PabloMK7 is a rocket pod.</li>
-            </ul>
-          </li>
-        </ol>
-        <h2>Installing acquired software</h2>
-        <ol>
-          <li>Extract archives for Input Redirection Client and Snickerstream to somewhere memorable.
-            <ul>
-              <li>For tidiness, the suite of files from this archive should be in their own directory.</li>
-            </ul>
-          </li>
-          <li>Transfer the <code>.cia</code> file into the 3DS' SD card.
-            <ul>
-              <li>Had you set this up earlier, you can use FTP should SMB via the native microSD Management feature be of no use.</li>
-              <li>The cleanup script ran during installation of CFW will had deleted the <code>cias</code> directory; FBI can install from anywhere.</li>
-            </ul>
-          </li>
-          <li>Open FBI.
-            <li>Select <code>SD</code>, then find the CIA file there.</li>
-            <li>After installing it, exit FBI and unwrap your gift.</li>
-        </ol>
-        <h2>Configuring and use of installed software</h2>
-        <h3>Input Redirection</h3>
-        <ol>
-          <li>Open Input Redirection Client.</li>
-          <li>Enable Input Redirection on the 3DS.</li>
-          <li>Give it your console's IP address.
-            <ul>
-              <li>If you prefer button placement to match the console, enable the boxes for inverting the face buttons.</li>
-            </ul>
-          </li>
-        </ol>
-        <p>If you are <b>not</b> in possession of an XInput-compatible controller, there is a way to make <i>any</i> controller compatible with Microsoft's API to make it useful with the input redirection feature from Luma3DS.</p>
-      </div>
-      <div class="warn msg">Hold it, before following these instructions for x360ce you should also confirm the controller functions as expected for emulating XInput before even beginning to use the software described below.</div>
-      <div class="body">
-        <ol>
-          <li><a href="https://www.x360ce.com/">Download the 32-bit version of DacoTaco's Xbox 360 controller emulator</a> (hereon: <i>x360ce</i>).</li>
-          <li>Extract, then run the software where it had been extracted.
-            <ul>
-              <li>You can also extract x360ce into the directory whose program you want to use it with.</li>
-            </ul>
-          </li>
-          <li>Open x360ce, then permit it to find a functional preset for your controller.</ul>
-            <li>If that doesn't work straight away, end its task, then select <code>Auto</code> in the General tab.</li>
-            <li>Alternatively, look in the Controller Settings tab to find a functional preset matching your hardware.</li>
-            </ul>
-          </li>
-          <li><i>If applicable</i>, copy files <code>x360ce.ini</code> and <code>xinput1_3.dll</code> where <code>InputReciredtionClient-Qt.exe</code> is.</li>
-          <li>Rename <code>xinput1_3.dll</code> to <code>xinput1_4.exe</code>.
-            <ul>
-              <li>Alternatively, create a hardlink for <code>xinput1_3.dll</code> named <code>xinput1_4.dll</code> if the software resides on an NTFS partition.</li>
-            </ul>
-          </li>
-          <li>Run <code>InputRedirectionClient-Qt.exe</code>. If successful, you should hear a tone to confirm x360ce is emulating XInput.</li>
-        </ol>
-        <h3>Video casting</h3>
-      </div>
-      <div class="warn msg in">Some items may simply not work, and launching certain titles while casting may crash the console.</div>
-      <div class="info msg">Crashes will not permanently disable the console; simply hold down the power button until the lights go out and power it back on.</div>
-      <div class="body">
-        <ol>
-          <li>On the 3DS, open BootNTR selector.</li>
-          <li>Go along with default everything, and select version 3.6.</li>
-          <li>Return to home menu.</li>
-          <li>Launch Snickerstream.
-            <ul>
-              <li>In doing this, a new <code>settings.ini</code> file is made where the executable exists. These settings may be of interest:
-                <ul>
-                  <li class="txtli"><code>IpAddr</code>: The default console IP address Snickerstream will look for.</li>
-                  <li class="txtli"><code>Framelimit</code>: Add this in a new line to specify the maximum number of casted frames.</li>
-				  <li><code>notepad.exe</code> cannot read the line breaks in this file, use an alternative editor such as <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=2ahUKEwi78ZPm-PvaAhVr4oMKHXzaAMgQFjAAegQIABAq&url=https%3A%2F%2Fnotepad-plus-plus.org%2F&usg=AOvVaw0iXSCYMB4lh5GlGEAEs2Jd">Notepad++</a>.
-                </ul>
+      <a class="item sechead">
+        <h2>Section 7 — 3DS operation from PC</h2>
+      </a>
+      <div class="sec">
+        <div class="warn msg br">Input redirection features, until otherwise rectified is for WIndows machines only.</div>
+        <div class="warn msg br">As video casting is processor-intensive, BootNTR for this purpose is only suitable for "new" consoles.</div>
+        <div class="info msg">While Snickerstream is only compiled for Windows, it should run well in Wine.</div>
+        <div class="body">
+          <p>If you ever imagined about using your 3DS on your PC, well... <b>you can.</b> The overgrown asterisk in the room is the difference in processing power between consoles. If you are in possession of Nintendo's later "new" consoles you can do everything shown here. Else all you can do is use another controller attached to your PC, which may be beneficial for persons who dislike the 3DS' (lack of) ergonomics but still want to enjoy their titles.</p>
+          <h2>Knowing the console's IP</h2>
+          <p>As follows, perform these steps to enable reception of remote inputs and reveal the console's IP address:</p>
+          <ol>
+            <li>Hold <code>L</code> and <code>Down</code> while pressing <code>Select</code> to cue Luma3DS' Rosalina menu.
+              <ul>
+                <li>If you had changed this key combination since, use whatever it was you assigned it to.</li>
+              </ul>
+            </li>
+            <li>Select <code>Miscellaneous options</code>.</li>
+            <li>Se;ect <code>Start InputRedirection</code>.</li>
+            <li>Press <code>B</code> to back out until you see the console's IP address.</li>
+          </ol>
+          <p>With the IP address noted, you can begin installing utilities on the PC which can utilize this information to connect with the console.</p>
+          <h2>Acquiring software for remote operation</h2>
+        </div>
+        <div class="info msg br">Both devices needs to be on the same network for any network-based utilities to function.</div>
+        <div class="good msg">If you lack an XInput-compatible device, there is an alternative! Read on to find out.</div>
+        <div class="body">
+          <ol>
+            <li><a href="https://github.com/TuxSH/InputRedirectionClient-Qt/releases">Download the latest version of Input Redirection Client.</a></li>
+            <li><a href="https://github.com/RattletraPM/Snickerstream/releases">Download the latest version of Snickerstream.</a></li>
+            <li><a href="https://github.com/Nanquitas/BootNTR/releases">Either version of BootNTR Selector from here.</a>
+              <ul>
+                <li><i>Not <code>Mode3</code>, nor the <code>.3dsx</code> file.</i></li>
+                <li>Banner doesn't matter; they're both rocketships. FONZD is a long spacecraft while PabloMK7 is a rocket pod.</li>
+              </ul>
+            </li>
+          </ol>
+          <h2>Installing acquired software</h2>
+          <ol>
+            <li>Extract archives for Input Redirection Client and Snickerstream to somewhere memorable.
+              <ul>
+                <li>For tidiness, the suite of files from this archive should be in their own directory.</li>
+              </ul>
+            </li>
+            <li>Transfer the <code>.cia</code> file into the 3DS' SD card.
+              <ul>
+                <li>Had you set this up earlier, you can use FTP should SMB via the native microSD Management feature be of no use.</li>
+                <li>The cleanup script ran during installation of CFW will had deleted the <code>cias</code> directory; FBI can install from anywhere.</li>
+              </ul>
+            </li>
+            <li>Open FBI.
+              <li>Select <code>SD</code>, then find the CIA file there.</li>
+              <li>After installing it, exit FBI and unwrap your gift.</li>
+          </ol>
+          <h2>Configuring and use of installed software</h2>
+          <h3>Input Redirection</h3>
+          <ol>
+            <li>Open Input Redirection Client.</li>
+            <li>Enable Input Redirection on the 3DS.</li>
+            <li>Give it your console's IP address.
+              <ul>
+                <li>If you prefer button placement to match the console, enable the boxes for inverting the face buttons.</li>
+              </ul>
+            </li>
+          </ol>
+          <p>If you are <b>not</b> in possession of an XInput-compatible controller, there is a way to make <i>any</i> controller compatible with Microsoft's API to make it useful with the input redirection feature from Luma3DS.</p>
+        </div>
+        <div class="warn msg">Hold it, before following these instructions for x360ce you should also confirm the controller functions as expected for emulating XInput before even beginning to use the software described below.</div>
+        <div class="body">
+          <ol>
+            <li><a href="https://www.x360ce.com/">Download the 32-bit version of DacoTaco's Xbox 360 controller emulator</a> (hereon: <i>x360ce</i>).</li>
+            <li>Extract, then run the software where it had been extracted.
+              <ul>
+                <li>You can also extract x360ce into the directory whose program you want to use it with.</li>
+              </ul>
+            </li>
+            <li>Open x360ce, then permit it to find a functional preset for your controller.</ul>
+              <li>If that doesn't work straight away, end its task, then select <code>Auto</code> in the General tab.</li>
+              <li>Alternatively, look in the Controller Settings tab to find a functional preset matching your hardware.</li>
+              </ul>
+            </li>
+            <li><i>If applicable</i>, copy files <code>x360ce.ini</code> and <code>xinput1_3.dll</code> where <code>InputReciredtionClient-Qt.exe</code> is.</li>
+            <li>Rename <code>xinput1_3.dll</code> to <code>xinput1_4.exe</code>.
+              <ul>
+                <li>Alternatively, create a hardlink for <code>xinput1_3.dll</code> named <code>xinput1_4.dll</code> if the software resides on an NTFS partition.</li>
+              </ul>
+            </li>
+            <li>Run <code>InputRedirectionClient-Qt.exe</code>. If successful, you should hear a tone to confirm x360ce is emulating XInput.</li>
+          </ol>
+          <h3>Video casting</h3>
+        </div>
+        <div class="warn msg br">Some items may simply not work, and launching certain titles while casting may crash the console.</div>
+        <div class="info msg">Crashes will not permanently disable the console; simply hold down the power button until the lights go out and power it back on.</div>
+        <div class="body">
+          <ol>
+            <li>On the 3DS, open BootNTR selector.</li>
+            <li>Go along with default everything, and select version 3.6.</li>
+            <li>Return to home menu.</li>
+            <li>Launch Snickerstream.
+              <ul>
+                <li>In doing this, a new <code>settings.ini</code> file is made where the executable exists. These settings may be of interest:
+                  <ul>
+                    <li class="txtli"><code>IpAddr</code>: The default console IP address Snickerstream will look for.</li>
+                    <li class="txtli"><code>Framelimit</code>: Add this in a new line to specify the maximum number of casted frames.</li>
+                    <li><code>notepad.exe</code> cannot read the line breaks in this file, use an alternative editor such as <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=2ahUKEwi78ZPm-PvaAhVr4oMKHXzaAMgQFjAAegQIABAq&url=https%3A%2F%2Fnotepad-plus-plus.org%2F&usg=AOvVaw0iXSCYMB4lh5GlGEAEs2Jd">Notepad++</a>. </ul>
+                  </li>
+              </ul>
               </li>
-            </ul>
-          </li>
-          <li>Give Snickerstream the console's IP address. (It's the same one you give to Input Redirection Client.)
-            <li>In the Preset section, specify _Best framerate_ to test, initially.</li>
-            <li>Choose to connect; If it worked, scale video with <code>[Up]</code> and <code>[Down]</code> on the keyboard.</li>
-            <li>When finished streaming, press <code>[Esc]</code> to exit.</li>
-        </ol>
+              <li>Give Snickerstream the console's IP address. (It's the same one you give to Input Redirection Client.)
+                <li>In the Preset section, specify <i>Best framerate</i> to test, initially.</li>
+                <li>Choose to connect; If it worked, scale video with <code>[Up]</code> and <code>[Down]</code> on the keyboard.</li>
+                <li>When finished streaming, press <code>[Esc]</code> to exit.</li>
+          </ol>
+        </div>
+        <div class="info msg br">Some better Snickerstream instructions may be provided in the future. Sorry I can't help any greater than this: I only have an old 3DS but I've seen it in action so I know it works for some people.</div>
+        <div class="good msg">If you've read this far, thank you for your time. If this guide had failed to assist you in any way, forward whatever concerns to whoever sent this to you. If you have a Github account and a desire to append further onto this, then by all means make modifications and contribute!</div>
       </div>
-      <div class="info msg in">Some better Snickerstream instructions may be provided in the future. Sorry I can't help any greater than this: I only have an old 3DS but I've seen it in action so I know it works for some people.</div>
-      <div class="good msg">If you've read this far, thank you for your time. If this guide had failed to assist you in any way, forward whatever concerns to whoever sent this to you. If you have a Github account and a desire to append further onto this, then by all means make modifications and contribute!</div>
-    </div>
-  </div>
-  <div class="good msg br">If you are going to use the code which renders this page for your own guide, no attribution is necessary: I hereby grant CC0 license to this work. Do whatever the hell you feel like with it!</div>
-  </div>
-  <!-- Template section for future use, where applicable. --
-
- <div><h2 class="head">TEMPLATE TITLE</h2></div>
+      <!-- SECTION TEMPLATE --
+<a class="item sechead"><h2>Preparation</h2></a>
 <div class="sec">
- <a href="#S1" class="show" id="S1"><img src="https://rawgit.com/Hebgbs/Hebgbs.github.io/master/dummy.png" class="btn"></a>
- <a href="#H1" class="hide" id="H1"><img src="https://rawgit.com/Hebgbs/Hebgbs.github.io/master/dummy.png" class="btn"></a>
- <div class="ins">
-      TEMPLATE TEXT
- </div>
- </div>
- 
--->
-</body>
+	<p>This is a sentence.</p>
+</div>
+-- END OF TEMPLATE --></div> <br> <small style="float: right; text-align: right;">Accodion script by Dynamic Drive. Guide by Heebeejeebees.</small> </body>
 
 </html>
