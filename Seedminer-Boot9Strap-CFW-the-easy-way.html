@@ -16,8 +16,8 @@
     </script>
     <script type="text/javascript">
     ddaccordion.init({
-      headerclass: "sechead", //Shared CSS class name of headers group
-      contentclass: "sec", //Shared CSS class name of contents group
+      headerclass: "section", //Shared CSS class name of headers group
+      contentclass: "ins", //Shared CSS class name of contents group
       revealtype: "click", //Reveal content when user clicks or onmouseover the header? Valid value: "click", "clickgo", or "mouseover"
       mouseoverdelay: 200, //if revealtype="mouseover", set delay in milliseconds before header expands onMouseover
       collapseprev: true, //Collapse previous content (so only one open at any time)? true/false 
@@ -49,7 +49,7 @@
       font-family: Inconsolata, Consolas, Ubuntu Mono, monospace;
     }
 
-    .sechead H2 {
+    .section H2 {
       margin: 5px 0;
     }
 
@@ -189,7 +189,7 @@
       background: #333;
     }
 
-    .guide div.sec {
+    .guide div.ins {
       /*DIV that contains each sub menu*/
       background: #555;
       padding: .01px;
@@ -199,15 +199,15 @@
   </head>
 
   <body>
-    <h1>Seedminer Boot9Strap CFW the easy way<br> <small>A tutorial for people who just want to <i>get it done.</i></small></h1>
+    <h1>Seedminer Boot9Strap CFW the easy way (+ bonus features)<br> <small>A tutorial for people who just want to <i>get it done.</i></small></h1>
     <div class="guide">
       <div class="busy msg br">This page is still undergoind construction, so some content may change in the future! The only thing really <i>all there</i> is the guide itself.</div>
       <div class="info msg br"><a href="https://discord.gg/MWxPgEp">For help with most Nintendo Homebrew things, there's a Discord guild for that.</a> This guide is not associated with them, but you can join there anyway for general inqueries.</div>
       <div class="info msg br">If you are interested in free games and other topics Nintendo Homebrew may outright ban you for, ask whoever gave you this page about another guild more open to that kind of discussion. Otherwise, you'll be finished with this guide at section 5.</div>
-      <a class="item sechead">
+      <a class="item section">
         <h2>Preface and summary</h2>
       </a>
-      <div class="sec">
+      <div class="ins">
         <div class="warn msg br">This guide is intended for use with <i>completely stock</i> 3DS consoles using firmware 11.4 - 11.6.0-39. Following these instructions with an Arm9LoaderHax-modifed console or with future firmware installed prior to modification will brick the console. Don't even try.</div>
         <div class="info msg br">Any reference to 3DS also applies for 2DS, meaning that regardless of model these instructions will apply.</div>
         <div class="good msg">After completing these instructions, it is safe to update Boot9Strap, Luma3DS and the console firmware.</div>
@@ -276,10 +276,10 @@
           <li>Further sections of this guide are hidden for convenience. Click on each heading to reveal its contents. Limit one active.</li>
         </ul>
       </div>
-      <a class="item sechead">
+      <a class="item section" id="title1">
         <h2>Section 1 — Preparation</h2>
       </a>
-      <div class="sec">
+      <div class="ins">
         <div class="body">
           <p>Before even beginning upon this saga that is the ritual of single-console CFW via this method, you need to make sure you have everything necessary for a successful installation. Without any of what is shown below, you may either not be able to perform some instructions, or embark upon this at all.</p>
           <h3>You will need the following</h3>
@@ -308,10 +308,10 @@
             </li>
         </div>
       </div>
-      <a class="item sechead">
+      <a class="item section" id="title2">
         <h2>Section 2 — Initial steps</h2>
       </a>
-      <div class="sec">
+      <div class="ins">
         <div class="info msg">If you have to, go into Windows Explorer's options and disable hiding of known file extensions. As it is beyond the scope of this guide, search for this information yourself.</div>
         <div class="body">
           <p>After having fulfilled everything in the above section, only <i>then</i> are you ready to begin without encountering any future difficulties. Unlike other guides online, this one provides a single archive providing a <i>universal</i> set of files <b>up to 11.6.0-39</b>.</p>
@@ -359,16 +359,16 @@ Purchase an injectable game from this list.</a></li>
           </ol>
         </div>
       </div>
-      <a class="item sechead">
+      <a class="item section" id="title3">
         <h2>Section 3 — Seedminer</h2>
       </a>
-      <div class="sec">
+      <div class="ins">
         <div class="good msg br">
           <h2>If you cannot mine and are using <a href="https://seedhelpeer.figgyc.uk">Seedhelper</a>, you do not need to download seedminer.</h2>You can use that service instead of following most of this section. To use seedhelper:
           <ol>
             <li>Give Seedhelper your part1 and id0
               <ul>
-                <li>Your id0 was obtained earlier; you should still have it per instructions in section 2.</li>
+                <li>Your id0 was obtained earlier; you should still have it per instructions in <a href="https://rawgit.com/Hebgbs/Hebgbs.github.io/master/Seedminer-Boot9Strap-CFW-the-easy-way.html?section=2#title2">section 2.</a></li>
               </ul>
             </li>
             <li>Add the firend code for user <code>figgyc</code></li>
@@ -436,7 +436,7 @@ Purchase an injectable game from this list.</a></li>
             <li>Execute <code>py -3 seedminer_launcher3.py id0 [id0]</code>.
               <ul>
                 <li><i>Example:</i> <code>py -3 seedminer_launcher3.py id0 <span class="hl1">4a5b6c7d8effe0d1c2b3aa9b0c1d2e3f</span></code>.</li>
-                <li>If you are confused about what your id0 is, see <b>section 2</b>. </ul>
+                <li>If you are confused about what your id0 is, see <b><a href="https://rawgit.com/Hebgbs/Hebgbs.github.io/master/Seedminer-Boot9Strap-CFW-the-easy-way.html?section=2#title2">section 2</a></b>. </ul>
               </li>
               <li>Execute <code>py -3 seedminer_launcher3.py gpu</code>.
                 <ul>
@@ -449,11 +449,11 @@ Purchase an injectable game from this list.</a></li>
           </ol>
         </div>
       </div>
-      <a class="item sechead">
+      <a class="item section" id="title4">
         <h2>Section 4 — DSiWare injection</h2>
       </a>
-      <div class="sec">
-        <div class="warn msg">None of these steps are of any use without your <code>movable.sed</code>. Acquire it from seedhelper or make it yourself in seedminer (see section 3).</div>
+      <div class="ins">
+        <div class="warn msg">None of these steps are of any use without your <code>movable.sed</code>. Acquire it from seedhelper or make it yourself in seedminer (see <a href="https://rawgit.com/Hebgbs/Hebgbs.github.io/master/Seedminer-Boot9Strap-CFW-the-easy-way.html?section=3#title3">section 3</a>).</div>
         <div class="body">
           <p>These series of steps are necessary for producing your CFW entrypoint. Without it, the additional software on your SD card is rendered useless.</p>
           <h2>At your computer</h2>
@@ -493,10 +493,10 @@ website to build your patched bin.</a></li>
           </ol>
         </div>
       </div>
-      <a class="item sechead">
+      <a class="item section" id="title5">
         <h2>Section 5 — CFW installation</h2>
       </a>
-      <div class="sec">
+      <div class="ins">
         <div class="info msg">Instructions shamelessly ripped off from <a href="https://jisagi.github.io/SeedminerGuide/injection/#section4">Jisagi's seedminer guide</a></div>
         <div class="body">
           <p>These instructions pertain to installing Boot9Strap, Luma3DS and GodMode9.</p>
@@ -540,13 +540,13 @@ website to build your patched bin.</a></li>
             </li>
           </ol>
         </div>
-        <div class="good msg">If you've completed what is shown here, including this section (and the finalizing setup page in 3ds.hacks.guide) then congratulations! You've completed this guide and need to do nothing else for enjoying the fruits of your labour. Everything past this is extra stuff to enhance your console's functionality.</div>
+        <div class="good msg">If you've completed what is shown here, including this section (and the finalizing setup page in 3ds.hacks.guide) then congratulations! You've completed this guide and need to do nothing else for enjoying the fruits of your labour. However, as many people enjoy a good bonus the two sections after this are for better utilizing the features of your custom firmware and expanding its functionality.</div>
       </div><br>
       <div class="warn msg br">Some things shown past this point may cause you to become banned from certain circles if discussed. As this guide isn't affiliated with any of those parties, they may not support you upon mention of this guide, or following the procedures shown after section 5. In order to cause the least amount of trouble, act like this guide doesn't exist when inquiring about any issues you may come across.</div>
-      <a class="item sechead">
+      <a class="item section" id="title6">
         <h2>Section 6 — Other 3DS software</h2>
       </a>
-      <div class="sec">
+      <div class="ins">
         <div class="body">
           <p>There is some other cool software you can install via FBI's TitleDB menu. As there is no additional preparation necessary, This section should be fairly straight-forward, especially compared with the long-winded process which permits the installation of such software. When finished, you will have<b>FTPD</b> and<b>Freeshop</b> made available to you. There is a <b>lot</b> of other software via TitleDB but the two mentioned are what may be considered most useful for games, patches and remote interaction with the SD card.</p>
         </div>
@@ -617,10 +617,10 @@ website to build your patched bin.</a></li>
           </ol>
         </div>
       </div>
-      <a class="item sechead">
+      <a class="item section" id="title7">
         <h2>Section 7 — 3DS operation from PC</h2>
       </a>
-      <div class="sec">
+      <div class="ins">
         <div class="warn msg br">Input redirection features, until otherwise rectified is for WIndows machines only.</div>
         <div class="warn msg br">As video casting is processor-intensive, BootNTR for this purpose is only suitable for "new" consoles.</div>
         <div class="info msg">While Snickerstream is only compiled for Windows, it should run well in Wine.</div>
@@ -734,8 +734,8 @@ website to build your patched bin.</a></li>
         <div class="good msg">If you've read this far, thank you for your time. If this guide had failed to assist you in any way, forward whatever concerns to whoever sent this to you. If you have a Github account and a desire to append further onto this, then by all means make modifications and contribute!</div>
       </div>
       <!-- SECTION TEMPLATE --
-<a class="item sechead"><h2>Preparation</h2></a>
-<div class="sec">
+<a class="item section"><h2>Preparation</h2></a>
+<div class="ins">
 	<p>This is a sentence.</p>
 </div>
 -- END OF TEMPLATE --></div> <br> <small style="float: right; text-align: right;">Accordion script by Dynamic Drive. Guide by Heebeejeebees.</small> </body>
