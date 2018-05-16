@@ -45,9 +45,13 @@
       font-family: Myraid Pro, PT Sans, Ubuntu Sans, sans-serif;
     }
 
-    CODE {
+    CODE, PRE {
       font-family: Inconsolata, Consolas, Ubuntu Mono, monospace;
     }
+	
+	PRE{
+	margin: 0;
+	display: block;}
 
     .section H2 {
       margin: 5px 0;
@@ -261,13 +265,13 @@
           </ul>
           <h3>The following additional steps can also be performed after installation of CFW:</h3>
           <ul>
-            <li>Installation of <b>FTPD</b>, an FTP server for 3DS through FBI's access to TitleDB.</li>
+            <li>Installation of <b>FTPD</b>, an FTP server for 2DS / 3DS.</li>
             <li>Installation of <b>Freeshop</b>, an open-source clone of Nintendo's eShop with title management.</li>
-            <li>Installation of <b>InputRedirectionQt</b> for use of Luma3DS' input redirection, a feature to use controllers attached to a PC.</li>
+            <li>Installation of <b>InputRedirectionClient-Qt</b> for use of Luma3DS' input redirection, a feature to use controllers attached to a PC.</li>
             <li>Installation of <b>Snickerstream</b> for casting video from the console onto PC.</li>
           </ul>
         </div>
-        <div class="warn msg">You will be performing these instructions <i>at your own risk.</i> This means any failure in following these instructions will be exclusively your fault; the author of this content, authors of related software shown and persons assisting you will <i>not</i> be at fault.</div>
+        <div class="warn msg">You will be performing these instructions <i>at your own risk.</i> This means any failure in following these instructions or instability the system may encounter while using custom firmware will be exclusively your fault; the author of this content, authors of related software shown and persons assisting you will <i>not</i> be at fault.</div>
       </div> <br>
       <div class="info msg">For convenience and your own understanding, this page behaves as follows:
         <ul>
@@ -275,7 +279,8 @@
           <li>This guide assumes you are using Microsoft Windows. Despite that, all web services are available to all web platforms.</li>
           <li>Further sections of this guide are hidden for convenience. Click on each heading to reveal its contents. Limit one active.</li>
         </ul>
-      </div>
+      </div><br>
+	  <div class="warn msg">Everything shown in this guide is procedural and top-down. This means steps should be followed in the order as shown for the best chance of success.</div>
       <a class="item section" id="title1">
         <h2>Section 1 — Preparation</h2>
       </a>
@@ -497,6 +502,43 @@ website to build your patched bin.</a></li>
         <h2>Section 5 — CFW installation</h2>
       </a>
       <div class="ins">
+	  <div class="body"><p>As one final reminder about the intended directory structure before you begin to install your CFW, here ia a tree view of the files and directories given from <code>seedkit.zip</code> after they had been extracted, excluding <code>Nintendo 3DS</code> and other extraneous directories:<br>
+	  <div style="margin: 20px; padding: 10px; background-color: #333; border: 2px solid #777; line-height: 1.15;"><pre>
+[Your SD card]
+│   boot.3dsx
+│   boot.firm
+│   boot.nds
+│   boot9strap.firm
+│
+├───3ds
+│       FBI.3dsx
+│
+├───cias
+│       Anemone3DS.cia
+│       Checkpoint.cia
+│       DSP1.cia
+│       FBI.cia
+│       hblauncher_loader.cia
+│       lumaupdater.cia
+│
+├───gm9
+│   ├───scripts
+│   │       Backup EmuNAND.gm9
+│   │       Backup SysNAND.gm9
+│   │       cleanup_sd_card.gm9
+│   │       Restore EmuNAND.gm9
+│   │       Restore SysNAND (Full).gm9
+│   │       Restore SysNAND (Safe).gm9
+│   │       setup_ctrnand_luma3ds.gm9
+│   │
+│   └───support
+│           aeskeydb.bin.here
+│           encTitleKeys.bin.here
+│           seeddb.bin.here
+│
+└───luma
+    └───payloads
+            GodMode9.firm</pre></div></div>
         <div class="info msg">Instructions shamelessly ripped off from <a href="https://jisagi.github.io/SeedminerGuide/injection/#section4">Jisagi's seedminer guide</a></div>
         <div class="body">
           <p>These instructions pertain to installing Boot9Strap, Luma3DS and GodMode9.</p>
@@ -532,7 +574,7 @@ website to build your patched bin.</a></li>
         <div class="warn msg">At this point, <code>boot.firm</code> is required to exist on the SD card. Without it, <i>the console will not boot.</i> To resolve this, follow the instructions in the page linked below. </div>
         <div class="body">
           <ol start="9">
-            <li><a href="https://3ds.hacks.guide/finalizing-setup"><b>Continue here to finish installing your CFW.</a></b>
+            <li><a href="https://3ds.hacks.guide/finalizing-setup#section-ii---updating-the-system"><b>Continue here to finish installing your CFW.</a></b>
               <ul>
                 <li>You will be finished at section VIII of that page.</li>
               </ul>
