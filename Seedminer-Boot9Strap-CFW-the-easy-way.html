@@ -205,7 +205,6 @@
   <body>
     <h1>Seedminer Boot9Strap CFW the easy way (+ bonus features)<br> <small>A tutorial for people who just want to <i>get it done.</i></small></h1>
     <div class="guide">
-      <div class="busy msg br">This page is still undergoind construction, so some content may change in the future! The only thing really <i>all there</i> is the guide itself.</div>
       <div class="info msg br"><a href="https://discord.gg/MWxPgEp">For help with most Nintendo Homebrew things, there's a Discord guild for that.</a> This guide is not associated with them, but you can join there anyway for general inqueries.</div>
       <div class="info msg br">If you are interested in free games and other topics Nintendo Homebrew may outright ban you for, ask whoever gave you this page about another guild more open to that kind of discussion. Otherwise, you'll be finished with this guide at section 5.</div>
       <a class="item section">
@@ -503,7 +502,7 @@ website to build your patched bin.</a></li>
       </a>
       <div class="ins">
 	  <div class="body"><p>As one final reminder about the intended directory structure before you begin to install your CFW, here ia a tree view of the files and directories given from <code>seedkit.zip</code> after they had been extracted, excluding <code>Nintendo 3DS</code> and other extraneous directories: If you do not have this archive, get it from <a href="https://rawgit.com/Hebgbs/Hebgbs.github.io/master/Seedminer-Boot9Strap-CFW-the-easy-way.html?section=2#title2">section 2</a>.<br>
-	  <div style="margin: 20px; padding: 10px; background-color: #333; border: 2px solid #777; line-height: 1.15;"><pre>
+	  <div style="margin: 20px 10px; padding: 20px; background-color: #333; border: 2px solid #777; line-height: 1.15;"><pre>
 [Your SD card]
 │   boot.3dsx
 │   boot.firm
@@ -539,9 +538,11 @@ website to build your patched bin.</a></li>
 └───luma
     └───payloads
             GodMode9.firm</pre></div></div>
-        <div class="info msg">Instructions shamelessly ripped off from <a href="https://jisagi.github.io/SeedminerGuide/injection/#section4">Jisagi's seedminer guide</a></div>
+			<div class="good msg br">If having followed instructions elsewhere which mandated creation of a <code>boot9strap</code> directory, there is no need for that to exist so it can either be deleted, or all contents within there can be deleted and the copy of <code>boot9strap.firm</code> from <code>seedkit.zip</code> can reside in there. This procedure isn't necessary, as b9stool can read from SD card root.</div>
+        <div class="info msg br">Instructions below shamelessly ripped off from <a href="https://jisagi.github.io/SeedminerGuide/injection/#section4">Jisagi's seedminer guide</a></div>
+		<div class="warn msg br">These instructions will fail without following <a href="file:///f:/documents/github/hebgbs.github.io/Seedminer-Boot9Strap-CFW-the-easy-way.html?section=4#title4">section 4</a>.</div>
         <div class="body">
-          <p>These instructions pertain to installing Boot9Strap, Luma3DS and GodMode9.</p>
+          <p>To install Boot9Strap, Luma3DS and GodMode9, follow these steps:</p>
           <ol style="margin-bottom: 0px;">
             <li>Launch b9sTool by starting your DSiWare game
               <ul>
