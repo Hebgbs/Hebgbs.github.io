@@ -227,7 +227,7 @@
         <h2>Preface and summary</h2>
       </a>
       <div class="ins">
-        <div class="warn msg br">This guide is intended for use with <i>completely stock</i> 3DS consoles using firmware 11.4 - 11.6.0-39. Following these instructions with an Arm9LoaderHax-modifed console or with future firmware installed prior to modification will brick the console. Don't even try.</div>
+        <div class="warn msg br">This guide is intended for use with <i>completely stock</i> 3DS consoles using firmware 11.4 - 11.7.0-40. Following these instructions with an Arm9LoaderHax-modifed console or with future firmware installed prior to modification will brick the console. Don't even try.</div>
         <div class="info msg br">Any reference to 3DS also applies for 2DS, meaning that regardless of model these instructions will apply.</div>
         <div class="good msg">After completing these instructions, it is safe to update Boot9Strap, Luma3DS and the console firmware.</div>
         <div class="body end">
@@ -611,7 +611,7 @@ website to build your patched bin.</a></li>
           <p>There is some other cool software you can install via FBI's TitleDB menu. As there is no additional preparation necessary, This section should be fairly straight-forward, especially compared with the long-winded process which permits the installation of such software. When finished, you will have <b>FTPD</b> and <b>Freeshop</b> made available to you. There is a <b>lot</b> of other software via TitleDB but the two mentioned are what may be considered most useful for games, patches and remote interaction with the SD card.</p>
         </div>
         <div class="info msg">If you only want one of the software shown below, follow instructions explicitly for that software only.</div>
-        <div class="body end">
+        <div class="body br">
 		  <h2 class="nobr">Software installation</h2>
           <ol>
             <li>Open FBI, and navigate to <code>TitleDB</code>.</li>
@@ -658,7 +658,18 @@ website to build your patched bin.</a></li>
             <li class="txtli"><code>Sort</code>: Adjust how games are sorted by release date, name, size, rating or vote tally.</li>
             <li class="txtli"><code>Inactivity</code>: Adjust which screens and features are disabled after a specified timeout.</li>
           </ul>
-          <h2>Wireless transfer via FTP</h2>
+		  </div>
+		  <div class="info msg">
+		  <p class="br">Because of ongoing issues with persons unable to use the QR code from <a href="http://3ds.titlekeys.gq">this repository</a> which hosts the domain shown above, an alternative for persons with no success following the above is to do as follows:</p>
+		  <ol class="br">
+		    <li>If applicable, launch freeShop to generate necessary directories for operation.</li>
+		    <li><a href="http://3ds.titlekeys.gq/downloadenc">Download <code>encTitleKeys.bin</code></a></li>
+			<li>Save <code class="hl3">encTitleKeys.bin</code> to the 3DS' SD card at <code>3ds/data/freeShop/keys</code>
+	      </ol> 
+		  <p>When finished, you should be able to see the application load a game list and show available titles.</p>
+		  </div>
+		  <div class="body end">
+          <h2 class="nobr">Wireless transfer via FTP</h2>
           <ol>
             <li>Open your computer's FTP client.
               <ul>
