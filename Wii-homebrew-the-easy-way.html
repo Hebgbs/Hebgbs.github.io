@@ -1,0 +1,807 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml2/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700|PT+Sans:400,400i,700,700i&amp;subset=latin-ext" rel="stylesheet">
+    <link href="https://rawgit.com/Hebgbs/plugthemes/master/fonts/MyraidPro.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="https://rawgit.com/Hebgbs/Hebgbs.github.io/master/ddaccordion.js">
+    /***********************************************
+     * Accordion Content script- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
+     * Visit http://www.dynamicDrive.com for hundreds of DHTML scripts
+     * Please keep this notice intact
+     ***********************************************/
+    </script>
+    <script type="text/javascript">
+    ddaccordion.init({
+      headerclass: "section", //Shared CSS class name of headers group
+      contentclass: "ins", //Shared CSS class name of contents group
+      revealtype: "click", //Reveal content when user clicks or onmouseover the header? Valid value: "click", "clickgo", or "mouseover"
+      mouseoverdelay: 200, //if revealtype="mouseover", set delay in milliseconds before header expands onMouseover
+      collapseprev: true, //Collapse previous content (so only one open at any time)? true/false 
+      defaultexpanded: [], //index of content(s) open by default [index1, index2, etc] [] denotes no content
+      onemustopen: true, //Specify whether at least one header should be open always (so never all headers closed)
+      animatedefault: false, //Should contents open by default be animated into view?
+      persiststate: true, //persist state of opened contents within browser session?
+      toggleclass: ["", ""], //Two CSS classes to be applied to the header when it's collapsed and expanded, respectively ["class1", "class2"]
+      togglehtml: ["suffix", "<img src='plus.gif' class='statusicon' />", "<img src='minus.gif' class='statusicon' />"], //Additional HTML added to the header when it's collapsed and expanded, respectively  ["position", "html1", "html2"] (see docs)
+      animatespeed: "fast", //speed of animation: integer in milliseconds (ie: 200), or keywords "fast", "normal", or "slow"
+      oninit: function(headers, expandedindices) { //custom code to run when headers have initalized
+        //do nothing
+      },
+      onopenclose: function(header, index, state, isuseractivated) { //custom code to run whenever a header is opened or closed
+        //do nothing
+      }
+    })
+    ddaccordion.init({
+      headerclass: "option", //Shared CSS class name of headers group
+      contentclass: "nestins", //Shared CSS class name of contents group
+      revealtype: "click", //Reveal content when user clicks or onmouseover the header? Valid value: "click", "clickgo", or "mouseover"
+      mouseoverdelay: 200, //if revealtype="mouseover", set delay in milliseconds before header expands onMouseover
+      collapseprev: true, //Collapse previous content (so only one open at any time)? true/false 
+      defaultexpanded: [], //index of content(s) open by default [index1, index2, etc] [] denotes no content
+      onemustopen: false, //Specify whether at least one header should be open always (so never all headers closed)
+      animatedefault: false, //Should contents open by default be animated into view?
+      persiststate: true, //persist state of opened contents within browser session?
+      toggleclass: ["", ""], //Two CSS classes to be applied to the header when it's collapsed and expanded, respectively ["class1", "class2"]
+      togglehtml: ["suffix", "<img src='plus.gif' class='statusicon' />", "<img src='minus.gif' class='statusicon' />"], //Additional HTML added to the header when it's collapsed and expanded, respectively  ["position", "html1", "html2"] (see docs)
+      animatespeed: "fast", //speed of animation: integer in milliseconds (ie: 200), or keywords "fast", "normal", or "slow"
+      oninit: function(headers, expandedindices) { //custom code to run when headers have initalized
+        //do nothing
+      },
+      onopenclose: function(header, index, state, isuseractivated) { //custom code to run whenever a header is opened or closed
+        //do nothing
+      }
+    })
+    </script>
+    <style type="text/css">
+    /* Notepad++ doesn't know how to handle formatting here, so funny. -- Hebgbs */
+	
+	:root{
+	  --brh: 20px;
+	}
+
+    BODY {
+      background: #000;
+      color: #fff;
+      font-family: Myraid Pro, PT Sans, Ubuntu Sans, sans-serif;
+    }
+
+    CODE,
+    PRE,
+    TABLE.pre TD,
+    UL LI.pre {
+      font-family: Inconsolata, Consolas, Ubuntu Mono, monospace;
+    }
+
+    PRE {
+      margin: 0;
+      display: block;
+    }
+
+    P {
+      -webkit-margin-before: 0px;
+      -webkit-margin-after: 0px;
+      margin: 0;
+    }
+
+    TABLE.pre {
+      width: 100%;
+      border: 2px solid #777;
+      border-collapse: collapse;
+    }
+
+    TABLE.pre TH {
+      text-align: left;
+    }
+
+    TABLE.pre TH,
+    TABLE.pre TD {
+      border: 1px solid #777;
+    }
+
+    .section H2,
+    .option H3 {
+      margin: 0;
+      padding: 5px 0;
+    }
+
+    .body A:visited,
+    .msg A:visited {
+      color: #fff;
+    }
+
+    .inner {
+      background: #111;
+	}
+	.inner.body{
+      padding: 10px;
+    }
+
+    .inset {
+      padding: 20px;
+      margin: 20px 10px;
+      background-color: #333;
+      border: 2px solid #777;
+    }
+
+    .inset PRE {
+      line-height: 1.15;
+    }
+
+    PRE,
+    TABLE.pre {
+      background-color: #333;
+    }
+
+    .body A {
+      color: #000;
+    }
+
+    .warn A {
+      color: #f22;
+    }
+
+    .info A {
+      color: #22f;
+    }
+
+    .good A {
+      color: #2f2;
+    }
+
+    .msg {
+      padding: 5px 10px;
+	  text-align: center;
+    }
+
+    .msg H2,
+    UL,
+    OL {
+      margin: 0px;
+    }
+
+    .busy,
+    .warn,
+    .info,
+    .good {
+      font-weight: bold;
+    }
+
+    .busy {
+      background-color: #404005;
+      border-top: 2px solid #ff2;
+    }
+
+    .warn {
+      background-color: #400505;
+      border-top: 2px solid #f22;
+    }
+
+    .info {
+      background-color: #050540;
+      border-top: 2px solid #22f;
+    }
+
+    .good {
+      background-color: #054005;
+      border-top: 2px solid #2f2;
+    }
+
+    LI.success {
+      list-style-image: url("https://i.imgur.com/X8670Cs.png");
+    }
+
+    LI.failure {
+      list-style-image: url("https://i.imgur.com/rpSQgsn.png");
+    }
+
+    LI.txtli,
+    .txtli LI {
+      list-style: none;
+      position: relative;
+      left: -1em;
+    }
+	
+	.fauxol{
+	  display: inline-block;
+	  width: 1.25em;
+	}
+
+    .body:not(.inner) {
+      padding: 16px 10px 0 10px;
+    }
+
+    .hl1 {
+      color: #0f0;
+    }
+
+    .hl2 {
+      color: #0ff;
+    }
+
+    .hl3 {
+      color: #ff0;
+    }
+
+    .hl4 {
+      color: #f0f;
+    }
+
+    .hl5 {
+      color: #f00;
+    }
+
+    .br {
+      margin-bottom: var(--brh);
+    }
+
+    .brh {
+      height: var(--brh);
+    }
+
+    .end:not(.inner) {
+      padding-bottom: 20px;
+    }
+
+    .nobr {
+      margin-top: 0;
+    }
+	
+	H3.nobr{
+	  margin-bottom: 0;}
+
+    TD {
+      vertical-align: center;
+    }
+
+    .guide {
+      margin: 5px 0;
+      padding: 0;
+      width: 100%;
+      /*width of menu*/
+      border-bottom-width: 0;
+    }
+
+    .guide a.item,
+    .guide a.option {
+      background-color: #222;
+      color: white;
+      display: block;
+      position: relative;
+      /*To help in the anchoring of the ".statusicon" icon image*/
+      width: auto;
+      padding: .01px;
+      padding-left: 10px;
+      text-decoration: none;
+    }
+
+    .guide a.item {
+      margin-top: 20px;
+    }
+
+    .guide a.option {
+      margin-top: 10px;
+    }
+
+    .guide a.option:first-child {
+      margin-top: 0;
+    }
+
+    .guide a.item:visited,
+    .guide a.option:visited,
+    .guide .item:active,
+    .guide .option:active {
+      color: white;
+    }
+
+    .guide a.item .statusicon {
+      /*CSS for icon image that gets dynamically added to headers*/
+      /* position: absolute;
+      top: 5px;
+      right: 5px;
+      border: none; */
+      display: none;
+      /* I don't need this, but I can't figure out how to remove it so it disappears instead. -- Hebgbs */
+    }
+
+    .guide div.ins,
+    .guide div.nestins {
+      /*DIV that contains each sub menu*/
+      background: #555;
+    }
+    </style>
+  </head>
+
+  <body>
+    <h1>Wii homebrew the easy way (+ bonus features)<br> <small>A tutorial for people who just want to <i>get it done.</i></small></h1>
+	<div class="busy msg br"><h3 class="nobr">Excuse the dust! This guide may be iterated upon in the future, and <i>may contain inaccuracies</i>. While <u>most</u> of the information here is sound and will work on a vast majority of RVL-001 and RVL-101 consoles, there may still be work to be done and there is room for improvement. Enjoy the work, and report any inaccuracy you may see!</h4>
+	<p>At the very least, the act of hacking the console is 100% accurate for all compatible models with version 4.3 of the firmware.</p></div>
+    <div class="guide">
+      <a class="item section" id="title1">
+        <h2>Preface and summary</h2>
+      </a>
+      <div class="ins">
+        <div class="warn msg br">
+          <h2>If you have bought this software, you have been scammed and should demand your money back. This software is free, <i>no exceptions.</i></h2>However, persons are more than free to sell their time and labour to install this software, your mileage with these services may vary. The very best way is to <i>do it yourself.</i></div>
+        <div class="warn msg br">Have a WIi Mini? <i>Don't even try.</i> This information is for RVL-001 and RVL-101 only. <i>This is not for Wii U / vWii!</i> Some of these instructions <i>will</i> <u>brick</u> your Wii U or limit its functionality!</div>
+        <div class="warn msg">Do you possess a Wii you didn't modify yourself? Stop, right now. Ask who modified the Wii or consult alternative documentation for provided software before you risk bricking your Wii by following these instructions.</div>
+        <div class="body end">
+          <p>The Nintendo Wii is a rather old console; having seen several hardware revisions, <i>many</i> software revisions and services intended with its use being discontinued. Unlike other guides on the Internet, this one brings it all together in a simple and understandable format, without any strings or bullocks standing between you and success.</p> <br>
+          <h3 class="nobr">After having followed these instructions, these contents will be in your Wii's SD card:</h3>
+          <h4>System software</h4>
+          <table>
+            <tr>
+              <th><img src="https://rawgit.com/Hebgbs/Hebgbs.github.io/master/WiiIco/bmi.png"></th>
+              <td><b>BootMii</b><br>A pre-boot utility to create and restore system memory images from USB, as well apply alternative system menu images for theming.</td>
+            </tr>
+            <tr>
+              <th><img src="https://rawgit.com/Hebgbs/Hebgbs.github.io/master/WiiIco/hbc.png"></th>
+              <td><b>The Homebrew Channel</b><br>A utility for executing third-party software.</td>
+            </tr>
+            <tr>
+              <th><img src="https://rawgit.com/Hebgbs/Hebgbs.github.io/master/WiiIco/prl.png"></th>
+              <td><b>Priiloader</b><br>A third-party pre-boot menu allowing modificatino of console boot and post-boot behaviour.</td>
+            </tr>
+            <tr>
+              <th><img src="https://rawgit.com/Hebgbs/Hebgbs.github.io/master/WiiIco/236.png"></th>
+              <td><b>IOS236 Installer</b><br>A patch to IOS 36 for NAND writing permissions; usually installable when everything else might not be.</td>
+            </tr>
+            <tr>
+              <th><img src="https://rawgit.com/Hebgbs/Hebgbs.github.io/master/WiiIco/d2x.png"></th>
+              <td><b>d2x cIOS </b><br>A patch to remove disc / IOS presence checking, which would otherwise crash titles loaded from external media.</td>
+            </tr>
+            <tr>
+              <th><img src="https://rawgit.com/Hebgbs/Hebgbs.github.io/master/WiiIco/r24.png"></th>
+              <td><b>RiiConnect24</b><br>A service to restore functionality for the News, Weather and Everybody Votes channels. For a full list, <a href="http://rc24.xyz/stats/index.html">click here.</a></td>
+            </tr>
+          </table>
+          </li>
+          <h4>User software</h4>
+          <table>
+            <tr>
+              <th><img src="https://rawgit.com/Hebgbs/Hebgbs.github.io/master/WiiIco/mmm.png"></th>
+              <td><b>Multi-Mod Manager</b><br>A collection of tools for safely managing IOS es, applications and IOS exploits.</td>
+            </tr>
+            <tr>
+              <th><img src="https://rawgit.com/Hebgbs/Hebgbs.github.io/master/WiiIco/hbb.png"></th>
+              <td><b>Homebrew Browser</b><br>A utility for installing other homebrew software curated by CodeMii.</td>
+            </tr>
+            <tr>
+              <th><img src="https://rawgit.com/Hebgbs/Hebgbs.github.io/master/WiiIco/gcm.png"></th>
+              <td><b>Gamecube Memory Manager</b><br>A utility to manage Gamecube saves on memory cards for RVL-001 models and creation of saves on SD card for use on emulators and via No More Memory (NMM).</td>
+            </tr>
+            <tr>
+              <th><img src="https://rawgit.com/Hebgbs/Hebgbs.github.io/master/WiiIco/ndt.png"></th>
+              <td><b>Nintendont</b><br>A utility for loading Gamecube titles from external media.</td>
+            </tr>
+            <tr>
+              <th><img src="https://rawgit.com/Hebgbs/Hebgbs.github.io/master/WiiIco/wif.png"></th>
+              <td><b>WiiFlow</b><br>A utility for loading Wii titles from external media, and also act as a replacement for the Wii System Menu, substitution for The Homebrew Channel and a means to play Gamecube titles.</td>
+            </tr>
+          </table>
+          <h3>The following websites may be utilized:</h3> <a href="https://please.hackmii.com"><b>LetterBomb</b></a> for generating an exploit specific for your console<br> <a href="http://flashhax.com"><b>FlashHax</b></a> for using an exploit avalable to all consoles<br> <a href="https://wii.marcan.st/parental"><b>Wii Parental Control password reset tool</b></a> for gaining unfettered access to the console without a parental control key.
+		  	      <h3>Why the softwre in this guide is separated into two different archives</h3>
+		  <P>As this is a question that is probably going to be asked a bunch of times, I will address this concern here.</p>
+		  <p class="br">This software is separated into two archives:</p>
+		  <ul class="txtli br">
+		    <li><code>wiikit.zip</code></li>
+		    <li><code>wiikit_ugly.zip</code></li>
+		  </ul>
+		  <p class="br"><code>wiikit.zip</code> provides the general tools for softmodding the console and preparing it for other tasks. After this point, you can do <i>anything you want</i> (within reason) to the console's software, leaving the responsibility up to you whether or not you begint o use the console as a device for infringing upon domestic and international copyright laws, (further) violate Nintendo's ToS / ToU / EULA and partake in software piracy.</p>
+		  <p class="br">By downloading <code>wiikit_ugly.zip</code> and following related instruction shown here, it is implied you understand this software is, and <i>all</i> software / services in this guide are presented <b>as-is</b> with no express guarantee of efficacy and functionality, and the author of this guide is not held responsible for any legal trouble you may encounter in your use of the software if reported to local authorities, charged for software piracy and convicted for breach of copyright.
+		  <h4>In plain speak:</h4>
+		  <ol class="br">
+		    <li>I do not know if this software will work for <i>your</i> particular console, despite my best efforts.</li>
+			<li>You cannot extort money from me or file a lawsuit for following these instructions; you are performing these instructions yourself.</li>
+			<li>I will not hold myself responsible for your abject stupidity, nor will I lose sleep at night knowing this information may incarcerate you and forever ruin your life.</li>
+	      </ol>
+		  <p>With this understanding, if you agree to the above, you are free to download this kit of software and use this guide's contents to engage in potentially criminal activities. If you are not comfortable with this, you can <i>still</i> follow all instructions which are less likely to toss you behind bars and ensure your Wii is given a second life via the efforts of hundreds who created awesome software for the console, including, but not limited to freely-downloadable games and ports of PC games for use on the console.</p>
+		  </div>
+      </div>
+      <a class="item section" id="title2">
+        <h2>Section 1 — Preparation</h2>
+      </a>
+      <div class="ins">
+        <div class="body end">
+          <p class="br">The Nintendo Wii isn't a hard unit to modify, and guides are usually straight-forward about this topic. This will also walk you through other software that may be of interest to any user with a modified Nintendo Wii, so you can enjoy the full benefit of this process with enhancements to the console's functionality.</p>
+          <p class="br">If, for some reason you forgot your parental control code, there is a website which allows you to remove this code rather easily. If this happens to be the case, follow these steps:</p>
+          <ol class="br">
+            <li>Make sure the time and date on the Wii accurately reflects your console's time, relative to its timezone,</li>
+            <li>Have the console know you forgot / don't know the console's parental control code.</li>
+            <li>Visit <a href="https://wii.marcan.st/parental">this website</a> to input the confirmation code you would otherwise give to Nintendo.</li>
+            <li>Use the unlock code that website gave you; this should help to unlock the Wii, should you not know its parental control code.</li>
+          </ol> After following these steps, you are free to do whatever you please with the console, which in the case of this guide is to install third-party applications. </div>
+      </div>
+      <a class="item section">
+        <h2>Section 2 — Initial steps</h2>
+      </a>
+      <div class="ins">
+        <div class="info msg">For offline installation, the files provided in this section are not enough. Refer to section 3.1 for information about additional content which is needed for Letterbomb.</div>
+        <div class="body end">
+          <p class="br">Before you begin, some setup is necessary. Depending on your needs, you may be interested in one or both of the files shown below:</p>
+          <ul class="br">
+            <li>This archived suite of <b>required</b> files for configuration of third-party software (<code>wiikit.zip</code>)</li>
+            <li>This archived suite of <b>optional</b> files for USB loading of various Nintendo titles (<code>wiikit_ugly.zip</code>)</li>
+            <li>If necessary, <i>update the Wii.</i> The methods for installing homebrew on the Wii shown here require firmware 4.3.</li>
+          </ul>
+          <p>Depending on your needs, you may <b>not</b> be interested in USB game loading (even for backup purposes) so for convenience the option to obtain tools which permit this are kept separate. After extraction onto the root of the SD card, proceed to installation of Homebrew Channel and BootMii.</p>
+        </div>
+        <div class="info msg">Some software may require a patched IOS installed to use all features, whether this is required will be made evident as necessary.</div>
+      </div>
+      <a class="item section" id="title3">
+        <h2>Section 3 — Homebrew initialization</h2>
+      </a>
+      <div class="ins">
+        <div class="inner body end">
+          <a class="item option" id="3opt1">
+            <h3>Option 1 — Letterbomb (Offline method)</h3>
+          </a>
+          <div class="nestins">
+            <div class="info msg">This is only for if your Wii cannot purpose the Internet channel, or is unable to connect to the Internet for some other reason.</div>
+            <div class="body end">
+              <p class="br">For this method to work, you will need to obtain a special archive made <i>specifically</i> for your system. All you need is as follows:</p>
+              <ul class="br">
+                <li>An SD card 32GB or less</li>
+                <li>An active Internet connection with another device</li>
+              </ul>
+              <p class="br">In order to begin with letterbomb, you need to find your console's Machine Access Code (MAC). To find your MAC, navigate to the following sections in order:</p>
+              <ol class="br">
+                <li>Wii Settings</li>
+                <li>Internet (on page 2)</li>
+                <li>Console Information</li>
+              </ol>
+              <p class="br">From there, you will see a series of six hexadecimal numbers: This is the number you need to input at <a href="https:/.please.hackmii.com">https:/.please.hackmii.com</a>. At that website, do the following:</p>
+              <ol class="br">
+                <li>Specify your console's region</li>
+                <li>Input your console's MAC address</li>
+                <li>Verify you are human, then click either of the submission buttons.</li>
+                <li>Download, then extract the specially-crafted archive to the root of your Wii's SD card.</li>
+                <li>Eject the SD card, then insert into the Wii.</li>
+              </ol>
+              <p>After the above, it is simply a matter of visiting the message board and if applicable, looking in yesterday's messages for a red envelope with a bomb inside. This will execute savezelda, which will forward you to the Homebrew Channel Installer.</p>
+            </div>
+          </div>
+          <a class="item option" id="3opt2">
+            <h3>Option 2 — FlashHax (Online method)</h3>
+          </a>
+          <div class="nestins">
+            <div class="info msg br">For this to work, installation of the Internet Channel is required; if not, get it from the Wii Shop Channel.</div>
+            <div class="info msg">If the console crashes at payload acquisition, then power off, confirm your connection to the outside world is good and try again.</div>
+            <div class="body end">
+              <p class="br">Unlike the offline method, <i>this</i> is way easier:</p>
+              <ol class="br">
+                <li>Open the Internet Channel</li>
+                <li>Choose to input an address (the button labelled "WWW")</li>
+                <li>Go to <code>flashhax.com</code></li>
+                <li>Select region of console from this webpage</li>
+                <li>Favourite the page your selection lead you to.</li>
+                <li>From favourites, select the page you just bookmarked.</li>
+              </ol>
+              <p>When the payload finishes downloading, savezelda should execute and forward you to the Homebrew Channel Installer. Installation of the Homebrew Channel, then exiting this software will forward you to the Homebrew Channel where you can perform instructions shown in the next section.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="item section" id="title4">
+        <h2>Section 4 — System configuration</h2>
+      </a>
+      <div class="ins">
+        <div class="warn msg"><i>If nothing else</i>, install BootMii. It is a rather important piece of kit.</div>
+        <div class="inner body">
+          <a class="item option" id="4opt1">
+            <h3>Required — Homebrew Channel</h3>
+          </a>
+          <div class="nestins">
+            <div class="body end">
+              <p>This is pretty straight-forward: You choose to install the Homebrew Channel after the summary and proceed with installation. There are no special requirements beyond what you needed to do for accessing the Homebrew Channel installer for installing this utility, which <i>will</i> be required later for additional steps.</p>
+            </div>
+          </div>
+          <a class="item option" id="4opt2">
+            <h3>Recommended — BootMii</h3>
+          </a>
+          <div class="nestins">
+            <div class="warn msg">While <i>technically</i> not a requirement, multiple software reference it so excluding this will most likely lead to malfunction or crashing of the system should an option to access this tool is available and chosen by accident without the software for it to reference.</div>
+            <div class="body end">
+              <p class="br">The Homebrew Channel Installer does more than just install the Homebrew Channel: it also bundles with it a powerful system memory management suite known as BootMii and provide multiple options for installing it, depending on what hardware is inside the Wii. Depending on the console's Boot2 hardware, how BootMii can be installed will be indicated with text <i>and</i> colour. Colours as follows:</p>
+              <ul class="txtli br">
+                <li class="hl1">Green: BootMii installable to Boot2</li>
+                <li class="hl4">Pink: BootMii can only be executed from SD card</li>
+                <li class="hl5">Red: Uninstallable (Always the case with Wii U / vWii.)</li>
+              </ul>
+              <p class="br">If you can, install BootMii in Boot2. If not, then proceed with IOS installation. <i>This means the SD card is required for BootMii to function.</i> There will be additional instructions on configuring how it boots shown later.</p>
+			  <p>If this software is excluded, Homebrew Channel will not list it. This software only exists when presence of IOS 254 is detected.</p>
+            </div>
+          </div>
+          <a class="item option" id="4opt3">
+            <h3>Recommended — IOS236 Installer</h3>
+          </a>
+          <div class="nestins">
+            <div class="warn msg br">Older versions of this software would lock you out of your Wii for a time if you told the software your intent was piracy when prompted.</div>
+            <div class="good msg">If no other IOS works for manipulating system memory in any way, <i>this one will</i> in most circumstances.</div>
+            <div class="body end">
+              <p class="br">This software installs a patched version of IOS 36 as a separate entity; IOS 236. In some cases, this may be the only IOS you can use to write new data onto the Wii via Multi-Mod Manager, which is why this is included.</p>
+              <p>When prompted, you will be given a choice to install additional components for piracy. This is a trick question, and due to Dr. Clipper's previous actions with older versions of this installer I had to include the most recent version, as all telling <i>that version of</i> the software you're a pirate does is undo everything it did, forcing you to run the installer once again. </div>
+          </div>
+          <a class="item option" id="4opt4">
+            <h3>Recommended — Priiloader</h3>
+          </a>
+          <div class="nestins">
+            <div class="warn msg">Without this software, should the system menu become inaccessible for any reason <i>you will be soft bricked.</i> There's a way out of a soft brick, but it is beyond your means without additional (and rather bespoke) hardware to do so, requiring assistance of whatever community members possess these tools if you are unable to acquire them yourself.</div>
+            <div class="body end">
+              <P>There isn't much an excuse why you should deprive yourself of any ways out of a soft-brick, and Priiloader is one of a few ways to do so. This software permits access to BootMii, Homebrew Channel and any installed utilities, as well permit other functions through various system hacks. To install, simply select the Priiloader installer launcher in Homebrew Channel and follow the on-screen prompts. It couldn't be any more simple without making assumptions of the user.</p>
+            </div>
+            <div class="info msg br">Should you encounter difficulties using IOS 36 to install Priiloader, refer to Multi-Mod Manager for further instructions.</div>
+            <div class="good msg">After installing Priiloader, <i>now</i> is a good time to back up your system memory via BootMii.</div>
+          </div>
+          <a class="item option" id="4opt5">
+            <h3>Optional — d2x</h3>
+          </a>
+          <div class="nestins">
+            <div class="warn msg br">This is part of <code>wiikit_ugly.zip</code> as it allows USB loaders to work, which generally facilitate piracy. Get it from section 2.</div>
+			<div class="good msg">No Internet? Too difficult? No problem! Refer to section 5 for an alternative, offline installation method.</div>
+            <div class="body end">
+              <p class="br">While not entirely necessary to enjoy most homebrew software, and supposedly it isn't necessary for USB loading <i>any more</i> it is a snap to install for USB loading <i>and</i> it also enhances the functionality of other programs which can utilize it. Open d2x cIOS Installer, then at the next menu you can interact with, specify the following:</p>
+              <div class="br inset">
+                <table class="pre">
+                  <tr>
+                    <th>d2x Version</th>
+                    <th>Base</th>
+                    <th>Slot</th>
+                    <th>Revision</th>
+                  </tr>
+                  <tr>
+                    <td>v10-Beta52</td>
+                    <td>249</td>
+                    <td>56</td>
+                    <td>65535</td>
+                  </tr>
+                  <tr>
+                    <td>v10-Beta52</td>
+                    <td>250</td>
+                    <td>57</td>
+                    <td>65535</td>
+                  </tr>
+                </table>
+              </div>
+              <p>While making selections, press <code>Home</code> / <code>Start</code> to add in batch these operations. Then press <code>A</code> to continue and install the custom IOS es specified above. When finished, press <code>B</code> to exit the software and continue with further instructions.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="item section" id="title5">
+        <h2>Section 5 — Multi-mod Manager</h2>
+      </a>
+	    <div class="inner">
+	      <div class="info msg br">Because of how many things benefit using this tool, it is included as its own section for reference.</div>
+		  <div class="info msg">This section isn't intended to be read on its own, though using this as an opportunity to "Read ahead" may not be a bad idea.</div>
+		</div>
+      <div class="ins">
+	    <div class="inner">
+		  <div class="inner"><div class="brh"><!--I decided to keep the info divs revealed, so this content is trickery to make the entire section appear as one whole block when selected.--></div>
+		  </div>
+		  <div class="warn msg">Ideally, IOS 236 should be installed else you may not be able to modify the system memory with IOS patching and WAD installation. See section 4.</div>
+		</div>
+        <div class="inner body">
+          <a class="item option" id="5opt1"><h3>Priiloader installer issues</h3></a>
+          <div class="nestins">
+            <div class="body end">
+              <p class="br">More recent updates by Nintendo resolves IOS 36' capability to install this utility. As such, after installing IOS 236 load it in IOS manager, then patch IOS 36 with all options available for later use with the Priiloader installer.</p>
+			  <p><b>Don't</b> under any circumstance use the option <code>Install and Patch IOS 36</code> in MMM's main menu, as the Priiloader installer will produce a cIOSpaghetti error, claiming the IOS is "Infected".</p>
+            </div>
+          </div>
+		  <a class="item option" id="5opt2"><h3>RiiConnect24</h3></a>
+          <div class="nestins">
+			<div class="warn msg">This is part of <code>wiikit_ugly.zip</code> because some components require breaching domestic and international copyright laws. Get it from section 2.</div>
+            <div class="body end">
+              <p class="br">If you wish to restore Wii mail, Mario Kart competitions, participation in the Everybody Votes channel, access to news and access to weather via RiiConnect24, then you can install the provided WAD files in MMM's <code>WAD Manager</code>:</p>
+			  <ul class="br">
+			    <li class="pre">IOS31.wad</li>
+				<li class="pre">IOS80.wad</li>
+				<li>Either of the following, depending on region;<ol class="txtli">
+				  <li><b>If you have trouble instaling either of these, choose to remove first, <i>then</i> install.</b></li>
+				  <li><span class="fauxol">U: </span><code>Everybody Votes Channel RiiConnect24 USA.wad</code></li>
+				  <li><span class="fauxol">E: </span><code>Everybody Votes Channel RiiConnect24 Europe.wad</code></li></ol>
+				</li>
+		      </ul>
+			  <p>Continue to installing RiiConnect24 in section 6.</p>
+            </div>
+          </div>
+		  <a class="item option" id="5opt3"><h3>Alternative installation of d2x</h3></a>
+          <div class="nestins">
+			<div class="warn msg">This is part of <code>wiikit_ugly.zip</code> as it allows USB loaders to work, which generally facilitate piracy. Get it from section 2.</div>
+            <div class="body end">
+              <p class="br">If the task of using d2x cIOS Installer is too daunting for you, MMM's <code>WAD Manager</code> option can be used to install the provided d2x-patched IOS es via WADs. In doing so, the d2x cIOS Installer is rendered useless, however it can still be kept on the SD card for the future when modding a Wii U so USB loaders function in vWii mode, should you choose to use it as a medium for patching IOSes. To complete, install the following WADs;</p>
+			  <ul>
+			    <li class="pre">cIOS249[56]-d2x-v10-beta52.wad</li>
+				<li class="pre">cIOS250[57]-d2x-v10-beta52.wad</li>
+		      </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="item section" id="title6">
+        <h2>Section 6 — Homebrew software</h2>
+      </a>
+      <div class="ins">
+        <div class="inner body">
+		  <a class="item option" id="6opt1"><h3>BootMii</h3></a>
+		  <div class="nestins">
+		    <div class="warn msg">This software requires a Gamecube controller for some tasks. Even if you lack interest in Gamecube, purchase the cheapest knockoff you can to keep one on hand.</div>
+		    <div class="body end">
+			  <p>Filler</p>
+			</div>
+		  </div>
+          <a class="item option" id="6opt2">
+            <h3>Homebrew Browser</h3>
+          </a>
+          <div class="nestins">
+            <div class="body end">
+              <p>By default, this software does nothing as it uses CoddMii's older servers; there exists a backup server which still remains active to this day, which <code>wiikit.zip</code> has configured by default: All you need to do is open it and browse!</p>
+            </div>
+            <div class="warn msg">Be advised: This software tends to crash while multitasking, so let all icons download first before installing software. Some software might not exist anymore, or the list may contain outdated software so Homebrew Browser should be treated more like a software listing, where you can then find later versions to replace with.</div>
+          </div>
+		  <a class="item option" id="6opt3"><h3>RiiConnect24</h3></a>
+		  <div class="nestins">
+			<div class="warn msg">This is part of <code>wiikit_ugly.zip</code> because some components require breaching domestic and international copyright laws. Get it from section 2.</div>
+			<div class="body end">
+			  <p class="br">RiiConnect24 is pretty easy to install on its own, it's a three-part process which converts the Wii's built-in utilities to use a different domain for web services. These three parts as follows:</p>
+			  <h4><u>WAD installation</u></h4>
+			  <p class="br">Follow the advice in section 5 regarding thia.
+			  <h4><u>Patching mail service</u></h4>
+			  <p class="br">Access the RiiConnect24 mail patcher utility from The Homebrew Channel and wait for it to complete. It will tell you what changes were made before exiting.</p>
+			  <h4><u>Making channels use RC24</u></h4>
+			  <p class="br">This is the most involved of the processes. As follows:</p>
+			  <ol>
+			    <li>Access the Wii System Menu</li>
+				<li>Open the Wii configuration menu, lower left</li>
+				<li>Open Wii settings</li>
+				<li>Go to page 2, then select Internet</li>
+				<li>Select Connection Settings, then pick your active Internet connection</li>
+				<li>Choose to change its settings</li>
+				<li>Scroll through available options until option <span style="hl1">Auto-Obtain DNS</span></li>
+				<li>Set primary DNS to the following: <code>164.132.044.106</code></li>
+				<li>Set secondary DNS to any of the following:<ul>
+				  <li>Your ISP's DNS address, per router, modem or endpoint settings (probably slowest)</li>
+				  <li>Google's DNS: <code>8.8.8.8</code> or <code>8.8.4.4</code></li>
+				  <li>IBM's DNS (Quad9): <code>9.9.9.9</code> or <code>149.112.112.112</code></li>
+				  <li>Cloudflare's DNS: <code>1.1.1.1</code> or <code>1.0.0.1</code></li>
+			</div>
+		  </div>
+		  <a class="item option" id="6opt4"><h3>Gamecube Memory Manager</h3></a>
+          <div class="nestins">
+            <div class="warn msg br">This only works for RVL-001 (full / fat Wii).</div>
+			<div class="warn msg">This is part of <code>wiikit_ugly.zip</code> because it can encourage cheating, and is only really useful with a utility which facilitate USB loading. Get it from section 2.</div>
+            <div class="body end">
+              <p class="br">This utility allows you to transfer information from Gamecube memory cards to either SD card or attached USB media. For users with RVL-101 models of Nintendo Wii, this is a good way to transfer saves to's RVL-001 so Gamecube titles can be loaded via USB with NMM loading save data from file on the SD card.</p>
+			  <p>It also has the facility to format memory cards, and export saves to RAW format should you prefer.</p>
+            </div>
+          </div>
+		  <a class="item option" id="6opt5"><h3>Nintendont</h3></a>
+		  <div class="nestins">
+		    <div class="warn msg">This is part of <code>wiikit_ugly.zip</code> because it can encourage cheating, and is only really useful with a utility which facilitate USB loading. Get it from section 2.</div>
+			<div class="body end">
+			  <p class="br">Nintendont is a USB loader for Gamecube. It can even permit the use of the Gamecube system menu, should one wish and allow for cheating, if enabled in Nintendont's settings. Along with just the program itself, the copy of Nintendont provided also brings with it a variety of themes for menus and when loading titles, so after configuring these settings the software will look more-or-less how you wish.</p>
+			  <p>You may use Nintendont in conjunction with Dios Mios, a replacement MIOS for Gamecube if you wish however unlike Dios Mios, Nintendont won't break compatibility with Gamecube media should you choose to use Gamecube discs.
+			</div>
+		  </div>
+		  <a class="item option" id="6opt6"><h3>WiiFlow</h3></a>
+		  <div class="nestins">
+			<div class="body end">
+			  <p class="br">WiiFlow is a USB loading utility with a coverflow-style menu. With an appearance inspired by Apple's iTunes which had CoverFlow and a variety of themes available via the Internet, WiiFlow can be modified to become a very personalized and elegant way of displaying your digital library. On top of being a USB loader for Wii and Gamecube titles (with the included build being specially optimized for use with Nintendont), it can act as a replacement or supplement for the following:</p>
+			<ul class="br">
+			  <li>The Homebrew Channel</li>
+			  <li>Wii System Menu</li>
+			  <li>Nintendont / Dios Mios</li>
+			  <li>Various emulators via plugins</li>
+			  <li>WiiRD (cheats database)</li>
+			  <li>CleanRip (for copying games)</li>
+			</ul>
+			<p>It is a very useful utility, as seen from its capabilities to supplement or displace tools which you may otherwise need to obtain for copying and managing media. The only thing it cannot do is install WADs, but this is what hacksDen's Multi-Mod Manager is for. Using the items from section 5 as an example, you can install just about any WAD representative of WiiWare titles for loading those from system memory as well.
+			</div>
+		  </div>
+        </div>
+      </div>
+      <a class="item section">
+        <h2>Section 7 — Wii software for PC</h2>
+      </a>
+      <div class="ins">
+        <div class="inner body">
+          <a class="item option">
+            <h3>Wii Backup Manager</h3>
+          </a>
+          <div class="nestins">
+            <div class="warn msg">This software <i>does not work</i> for Gamecube ISOs. There is another utility to shrink Gamecube games shown in the next option.</div>
+			<div class="body end">
+              <p class="br">This software is used to manage Nintendo Wii titles. While not entirely necessary to enjoy a Nintendo Wii title loaded from USB, it provides several key benefits:</p>
+			  <ul class="br">
+			    <li>Easier management of installed titles</li>
+				<li>Handling of media on two separate devices (or locations)</li>
+				<li>Conversion of titles into several formats</li>
+		      </ul>
+			  <p class="br">The last of the listed highlights is important to understand, as obtaining Wii titles from the Internet presently isn't as easy as Wii U and 3DS titles, which is subject to change in the near future. As we aren't there now, a suite of tools are required to use content from the Internet via USB media or SD card.</p>
+			  <p>The WBFS format should be of interest for most people who are archiving <i>a lot</i> of titles as it features the main benefits of compact ISO (CIOS) while allowing the titles to be usable in <i>all</i> USB loaders. However, some software for PC requires the title to be of ISO format before changes can be made, which would decompress the image and return it to original file size.</p>
+            </div>
+			<div class="info msg br">From observing features presented in this software, it appears like there is a possibility of using original media to make backups on PC, however not all optical devices are compatible which if this is the case for your PC, tools like CleanRip (not covered) or WiiFlow (from <code>wiikit_ugly.zip</code>) should be used on the Wii instead.</div>
+			<div class="warn msg"><i>Always</i> keep the original media you are modifying until confirming changes made do not render modified media unplayable. There is a distinct possibility some titles will not function at all and for the sake of saving a few megabytes for larger titles, the effort may not be worth it.</div>
+          </div>
+          <a class="item option">
+            <h3>GCM Utility</h3>
+          </a>
+          <div class="nestins">
+            <div class="body end">
+              <p>This is a utility which allows you to shrink Nintendo Gamecube titles. You can also use it to generate multi-boot ISOs which would prompt a menu with a selection of titles compiled together, however that is beyond the scope of this guide.</p>
+            </div>
+			<div class="warn msg"><i>Always</i> keep the original media you are modifying until confirming changes made do not render modified media unplayable. There is a distinct possibility some titles will not function at all and for the sake of saving a few megabytes for larger titles, the effort may not be worth it.</div>
+          </div>
+          <a class="item option">
+            <h3>WIimmfi patch tools</h3>
+          </a>
+          <div class="nestins">
+		    <div class="warn msg br">This is part of <code>wiikit_ugly.zip</code> because the act of patching using these tools can be considered as piracy <i>even if you own the original</i> without the effort of using a USB loader or dedicated software for creating an archive of the intended target. Even with the original copy, modifying games with these tools can still be considered violation of domestic and international copyright laws.</div>
+			<div class="info msg">This software only works on ISO files, and most may work even if they were scrubbed. Use Wii Backup Manager to convert WBFS to ISO.</div>
+            <div class="body end">
+              <p class="br">Being the most popular of the two WFC alternatives (the other, not covered being AltWFC), Wiimmfi (pronounced whim-fi) is very easy to implement into any WFC-compatible game. Below is a summary of the directories provided:</p>
+			  <ul class="txtli br">
+			    <li><code>ACCF</code>: Patcher designed specifically for Animal Crossing: Let's Go to the City / City Folk.</li>
+				<li><code>MKWii</code>: Patcher designed specifically for Mario Kart Wii.</li>
+				<li><code>Generic</code>: Patcher for all other Wii WFC games, such as Super Smash Bros. Brawl or Bomberman Blast.</li>
+				<li><code>WiiWare</code>: patcher for all WFC WiiWare titles, such as Uno or Tetris Party.</li>
+			  </ul>
+			  <p class="br">The patchers provided can be used as follows: </p>
+			  <ol class="br">
+			    <li>Place compatible images inside of their respective directories.<ul>
+				  <li class="txtli">If there are system-specific directories, place images in there, assume further instructions are followed there.</li></ul></li>
+				<li>Run the patcher batch or shell file, respective for your operating system<ul class="txtli">
+				  <li>If Windows SmartScreen warns about the file being potentially malicious, it isn't; Click on <code>More Info</code> and sselect <code>Run anyway</code></li>
+				  <li>If on an open-source system or Mac, you may need to execute `chmod a+x` on the file before executing the shell script in terminal.</li></ul></li>
+				<li>Collect the modified ISO image at the directory the script generates</li>
+			  </ol>
+			  <p>Once modified, you should be able to launch your game and use the WFC functionality it originally had, thus retaining the original value of the titles affected. For a full list of compatible titles before you begin modding, check out <a href="https://wiimmfi.de/stat?m=24">this compatibility list.</a></p>
+            </div>
+			<div class="info msg">While there are a lot of "Compatible" titles, few ever garnered massive communities. Online experience may be worse for lesser-known titles, requiring a significant interest by the Wiimmfi community before fast matchmaking is a possibility.</div>
+          </div>
+        </div>
+      </div>
+      <a class="item section">
+        <h2>Credits</h2>
+      </a>
+      <div class="ins">
+        <div class="body end msg">
+		  <h3 class="nobr">Website</h3>
+          <p>Accordion script by Dynamic Drive.</p>
+		  <p class="br">Guide by Heebeejeebees.</p>
+		  <h3 class="nobr">Tools</h3>
+		  <p>Primary info sourced from <a href="https://hacks.3ds.guide">3DS Hacks Guide</a>.</p>
+		  <p>WFC info sourced from <a href="https://wiimmfi.de/">Wiimmfi</a>.</p>
+		  <p>WC24 info sourced from <a href="https://rc24.xyz">RiiConnect24</a>.</p>
+		  <p>Multi-Mod Manager by <a href="http://hacksden.com">HacksDen</a>.</p>
+		  <p>Dr. Clipper for IOS236.</p>
+		  <p>Fig2K4 for Wii Backup manager.</p>
+		  <p>XFlak and co. for d2x cIOS</p>
+		  <p>Crediar and co. for Nintendont.</p>
+		  <p>FIX94 and co. for WiiFlow.</p>
+		  <p>Team Twiizers for making everything possible.</p>
+		  <p class="br"><a gref="https://sites.google.com/site/completesg/">CSM</a>, <a href="http://gwht.wikidot.com/">GHWT</a>, <a href="https://gbatemp.net">GBAtemp</a> and other uncredited info repos.</p>
+		  <p><b>All credited individuals / repositories<br>are not associated with this guide.</b></p>
+        </div>
+      </div>
+    </div>
+    <!-- SECTION TEMPLATE --
+<a class="item section"><h2>SECTION TITLE</h2></a>
+<div class="ins">
+  <div class="warn">
+    This is a message. <code>warn</code> = Bad or Important, <code>info</code> = optional reading or general information, <code>good</code> = information with no negative outcome or a solutioon highlight.
+  </div>
+  <div class="body">
+    <h2 class="nobr">Some kind of heading.</h2>
+    <p>This is some text. Without this, sections have no purpose.
+  </div>
+  <div class="body end">
+	<p>Ending bodies need the <code>end</code> class to append some padding at the bottom. WIthout this stuff looks weird. If ending with a <code>msg</code> cell, you don't need to do this as messages separate from body shouldn't have padding above or below. The <code>nobr</code> class can be used with headings and lists if they look a little funny when used as-is. Inversely, <code>br</code> should be used to add a break between blocks of text. It's not the best setup but it works <i>so far.</i></p>
+</div>
+-- END OF TEMPLATE --></div> <br>
+
+</html>
