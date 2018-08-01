@@ -73,7 +73,7 @@
         }
 
         BODY {
-            background: #282726;
+            background: url(https://rawgit.com/Hebgbs/Hebgbs.github.io/master/dandy.png) no-repeat fixed center/cover #000000;
             color: #fff;
             font-family: Myraid Pro, PT Sans, Ubuntu Sans, sans-serif;
         }
@@ -88,7 +88,6 @@
         PRE {
             margin: 0;
             display: block;
-            font-weight: normal;
         }
 
         P {
@@ -124,7 +123,7 @@
         }
 
         .inner {
-            background: #111;
+            background-color: rgba(0, 0, 0, 0.5);
         }
 
         .inner.body {
@@ -134,7 +133,7 @@
         .inset {
             padding: 20px;
             margin: 20px 10px;
-            background-color: #333;
+            background-color: rgba(51, 51, 51, 0.5);
             border: 2px solid #777;
         }
 
@@ -144,23 +143,31 @@
 
         PRE,
         TABLE.pre {
-            background-color: #333;
+            background-color: transparent;
         }
 
         .body A {
-            color: #000;
+		    color: white;
+            text-shadow: 0px 0px 6px #333,
+			             0px 0px 6px #333;
         }
 
         .warn A {
             color: #f22;
+			text-shadow: 0px 0px 6px #400505,
+			             0px 0px 6px #400505;
         }
 
         .info A {
             color: #22f;
+			text-shadow: 0px 0px 6px #050540,
+			             0px 0px 6px #050540
         }
 
         .good A {
             color: #2f2;
+			text-shadow: 0px 0px 6px #054005,
+			             0px 0px 6px #054005;
         }
 
         .msg {
@@ -185,22 +192,26 @@
         }
 
         .busy {
-            background-color: #404005;
+            background: linear-gradient(to bottom, rgba(64, 64, 5, 0.5), rgba(64, 64, 5, 0.5)),
+			            url(https://rawgit.com/Hebgbs/Hebgbs.github.io/master/bdandy.png) no-repeat fixed center/cover #404005;
             border-top: 2px solid #ff2;
         }
 
         .warn {
-            background-color: #400505;
+            background: linear-gradient(to bottom, rgba(64, 5, 5, 0.5), rgba(64, 5, 5, 0.5)),
+			            url(https://rawgit.com/Hebgbs/Hebgbs.github.io/master/wdandy.png) no-repeat fixed center/cover #400505;
             border-top: 2px solid #f22;
         }
 
         .info {
-            background-color: #050540;
+            background: linear-gradient(to bottom, rgba(5, 5, 64, 0.5), rgba(5, 5, 64, 0.5)),
+			            url(https://rawgit.com/Hebgbs/Hebgbs.github.io/master/idandy.png) no-repeat fixed center/cover #050540;
             border-top: 2px solid #22f;
         }
 
         .good {
-            background-color: #054005;
+            background: linear-gradient(to bottom, rgba(5, 64, 5, 0.5), rgba(5, 64, 5, 0.5)),
+			            url(https://rawgit.com/Hebgbs/Hebgbs.github.io/master/gdandy.png) no-repeat fixed center/cover #054005;
             border-top: 2px solid #2f2;
         }
 
@@ -227,6 +238,12 @@
             display: inline-block;
             width: 1.25em;
         }
+		
+		LI.intl {
+		    list-style-type: initial;
+			position: initial;
+			left: 0;
+		}
 
         .body:not(.inner) {
             padding: 16px 10px 0 10px;
@@ -286,7 +303,7 @@
 
         .guide a.item.section,
         .guide A.item.option:not(.msg) {
-            background-color: #222;
+            background-color: rgba(0, 0, 0, 0.7);
         }
 
         .guide a.item,
@@ -330,23 +347,25 @@
             /* I don't need this, but I can't figure out how to remove it so it disappears instead. -- Hebgbs */
         }
 
-        .guide div.ins,
-        .guide div.nestins {
-            /*DIV that contains each sub menu*/
-            background: #555;
+		/*DIVs that contains each sub menu*/
+        .guide div.ins {
+            background: rgba(51, 51, 51, 0.5);
         }
-
-        /* WIDGETBOT STUFF */
-        .css-6ravjl>div:nth-child(1) {
-            background-color: red !Important;
-        }
+		
+		.guide div.nestins {
+		    background: linear-gradient(to bottom, rgba(51, 51, 51, 0.5), rgba(51, 51, 51, 0.5)),
+			            url(https://rawgit.com/Hebgbs/Hebgbs.github.io/master/dandy.png) no-repeat fixed center/cover;
+		}
     </style>
 </head>
 
 <body>
     <h1>Seedminer Boot9Strap CFW the easy way (+ bonus features)<br> <small>A tutorial for people who just want to <i>get it done.</i></small></h1>
     <div class="guide">
-	    <div class="good msg bdr br ctr"><h2>Some people may find this guide confusing to follow.</h2><p class="br">I get it. If you are doing this stuff for the first time, you may be uncertain about what you are doing, despite the content laid out before you optimized to waste as little of your time and bandwidth as possible. If you are confused, ask the person who provided this guide to you for additional consultation and advice.</p>
+	    <div class="warn msg bdr br ctr end"><h1 class="br">Important information about using this guide.</h1>
+		<h2>11.8 has been released. During the last twenty-four hours it has come to my attention there are significant changes which will make using this information on system firmware 11.8 impossible for the time being. Do not use this guide if using the latest system firmware. Thank you for your understanding, dedicated members of the community are continuing to work on solutions for the 11.8 firmware.</h2>
+		<h2> If the above isn't clear enough, <i class="hl3"><u>only follow this if on 11.7 or less!</u></i></div>
+		<div class="good msg bdr br ctr"><h2>Some people may find this guide confusing to follow.</h2><p class="br">I get it. If you are doing this stuff for the first time, you may be uncertain about what you are doing, despite the content laid out before you optimized to waste as little of your time and bandwidth as possible. If you are confused, ask the person who provided this guide to you for additional consultation and advice.</p>
 		<p>Much confusion can be had by "Skimming" the contents of this guide. <i>Do not "Skim", "Scan" or otherwise half-read contents of this guide.</i></p><p class="br"><span class="hl3">Every word has a purpose, and treating each word of this guide with equal respect and time will ensure you do not trip over yourself and break your console in the process.</span></p>
 		<h2>It's okay to be afraid.</h2><p class="br">If you are feeling uncertain about doing this, or uneasy about following certain steps, it is reasonable to feel fear and anxiety. You are performing actions which would invalidate whatever warranty Nintendo has extended to your device, in exchange for additional features enabled by use of third-party software. There is also a chance of being banned from Nintendo's servers for online play, but there are ways and means around that which are not in the scope of this guide and it is <i>very</i> unlikely the act of having custom firmware by itself would be cause for a ban. Don't cheat or otherwi	se subvert game rules and you'll be fine.</p>
 		<h2>Following these steps correctly, <i>you will not brick.</i></h2><p class="br">Along with the uncertainty about future participation in online titles, people are concerned about <i>bricking</i>; the incapability of using your console because of a software or hardware fault. This shouldn't happen. Everything shown below is to be followed procedurally, and while there may be alternative steps shown for doing certain things, it is only for acquisition of files needed to modify your console; the act of doing it remains the same, no matter what, and has been performed on countless thousands of handhelds covered in this guide.</p>
@@ -745,16 +764,12 @@
                         </ul>
                     </li>
                     <li>Launch b9sTool by starting your DSiWare game.</li>
-                    <li>Select <code>Dump F0F1</code> to backup the 3DS FIRM.</li>
+                    <li><span class="hl3">Select <code>Dump F0F1</code> to backup the 3DS FIRM.</span><ul>
+					    <li>This is important; In the case Rosalina menu doesn't show in later steps you will want to restore firm0, which b9stool writes to.</li></ul></li>
                     <li>Select <code>Install boot9strap</code> and confirm.</li>
-                    <li>Wait for it to say <code>done!</code>. Exit b9sTool and power off your 3DS.
-                        <ul>
-                            <li>You may need to force power off by holding the power button.</li>
-                        </ul>
-                    </li>
-                    <li>Boot up your 3DS while holding <code>Select</code> to launch the Luma3DS configuration menu.
-                        <ul>
-                            <li>If your 3DS boots normally to the HOME Menu then boot9strap did not install correctly. Replace your prep files with freshly downloaded files and restore the F0F1 backup in b9sTool. Do not create a new F0F1 backup! Then try reinstalling boot9strap again.</li>
+                    <li>Wait for it to say <code>done!</code>. Exit b9sTool and continue to Luma3DS configuration.<ul>
+                            <li>If your 3DS reboots normally then boot9strap did not install correctly. Replace your prep files with freshly downloaded files and restore the F0F1 backup in b9sTool. <b>Do not create a new F0F1 backup!</b> Then try reinstalling boot9strap again.</li>
+							<li>You can return here later while the 3DS is turned off by holding <code>Select</code> whilepowering on.</li>
                         </ul>
                     </li>
                     <li>Use the <code>A</code> button and the D-pad to enable the following options:
@@ -764,7 +779,9 @@
                             <li><code>Show NAND or User String in System Settings</code> (to confirm CFW is loaded).</li>
                         </ul>
                     </li>
-                    <li style="height: 2em;">Press <code>Start</code> to save and reboot.</li>
+                    <li class="br">Press <code>Start</code> to save and reboot.<ul>
+					    <li><b>Wait!</b> Hold on! If GodMode9 shows up instead of rebooting into the system, write <code>essential.exefs</code> (<span class="hl4">if you have the space</span>), fix the time and such, but <i>reboot</i> the 3DS when you are at GodMode9's file manager. Sometimes exiting Luma3DS config bugs out in a rather particular way which executes its payload instead of booting normally.</li>
+						<li><span class="hl4" >If you have less than 1.4GB on your SD card</span>, then consult section 6 of this guide for information about SD card migration and (re)creating backup files. <b>Disregard section VII of the page linked below.</b></li></ul></li>
                 </ol>
             </div>
             <div class="warn msg bdr">At this point, <code>boot.firm</code> is required to exist on the SD card. Without it, <i>the console will not boot.</i> To resolve this, follow the instructions in the page linked below. </div>
@@ -779,12 +796,12 @@
                 </ol>
             </div>
             <div class="good msg bdr">If you've completed what is shown here, including this section (and the finalizing setup page in 3ds.hacks.guide) then congratulations! You've completed this guide and need to do nothing else for enjoying the fruits of your labour. However, as many people enjoy a good bonus the two sections after this are for better utilizing the features of your custom firmware and expanding its functionality.</div>
-        </div><br>
-        <div class="warn msg bdr br">Some things shown past this point may cause you to become banned from certain circles if discussed. As this guide isn't affiliated with any of those parties, they may not support you upon mention of this guide, or following the procedures shown after section 5. In order to cause the least amount of trouble, act like this guide doesn't exist when inquiring about any issues you may come across.</div>
+        </div>
         <a class="item section" id="title6">
             <h2>Section 6 — Other 3DS software</h2>
         </a>
         <div class="ins">
+		<div class="warn msg bdr">Certain circles do not dare discuss piracy. As some places may ban you for talking about it, <span class="hl3">don't bring up freeShop.</span> <i>Ever.</i></div>
             <div class="body end">
                 <p>There is some other cool software you can install via FBI's TitleDB menu. As there is no additional preparation necessary, This section should be fairly straight-forward, especially compared with the long-winded process which permits the installation of such software. When finished, you will have <b>FTPD</b> and <b>Freeshop</b> made available to you. There is a <b>lot</b> of other software via TitleDB but the two mentioned are what may be considered most useful for games, patches and remote interaction with the SD card.</p>
             </div>
@@ -792,22 +809,17 @@
             <div class="body br">
                 <h2 class="nobr">Software installation</h2>
                 <ol>
-                    <li>Open FBI, and navigate to <code>TitleDB</code>.</li>
-                    <li>Scroll to the F's, select and download <code>Freeshop</code>, then <code>ftpd</code>.
-                        <ul>
-                            <li>If you do not see <code>ftpd</code>, scroll to the S's, select and download <code>Super ftpd ii turbo</code>.</li>
-                            <li>To navigate through the list faster, left and right act as page up and page down respectively.</li>
+                    <li>Open FBI, and navigate to <code>TitleDB</code>.<ul>
+					    <li>To navigate through the list faster, left and right act as page up and page down respectively.</li>
                             <li>For multiple entries in TitleDB, the bottom-most one is usually the latest.</li>
-                            <li>When prompted, FBI will provide two options for installation. As follows;
-                                <ul>
-                                    <li class="txtli"><code>CIA</code>: Installs to system memory and creates a shortcut in Home Menu.</li>
-                                    <li class="txtli"><code>3DSX</code>: installs to <code>3ds</code> on SD card, only accessible through the Homebrew Launcher.</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    </ul>
-                    </li>
+                            <li>When prompted, FBI will provide two options for installation. As follows;<ul>
+                                <li class="txtli"><code>CIA</code>: Installs to system memory and creates a shortcut in Home Menu.</li>
+                                <li class="txtli"><code>3DSX</code>: installs to <code>3ds</code> on SD card, only accessible through the Homebrew Launcher.</li></ul></li></ul></li>
+                    <li>Scroll to the F's, select and download the following two applications:<ul>
+					    <li class="txtli"><code>freeShop</code><ul>
+					        <li class="intl">As <code>CIA</code> is the only option shown here, freeShop will install to system memory.</li></ul></li>
+					    <li class="txtli"><code>ftpd</code><ul>
+                            <li class="intl">If you do not see <code>ftpd</code>, scroll to the S's, select and download <code>Super ftpd ii turbo</code>.</li></ul></li></ul></li>
                     <li>Exit FBI and unwrap your gifts.</li>
                 </ol>
                 <h2>Freeshop configuration</h2>
@@ -869,8 +881,17 @@
                 </ol>
             </div>
         </div>
-        <a class="item section" id="title7">
-            <h2>Section 7 — 3DS operation from PC</h2>
+		<a class="item section" id="title7">
+		    <h2>Section 7 — MIgration and backup</h2>
+	    </a>
+		<div class="ins">
+		    <div class="body end">
+			    <p>[Critical error: 11.8 has been released, this section to be finished later.]</p>
+				<p>[Include information about how to create <code>essential.exefs</code> in GodMode9.]</p>
+			</div>
+		</div>
+        <a class="item section" id="title8">
+            <h2>Section 8 — 3DS operation from PC</h2>
         </a>
         <div class="ins">
             <div class="warn msg bdr br">Input redirection features, until otherwise rectified is easily installable for Windows machines only.</div>
