@@ -417,7 +417,7 @@
       <h2>Preface and summary</h2>
     </a>
     <div class="ins">
-      <div class="warn msg bdr br">This guide is intended for use with <i>completely stock</i> 3DS consoles using firmware 11.4 - 11.7.0-40. <span class="hl3">Following these instructions with an Arm9LoaderHax-modified console will brick the console.</span> <u>Don't even try.</u> Future firmware <i>may</i> not brick the console; if given an update <i>before modding</i>, don't accept until cleared and skip any instructions suggesting you should update the console.</div>
+      <div class="warn msg bdr br">This guide is intended for use with <i>completely stock</i> 3DS consoles using firmware 11.4 - 11.8. <span class="hl3">Following these instructions with an Arm9LoaderHax-modified console will brick the console.</span> <u>Don't even try.</u> Future firmware <i>may</i> not brick the console; if given an update <i>before modding</i>, don't accept until it is certain the software provided is functional for the latest firmware version.</div>
       <div class="info msg bdr br">Any reference to 3DS also applies for 2DS, meaning that regardless of model these instructions will apply.</div>
       <div class="good msg bdr">After completing these instructions, it is safe to update Boot9Strap, Luma3DS and the console firmware.</div>
       <div class="body end">
@@ -564,10 +564,15 @@
             </li>
             <li>Download the following <i>additional</i> files depending on your firmware version:
               <ul>
-                <li class="txtli"><code>11.4 - 11.7:</code> <a href="https://github.com/zoogie/b9sTool/releases/download/v4.0.0/boot.nds">B9STool v4.0.0</a></li>
+                <li class="txtli"><code>11.4 - 11.7:</code> <a href="https://github.com/zoogie/b9sTool/releases/download/v4.0.0/boot.nds">B9STool v4.0.0</a>
+				  <ul class="intl">
+				    <li>If you already have a compatible DSiWare title, <i class="hl3">do not update the system firmware!</i> Any future instructions to update <i>should be ignored.</i></li>
+			      </ul>
+				</li>
                 <li class="txtli"><code>11.8 onward:</code> <a href="https://github.com/zoogie/b9sTool/releases/download/v4.0.1/boot.nds">B9STool v4.0.1</a>
-                  <ul>
+                  <ul class="intl">
                     <li><span class="hl3">v4.0.1 is <i>not</i> compatible with 11.7 or less!</span></li>
+					<li>If you didn't have a compatible DSiWare title already, you may be forced to update the system firmware which makes this the <i>only</i> option.</li>
                   </ul>
                 </li>
               </ul>
