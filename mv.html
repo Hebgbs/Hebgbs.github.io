@@ -13,10 +13,14 @@
 				   Ubuntu Sans,
 				   sans-serif;
 	}
-	H1 {
-	  margin-top: 0;
+	IFRAME {
+	  width: 100%;
+	  height: 186px;
+	  border: none;
 	}
-	H3 {
+	H1,
+    H3 {
+	  margin-top: 0;
 	  margin-bottom: 0;
 	}
 	#mvbox {
@@ -26,18 +30,26 @@
       width: auto;
 	}
 	.mvmsg {
-	  background: red;
       padding: 40px;
       text-align: center;
       display: table-cell;
       vertical-align: middle;
+	}
+	.mvc {
+	  position: absolute;
+	  width: calc(100% - 10px)
+	  top: calc((100% + 186px) / 3);
+	  bottom: calc((100% + 186px) / 3);
+	  left: 0;
+	  right: 0;
+	  margin: auto;
 	}
   </style>
 </head>
 <body>
   <div id="mvbox" style="background: red;">
     <div class="mvmsg">
-    <h1>This page has moved!</h1>
+    <h1>This page has moved!</h1><br>
 	<h3>Click on the link below to view at its new location!</h3>
     </div>
   </div>
