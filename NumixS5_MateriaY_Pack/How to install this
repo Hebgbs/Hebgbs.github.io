@@ -1,0 +1,277 @@
+Installation is straight-forward if you understand these icons DEPEND on NumixS5_MateriaY_Common:
+
+1) Extract the common set to ~/.icons
+2) Extract any or all of the other packs somewhere else
+3) Copy / Link the icon sets you want
+
+For each pack which isn't the common set, there are two directories.
+In each of the two directories, there are six colours.
+In each subdirectory therein, there are three icon themes.
+
+Square and Circle themes rely on the base set (the one without any icon shape designation).
+
+Directory tree (slightly modified, excluding common) just to show each set:
+.
+├── dark
+│   ├── aqua
+│   │   ├── NumixS5_MateriaY-Circle_Dark-Aqua
+│   │   ├── NumixS5_MateriaY_Dark-Aqua
+│   │   └── NumixS5_MateriaY-Square_Dark-Aqua
+│   ├── blue
+│   │   ├── NumixS5_MateriaY-Circle_Dark-Blue
+│   │   ├── NumixS5_MateriaY_Dark-Blue
+│   │   └── NumixS5_MateriaY-Square_Dark-Blue
+│   ├── maia
+│   │   ├── NumixS5_MateriaY-Circle_Dark-Maia
+│   │   ├── NumixS5_MateriaY_Dark-Maia
+│   │   └── NumixS5_MateriaY-Square_Dark-Maia
+│   ├── mate
+│   │   ├── NumixS5_MateriaY-Circle_Dark-MATE
+│   │   ├── NumixS5_MateriaY_Dark-MATE
+│   │   └── NumixS5_MateriaY-Square_Dark-MATE
+│   ├── orange
+│   │   ├── NumixS5_MateriaY-Circle_Dark-Orange
+│   │   ├── NumixS5_MateriaY_Dark-Orange
+│   │   └── NumixS5_MateriaY-Square_Dark-Orange
+│   └── red
+│       ├── NumixS5_MateriaY-Circle_Dark-Red
+│       ├── NumixS5_MateriaY_Dark-Red
+│       └── NumixS5_MateriaY-Square_Dark-Red
+├── dark-lc
+│   ├── aqua
+│   │   ├── NumixS5_MateriaY-Circle_Dark-LC-Aqua
+│   │   ├── NumixS5_MateriaY_Dark-LC-Aqua
+│   │   └── NumixS5_MateriaY-Square_Dark-LC-Aqua
+│   ├── blue
+│   │   ├── NumixS5_MateriaY-Circle_Dark-LC-Blue
+│   │   ├── NumixS5_MateriaY_Dark-LC-Blue
+│   │   └── NumixS5_MateriaY-Square_Dark-LC-Blue
+│   ├── maia
+│   │   ├── NumixS5_MateriaY-Circle_Dark-LC-Maia
+│   │   ├── NumixS5_MateriaY_Dark-LC-Maia
+│   │   └── NumixS5_MateriaY-Square_Dark-LC-Maia
+│   ├── mate
+│   │   ├── NumixS5_MateriaY-Circle_Dark-LC-MATE
+│   │   ├── NumixS5_MateriaY_Dark-LC-MATE
+│   │   └── NumixS5_MateriaY-Square_Dark-LC-MATE
+│   ├── orange
+│   │   ├── NumixS5_MateriaY-Circle_Dark-LC-Orange
+│   │   ├── NumixS5_MateriaY_Dark-LC-Orange
+│   │   └── NumixS5_MateriaY-Square_Dark-LC-Orange
+│   └── red
+│       ├── NumixS5_MateriaY-Circle_Dark-LC-Red
+│       ├── NumixS5_MateriaY_Dark-LC-Red
+│       └── NumixS5_MateriaY-Square_Dark-LC-Red
+├── light
+│   ├── aqua
+│   │   ├── NumixS5_MateriaY-Circle_Light-Aqua
+│   │   ├── NumixS5_MateriaY_Light-Aqua
+│   │   └── NumixS5_MateriaY-Square_Light-Aqua
+│   ├── blue
+│   │   ├── NumixS5_MateriaY-Circle_Light-Blue
+│   │   ├── NumixS5_MateriaY_Light-Blue
+│   │   └── NumixS5_MateriaY-Square_Light-Blue
+│   ├── maia
+│   │   ├── NumixS5_MateriaY-Circle_Light-Maia
+│   │   ├── NumixS5_MateriaY_Light-Maia
+│   │   └── NumixS5_MateriaY-Square_Light-Maia
+│   ├── mate
+│   │   ├── NumixS5_MateriaY-Circle_Light-MATE
+│   │   ├── NumixS5_MateriaY_Light-MATE
+│   │   └── NumixS5_MateriaY-Square_Light-MATE
+│   ├── orange
+│   │   ├── NumixS5_MateriaY-Circle_Light-Orange
+│   │   ├── NumixS5_MateriaY_Light-Orange
+│   │   └── NumixS5_MateriaY-Square_Light-Orange
+│   └── red
+│       ├── NumixS5_MateriaY-Circle_Light-Red
+│       ├── NumixS5_MateriaY_Light-Red
+│       └── NumixS5_MateriaY-Square_Light-Red
+├── light-lc
+│   ├── aqua
+│   │   ├── NumixS5_MateriaY-Circle_Light-LC-Aqua
+│   │   ├── NumixS5_MateriaY_Light-LC-Aqua
+│   │   └── NumixS5_MateriaY-Square_Light-LC-Aqua
+│   ├── blue
+│   │   ├── NumixS5_MateriaY-Circle_Light-LC-Blue
+│   │   ├── NumixS5_MateriaY_Light-LC-Blue
+│   │   └── NumixS5_MateriaY-Square_Light-LC-Blue
+│   ├── maia
+│   │   ├── NumixS5_MateriaY-Circle_Light-LC-Maia
+│   │   ├── NumixS5_MateriaY_Light-LC-Maia
+│   │   └── NumixS5_MateriaY-Square_Light-LC-Maia
+│   ├── mate
+│   │   ├── NumixS5_MateriaY-Circle_Light-LC-MATE
+│   │   ├── NumixS5_MateriaY_Light-LC-MATE
+│   │   └── NumixS5_MateriaY-Square_Light-LC-MATE
+│   ├── orange
+│   │   ├── NumixS5_MateriaY-Circle_Light-LC-Orange
+│   │   ├── NumixS5_MateriaY_Light-LC-Orange
+│   │   └── NumixS5_MateriaY-Square_Light-LC-Orange
+│   └── red
+│       ├── NumixS5_MateriaY-Circle_Light-LC-Red
+│       ├── NumixS5_MateriaY_Light-LC-Red
+│       └── NumixS5_MateriaY-Square_Light-LC-Red
+├── medium-dark
+│   ├── aqua
+│   │   ├── NumixS5_MateriaY-Circle_Mid-Dark-Aqua
+│   │   ├── NumixS5_MateriaY_Mid-Dark-Aqua
+│   │   └── NumixS5_MateriaY-Square_Mid-Dark-Aqua
+│   ├── blue
+│   │   ├── NumixS5_MateriaY-Circle_Mid-Dark-Blue
+│   │   ├── NumixS5_MateriaY_Mid-Dark-Blue
+│   │   └── NumixS5_MateriaY-Square_Mid-Dark-Blue
+│   ├── maia
+│   │   ├── NumixS5_MateriaY-Circle_Mid-Dark-Maia
+│   │   ├── NumixS5_MateriaY_Mid-Dark-Maia
+│   │   └── NumixS5_MateriaY-Square_Mid-Dark-Maia
+│   ├── mate
+│   │   ├── NumixS5_MateriaY-Circle_Mid-Dark-MATE
+│   │   ├── NumixS5_MateriaY_Mid-Dark-MATE
+│   │   └── NumixS5_MateriaY-Square_Mid-Dark-MATE
+│   ├── orange
+│   │   ├── NumixS5_MateriaY-Circle_Mid-Dark-Orange
+│   │   ├── NumixS5_MateriaY_Mid-Dark-Orange
+│   │   └── NumixS5_MateriaY-Square_Mid-Dark-Orange
+│   └── red
+│       ├── NumixS5_MateriaY-Circle_Mid-Dark-Red
+│       ├── NumixS5_MateriaY_Mid-Dark-Red
+│       └── NumixS5_MateriaY-Square_Mid-Dark-Red
+└── medium-light
+    ├── aqua
+    │   ├── NumixS5_MateriaY-Circle_Mid-Light-Aqua
+    │   ├── NumixS5_MateriaY_Mid-Light-Aqua
+    │   └── NumixS5_MateriaY-Square_Mid-Light-Aqua
+    ├── blue
+    │   ├── NumixS5_MateriaY-Circle_Mid-Light-Blue
+    │   ├── NumixS5_MateriaY_Mid-Light-Blue
+    │   └── NumixS5_MateriaY-Square_Mid-Light-Blue
+    ├── maia
+    │   ├── NumixS5_MateriaY-Circle_Mid-Light-Maia
+    │   ├── NumixS5_MateriaY_Mid-Light-Maia
+    │   └── NumixS5_MateriaY-Square_Mid-Light-Maia
+    ├── mate
+    │   ├── NumixS5_MateriaY-Circle_Mid-Light-MATE
+    │   ├── NumixS5_MateriaY_Mid-Light-MATE
+    │   └── NumixS5_MateriaY-Square_Mid-Light-MATE
+    ├── orange
+    │   ├── NumixS5_MateriaY-Circle_Mid-Light-Orange
+    │   ├── NumixS5_MateriaY_Mid-Light-Orange
+    │   └── NumixS5_MateriaY-Square_Mid-Light-Orange
+    └── red
+        ├── NumixS5_MateriaY-Circle_Mid-Light-Red
+        ├── NumixS5_MateriaY_Mid-Light-Red
+        └── NumixS5_MateriaY-Square_Mid-Light-Red
+
+Sorted by dependency in reverse order (hand-made):
+NumixS5_materiaY_Common
+├── gnome
+└── hicolor
+    ├── NumixS5_MateriaY_Dark-Aqua
+    │   ├── NumixS5_MateriaY-Circle_Dark-Aqua
+    │   └── NumixS5_MateriaY-Square_Dark-Aqua
+    ├── NumixS5_MateriaY_Dark-Blue
+    │   ├── NumixS5_MateriaY-Circle_Dark-Blue
+    │   └── NumixS5_MateriaY-Square_Dark-Blue
+    ├── NumixS5_MateriaY_Dark-Maia
+    │   ├── NumixS5_MateriaY-Circle_Dark-Maia
+    │   └── NumixS5_MateriaY-Square_Dark-Maia
+    ├── NumixS5_MateriaY_Dark-MATE
+    │   ├── NumixS5_MateriaY-Circle_Dark-MATE
+    │   └── NumixS5_MateriaY-Square_Dark-MATE
+    ├── NumixS5_MateriaY_Dark-Orange
+    │   ├── NumixS5_MateriaY-Circle_Dark-Orange
+    │   └── NumixS5_MateriaY-Square_Dark-Orange
+    ├── NumixS5_MateriaY_Dark-Red
+    │   ├── NumixS5_MateriaY-Circle_Dark-Red
+    │   └── NumixS5_MateriaY-Square_Dark-Red
+    ├── NumixS5_MateriaY_Dark-LC-Aqua
+    │   ├── NumixS5_MateriaY-Circle_Dark-LC-Aqua
+    │   └── NumixS5_MateriaY-Square_Dark-LC-Aqua
+    ├── NumixS5_MateriaY_Dark-LC-Blue
+    │   ├── NumixS5_MateriaY-Circle_Dark-LC-Blue
+    │   └── NumixS5_MateriaY-Square_Dark-LC-Blue
+    ├── NumixS5_MateriaY_Dark-LC-Maia
+    │   ├── NumixS5_MateriaY-Circle_Dark-LC-Maia
+    │   └── NumixS5_MateriaY-Square_Dark-LC-Maia
+    ├── NumixS5_MateriaY_Dark-LC-MATE
+    │   ├── NumixS5_MateriaY-Circle_Dark-LC-MATE
+    │   └── NumixS5_MateriaY-Square_Dark-LC-MATE
+    ├── NumixS5_MateriaY_Dark-LC-Orange
+    │   ├── NumixS5_MateriaY-Circle_Dark-LC-Orange
+    │   └── NumixS5_MateriaY-Square_Dark-LC-Orange
+    ├── NumixS5_MateriaY_Dark-LC-Red
+    │   ├── NumixS5_MateriaY-Circle_Dark-LC-Red
+    │   └── NumixS5_MateriaY-Square_Dark-LC-Red
+    ├── NumixS5_MateriaY_Light-Aqua
+    │   ├── NumixS5_MateriaY-Circle_Light-Aqua
+    │   └── NumixS5_MateriaY-Square_Light-Aqua
+    ├── NumixS5_MateriaY_Light-Blue
+    │   ├── NumixS5_MateriaY-Circle_Light-Blue
+    │   └── NumixS5_MateriaY-Square_Light-Blue
+    ├── NumixS5_MateriaY_Light-Maia
+    │   ├── NumixS5_MateriaY-Circle_Light-Maia
+    │   └── NumixS5_MateriaY-Square_Light-Maia
+    ├── NumixS5_MateriaY_Light-MATE
+    │   ├── NumixS5_MateriaY-Circle_Light-MATE
+    │   └── NumixS5_MateriaY-Square_Light-MATE
+    ├── NumixS5_MateriaY_Light-Orange
+    │   ├── NumixS5_MateriaY-Circle_Light-Orange
+    │   └── NumixS5_MateriaY-Square_Light-Orange
+    ├── NumixS5_MateriaY_Light-Red
+    │   ├── NumixS5_MateriaY-Circle_Light-Red
+    │   └── NumixS5_MateriaY-Square_Light-Red
+    ├── NumixS5_MateriaY_Light-LC-Aqua
+    │   ├── NumixS5_MateriaY-Circle_Light-LC-Aqua
+    │   └── NumixS5_MateriaY-Square_Light-LC-Aqua
+    ├── NumixS5_MateriaY_Light-LC-Blue
+    │   ├── NumixS5_MateriaY-Circle_Light-LC-Blue
+    │   └── NumixS5_MateriaY-Square_Light-LC-Blue
+    ├── NumixS5_MateriaY_Light-LC-Maia
+    │   ├── NumixS5_MateriaY-Circle_Light-LC-Maia
+    │   └── NumixS5_MateriaY-Square_Light-LC-Maia
+    ├── NumixS5_MateriaY_Light-LC-MATE
+    │   ├── NumixS5_MateriaY-Circle_Light-LC-MATE
+    │   └── NumixS5_MateriaY-Square_Light-LC-MATE
+    ├── NumixS5_MateriaY_Light-LC-Orange
+    │   ├── NumixS5_MateriaY-Circle_Light-LC-Orange
+    │   └── NumixS5_MateriaY-Square_Light-LC-Orange
+    ├── NumixS5_MateriaY_Light-LC-Red
+    │   ├── NumixS5_MateriaY-Circle_Light-LC-Red
+    │   └── NumixS5_MateriaY-Square_Light-LC-Red
+    ├── NumixS5_MateriaY_Mid-Dark-Aqua
+    │   ├── NumixS5_MateriaY-Circle_Mid-Dark-Aqua
+    │   └── NumixS5_MateriaY-Square_Mid-Dark-Aqua
+    ├── NumixS5_MateriaY_Mid-Dark-Blue
+    │   ├── NumixS5_MateriaY-Circle_Mid-Dark-Blue
+    │   └── NumixS5_MateriaY-Square_Mid-Dark-Blue
+    ├── NumixS5_MateriaY_Mid-Dark-Maia
+    │   ├── NumixS5_MateriaY-Circle_Mid-Dark-Maia
+    │   └── NumixS5_MateriaY-Square_Mid-Dark-Maia
+    ├── NumixS5_MateriaY_Mid-Dark-MATE
+    │   ├── NumixS5_MateriaY-Circle_Mid-Dark-MATE
+    │   └── NumixS5_MateriaY-Square_Mid-Dark-MATE
+    ├── NumixS5_MateriaY_Mid-Dark-Orange
+    │   ├── NumixS5_MateriaY-Circle_Mid-Dark-Orange
+    │   └── NumixS5_MateriaY-Square_Mid-Dark-Orange
+    ├── NumixS5_MateriaY_Mid-Dark-Red
+    │   ├── NumixS5_MateriaY-Circle_Mid-Dark-Red
+    │   └── NumixS5_MateriaY-Square_Mid-Dark-Red
+    ├── NumixS5_MateriaY_Mid-Light-Aqua
+    │   ├── NumixS5_MateriaY-Circle_Mid-Light-Aqua
+    │   └── NumixS5_MateriaY-Square_Mid-Light-Aqua
+    ├── NumixS5_MateriaY_Mid-Light-Blue
+    │   ├── NumixS5_MateriaY-Circle_Mid-Light-Blue
+    │   └── NumixS5_MateriaY-Square_Mid-Light-Blue
+    ├── NumixS5_MateriaY_Mid-Light-Maia
+    │   ├── NumixS5_MateriaY-Circle_Mid-Light-Maia
+    │   └── NumixS5_MateriaY-Square_Mid-Light-Maia
+    ├── NumixS5_MateriaY_Mid-Light-MATE
+    │   ├── NumixS5_MateriaY-Circle_Mid-Light-MATE
+    │   └── NumixS5_MateriaY-Square_Mid-Light-MATE
+    ├── NumixS5_MateriaY_Mid-Light-Orange
+    │   ├── NumixS5_MateriaY-Circle_Mid-Light-Orange
+    │   └── NumixS5_MateriaY-Square_Mid-Light-Orange
+    └── NumixS5_MateriaY_Mid-Light-Red
+        ├── NumixS5_MateriaY-Circle_Mid-Light-Red
+        └── NumixS5_MateriaY-Square_Mid-Light-Red
