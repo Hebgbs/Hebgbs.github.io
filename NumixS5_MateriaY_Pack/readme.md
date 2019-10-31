@@ -6,7 +6,7 @@
 
 #### Theme hirearchy
 Before installation, it is wise to know the hierarchical structure of these themes, since they rely upon one another:
-* The 3 "Themes" in `common` provide icons for everything else in the set.
+* The 3 "Themes" in `common/` provide icons for everything else in the set.
 * The 36 "Base" themes in every other top-level tarball directory inherit from "Base common" (defined via index).
 * The 72 app icon "Square" and "Circle" themes _additionally_ rely on app icon "Common" themes (defined via symlinks).
 
@@ -19,20 +19,32 @@ To install this theme, after having downloaded the tarball, use the terminal to 
 Once having done so, _then_ installation for _all_ themes is as simple as these three commands:
 ```
 # Install all (3) common files (mandatory, provided themes will NOT work otherwise!)
-tar -xzf NumixS5_MateriaY_Pack.tar.gz --wildcards --strip-components=1 -C $HOME/.icons 'common/*'
+tar -xzf NumixS5_MateriaY_Pack.tar.gz --wildcards --strip-components=1 -C $HOME/.icons/ 'common/*/'
 # Install all (36) base themes
-tar -xzf NumixS5_MateriaY_Pack.tar.gz --wildcards --strip-components=2 -C $HOME/.icons '*/*/NumixS5_MateriaY_*'
+tar -xzf NumixS5_MateriaY_Pack.tar.gz --wildcards --strip-components=2 -C $HOME/.icons/ '*/*/NumixS5_MateriaY_*/'
 # Install all (72) app icon variants
-tar -xzf NumixS5_MateriaY_Pack.tar.gz --wildcards --strip-components=2 -C $HOME/.icons '*/*/NumixS5_MateriaY-*'
+tar -xzf NumixS5_MateriaY_Pack.tar.gz --wildcards --strip-components=2 -C $HOME/.icons/ '*/*/NumixS5_MateriaY-*/'
 ```
 
 #### Installing themes selectively
 If you would rather install themes selectively, there is a _bit_ you need to know before changing these commands. If you continue reading on, you'll soon learn all of the available directories you can call upon in the tarball to extract. Follow the command in the previous subsection to extract all common icons, then make a selection based upon the information below. As an example:
 ```
-tar -xzf NumixS5_MateriaY_Pack.tar.gz --wildcards --strip-components=2 -C $HOME/.icons 'light/mate/NumixS5_MateriaY*'
+tar -xzf NumixS5_MateriaY_Pack.tar.gz --wildcards --strip-components=2 -C $HOME/.icons/ 'light/mate/NumixS5_MateriaY*/'
 ```
 
-Note the above will install _all_ (3) themes under `dark/mate` in the tarball. If you would rather just the base theme, replace `*'` with `_*` and if you want just the app icons themes, replace `*` with `-*`. For circle app icons only replace `*` with `-Circle*` and for square app icons replace `*` with `-Square*`. Square and circle themes _need_ the base theme to exist alongside it. **Everything shown is case-sensitive.**
+Note the above will install _all_ (3) themes under `dark/mate` in the tarball. If you would rather just the base theme, replace `*/` with `_*/` and if you want just the app icons themes, replace `*` with `-*`. For circle app icons only replace `*/` with `-Circle*/` and for square app icons only replace `*/` with `-Square*/`. Square and circle themes _need_ the base theme to exist alongside it. **Everything shown is case-sensitive.**
+
+#### Alternative installation via symlinks
+"Common" themes and the 36 base themes this suite relies upon can be symbolically linked if you extracted the tarball's contents _somewhere other than_ `~/.icons\`. If you wish to do that (i.e. you have multiple users, with a common file space) then you can do the following, assuming you `cd` to where the top-level tarball directories are;
+```
+ln -s $PWD/common/*/ ~/.icons/
+ln -s $PWD/*/*/NumixS5_MateriaY_*/ ~/.icons/
+```
+
+For the app icon variants, `ln` cannot be used. But since all 72 variants using `common/NumixS5_Common_Circle` and `common/NumixS5_Common_Square` are made entirely of symbolic links _anyway_ not much space will be taken up with their presence in `~/.icons/` after the following had been performed:
+```
+cp -R ./*/*/NumixS5_MateriaY-*/ ~/.icons/
+```
 
 
 ### About
