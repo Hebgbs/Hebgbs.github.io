@@ -1,4 +1,4 @@
-# New Document# Numix S5 Materia-Y icon suite for Linux systems
+# Numix S5 Materia-Y icon suite for Linux systems
 
 ### Installation
 
