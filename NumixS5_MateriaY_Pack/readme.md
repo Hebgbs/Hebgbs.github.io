@@ -2,7 +2,7 @@
 
 ### Installation
 
-> :heavy_dollar_sign: This implies you know enough about dealingwith the terminal to know what you're doing in it. If you don't, then thre is no shame in using graphical tools for everything shown, and graphical equivalents will be shown alongside terminal commands for general user convenience.
+> :heavy_dollar_sign: This implies you know enough about dealing with the terminal to know what you're doing in it. If you don't, then there is no shame in using graphical tools for everything shown, and graphical equivalents will be shown alongside terminal commands for general user convenience.
 
 #### Theme hirearchy
 Before installation, it is wise to know the hierarchical structure of these themes, since they rely upon one another:
