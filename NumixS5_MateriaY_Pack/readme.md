@@ -19,11 +19,11 @@ To install this theme, after having downloaded the tarball, use the terminal to 
 Once having done so, _then_ installation for _all_ themes is as simple as these three commands:
 ```
 # Install all (3) common files (mandatory, provided themes will NOT work otherwise!)
-tar -xzf NumixS5_MateriaY_Pack.tar.gz --wildcards --strip-components=1 -C $HOME/.icons/ 'common/*/'
+tar -xzf ./NumixS5_MateriaY_Pack.tar.gz --wildcards --strip-components=1 -C $HOME/.icons/ 'common/*/'
 # Install all (36) base themes
-tar -xzf NumixS5_MateriaY_Pack.tar.gz --wildcards --strip-components=2 -C $HOME/.icons/ '*/*/NumixS5_MateriaY_*/'
+tar -xzf ./NumixS5_MateriaY_Pack.tar.gz --wildcards --strip-components=2 -C $HOME/.icons/ '*/*/NumixS5_MateriaY_*/'
 # Install all (72) app icon variants
-tar -xzf NumixS5_MateriaY_Pack.tar.gz --wildcards --strip-components=2 -C $HOME/.icons/ '*/*/NumixS5_MateriaY-*/'
+tar -xzf ./NumixS5_MateriaY_Pack.tar.gz --wildcards --strip-components=2 -C $HOME/.icons/ '*/*/NumixS5_MateriaY-*/'
 ```
 > 🖱️The graphical equivalent of this would be to open the tarball in an archive editor and using that to navigate to the locations shown. Asterisks are wildcards; they're the equivalent of selecting the _same of_ a type based on pattern.
 
@@ -33,7 +33,7 @@ If you would rather install themes selectively, there is a _bit_ you need to kno
 tar -xzf NumixS5_MateriaY_Pack.tar.gz --wildcards --strip-components=2 -C $HOME/.icons/ 'light/mate/NumixS5_MateriaY*/'
 ```
 
-Note the above will install _all_ (3) themes under `dark/mate` in the tarball. If you would rather just the base theme, replace `*/` with `_*/` and if you want just the app icons themes, replace `*` with `-*`. For circle app icons only replace `*/` with `-Circle*/` and for square app icons only replace `*/` with `-Square*/`. Square and circle themes _need_ the base theme to exist alongside it. **Everything shown is case-sensitive.**
+Note the above will install _all_ (3) themes under `dark/mate` in the tarball. If you would rather just the base theme, replace `*/` with `_*/` and if you want just the app icons themes, replace `*/` with `-*/`. For circle app icons only replace `*/` with `-Circle*/` and for square app icons only replace `*/` with `-Square*/`. Square and circle themes _need_ the base theme to exist alongside it. **Everything shown is case-sensitive.**
 
 #### Alternative installation via symlinks
 "Common" themes and the 36 base themes this suite relies upon can be symbolically linked if you extracted the tarball's contents _somewhere other than_ `~/.icons\`. If you wish to do that (i.e. you have multiple users, with a common file space) then you can do the following, assuming you `cd` to where the top-level tarball directories are;
