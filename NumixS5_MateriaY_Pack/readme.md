@@ -25,6 +25,7 @@ tar -xzf NumixS5_MateriaY_Pack.tar.gz --wildcards --strip-components=2 -C $HOME/
 # Install all (72) app icon variants
 tar -xzf NumixS5_MateriaY_Pack.tar.gz --wildcards --strip-components=2 -C $HOME/.icons/ '*/*/NumixS5_MateriaY-*/'
 ```
+> 🖱️The graphical equivalent of this would be to open the tarball in an archive editor and using that to navigate to the locations shown. Asterisks are wildcards; they're the equivalent of selecting the _same of_ a type based on pattern.
 
 #### Installing themes selectively
 If you would rather install themes selectively, there is a _bit_ you need to know before changing these commands. If you continue reading on, you'll soon learn all of the available directories you can call upon in the tarball to extract. Follow the command in the previous subsection to extract all common icons, then make a selection based upon the information below. As an example:
@@ -40,11 +41,15 @@ Note the above will install _all_ (3) themes under `dark/mate` in the tarball. I
 ln -s $PWD/common/*/ ~/.icons/
 ln -s $PWD/*/*/NumixS5_MateriaY_*/ ~/.icons/
 ```
+> 🖱️ Some open-source file managers have the capability to create symbolic links, but these usually begin with `Link to ` which needs to be resolved by renaming them. _After moving these links elsewhere_ press <kbd>F2</kbd> and remove the preceding text (including the first space) to make them work.
+> 
+> :file_folder: _Some_ file managers also have the capabiility to batch-rename without third party tools, such as Nemo and Caja. If your FM lacks this capabilitty you may want to install a third-party tool to do this, such as `gprename` for GTK-based environments. Check your distributor's repository for options depending on FM features and DE in use.
 
 For the app icon variants, `ln` cannot be used. But since all 72 variants using `common/NumixS5_Common_Circle` and `common/NumixS5_Common_Square` are made entirely of symbolic links _anyway_ not much space will be taken up with their presence in `~/.icons/` after the following had been performed:
 ```
 cp -R ./*/*/NumixS5_MateriaY-*/ ~/.icons/
 ```
+> 🖱️ Equivalent action would be a simple copy-paste.
 
 
 ### About
