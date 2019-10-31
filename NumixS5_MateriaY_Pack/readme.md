@@ -43,7 +43,7 @@ ln -s $PWD/*/*/NumixS5_MateriaY_*/ ~/.icons/
 ```
 > 🖱️ Some open-source file managers have the capability to create symbolic links, but these usually begin with `Link to ` which needs to be resolved by renaming them. _After moving these links elsewhere_ press <kbd>F2</kbd> and remove the preceding text (including the first space) to make them work.
 > 
-> :file_folder: _Some_ file managers also have the capabiility to batch-rename without third party tools, such as Nemo and Caja. If your FM lacks this capabilitty you may want to install a third-party tool to do this, such as `gprename` for GTK-based environments. Check your distributor's repository for options depending on FM features and DE in use.
+> :file_folder: _Some_ file managers also have the capabiility to batch-rename without third party tools, such as Nemo and Caja. If your FM lacks this you may want to install a third-party tool to do this, such as `gprename` for GTK-based environments. Check your distributor's repository for options depending on FM features and DE in use.
 
 For the app icon variants, `ln` cannot be used. But since all 72 variants using `common/NumixS5_Common_Circle` and `common/NumixS5_Common_Square` are made entirely of symbolic links _anyway_ not much space will be taken up with their presence in `~/.icons/` after the following had been performed:
 ```
