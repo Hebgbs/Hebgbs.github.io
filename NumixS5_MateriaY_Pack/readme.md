@@ -1,4 +1,4 @@
-# Numix S5 Materia-Y icon suite for Linux systems
+# New Document# Numix S5 Materia-Y icon suite for Linux systems
 
 ### Installation
 
@@ -34,7 +34,6 @@ tar -xzf NumixS5_MateriaY_Pack.tar.gz --wildcards --strip-components=2 -C $HOME/
 
 Note the above will install _all_ (3) themes under `dark/mate` in the tarball. If you would rather just the base theme, replace `*'` with `_*` and if you want just the app icons themes, replace `*` with `-*`. For circle app icons only replace `*` with `-Circle*` and for square app icons replace `*` with `-Square*`. Square and circle themes _need_ the base theme to exist alongside it. **Everything shown is case-sensitive.**
 
-####
 
 ### About
 What began as a personal project for just myself became this campaign to create something for the Linux community to use... or at least, a small subset of it. Numix-based, but not following the original developer's convention entirely because of how much space it would take otherwise.
@@ -42,9 +41,9 @@ What began as a personal project for just myself became this campaign to create 
 #### How it's so _tiny_
 Numix _as a set_ traditionlly only has symbolic links for the app icon variants, barrowing _heavily_ from Numix base theme via symbolic linking for its panel indicator icons. Inspired from this, and GTK's capability to have hier themes defined in each theme's index I took both ideas one step further and squished down everything to fit in ~40 megabytes.
 
-This also means that certain common directories are **Mandatory** to have installed, else it simply will not work. From the archive provided, as follows:
-`common/NumixS5_MateriaY_Common`: _The_ one set for everything. Have this or die.
-`common/NumixS5_MateriaY-Circle_Common`: Circular app icons for circle variants.
+This also means that certain common directories are **Mandatory** to have installed, else it simply will not work. From the archive provided, as follows:<br>
+`common/NumixS5_MateriaY_Common`: _The_ one set for everything. Have this or die.<br>
+`common/NumixS5_MateriaY-Circle_Common`: Circular app icons for circle variants.<br>
 `common/NumixS5_MateriaY-Square_Common`: Square app icons for square variants.
 
 After having created these, theme inheritience was adjusted, as well symbolic links recreated to repair the themes this archive provides after the initial change, then for the app icon variants rather than every instance of `48/apps` hosting its own set of icons, that directory simply pulls from its respective common set. This hyper-optimization compared to stock means less space taken on your disk for all of this selection to be made available.
@@ -80,14 +79,14 @@ Intended to go with MateriaV2 MATE, but it's really Mint-Y (green). Practically 
 Exactly as you'd expect, down to what Mint-Y colours they barrow.
 
 ### Variants
-Each colour for each style has two additional variants. Since each circle and square theme is modifed to only rely on symbolic links, you need the following from `common` in `~/.icons`:
-`common/NumixS5_MateriaY-Circle_Common`
+Each colour for each style has two additional variants. Since each circle and square theme is modifed to only rely on symbolic links, you need the following from `common` in `~/.icons`:<br>
+`common/NumixS5_MateriaY-Circle_Common`<br>
 `common/NumixS5_MateriaY-Square_Common`
 
 Without these, the app icons will not apply. This is because every instance of `48/apps` in each circle and square variant looks for the common variant two directories up, which is its intended behaviour.
 
 ### Credits
-_codic_ from Ubuntu MATE community for MateriaV2, the GTK theme which inspired this.
-_Numix Project_ for providing the tool I used to adjust their theme
-_GNU_ for their coreutils which made file links possible
+_codic_ from Ubuntu MATE community for MateriaV2, the GTK theme which inspired this.<br>
+_Numix Project_ for providing the tool I used to adjust their theme.<br>
+_GNU_ for their coreutils which made file links possible.<br>
 _Freenode_ for hsoting the `##linux` IRC channel, which was very, very helpful.
