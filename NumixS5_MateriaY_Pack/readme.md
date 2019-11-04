@@ -1,7 +1,5 @@
 # Numix S5 Materia-Y icon suite for Linux systems
-
-## Don't neglect to RTFM.
-***Seriously!***
+***Don't neglect to RTFM.***
 
 ### Installation
 
