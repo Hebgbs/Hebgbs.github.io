@@ -37,7 +37,7 @@ tar -xzf NumixS5_MateriaY_Pack.tar.gz --wildcards --strip-components=2 -C $HOME/
 Note the above will install _all_ (3) themes under `dark/mate` in the tarball. If you would rather just the base theme, replace `*/` with `_*/` and if you want just the app icons themes, replace `*/` with `-*/`. For circle app icons only replace `*/` with `-Circle*/` and for square app icons only replace `*/` with `-Square*/`. Square and circle themes _need_ the base theme to exist alongside it. **Everything shown is case-sensitive.**
 
 #### Alternative installation via symlinks
-"Common" themes and the 36 base themes this suite relies upon can be symbolically linked if you extracted the tarball's contents _somewhere other than_ `~/.icons\`. If you wish to do that (i.e. you have multiple users, with a common file space) then you can do the following, assuming you `cd` to where the extracted top-level directories are;
+"Common" themes and the 36 base themes this suite relies upon can be symbolically linked if you extracted the tarball's contents _somewhere other than_ `~/.icons/`. If you wish to do that (i.e. you have multiple users, with a common file space) then you can do the following, assuming you `cd` to where the extracted top-level directories are;
 ```
 ln -s $PWD/common/*/ ~/.icons/
 ln -s $PWD/*/*/NumixS5_MateriaY_*/ ~/.icons/
