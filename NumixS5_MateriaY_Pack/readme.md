@@ -1,20 +1,23 @@
 # Numix S5 Materia-Y icon suite for Linux systems
 
+## Don't neglect to RTFM.
+***Seriously!***
+
 ### Installation
 
 > :heavy_dollar_sign: This implies you know enough about dealing with the terminal to know what you're doing in it. If you don't, then there is no shame in using graphical tools for everything shown, and graphical equivalents will be shown alongside terminal commands for general user convenience.
 
 #### Theme hirearchy
 Before installation, it is wise to know the hierarchical structure of these themes, since they rely upon one another:
-* The 3 "Themes" in `common/` provide icons for everything else in the set.
+* The 3 "Common" themes in `common/` provide icons for everything else in the set.
 * The 36 "Base" themes in every other top-level tarball directory inherit from "Base common" (defined via index).
-* The 72 app icon "Square" and "Circle" themes _additionally_ rely on app icon "Common" themes (defined via symlinks).
+* The 72 app icon "Square" and "Circle" variants _additionally_ rely on app icon "Common" themes (defined via symlinks).
 
 Remember this, and you shouldn't have any trouble installing it. Speaking of...
 
 #### Installing all icon themes
 
-To install this theme, after having downloaded the tarball, use the terminal to `cd` at where it is. If you don't feel experienced enough, you can instead right-click in most file managers to open in its terminal of preference.
+To install this theme, after having downloaded the tarball, use the terminal to `cd` at where it is. If you don't feel experienced enough, you can instead right-click in most file managers once you navigate to where the tarball is to open its terminal of preference at the directory you are at.
 
 Once having done so, _then_ installation for _all_ themes is as simple as these three commands:
 ```
@@ -36,7 +39,7 @@ tar -xzf NumixS5_MateriaY_Pack.tar.gz --wildcards --strip-components=2 -C $HOME/
 Note the above will install _all_ (3) themes under `dark/mate` in the tarball. If you would rather just the base theme, replace `*/` with `_*/` and if you want just the app icons themes, replace `*/` with `-*/`. For circle app icons only replace `*/` with `-Circle*/` and for square app icons only replace `*/` with `-Square*/`. Square and circle themes _need_ the base theme to exist alongside it. **Everything shown is case-sensitive.**
 
 #### Alternative installation via symlinks
-"Common" themes and the 36 base themes this suite relies upon can be symbolically linked if you extracted the tarball's contents _somewhere other than_ `~/.icons\`. If you wish to do that (i.e. you have multiple users, with a common file space) then you can do the following, assuming you `cd` to where the top-level tarball directories are;
+"Common" themes and the 36 base themes this suite relies upon can be symbolically linked if you extracted the tarball's contents _somewhere other than_ `~/.icons\`. If you wish to do that (i.e. you have multiple users, with a common file space) then you can do the following, assuming you `cd` to where the extracted top-level directories are;
 ```
 ln -s $PWD/common/*/ ~/.icons/
 ln -s $PWD/*/*/NumixS5_MateriaY_*/ ~/.icons/
