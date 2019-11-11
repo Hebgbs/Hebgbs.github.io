@@ -31,7 +31,7 @@ tar -xzf ./NumixS5_MateriaY_Pack.tar.gz --wildcards --strip-components=2 -C $HOM
 #### Installing themes selectively
 If you would rather install themes selectively, there is a _bit_ you need to know before changing these commands. If you continue reading on, you'll soon learn all of the available directories you can call upon in the tarball to extract. Follow the command in the previous subsection to extract all common icons, then make a selection based upon the information below. As an example:
 ```
-tar -xzf NumixS5_MateriaY_Pack.tar.gz --wildcards --strip-components=2 -C $HOME/.icons/ 'light/mate/NumixS5_MateriaY*/'
+tar -xzf NumixS5_MateriaY_Pack.tar.gz --wildcards --strip-components=2 -C $HOME/.icons/ 'dark/mate/NumixS5_MateriaY*/'
 ```
 
 Note the above will install _all_ (3) themes under `dark/mate` in the tarball. If you would rather just the base theme, replace `*/` with `_*/` and if you want just the app icons themes, replace `*/` with `-*/`. For circle app icons only replace `*/` with `-Circle*/` and for square app icons only replace `*/` with `-Square*/`. Square and circle themes _need_ the base theme to exist alongside it. **Everything shown is case-sensitive.**
