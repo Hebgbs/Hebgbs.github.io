@@ -45,7 +45,11 @@
 /* Flip channel sidebar */
 .sidebar-2K8pFh,
     /* & all elements within */
-.sidebar-2K8pFh .scroller-2FKFPG,
+        /* Activity */    
+.sidebar-2K8pFh .searchBar-6Kv8R2,
+.sidebar-2K8pFh .header-zu8eWb,
+.sidebar-2K8pFh .channel-2QD9_O,
+        /* Channels */
 .sidebar-2K8pFh .channelNotice-1-XFjC,
 .sidebar-2K8pFh .unread-1s3J68,
 .sidebar-2K8pFh .containerDefault-3GGEv_,
