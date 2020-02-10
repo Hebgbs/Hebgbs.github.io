@@ -50,6 +50,7 @@
 .sidebar-2K8pFh .header-zu8eWb,
 .sidebar-2K8pFh .channel-2QD9_O,
         /* Channels */
+.sidebar-2K8pFh .header-2o-2hj,
 .sidebar-2K8pFh .channelNotice-1-XFjC,
 .sidebar-2K8pFh .unread-1s3J68,
 .sidebar-2K8pFh .containerDefault-3GGEv_,
@@ -60,7 +61,7 @@
 /* Make sidebar independent */
 .sidebar-2K8pFh {
     position: absolute;
-    z-index: 100;
+    z-index: 101;
     height: 100%;
 }
 /* Position on sidebar state */
