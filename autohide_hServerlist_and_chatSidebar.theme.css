@@ -9,10 +9,15 @@
 
 /* === Variable settings === */
 /* Settings for reveal animation duration and hiding
-   delay, partly a lazy fix for sidebar issues. */
+   delay. Copy root into your custom CSS to change. */
 :root {
-    --revealDur: 0.2s;
-    --hideDelay: 1s;
+    --autohide_duration: 0.2s;
+    --autohide_delay: 0s;
+    --sidebar_hover: 240px;
+    --autohide_size: 5px;
+    --guildpill_hover: 50px;
+    --guildpill_normal: 1px;
+    --sidebar_user: 36px;
 }
 /* ### Nothing else past this line needs to be touch. ### */
 
@@ -20,19 +25,19 @@
 /* Flip unread pill */
 .pill-2uzAFe,
 .pill-31IEus,
-.pill-1m5BUr{
+.pill-1m5BUr {
     transform: scaley(-1);
 }
 /* Position pill on guild bar state */
 .wrapper-1Rf91z.guilds-1SWlCJ:not(:hover) .pill-2uzAFe,
 .wrapper-1Rf91z.guilds-1SWlCJ:not(:hover) .pill-31IEus,
 .wrapper-1Rf91z.guilds-1SWlCJ:not(:hover) .pill-1m5BUr {
-    margin-top: 1px;
+    margin-top: var(--guildpill_normal);
 }
 .wrapper-1Rf91z.guilds-1SWlCJ:hover .pill-2uzAFe,
 .wrapper-1Rf91z.guilds-1SWlCJ:hover .pill-31IEus,
 .wrapper-1Rf91z.guilds-1SWlCJ:hover .pill-1m5BUr {
-    margin-top: 50px;
+    margin-top: var(--guildpill_hover);
 }
 /* Scale on guild bar state */
 .wrapper-1Rf91z.guilds-1SWlCJ:not(:hover) {
@@ -48,18 +53,27 @@
     height: 100%;
     z-index: 101;
 }
-/* Flip guild channel scroller */
-/* A / N: This puts the channel unread pills to the
-          right for end-users to see unread posts. */
+/* Flip sidebar elements */
+/* N: This puts the channel unread pills to the
+      right for end-users to see unread posts. */
 .sidebar-2K8pFh .scroller-2wx7Hm,
+.sidebar-2K8pFh .scroller-2FKFPG,
     /* & all elements therein */
 .sidebar-2K8pFh .content-3at_AU,
-.sidebar-2K8pFh .containerDefault-3GGEv_ {
+.sidebar-2K8pFh .content-3xS9Lh,
+.sidebar-2K8pFh .containerDefault-3GGEv_,
+.sidebar-2K8pFh .scroller-2FKFPG .container-2Pjhx- {
     transform: scalex(-1);
 }
+/* Fix guild VC display */
+.sidebar-2K8pFh .list-2bwCXU {
+    padding-left: 0px !Important;
+    padding-right: var(--sidebar_user); 
+}
+
 /* Position on sidebar state */
 .sidebar-2K8pFh:not(:hover) {
-    left: -235px;
+    left: calc((var(--sidebar_hover) - var(--autohide_size)) * -1);
 }
 .sidebar-2K8pFh:hover {
     left: 0px !important;
@@ -71,14 +85,19 @@
 .pill-31IEus,
 .pill-1m5BUr,
 .wrapper-1Rf91z.guilds-1SWlCJ {
-    transition: ease var(--revealDur);
+    transition: ease var(--autohide_duration) var(--autohide_delay);
 }
-/* Lazy fix for sidebar */
-.sidebar-2K8pFh:not(:hover),
-.wrapper-1Rf91z.guilds-1SWlCJ:not(:hover),
-.wrapper-1Rf91z.guilds-1SWlCJ:not(:hover) .pill-2uzAFe,
-.wrapper-1Rf91z.guilds-1SWlCJ:not(:hover) .pill-31IEus,
-.wrapper-1Rf91z.guilds-1SWlCJ:not(:hover) .pill-1m5BUr {
-    transition-delay: var(--hideDelay);
+
+/* ===Lazy fix for sidebar in DMs */
+/* N: Since the sidebar scroller is flipped,
+      left side is otherwise hard to grab. */
+.sidebar-2K8pFh .privateChannels-1nO12o:after {
+    transform: scalex(-1);
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: var(--autohide_width);
+    height: 100%;
 }
 /* ### EOF ### */
