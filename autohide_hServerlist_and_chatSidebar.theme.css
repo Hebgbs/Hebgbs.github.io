@@ -42,41 +42,29 @@
     height: 54px !important;
 }
 /* === Autohide for channel list === */
-/* Flip channel sidebar */
-.sidebar-2K8pFh,
-    /* & all elements within */
-        /* Activity */    
-.sidebar-2K8pFh .searchBar-6Kv8R2,
-.sidebar-2K8pFh .header-zu8eWb,
-.sidebar-2K8pFh .channel-2QD9_O,
-        /* Channels */
-.sidebar-2K8pFh .header-2o-2hj,
-.sidebar-2K8pFh .channelNotice-1-XFjC,
-.sidebar-2K8pFh .unread-1s3J68,
-.sidebar-2K8pFh .containerDefault-3GGEv_,
-.sidebar-2K8pFh .containerDefault-1ZnADq,
-.sidebar-2K8pFh .panels-j1Uci_ {
-    transform: scalex(-1);
-}
 /* Make sidebar independent */
 .sidebar-2K8pFh {
     position: absolute;
-    z-index: 101;
     height: 100%;
+    z-index: 101;
+}
+/* Flip guild channel scroller */
+/* A / N: This puts the channel unread pills to the
+          right for end-users to see unread posts. */
+.sidebar-2K8pFh .scroller-2wx7Hm,
+    /* & all elements therein */
+.sidebar-2K8pFh .content-3at_AU,
+.sidebar-2K8pFh .containerDefault-3GGEv_ {
+    transform: scalex(-1);
 }
 /* Position on sidebar state */
 .sidebar-2K8pFh:not(:hover) {
-    left: -236px;
+    left: -235px;
 }
 .sidebar-2K8pFh:hover {
     left: 0px !important;
 }
-/* Flip and repos unread pill */
-.sidebar-2K8pFh .containerDefault-1ZnADq .unread-3zKkbm {
-    transform: scalex(-1);
-    position: absolute;
-    left: 228px;
-}
+
 /* === Animate hidden elements === */
 .sidebar-2K8pFh,
 .pill-2uzAFe,
