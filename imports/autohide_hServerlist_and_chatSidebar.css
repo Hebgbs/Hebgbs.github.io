@@ -42,13 +42,18 @@
 .sidebar-2K8pFh .content-3at_AU,
 .sidebar-2K8pFh .content-3xS9Lh,
 .sidebar-2K8pFh .containerDefault-3GGEv_,
+.sidebar-2K8pFh .scroller-2FKFPG .header-zu8eWb,
 .sidebar-2K8pFh .scroller-2FKFPG .container-2Pjhx- {
     transform: scalex(-1);
 }
-/* Fix guild VC display */
+/* Fix display for flipped elements */
 .sidebar-2K8pFh .list-2bwCXU {
     padding-left: 0px !Important;
     padding-right: var(--sidebar_user); 
+}
+.sidebar-2K8pFh .scroller-2FKFPG .header-zu8eWb {
+    padding-left: 8px !Important;
+    padding-right: 18px !Important;
 }
 
 /* Position on sidebar state */
