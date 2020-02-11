@@ -1,24 +1,5 @@
-/*//META{"name":"Auto-hiding horizontal guild list and chat sidebar","description":"<b>Requires Gibbu's Horizontal Serverlist theme.</b> Hides the server list from view and flips the display of the guild channels sidebar so the scrollbar is to the left, and unread pips are within view of the exposed portion used for expanding either once hovered. PLay with animation and delay by modifying the theme.","author":"Hebgbs","version":"1.0"}*//**/
-
-/* ### Remove meta if using as custom CSS or with BetterCustomCSS. ### */
-
-/* ###############################################
-   # Guild bar and sidebar hiding script for use #
-   #  with Gibbu's Horizontal Serverlist theme.  #
-   ############################################### */
-
-/* === Variable settings === */
-/* Settings for reveal animation duration and hiding
-   delay. Copy root into your custom CSS to change. */
-:root {
-    --autohide_duration: 0.2s;
-    --autohide_delay: 0s;
-    --sidebar_hover: 240px;
-    --autohide_size: 5px;
-    --guildpill_hover: 50px;
-    --guildpill_normal: 1px;
-    --sidebar_user: 36px;
-}
+/* Import for "Auto-hiding horizontal guild list and chat sidebar"
+   This permits for changes to be made per-theme in the future. */
 
 /* === Guild bar === */
 /* Flip unread pill */
