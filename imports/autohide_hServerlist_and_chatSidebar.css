@@ -6,9 +6,7 @@
    #   with Gibbu's Horizontal Serverlist theme   #
    ################################################
 
-            === Variable configuration ===
-   Settings for reveal animation duration and hiding
-   delay. Copy root into your custom CSS to change. */
+            === Variable configuration === */
 :root {
     /* Define Animation timing: See N1 */
     --autohide_duration: 0.2s;
