@@ -1,7 +1,38 @@
 /* Import for "Auto-hiding horizontal guild list and chat sidebar"
    This permits for changes to be made per-theme in the future. */
 
-/* === Guild bar === */
+/* ################################################
+   # Guild bar and sidebar hiding script, for use #
+   #   with Gibbu's Horizontal Serverlist theme   #
+   ################################################
+
+            === Variable configuration ===
+   Settings for reveal animation duration and hiding
+   delay. Copy root into your custom CSS to change. */
+:root {
+    /* Define Animati0n timing: See N1 */
+    --autohide_duration: 0.2s;
+    --autohide_delay: 0s; /* See N2 */
+    /* Define size on state: See N1 */
+    --sidebar_hover: 240px;
+    --autohide_size: 5px;
+    /* Define value to sum with default: See N3 */
+    --guildpill_normal: 0px; /* See N4 */
+    --guildpill_hover: 0px; /* See N4 */
+    --sidebar_padfix: 0px; /* See N5 */
+} /*
+                === Variable notes ===
+N1: Absolute definition. What you set is what you get.
+N2: If use causes disorientation, define this.
+N3: Relative dfinition for sum of [x] + default;
+    Define [x] to set total value rather than absolute.
+N4: Change if theme makes unread pill hard to see.
+N5: Change if voiceuser or "+" symbol is not where it
+    should be compared to defintion in theme.
+           === Additional notes above EOF ===
+*/
+
+         /* === Autohide for guild bar === */
 /* Flip unread pill */
 .pill-2uzAFe,
 .pill-31IEus,
@@ -26,16 +57,14 @@
 .wrapper-1Rf91z.guilds-1SWlCJ:hover {
     height: 54px !important;
 }
-/* === Autohide for channel list === */
+          /* === Autohide for sidebar === */
 /* Make sidebar independent */
 .sidebar-2K8pFh {
     position: absolute;
     height: 100%;
     z-index: 101;
 }
-/* Flip sidebar elements */
-/* N5: This puts the channel unread pills to the
-       right for end-users to see unread posts. */
+/* Flip sidebar elements: See N6 (above EOF) */
 .sidebar-2K8pFh .scroller-2wx7Hm,
 .sidebar-2K8pFh .scroller-2FKFPG,
     /* & all elements therein */
@@ -62,7 +91,7 @@
     left: 0px !important;
 }
 
-/* === Animate hidden elements === */
+            /* === Animate elements === */
 .sidebar-2K8pFh,
 .pill-2uzAFe,
 .pill-31IEus,
@@ -71,9 +100,8 @@
     transition: ease var(--autohide_duration) var(--autohide_delay);
 }
 
-/* ===Lazy fix for sidebar in DMs */
-/* N: Since the sidebar scroller is flipped,
-      left side is otherwise hard to grab. */
+        /* === Lazy fix for DM scroller === */
+/* See N7  */
 .sidebar-2K8pFh .privateChannels-1nO12o:after {
     transform: scalex(-1);
     content: "";
@@ -82,5 +110,10 @@
     left: 0;
     width: var(--autohide_width);
     height: 100%;
-}
-/* ### EOF ### */
+} /*
+               /* === Code notes ===
+N6: This puts the channel unread pills to the
+    right for end-users to see unread posts.
+N7: Since the sidebar scroller is flipped,
+    left side is otherwise hard to grab.
+*//* ### EOF ### */
