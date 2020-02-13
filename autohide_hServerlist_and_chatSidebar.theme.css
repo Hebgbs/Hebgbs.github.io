@@ -5,7 +5,15 @@
    #     with Gibbu's Horizontal Serverlist theme     #
    ####################################################
 
-            === Variable configuration === */
+              /* === Code Imports === */
+/* Code for horizontal serverlist by Gibbu */
+/*@import url("https://gibbu.github.io/BetterDiscord-Themes/HorizontalServerlist/horizontalBase.css");*/
+/* Code for autohide guild bar and serverlist by Hebgbs */
+@Import url("https://gitcdn.xyz/repo/Hebgbs/Hebgbs.github.io/BetterDiscord-Personal/imports/autohide_hServerlist_and_chatSidebar.css");
+
+         /* === Variable configuration ===
+   Settings for reveal animation duration and hiding
+   delay. Copy root into your custom CSS to change. */
 :root {
     /* Define Animation timing: See N1 */
     --animate_duration: 0.2s;
@@ -17,6 +25,11 @@
     /* Define value to sum with default: See N3 */
     --guildpill_adjust: 0px; /* See N4 */
     --sidebar_padfix: 0px; /* See N5 */
+    /* Preferences specific to Horizontal Serverlist */
+    --HSL-size: 35px;
+    --HSL-spacing: 10px;
+    --HSL-roundness: 50%;
+    --HSL-roundnessHover: 20%;
 } /*
                 === Variable notes ===
 N1: Absolute definition; What you set is what you get.
@@ -32,109 +45,10 @@ N5: Change if voiceuser or "+" symbol is not where it
   # Use DevilBro's ServerFolders? See N9 (above EOF)! #
   #####################################################
 */
-           /* === Element liberation === */
-.wrapper-1Rf91z.guilds-1SWlCJ,
-.sidebar-2K8pFh,
-.wrapper-1Rf91z.guilds-1SWlCJ.content-Pph8t6.foldercontent {
-    position: absolute !important;
-}
-/* Set layer position */
-.wrapper-1Rf91z.guilds-1SWlCJ {
-    z-index: 102;
-}
-.sidebar-2K8pFh,
-    /* Server Folders plugin: See N9 (above EOF) */
-.wrapper-1Rf91z.guilds-1SWlCJ.content-Pph8t6.foldercontent {
-    z-index: 101;
-}
-/* Lazy fix for liberating sidebar */
-.sidebar-2K8pFh {
-    height: 100%;
-}
-/* Lazy fix for DM scroller: See N6  */
-.sidebar-2K8pFh .privateChannels-1nO12o:after {
-    transform: scalex(-1);
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: var(--autohide_size);
-    height: 100%;
-}
-         /* === Autohide for guild bar === */
-/* Scale guild bar to preference */
-.wrapper-1Rf91z.guilds-1SWlCJ {
-    height: var(--guildbar_size) !Important;
-}
-/* Scale lower elements for UX */
-.sidebar-2K8pFh .header-2o-2hj,
-.chat-3bRxxu .title-3qD0b- {
-    height: 54px !Important;
-}
-/* Flip unread pill */
-.pill-2uzAFe,
-.pill-31IEus,
-.pill-1m5BUr {
-    transform: scaley(-1);
-    margin-top: calc(51px + var(--guildpill_adjust))
-}
-/* Move on guild bar state */
-.wrapper-1Rf91z:not(:hover).guilds-1SWlCJ {
-    top: calc((var(--guildbar_size) - var(--autohide_size)) * -1);
-}
-.wrapper-1Rf91z:hover.guilds-1SWlCJ,
-.wrapper-1Rf91z.guilds-1SWlCJ.content-Pph8t6.foldercontent {
-    top: 0px;
-}
-          /* === Autohide for sidebar === */
-/* Scale sidebar to preference */
-.sidebar-2K8pFh {
-    width: var(--sidebar_size);
-}
-/* Flip sidebar elements: See N7 (above EOF) */
-.sidebar-2K8pFh .scroller-2wx7Hm,
-.sidebar-2K8pFh .scroller-2FKFPG,
-    /* & all elements therein: See N8 */
-.sidebar-2K8pFh .content-3at_AU,
-.sidebar-2K8pFh .content-3xS9Lh,
-.sidebar-2K8pFh .containerDefault-3GGEv_,
-.sidebar-2K8pFh .scroller-2FKFPG .header-zu8eWb,
-.sidebar-2K8pFh .scroller-2FKFPG .container-2Pjhx-,
-.sidebar-2K8pFh .list-2bwCXU,
-.sidebar-2K8pFh .list-19h6Fv .voiceUser-14U_Ns {
-    transform: scalex(-1);
-}
-        /* Padded element fix */
-.sidebar-2K8pFh SVG[name="PlusAlt"],
-.sidebar-2K8pFh .list-19h6Fv .voiceUser-14U_Ns {
-    margin-left: calc(-8px + var(--sidebar_padfix));
-}
-/* Position on sidebar state */
-.sidebar-2K8pFh:not(:hover) {
-    left: calc((var(--sidebar_size) - var(--autohide_size)) * -1);
-}
-.sidebar-2K8pFh:hover {
-    left: 0px !important;
-}
-            /* === Animate elements === */
-.sidebar-2K8pFh:hover,
-.wrapper-1Rf91z:hover.guilds-1SWlCJ {
-    transition: ease var(--animate_duration);
-}
-.sidebar-2K8pFh:not(:hover),
-.wrapper-1Rf91z:not(:hover).guilds-1SWlCJ {
-    transition: ease var(--animate_duration) var(--animate_delay);
-}
 
 /*
                   === Code notes ===
-N6: Since the sidebar scroller is flipped, left side
-    is otherwise hard to grab which worsens UX. The
-    pseudochild fixes this problem 100% of the time.
-N7: This puts the channel unread pills to the right
-    for end-users to see unread posts.
-N8: Some of this is to reverse the change by doing
-    it again, so it can be made readable once more.
+For notes 6-8, see CSS via its import URL!
 N9: It's kind of hacky. Then again, what isn't with
     BetterDiscord? Optimal settings with this code:
     -o Close other Folders when selecting a Folder

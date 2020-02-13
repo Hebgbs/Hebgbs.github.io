@@ -95,13 +95,5 @@ N7: This puts the channel unread pills to the right
     for end-users to see unread posts.
 N8: Some of this is to reverse the change by doing
     it again, so it can be made readable once more.
-N9: It's kind of hacky. Then again, what isn't with
-    BetterDiscord? Optimal settings with this code:
-    -o Close other Folders when selecting a Folder
-    o- Close the Folder when selecting a Server
-    -o Close All Folders when selecting a Server
-    o- Force a Folder to open when switching to...
-    o- Display Badge for Amount of Servers in a Folder
-    o- Adds separators between Servers of different...
     
 Authored by Brandon "Hebgbs" Bachman *//* ### EOF ### */
