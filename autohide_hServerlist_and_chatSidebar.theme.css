@@ -7,9 +7,9 @@
 
               /* === Code Imports === */
 /* Code for horizontal serverlist by Gibbu */
-/*@import url("https://gibbu.github.io/BetterDiscord-Themes/HorizontalServerlist/horizontalBase.css");*/
+@import url("https://gibbu.github.io/BetterDiscord-Themes/HorizontalServerlist/base.css");
 /* Code for autohide guild bar and serverlist by Hebgbs */
-@Import url("https://gitcdn.xyz/repo/Hebgbs/Hebgbs.github.io/BetterDiscord-Personal/imports/autohide_hServerlist_and_chatSidebar.css");
+@Import url("https://gitcdn.xyz/repo/Hebgbs/Hebgbs.github.io/BetterDiscord-Personal/autohide_hServerlist_and_chatSidebar.theme.css");
 
          /* === Variable configuration ===
    Settings for reveal animation duration and hiding
