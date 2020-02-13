@@ -79,24 +79,14 @@
     margin-left: calc(-8px + var(--sidebar_padfix));
 }
 /* Position on sidebar state */
-.sidebar-2K8pFh:not(:hover) {
+.sidebar-2K8pFh:not(:hover) {O
     left: calc((var(--sidebar_size) - var(--autohide_size)) * -1);
 }
 .sidebar-2K8pFh:hover {
     left: 0px !important;
 }
-            /* === Animate elements === */
-.sidebar-2K8pFh:hover,
-.wrapper-1Rf91z:hover.guilds-1SWlCJ,
-.wrapper-1Rf91z:hover.guilds-1SWlCJ.content-Pph8t6.foldercontent {
-    transition: ease var(--animate_duration) 0;
-}
-.sidebar-2K8pFh:not(:hover),
-.wrapper-1Rf91z:not(:hover).guilds-1SWlCJ,
-.wrapper-1Rf91z:not(:hover).guilds-1SWlCJ.content-Pph8t6.foldercontent {
-    transition: ease var(--animate_duration) var(--autohide_delay);
-}
- /*
+
+/*
                   === Code notes ===
 N6: Since the sidebar scroller is flipped, left side
     is otherwise hard to grab which worsens UX. The

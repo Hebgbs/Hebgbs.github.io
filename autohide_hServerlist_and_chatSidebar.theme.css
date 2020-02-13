@@ -9,7 +9,7 @@
 :root {
     /* Define Animation timing: See N1 */
     --animate_duration: 0.2s;
-    --autohide_delay: 0s; /* See N2 */
+    --animate_delay: 0s; /* See N2 */
     /* Define size on state: See N1 */
     --sidebar_size: 240px;
     --guildbar_size: 55px;
@@ -119,13 +119,14 @@ N5: Change if voiceuser or "+" symbol is not where it
             /* === Animate elements === */
 .sidebar-2K8pFh:hover,
 .wrapper-1Rf91z:hover.guilds-1SWlCJ {
-    transition: ease var(--animate_duration) 0;
+    transition: ease var(--animate_duration);
 }
 .sidebar-2K8pFh:not(:hover),
 .wrapper-1Rf91z:not(:hover).guilds-1SWlCJ {
-    transition: ease var(--animate_duration) var(--autohide_delay);
+    transition: ease var(--animate_duration) var(--animate_delay);
 }
- /*
+
+/*
                   === Code notes ===
 N6: Since the sidebar scroller is flipped, left side
     is otherwise hard to grab which worsens UX. The
