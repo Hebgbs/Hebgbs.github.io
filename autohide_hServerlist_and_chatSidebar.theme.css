@@ -11,7 +11,7 @@
    Settings for reveal animation duration and hiding
    delay. Copy root into your custom CSS to change. */
 :root {
-    /* Define Animati0n timing: See N1 */
+    /* Define Animation timing: See N1 */
     --autohide_duration: 0.2s;
     --autohide_delay: 0s; /* See N2 */
     /* Define size on state: See N1 */
