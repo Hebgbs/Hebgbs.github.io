@@ -30,7 +30,6 @@ N5: Change if voiceuser or "+" symbol is not where it
     should be compared to defintion in theme.
            === Additional notes above EOF ===
 */
-
          /* === Autohide for guild bar === */
 /* Flip unread pill */
 .pill-2uzAFe,
@@ -81,7 +80,6 @@ N5: Change if voiceuser or "+" symbol is not where it
 .sidebar-2K8pFh .list-19h6Fv .voiceUser-14U_Ns {
     margin-left: calc(-8px + var(--sidebar_padfix));
 }
-
 /* Position on sidebar state */
 .sidebar-2K8pFh:not(:hover) {
     left: calc((var(--sidebar_hover) - var(--autohide_size)) * -1);
@@ -89,7 +87,6 @@ N5: Change if voiceuser or "+" symbol is not where it
 .sidebar-2K8pFh:hover {
     left: 0px !important;
 }
-
             /* === Animate elements === */
 .sidebar-2K8pFh,
 .pill-2uzAFe,
@@ -98,7 +95,6 @@ N5: Change if voiceuser or "+" symbol is not where it
 .wrapper-1Rf91z.guilds-1SWlCJ {
     transition: ease var(--autohide_duration) var(--autohide_delay);
 }
-
         /* === Lazy fix for DM scroller === */
 /* See N7  */
 .sidebar-2K8pFh .privateChannels-1nO12o:after {
@@ -110,9 +106,10 @@ N5: Change if voiceuser or "+" symbol is not where it
     width: var(--autohide_width);
     height: 100%;
 } /*
-               /* === Code notes ===
+                  === Code notes ===
 N6: This puts the channel unread pills to the
     right for end-users to see unread posts.
 N7: Since the sidebar scroller is flipped,
     left side is otherwise hard to grab.
-*//* ### EOF ### */
+    
+Authored by Brandon "Hebgbs" Bachman *//* ### EOF ### */
