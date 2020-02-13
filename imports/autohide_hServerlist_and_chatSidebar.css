@@ -12,12 +12,12 @@
 .wrapper-1Rf91z.guilds-1SWlCJ:not(:hover) .pill-2uzAFe,
 .wrapper-1Rf91z.guilds-1SWlCJ:not(:hover) .pill-31IEus,
 .wrapper-1Rf91z.guilds-1SWlCJ:not(:hover) .pill-1m5BUr {
-    margin-top: var(--guildpill_normal);
+    margin-top: calc(1px + var(--guildpill_normal));
 }
 .wrapper-1Rf91z.guilds-1SWlCJ:hover .pill-2uzAFe,
 .wrapper-1Rf91z.guilds-1SWlCJ:hover .pill-31IEus,
 .wrapper-1Rf91z.guilds-1SWlCJ:hover .pill-1m5BUr {
-    margin-top: var(--guildpill_hover);
+    margin-top: calc(50px + var(--guildpill_hover));
 }
 /* Scale on guild bar state */
 .wrapper-1Rf91z.guilds-1SWlCJ:not(:hover) {
@@ -34,8 +34,8 @@
     z-index: 101;
 }
 /* Flip sidebar elements */
-/* N: This puts the channel unread pills to the
-      right for end-users to see unread posts. */
+/* N5: This puts the channel unread pills to the
+       right for end-users to see unread posts. */
 .sidebar-2K8pFh .scroller-2wx7Hm,
 .sidebar-2K8pFh .scroller-2FKFPG,
     /* & all elements therein */
@@ -43,17 +43,15 @@
 .sidebar-2K8pFh .content-3xS9Lh,
 .sidebar-2K8pFh .containerDefault-3GGEv_,
 .sidebar-2K8pFh .scroller-2FKFPG .header-zu8eWb,
-.sidebar-2K8pFh .scroller-2FKFPG .container-2Pjhx- {
+.sidebar-2K8pFh .scroller-2FKFPG .container-2Pjhx-,
+        /* Padded element fix */
+.sidebar-2K8pFh .list-2bwCXU,
+.sidebar-2K8pFh .list-19h6Fv .voiceUser-14U_Ns {
     transform: scalex(-1);
 }
-/* Fix display for flipped elements */
-.sidebar-2K8pFh .list-2bwCXU {
-    padding-left: 0px !Important;
-    padding-right: var(--sidebar_user); 
-}
-.sidebar-2K8pFh .scroller-2FKFPG .header-zu8eWb {
-    padding-left: 8px !Important;
-    padding-right: 18px !Important;
+.sidebar-2K8pFh SVG[name="PlusAlt"],
+.sidebar-2K8pFh .list-19h6Fv .voiceUser-14U_Ns {
+    margin-left: calc(-8px + var(--sidebar_padfix));
 }
 
 /* Position on sidebar state */

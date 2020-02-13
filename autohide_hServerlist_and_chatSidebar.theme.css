@@ -11,14 +11,24 @@
 /* Settings for reveal animation duration and hiding
    delay. Copy root into your custom CSS to change. */
 :root {
+    /* Define Animati0n timing: See N1 */
     --autohide_duration: 0.2s;
     --autohide_delay: 0s;
+    /* Define size on state: See N1 */
     --sidebar_hover: 240px;
     --autohide_size: 5px;
-    --guildpill_hover: 50px;
-    --guildpill_normal: 1px;
-    --sidebar_user: 36px;
-}
+    /* Define value to sum with default: See N2 */
+    --guildpill_normal: 0px; /* See N3 */
+    --guildpill_hover: 0px; /* See N3 */
+    --sidebar_padfix: 0px; /* See N4 */
+} /*
+N1: Direct definition. What you set is what you get.
+N2: Defines [x] for calc equations [x] + [default].
+    Set how much to change by, not how much directly.
+N3: Change if theme makes unread pill hard to see.
+N4: Change if voiceuser or "+" symbol is not where it
+    should be compared to defintion in theme.
+*/
 
 /* === Guild bar === */
 /* Flip unread pill */
@@ -31,12 +41,12 @@
 .wrapper-1Rf91z.guilds-1SWlCJ:not(:hover) .pill-2uzAFe,
 .wrapper-1Rf91z.guilds-1SWlCJ:not(:hover) .pill-31IEus,
 .wrapper-1Rf91z.guilds-1SWlCJ:not(:hover) .pill-1m5BUr {
-    margin-top: var(--guildpill_normal);
+    margin-top: calc(1px + var(--guildpill_normal));
 }
 .wrapper-1Rf91z.guilds-1SWlCJ:hover .pill-2uzAFe,
 .wrapper-1Rf91z.guilds-1SWlCJ:hover .pill-31IEus,
 .wrapper-1Rf91z.guilds-1SWlCJ:hover .pill-1m5BUr {
-    margin-top: var(--guildpill_hover);
+    margin-top: calc(50px + var(--guildpill_hover));
 }
 /* Scale on guild bar state */
 .wrapper-1Rf91z.guilds-1SWlCJ:not(:hover) {
@@ -53,8 +63,8 @@
     z-index: 101;
 }
 /* Flip sidebar elements */
-/* N: This puts the channel unread pills to the
-      right for end-users to see unread posts. */
+/* N5: This puts the channel unread pills to the
+       right for end-users to see unread posts. */
 .sidebar-2K8pFh .scroller-2wx7Hm,
 .sidebar-2K8pFh .scroller-2FKFPG,
     /* & all elements therein */
@@ -62,17 +72,15 @@
 .sidebar-2K8pFh .content-3xS9Lh,
 .sidebar-2K8pFh .containerDefault-3GGEv_,
 .sidebar-2K8pFh .scroller-2FKFPG .header-zu8eWb,
-.sidebar-2K8pFh .scroller-2FKFPG .container-2Pjhx- {
+.sidebar-2K8pFh .scroller-2FKFPG .container-2Pjhx-,
+        /* Padded element fix */
+.sidebar-2K8pFh .list-2bwCXU,
+.sidebar-2K8pFh .list-19h6Fv .voiceUser-14U_Ns {
     transform: scalex(-1);
 }
-/* Fix display for flipped elements */
-.sidebar-2K8pFh .list-2bwCXU {
-    padding-left: 0px !Important;
-    padding-right: var(--sidebar_user); 
-}
-.sidebar-2K8pFh .scroller-2FKFPG .header-zu8eWb {
-    padding-left: 8px !Important;
-    padding-right: 18px !Important;
+.sidebar-2K8pFh SVG[name="PlusAlt"],
+.sidebar-2K8pFh .list-19h6Fv .voiceUser-14U_Ns {
+    margin-left: calc(-8px + var(--sidebar_padfix));
 }
 
 /* Position on sidebar state */
