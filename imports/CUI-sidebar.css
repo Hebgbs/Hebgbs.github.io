@@ -6,37 +6,36 @@
  \:\__\   \::/  /  \:\__\  
   \/__/    \/__/    \/__/
 
-Collapsible sidebar. This is universal and will
-find its way into all collapsible UI iterations. */
+Common script for collapsible UI. This should
+cover all scenarios this script will be used
+for context of the plugin's intent. */
 
-/* Scale sidebar to preference */
+.wrapper-1Rf91z.guilds-1SWlCJ,
+.sidebar-2K8pFh,
+.wrapper-1Rf91z.guilds-1SWlCJ.content-Pph8t6.foldercontent {
+    position: absolute !important;
+}
+/* Set layer position */
+.wrapper-1Rf91z.guilds-1SWlCJ {
+    z-index: 102;
+}
+.sidebar-2K8pFh,
+.wrapper-1Rf91z.guilds-1SWlCJ.content-Pph8t6.foldercontent {
+    z-index: 101;
+}
+/* Lazy fix for liberating sidebar */
 .sidebar-2K8pFh {
-    width: var(--CUI-sideSize);
+    height: 100%;
 }
-/* Flip sidebar elements: See N7 (above EOF) */
-.sidebar-2K8pFh .scroller-2wx7Hm,
-.sidebar-2K8pFh .scroller-2FKFPG,
-    /* & all elements therein: See N8 */
-.sidebar-2K8pFh .content-3at_AU,
-.sidebar-2K8pFh .content-3xS9Lh,
-.sidebar-2K8pFh .containerDefault-3GGEv_,
-.sidebar-2K8pFh .scroller-2FKFPG .header-zu8eWb,
-.sidebar-2K8pFh .scroller-2FKFPG .container-2Pjhx-,
-.sidebar-2K8pFh .list-2bwCXU,
-.sidebar-2K8pFh .list-19h6Fv .voiceUser-14U_Ns {
+/* Lazy fix for DM scroller: See N6  */
+.sidebar-2K8pFh .privateChannels-1nO12o:after {
     transform: scalex(-1);
-}
-        /* Padded element fix */
-.sidebar-2K8pFh SVG[name="PlusAlt"],
-.sidebar-2K8pFh .list-19h6Fv .voiceUser-14U_Ns {
-    margin-left: calc(-8px + var(--CUI-sidePadfix));
-}
-/* Position on sidebar state */
-.sidebar-2K8pFh:not(:hover) {O
-    left: calc((var(--CUI-sideSize) - var(--CUI-collapseSize)) * -1);
-}
-.sidebar-2K8pFh:hover {
-    left: 0px !important;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: var(--CUI-collapseSize);
+    height: 100%;
 }
 
 /* CC0 2020 | Original work by Brandon "Hebgbs" Bachman | EOF */

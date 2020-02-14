@@ -37,6 +37,15 @@ for context of the plugin's intent. */
     width: var(--CUI-collapseSize);
     height: 100%;
 }
+            /* === Animate elements === */
+.sidebar-2K8pFh:hover,
+.wrapper-1Rf91z:hover.guilds-1SWlCJ {
+    transition: ease var(--CUI-animateTime);
+}
+.sidebar-2K8pFh:not(:hover),
+.wrapper-1Rf91z:not(:hover).guilds-1SWlCJ {
+    transition: ease var(--CUI-animateTime) var(--CUI-animateDelay);
+}
 
 /* CC0 2020 | Original work by Brandon "Hebgbs" Bachman | EOF */
 
