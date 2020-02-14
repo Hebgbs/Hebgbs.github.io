@@ -6,36 +6,37 @@
  \:\__\   \::/  /  \:\__\  
   \/__/    \/__/    \/__/
 
-Common script for collapsible UI. This should
-cover all scenarios this script will be used
-for context of the plugin's intent. */
+Collapsible sidebar. This is universal and will
+find its way into all collapsible UI iterations. */
 
-.wrapper-1Rf91z.guilds-1SWlCJ,
-.sidebar-2K8pFh,
-.wrapper-1Rf91z.guilds-1SWlCJ.content-Pph8t6.foldercontent {
-    position: absolute !important;
-}
-/* Set layer position */
-.wrapper-1Rf91z.guilds-1SWlCJ {
-    z-index: 102;
-}
-.sidebar-2K8pFh,
-.wrapper-1Rf91z.guilds-1SWlCJ.content-Pph8t6.foldercontent {
-    z-index: 101;
-}
-/* Lazy fix for liberating sidebar */
+/* Scale sidebar to preference */
 .sidebar-2K8pFh {
-    height: 100%;
+    width: var(--CUI-sideSize);
 }
-/* Lazy fix for DM scroller: See N6  */
-.sidebar-2K8pFh .privateChannels-1nO12o:after {
+/* Flip sidebar elements: See N7 (above EOF) */
+.sidebar-2K8pFh .scroller-2wx7Hm,
+.sidebar-2K8pFh .scroller-2FKFPG,
+    /* & all elements therein: See N8 */
+.sidebar-2K8pFh .content-3at_AU,
+.sidebar-2K8pFh .content-3xS9Lh,
+.sidebar-2K8pFh .containerDefault-3GGEv_,
+.sidebar-2K8pFh .scroller-2FKFPG .header-zu8eWb,
+.sidebar-2K8pFh .scroller-2FKFPG .container-2Pjhx-,
+.sidebar-2K8pFh .list-2bwCXU,
+.sidebar-2K8pFh .list-19h6Fv .voiceUser-14U_Ns {
     transform: scalex(-1);
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: var(--CUI-collapseSize);
-    height: 100%;
+}
+        /* Padded element fix */
+.sidebar-2K8pFh SVG[name="PlusAlt"],
+.sidebar-2K8pFh .list-19h6Fv .voiceUser-14U_Ns {
+    margin-left: calc(-8px + var(--CUI-sidePadfix));
+}
+/* Position on sidebar state */
+.sidebar-2K8pFh:not(:hover) {
+    left: calc((var(--CUI-sideSize) - var(--CUI-collapseSize)) * -1);
+}
+.sidebar-2K8pFh:hover {
+    left: 0px !important;
 }
 
 /* CC0 2020 | Original work by Brandon "Hebgbs" Bachman | EOF */
