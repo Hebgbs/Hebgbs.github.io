@@ -1,0 +1,42 @@
+/* ___      ___      ___   
+  /\  \    /\__\    /\  \  
+ /::\  \  /:/ _/_  _\:\  \ 
+/:/\:\__\/:/_/\__\/\/::\__\
+\:\ \/__/\:\/:/  /\::/\/__/
+ \:\__\   \::/  /  \:\__\  
+  \/__/    \/__/    \/__/
+
+Common script for collapsible UI. This should
+cover all scenarios this script will be used
+for context of the plugin's intent. */
+
+.wrapper-1Rf91z.guilds-1SWlCJ,
+.sidebar-2K8pFh,
+.wrapper-1Rf91z.guilds-1SWlCJ.content-Pph8t6.foldercontent {
+    position: absolute !important;
+}
+/* Set layer position */
+.wrapper-1Rf91z.guilds-1SWlCJ {
+    z-index: 102;
+}
+.sidebar-2K8pFh,
+.wrapper-1Rf91z.guilds-1SWlCJ.content-Pph8t6.foldercontent {
+    z-index: 101;
+}
+/* Lazy fix for liberating sidebar */
+.sidebar-2K8pFh {
+    height: 100%;
+}
+/* Lazy fix for DM scroller: See N6  */
+.sidebar-2K8pFh .privateChannels-1nO12o:after {
+    transform: scalex(-1);
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: var(--CUI-collapseSize);
+    height: 100%;
+}
+
+/* CC0 2020 | Original work by Brandon "Hebgbs" Bachman | EOF */
+
