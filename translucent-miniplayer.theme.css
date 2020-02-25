@@ -1,0 +1,60 @@
+/* ####################################
+   # Translucent filtering miniplayer #
+   #################################### */
+/* === Preface ===
+   The intent of this code is to make the video stream
+   of a target appear to the receiving end-user as
+   translucent, with a diffused backdrop.
+
+   === Function summary ===
+   This is achieved by making the picture-in-picture
+   miniplayer and its video stream use a transparent
+   background, then adjusting the opacity of the target
+   stream. It was later modified to include beta-only
+   level 2 filters for other effects behind it.
+   Additional functionality is the removal of the
+   "Live" badge in PiP mode, transition effect and
+   cursor removal if it is idled on the miniplayer.
+
+   The end effect is a translucent player, showing the
+   contents underneath with other means to further
+   obfuscate the content beneath. More info in notes.
+*/
+
+/* === Code Imports === */
+/* Code for translucent miniplayer by Hebgbs */
+@Import url("https://gitcdn.xyz/cdn/Hebgbs/Hebgbs.github.io/repo/imports/TMP-core.css");
+/* Code for effects: See N5 */
+@Import url("https://gitcdn.xyz/cdn/Hebgbs/Hebgbs.github.io/repo/imports/TMP-beta.css");
+
+/* === End-user adjustment === */
+:root { /* See N1 */
+    --TMP-diffuse: 5px; /* See N2 */
+    --TMP-invert: 0; /* See N3 */
+    --TMP-bright: 1; /* See N4 */
+}
+/* === Variable notes ===
+   N1: NONE OF THIS MATTERS IF YOU ARE USING STABLE.
+       At least for now, with module version 0.0.9.
+
+   N2: Depending how much you want to blur out content
+       behind the player, make the value higher or lower.
+       Higher will obfuscate content more. Set to 0 for
+       no translucent effect if pellucid is preferred.
+
+   N3: Set to 1 if using light theme, should you have
+       difficulty seeing the image above. If you would
+       rather "Grey out" everything, .5 works for that.
+
+   N4: Adjusting the brightness as a last-ditch effort
+       at usability is provided when all else fails.
+       Lower is darker.
+*/
+/* === Code notes ===
+   N5: Beta effects are held separate from the code in
+       case another theme replicates the effect this
+       code implements. If this is the case, remove the
+       top import for TMP-core from this theme.
+*/
+
+/* CC0 2020 | Original work by Brandon "Hebgbs" Bachman | EOF */
