@@ -1,6 +1,5 @@
-/* ####################################
-   # Translucent filtering miniplayer #
-   #################################### */
+/*//META{"name":"Translucent miniplayer","description":"Makes it possible to see through the miniplayer to see content underneath. If on PTB, this effect creates a translucent effect instead, which can be disabled by removing the import which allows these effects.","author":"Hebgbs","version":"1.0"}*//**/
+
 /* === Preface ===
    The intent of this code is to make the video stream
    of a target appear to the receiving end-user as
@@ -23,9 +22,9 @@
 
 /* === Code Imports === */
 /* Code for translucent miniplayer by Hebgbs */
-@Import url("https://gitcdn.xyz/cdn/Hebgbs/Hebgbs.github.io/repo/imports/TMP-core.css");
+@Import url("https://gitcdn.xyz/cdn/Hebgbs/Hebgbs.github.io/BetterDiscord-Personal/imports/TMP-core.css");
 /* Code for effects: See N5 */
-@Import url("https://gitcdn.xyz/cdn/Hebgbs/Hebgbs.github.io/repo/imports/TMP-beta.css");
+@Import url("https://gitcdn.xyz/cdn/Hebgbs/Hebgbs.github.io/BetterDiscord-Personal/imports/TMP-beta.css");
 
 /* === End-user adjustment === */
 :root { /* See N1 */
