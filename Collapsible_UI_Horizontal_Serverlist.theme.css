@@ -1,21 +1,30 @@
 /*//META{"name":"Collapsible UI w/ Gibbu's Horizontal Serverlist","description":"Provides automatically hiding sidebar and guildbar to provision more space for chat messages. Integrates GIbbu's Horizontal Serverlist; Use this by itself.","author":"Hebgbs","version":"1.5"}*//**/
 
-/* ####################################################
-   #   Guild bar and sidebar hiding script, for use   #
-   #     with Gibbu's Horizontal Serverlist theme     #
-   ####################################################
+/* === Preface ===
+   The intent of this code is to make interface elements
+   normally persistent but less used automatically move
+   away from the main viewport, as to be out of the way.
+   
+   === Function summary ===
+   The tricks used to make this possible is by use of
+   transform on the scrolling elements of the sidebar
+   as well flipping and repositioning whatever elements
+   affected by this change as necessary. Hovering over
+   the containers for each will reveal them in full
+   which would permit interaction of the sidebar and
+   guild bar. The inclusion of Gibbu's Horizontal
+   Serverlist mod better realizes this code's intent. */
 
-              /* === Code Imports === */
+/* === Code Imports === */
 /* Code for horizontal serverlist by Gibbu */
 @import url("https://gibbu.github.io/BetterDiscord-Themes/HorizontalServerlist/base.css");
 /* Code for autohide guild bar and serverlist by Hebgbs */
-@Import url("https://gitcdn.xyz/cdn/Hebgbs/Hebgbs.github.io/d53272e814f331bc7fa86fc4921023451ef106f2/imports/CUI-common.css");
-@Import url("https://gitcdn.xyz/cdn/Hebgbs/Hebgbs.github.io/97433506693ce4cac396bf47d88784947a05c11c/imports/CUI-sidebar.css");
-@Import url("https://gitcdn.xyz/cdn/Hebgbs/Hebgbs.github.io/d53272e814f331bc7fa86fc4921023451ef106f2/imports/CUI-HSL.css");
+@Import url("https://gitcdn.xyz/cdn/Hebgbs/Hebgbs.github.io/repo/imports/CUI-core.css");
 
-         /* === Variable configuration ===
+/* === End-user adjustment ===
    Settings for reveal animation duration and hiding
-   delay. Copy root into your custom CSS to change. */
+   delay. Copy root into your custom CSS to change or
+   define values here; the latter requires reload. */
 :root {
     /* Define Animation timing: See N1 */
     --CUI-animateTime: 0.2s;
@@ -33,25 +42,26 @@
     --HSL-roundness: 50%;
     --HSL-roundnessHover: 20%;
 } /*
-                === Variable notes ===
+   === Variable notes ===
 N1: Absolute definition; What you set is what you get.
+
 N2: If use causes disorientation, define this. Once
     cursor is away, element is temporarily visible.
+    
 N3: Relative definition for sum of [x] + default;
     Define [x] to set total rather than absolute.
+    
 N4: Change if theme makes unread pill hard to see.
+
 N5: Change if voiceuser or "+" symbol is not where it
     should be compared to defintion in theme.
   #####################################################
   #            Additional notes above EOF             #
   # Use DevilBro's ServerFolders? See N9 (above EOF)! #
   #####################################################
-*/
-
-/*
-                  === Code notes ===
-For notes 6-8, see CSS via its import URL!
-N9: It's kind of hacky. Then again, what isn't with
+*//*
+   === Code notes ===
+N6: It's kind of hacky. Then again, what isn't with
     BetterDiscord? Optimal settings with this code:
     -o Close other Folders when selecting a Folder
     o- Close the Folder when selecting a Server
@@ -60,4 +70,4 @@ N9: It's kind of hacky. Then again, what isn't with
     o- Display Badge for Amount of Servers in a Folder
     o- Adds separators between Servers of different...
     
-Authored by Brandon "Hebgbs" Bachman *//* ### EOF ### */
+/* CC0 2020 | Original work by Brandon "Hebgbs" Bachman | EOF */
