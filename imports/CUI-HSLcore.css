@@ -82,11 +82,14 @@
     height: 54px !Important;
 }
 /* Flip unread pill */
-.pill-2uzAFe,
-.pill-31IEus,
-.pill-1m5BUr {
+.wrapper-1Rf91z.guilds-1SWlCJ .pill-2uzAFe,
+.wrapper-1Rf91z.guilds-1SWlCJ .pill-31IEus,
+.wrapper-1Rf91z.guilds-1SWlCJ .pill-1m5BUr {
     transform: scaley(-1);
     margin-top: calc(51px + var(--CUI-pillAdjust))
+}   /* Unread DMs */
+.wrapper-1Rf91z.guilds-1SWlCJ .pill-1m5BUr .item-2hkk8m {
+    background-color: var(--CUI-unreadDM) !Important;
 }
 /* Move on guild bar state */
 .wrapper-1Rf91z:not(:hover).guilds-1SWlCJ {

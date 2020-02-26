@@ -27,6 +27,8 @@
    delay. Copy root into your custom CSS to change or
    define values here; the latter requires reload. */
 :root {
+    /* Define DM unread colour to preference */
+    --CUI-unreadDM: #fff;
     /* Define Animation timing: See N1 */
     --CUI-animateTime: 0.2s;
     --CUI-animateDelay: 0s; /* See N2 */
