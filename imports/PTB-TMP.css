@@ -1,0 +1,13 @@
+/* If you want to play with these settings,
+   copy this root block into your custom CSS. */
+:root {
+    --TMP-diffuse: 5px;
+    --TMP-invert: 0;
+    --TMP-bright: 100;
+}
+
+/* Apply beta effects */
+.pictureInPicture-3VocJq .miniPlayer-3Ms77e,
+.pictureInPictureWindow-1B5qSe .pictureInPictureVideo-20ZvXn {
+    backdrop-filter: blur(var(--TMP-diffuse)) invert(var(--TMP-invert)) brightness(var(--TMP-bright));
+}

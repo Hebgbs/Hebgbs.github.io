@@ -1,0 +1,11 @@
+:root {
+    --CUI-diffuse: 5px;
+    --CUI-invert: 0;
+    --CUi-bright: 100;
+}
+
+.wrapper-1Rf91z.guilds-1SWlCJ,
+.sidebar-2K8pFh,
+.wrapper-1Rf91z.guilds-1SWlCJ.content-Pph8t6.foldercontent {
+    backdrop-filter: blur(var(--CUI-diffuse)) invert(var(--CUI-invert)) brightness(var(--CUI-bright));
+}
