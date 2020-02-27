@@ -23,7 +23,7 @@
 /* === End-user adjustment === */
 :root { /* See notes for more information. */
     /* Position, size and radius */
-    --CUI-miniVoiceY: 13px;
+    --CUI-miniVoiceY: 11px;
     --CUI-miniVoiceX: 0px;
     --CUI-miniVoiceW: 4px;
     --CUI-miniVoiceH: 8px;
