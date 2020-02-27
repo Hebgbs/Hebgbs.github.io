@@ -1,0 +1,49 @@
+/*//META{"name":"Collapsible UI — Miniature voice indicator","description":"Provides miniature voice indicators to see people talking without expanding the sidebar. Use with Collapsible UI. See code for notes and use details.","author":"Hebgbs","version":"1.0"}*//**/
+
+/* === Preface ===
+   After having collapsed the sidebar, it had come to my
+   attention that sometimes it's hard to see if anyone is
+   in a voice chat. WHile an end-user has to expand the
+   sidebar to visit one, once inside this code allows for
+   the sidebar to remain cioollapsed, yet see indicators
+   to see if anyone is in there, and if anyone is speaking.
+
+   === Function summary ===
+   A pseudochild is created for the user, taking advantage
+   of the provided states for user voice interaction by
+   providing a colour-changing indicator. By default it is
+   grey, when speaking it becomes green. These indicators
+   are hissen when the sidebar is hovered over, as to not
+   provide redundant information when expanded.
+*/
+
+/* === Code imports === */
+@Import url("https://gitcdn.xyz/cdn/Hebgbs/Hebgbs.github.io/BetterDiscord-Personal/imports/CUI-mvCore.css");
+
+/* === End-user adjustment === */
+:root { /* See notes for more information. */
+    /* Position, size and radius */
+    --CUI-miniVoiceY: 13px;
+    --CUI-miniVoiceX: 0px;
+    --CUI-miniVoiceW: 4px;
+    --CUI-miniVoiceH: 8px;
+    --CUI-miniVoiceR: 4px 0 0 4px;
+    /* Colours */
+    --CUI-miniVoiceQ: #8e9297;
+    --CUI-miniVoiceL: #43b581;
+}
+/* === Variable notes ===
+N1: Y, X are position; top and right respectively. By
+    default it works with the stndard theme. Adjustment
+    for X should be a negative value to move more left.
+
+N2: W, H is size; width and height respectively. See
+    theme in use to learn these values where applicable.
+
+N3: R is border radius. Set for stock, change per-theme.
+
+N4: Q, L are user states, quiet and loud respectively.
+    Set colours to theme and / or preference.
+*/
+
+/* CC0 2020 | Original work by Brandon "Hebgbs" Bachman | EOF */
