@@ -28,11 +28,12 @@
     width: 100% !Important;
 }
 /* Put editor above title */
-.title-3qD0b- {
-    z-index: 0 !Important;
+.wrapper-1Rf91z,
+.container-2Rl01u {
+    z-index: 1 !important;
 }
 #bd-customcss-detach-container {
-    z-index: 1 !Important;
+    z-index: 2 !Important;
 }
 /* Editor colours — Uses defaults with alpha */
 #bd-customcss-detach-container { /* Make see-through, define ani */
