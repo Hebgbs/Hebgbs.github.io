@@ -5,6 +5,7 @@ This series of textures is for Minecraft's _default_ texture set with Appleskin 
 ### Changes provided
 `minecraft`
 * `icons.png`
+   * Dot crosshair
    * Transparent empty hearts
    * Transparent armour
    * Modified appearance _close to_ stock
@@ -12,6 +13,7 @@ This series of textures is for Minecraft's _default_ texture set with Appleskin 
    * Modified horse bar
    * More vibrant horse health icons
    * Bread hunger bar (by Sunnybrook1 — https://www.planetminecraft.com/texture-pack/bread-hunger-bar/)
+
 `appleskin`
 * `icons.png`
    * Rainbow fatigue bar
