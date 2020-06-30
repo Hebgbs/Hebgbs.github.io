@@ -5,12 +5,12 @@ These themes are designed for the UI interface element known as GNOME-pie.
 Both function as clocks, and are based on Simon Schneegans' Analog Clock design.
 
 ### Themes
-**u>`numix_clock`**
+**`numix_clock`**  
 This theme was the imputus of these modified clocks. I like the concept, not so much the execution.
 
 The clock face was entirely remade with Inkscape and the the hands, also in Inkscape were designed to hide the edges closest to centre with the seconds hand. Not the most ornate thing, but considerable design attention was given for readibility.
 
-**`numix_space_clock`**
+**`numix_space_clock`**  
 Having seen and wanted something similar to Space Clock except... **not bright** I decided to create "Hands" which nested together.
 
 These hands are simply triangles which ar floating in space relative to their hand coordinates. For some this may be easier to tell the time with at-a-glance. Looks really cool at 00:00:00, 03:15:15, 06:30:30, 09:45:45, 12:00:00, 15:15:15, 18:30:30 and 21:45:45.
