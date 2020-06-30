@@ -35,10 +35,10 @@ Additionally, you can perform the following to create your own personalized mix 
 ```
 mkdir $HOME/.config/gnome-pie/themes/my_numix_clock
 mkdir $HOME/.config/gnome-pie/themes/my_numix_space_clock
-ln -s $HOME/.config/gnome-pie/themes/numix_clock/*.svg $HOME/.config/gnome-pie/themes/my_numix_clock\
-cp $HOME/.config/gnome-pie/themes/numix_clock/theme.xml $HOME/.config/gnome-pie/themes/my_numix_clock\
-ln -s $HOME/.config/gnome-pie/themes/numix_space_clock/*.svg $HOME/.config/gnome-pie/themes/my_numix_space_clock\
-cp $HOME/.config/gnome-pie/themes/numix_space_clock/theme.xml $HOME/.config/gnome-pie/themes/my_numix_space_clock\
+ln -s $HOME/.config/gnome-pie/themes/numix_clock/*.svg $HOME/.config/gnome-pie/themes/my_numix_clock/
+cp $HOME/.config/gnome-pie/themes/numix_clock/theme.xml $HOME/.config/gnome-pie/themes/my_numix_clock/
+ln -s $HOME/.config/gnome-pie/themes/numix_space_clock/*.svg $HOME/.config/gnome-pie/themes/my_numix_space_clock/
+cp $HOME/.config/gnome-pie/themes/numix_space_clock/theme.xml $HOME/.config/gnome-pie/themes/my_numix_space_clock/
 ```
 
 Modify `theme.xml` as necessary, play with the SVG files in Inkscape (or preferred solution) and create your own previews in GIMP (or preferred solution). **Do _not_ forget to save as, else you will overwrite changes for existing clocks!**
