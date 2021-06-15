@@ -117535,4 +117535,4 @@ ff02::3 ip6-allhosts
 # update process. For example, uncomment the following line to block
 # 'example.com':
 
-# 0.0.0.0 animesuge.io
+0.0.0.0 animesuge.io
