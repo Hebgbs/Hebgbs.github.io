@@ -7,29 +7,29 @@ As the new proud owner of a Fire HD 8 tablet, I was disappointed to see Amazon's
 
 _If you see a QR code, you can scan that with any variety of QR code scanners available from Amazon's app market._  
 
-_All files are provided courtesy of APKMirror._
+_All files are provided courtesy of APKMirror. APKMirror makes direct-download links unavailable, so you will have to download them from the provided URLs._
 
 ### Requisite software
 Download and install the following through Silk browser, if you are not viewing the page through here already:
 > #### Google Services Framework
 > [[Download link]](https://www.apkmirror.com/apk/google-inc/google-services-framework/google-services-framework-7-1-2-release/google-services-framework-7-1-2-android-apk-download/)  
 > _Alternatively, scan code to download:_  
-> ![Google Service Framework, courtesy of APKMirror.](https://github.com/Hebgbs/Hebgbs.github.io/blob/master/QRcodes/FireHD8/GSvcF.png?raw=true)
+> ![Google Service Framework, courtesy of APKMirror.](https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=http%3A%2F%2Fwww.apkmirror.com%2Fapk%2Fgoogle-inc%2Fgoogle-services-framework%2Fgoogle-services-framework-7-1-2-release%2Fgoogle-services-framework-7-1-2-android-apk-download%2F)
 
 > #### Google Account Manager
-> [[Download link]](https://www.apkmirror.com/wp-content/themes/APKMirror/download.php?id=193911)  
+> [[Download link]](https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=http%3A%2F%2Fwww.apkmirror.com%2Fapk%2Fgoogle-inc%2Fgoogle-account-manager%2Fgoogle-account-manager-7-1-2-release%2F)  
 > _Alternatively, scan code to download:_  
-> ![Google Account Manager, courtesy of APKMirror.](https://github.com/Hebgbs/Hebgbs.github.io/blob/master/QRcodes/FireHD8/GAcctM.png?raw=true)
+> ![Google Account Manager, courtesy of APKMirror.](https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=http%3A%2F%2Fwww.apkmirror.com%2Fapk%2Fgoogle-inc%2Fgoogle-account-manager%2Fgoogle-account-manager-7-1-2-release%2Fgoogle-account-manager-7-1-2-android-apk-download%2F)
 
 > #### Google Play Services
 > [[Downlload link]](https://www.apkmirror.com/wp-content/themes/APKMirror/download.php?id=2348187&forcebaseapk)  
 > _Alternatively, scan code to download:_  
-> ![Google Play Services, courtesy of APKMirror](https://github.com/Hebgbs/Hebgbs.github.io/blob/master/QRcodes/FireHD8/GPlayS.png?raw=true)
+> ![Google Play Services, courtesy of APKMirror](https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=http%3A%2F%2Fwww.apkmirror.com%2Fapk%2Fgoogle-inc%2Fgoogle-play-services%2Fgoogle-play-services-21-12-13-release%2Fgoogle-play-services-21-12-13-020400-367530751-android-apk-download%2F)
 
 > #### Google Play Store
 > [[Download link]](https://www.apkmirror.com/wp-content/themes/APKMirror/download.php?id=2371237&forcebaseapk)  
 > _Alternatively, scan code to download:_  
-> ![Google Play Store, courtesy of APKMirror](https://github.com/Hebgbs/Hebgbs.github.io/blob/master/QRcodes/FireHD8/GPlay.png?raw=true)
+> ![Google Play Store, courtesy of APKMirror](https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=http%3A%2F%2Fwww.apkmirror.com%2Fapk%2Fgoogle-inc%2Fgoogle-play-store%2Fgoogle-play-store-25-9-19-release%2Fgoogle-play-store-25-9-19-21-0-pr-380694501-2-android-apk-download%2F)
 
 ### This is very important.
 The version of Play provided will have _My apps and games_ in the user menu at the upper right. As I was writing this, I encountered special issues with software not installing after searching for and initiating retrieval through the Play store. I found the easiest way t resolve this is to **restart the device** after installation, so that the latest version of PLay is retrieved post-boot and the avatar menu contains _Manage apps and games_ which then allowed for the installation of software through Google Play.  
@@ -62,4 +62,4 @@ Move the APK files for Google Play to a formatted USB device, then eject it in t
 
 Once finished for each profile, enjoy your new Fire tablet — now with more of the free applications you loved from Google Play and alternative app markets.  
 
-_Other information used in this guide courtesy of XDA Developers and Hot-To Geek._
+_Other information used in this guide courtesy of XDA Developers and How-To Geek._
