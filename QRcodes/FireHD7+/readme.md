@@ -17,7 +17,7 @@ Download and install the following through Silk browser, if you are not viewing 
 > ![Google Service Framework, courtesy of APKMirror.](https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=http%3A%2F%2Fwww.apkmirror.com%2Fapk%2Fgoogle-inc%2Fgoogle-services-framework%2Fgoogle-services-framework-7-1-2-release%2Fgoogle-services-framework-7-1-2-android-apk-download%2F)
 
 > #### Google Account Manager
-> [[Download link]](https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=http%3A%2F%2Fwww.apkmirror.com%2Fapk%2Fgoogle-inc%2Fgoogle-account-manager%2Fgoogle-account-manager-7-1-2-release%2F)  
+> [[Download link]](https://www.apkmirror.com/apk/google-inc/google-account-manager/google-account-manager-7-1-2-release/google-account-manager-7-1-2-android-apk-download/)  
 > _Alternatively, scan code to download:_  
 > ![Google Account Manager, courtesy of APKMirror.](https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=http%3A%2F%2Fwww.apkmirror.com%2Fapk%2Fgoogle-inc%2Fgoogle-account-manager%2Fgoogle-account-manager-7-1-2-release%2Fgoogle-account-manager-7-1-2-android-apk-download%2F)
 
