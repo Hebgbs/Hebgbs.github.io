@@ -61,7 +61,7 @@ You are free to write in your native language if you are unable to present any i
 
 We will not tolerate mockery of individual persons who are unable to communicate effectively in English. They're trying their best, please be encouraging and inclusive.
 
-### Keep discussion clean and civil.
+### _Keep discussion clean and civil._
 There are three things in life that are certain; death, taxes and controversy. If when we encounter any discussion that may be controversial in all immediately-available channels, is it **mandatory** we do not act with lax civility with our fellow man.
 
 If you must act less-than-civil or are uncertain of the civility of response elsewhere, reserve such outbursts in [#rants-and-raves](https://discord.com/channels/225678837051031552/225688133101027328). Due to how variable civility may be in that channel, access is gated by means of reaction role. Provide yourself the role to view that channel by reacting with ‼️ in [this post at #assign-role](https://discord.com/channels/225678837051031552/889757833145499648/927838790884675615).
