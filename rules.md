@@ -19,6 +19,8 @@ You can refer to this list _any time_ by going to [#rules](https://discord.com/c
 
 We are imperfect as individuals, regardless of the role we provide. We wish nothing but tolerance and respect for all who willfully conform with these rules stated above to ensure the health and safety of our guild and its membership.
 
+A final note regarding excellence: **freedom of speech is not freedom of abuse.** With freedom, comes responsibility to exercise these freedoms, and if you abuse those freedoms to breach out rules, Discord's community guidelines and Discord's terms of service, _whether we like to or not_ we will take action for the benefit of our guild. All else is secondary if the life of the guild is put into direct jeopardy thanks to your actions. Help us help you, but also help this community stay alive!
+
 # Rule explanations
 below are expansions of the rules stated above. Much of this is to satisfy edge / corner cases, and will be iterated upon as necessary. You will be made aware of these changes as they develop.
 
