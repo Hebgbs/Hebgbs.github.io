@@ -3,6 +3,9 @@ Abuse of carl's image-bombing features such as `catbomb`, `dogbomb` and `awwbomb
 
 If you elect to image-bomb with your own images, this is considered equally as offensive and we will punish it just as readily.
 
+### Of support
+Note that image bombing mandtes will be **exempt** for images of your PC, but _only_ in #support. If you need to share some captures of your PC during boot, or are encountering issues which leave you in any kind of "Emergency modes" which stop you from using your PC normally, you're _highly encouraged_, though not mandated to do so in a thread related to your problem.
+
 # About [#support](https://discord.com/channels/225678837051031552/675194889146859568) and conduct therein
 It should be understood that Linux Enthuiast Group is a place that is discussion-focused, not assistance-focused. _However_ due to the nature of conversation, support is merely consequential and it is never guaranteed you will receive a good answer to any problem you present, _let alone_ any response at all.
 
