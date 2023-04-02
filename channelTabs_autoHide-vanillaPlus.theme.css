@@ -1,4 +1,9 @@
-/*//META{"name":"Translucent miniplayer","description":"Makes it possible to see through the miniplayer to see content underneath. If on PTB, this effect creates a translucent effect instead, which can be disabled by removing the import which allows these effects.","author":"Hebgbs","version":"1.0"}*//**/
+/**
+  * @name ChannelTabs — Vanilla+ with autohide
+  * @description Providing slight improvements for ChannelTabs with Discord's default colours, linear gradient hackery and a highly animated autohide feature, this theme is both punchy and polite as tabs hide themselves away until you receive a guild message, mention or DM..
+  * @author Hebgbs
+  * @version 1.4.8
+*/
 
 /* === Preface ===
    This theme combines together the "Vanilla+" theming I've
