@@ -1,0 +1,23 @@
+/*//META{"name":"Translucent miniplayer","description":"Makes it possible to see through the miniplayer to see content underneath. If on PTB, this effect creates a translucent effect instead, which can be disabled by removing the import which allows these effects.","author":"Hebgbs","version":"1.0"}*//**/
+
+/* === Preface ===
+   This theme combines together the "Vanilla+" theming I've
+   committed for ChannelTabs while at the same time making it
+   disappear, showing nothing in its minimized state when there
+   are no messages in channels, or no mentions / DMs toward you.
+
+   The result is something that appears to integrate better with
+   Discord's guild bar while politely preventing burn-in.
+*/
+
+/* === Code Imports === */
+/* Code for ChannelTabs Vanilla+ theme by Hebgbs */
+@Import url("https://gitcdn.xyz/cdn/Hebgbs/Hebgbs.github.io/BetterDiscord-Personal/imports/TMP-core.css");
+/* Code for autohiding effects: See note */
+@Import url("https://gitcdn.xyz/cdn/Hebgbs/Hebgbs.github.io/BetterDiscord-Personal/imports/CTautohide.css");
+/* === Code notes ===
+   N1: Theme colours can be edited by declaring your
+	   own changes in the root block for Vanilla+ theme. 
+*/
+
+/* CC0 2023 | Original work by Brandon "Hebgbs" Bachman | EOF */

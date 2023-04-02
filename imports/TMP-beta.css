@@ -1,5 +1,0 @@
-/* Apply beta effects */
-.pictureInPicture-3VocJq .miniPlayer-3Ms77e,
-.pictureInPictureWindow-1B5qSe .pictureInPictureVideo-20ZvXn {
-    backdrop-filter: blur(var(--TMP-diffuse)) invert(var(--TMP-invert)) brightness(var(--TMP-bright));
-}

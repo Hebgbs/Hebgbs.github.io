@@ -1,0 +1,49 @@
+/* ### Vanilla+ ChannelTabs theme ### */
+
+/* === Theme variables === */
+/* Adjust directly or use in custom CSS root block. */
+:root {
+	--CT_mBg: var(--brand-experiment); /* Mention colour */
+	--CT_uBg: var(--status-danger); /* Urgency colour */
+}
+/* === Basic tab colouration === */
+/* General */
+    /* Style new tab button */
+    .channelTabs-newTab {
+        color: var(--brand-experiment) !important;}
+    .channelTabs-newTab:hover {
+        background-color: var(--brand-experiment) !important;
+        color: var(--interactive-normal) !important;}
+    /* Spacing */
+    .channelTabs-tab {
+        margin-right: 3px !important;}
+/* Tab appearance */
+    /* Typing indicator */
+    .channelTabs-TypingContainer {
+        border-radius: 8px;}
+    .channelTabs-TypingContainer,
+    .channelTabs-badgeAlignLeft {
+        margin-right: 2px;}
+    /* Interaction states */
+    .channelTabs-tab:not(.channelTabs-selected) {
+        background-color: var(--background-modifier-hover) !important;
+        background-image: linear-gradient(to top, rgba(0,0,0,0.35), rgba(0,0,0,0.35)) !important;}
+    .channelTabs-tab:not(.channelTabs-selected):hover {
+        background-image: linear-gradient(to top, rgba(0,0,0,0.10), rgba(0,0,0,0.10)) !important;}
+    .channelTabs-selected {
+        background-image: none !Important;}
+    /* Urgency */
+    .channelTabs-gridContainer DIV DIV,
+    .channelTabs-classicBadgeAlignment {
+        background-color: var(--background-tertiary) !important;}
+    .channelTabs-unreadBadge {
+        color: var(--brand-experiment) !important;}
+    .channelTabs-tab.channelTabs-unread {
+        background-color: var(--brand-experiment) !important;
+        color: var(--background-tertiary) !important;}
+    .channelTabs-tab.channelTabs-unread .channelTabs-tabName {
+        font-weight: bold;}
+    .channelTabs-tab.channelTabs-mention {
+        background-color: var(--status-danger) !important;}
+    .channelTabs-mentionBadge {
+        color: var(--status-danger) !important;}
