@@ -12,8 +12,8 @@ Recently, a problem has been encountered with glib causing an inability to compi
 For AUR browsing, novices love that they can install AUR software without the need to use a terminal, which _while not the best, nor most safe thing in the wide, weird and wild world of Arch Linux to do_ is welcome for persons who who are just starting out, or who want to no-think their way to a better open-source experience than dealing with corporate shenanigans from Canonical and Red Hat, while maintaining the same appearance of user-friendliness their selections provide courtesy of the Manjaro project and their soft-fork release of Pamac suite for Arch Linux proper.
 
 ### Installation
-Simply download any **one** of four selections from `libpamac` and the `pamac-aur` package, then install them with `sudo pacman U`.Below are hashes for pamac —
-_MD5:_ `584b34104cc8a594cb13f814142613b3`
+Simply download any **one** of four selections from `libpamac` and the `pamac-aur` package, then install them with `sudo pacman U`.Below are hashes for pamac —  
+_MD5:_ `584b34104cc8a594cb13f814142613b3`  
 _SHA256:_ `29c3272aef413e9b2b1ed474bfdf72601821a46385e2a19b1c5d101cda4950dc`
 
 If you need to install `snapd` and `snapd-glib` as dependencies for either of the `libpamac-aur` builds which has Snap support compiled. you'll need to also fetch that from the AUR, either using an AUR helper or by performing the following (assuming you have `base-devel` and `git`):
