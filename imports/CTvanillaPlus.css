@@ -1,4 +1,4 @@
-/* ### Vanilla+ ChannelTabs theme ### */
+/* ### Vanilla+ ChannelTabs theme 041523 ### */
 
 /* === Theme variables === */
 /* Adjust directly or use in custom CSS root block. */
@@ -36,7 +36,7 @@
     .channelTabs-gridContainer DIV DIV,
     .channelTabs-classicBadgeAlignment {
         background-color: var(--background-tertiary) !important;}
-    .channelTabs-unreadBadge {
+    .channelTabs-tabContainer .channelTabs-unreadBadge {
         color: var(--brand-experiment) !important;}
     .channelTabs-tab.channelTabs-unread {
         background-color: var(--brand-experiment) !important;
@@ -45,5 +45,6 @@
         font-weight: bold;}
     .channelTabs-tab.channelTabs-mention {
         background-color: var(--status-danger) !important;}
-    .channelTabs-mentionBadge {
+    .channelTabs-tabContainer .channelTabs-mentionBadge {
         color: var(--status-danger) !important;}
+

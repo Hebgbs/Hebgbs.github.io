@@ -1,4 +1,4 @@
-/* ### Autohiding tab bar ### */
+/* ### Autohiding tab bar 041523 ### */
 
 /* === Function variables === */
 /* Adjust directly or use in custom CSS root block. */
@@ -14,25 +14,36 @@
     /* Don't touch! Included only because this is common enough in the code. */
     --CT_clAnim: calc(var(--CT_tSpd) * var(--CT_clkX)) ease calc(var(--CT_cDly) * var(--CT_clkX));
     --CT_exAnim: calc(var(--CT_tSpd) * var(--CT_clkX));
+	--CT_favBar: var(--background-tertiary);
 }
 
-/* === Autohiding tab bar === */
 /* General */
     /* Move new tab at first ordinal to integrate with guildbar */
     .channelTabs-newTab {
         order: -1;
         width: 48px !Important;
         border-radius: calc(var(--channelTabs-openTabSize) / 2) !important;}
-    /* Hide tabs under notices */
+    /* Rearrange element stack */
+    .content-1SgpWY {
+        z-index: 0 !important;}
     #channelTabs-container {
         z-index: 1 !important;}
-    .notice-2HEN-u {
+    .notice-2HEN-u,
+    #channelTabs-container:not(:hover) .channelTabs-favContainer {
         z-index: 2;}
     #channelTabs-container:not(:hover) .channelTabs-tab:nth-child(2) {
         margin-left: 3px !important;}
     /* Make tabs movable */
     #channelTabs-container .channelTabs-tabContainer {
         position: relative !important;}
+    /* Adjust bookmarks */
+    #channelTabs-container .channelTabs-favContainer {
+        margin-top: 1px !important;
+        margin-left: -8px !important;
+        width: calc(100% + 16px) !important;}
+    /* Bookmarks bar colour */
+    #channelTabs-container .channelTabs-favContainer {
+        background-color: var(--CT_favBar) !important;}
 /* Normal state */
     /* Timings */
         /* Tab container and tabs */
@@ -48,22 +59,25 @@
         /* Tab controls */
         #channelTabs-container:not(:hover) .channelTabs-newTab,
         #channelTabs-container:not(:hover) .channelTabs-tabNav,
-        #channelTabs-container:not(:hover) .channelTabs-tabNav > DIV {
+        #channelTabs-container:not(:hover) .channelTabs-tabNav > DIV,
+        #channelTabs-container:not(:hover) .channelTabs-favContainer,
+        #channelTabs-container:not(:hover) .channelTabs-settingsIcon {
             transition: margin var(--CT_clAnim),
                         width var(--CT_clAnim),
                         opacity calc((var(--CT_tSpd) / 2) * var(--CT_clkX)) ease calc(var(--CT_cDly) * (var(--CT_clkX) / 2));}
     /* Effects */
         /* Tab container and tabs */
         #channelTabs-container:not(:hover) {
-            height: calc(-5px + var(--CT_cTab)) !important;
+            height: calc(-5px + var(--CT_cTab)) !important;}
+        #channelTabs-container:not(:hover) .channelTabs-tabContainer {
             padding-left: 0 !important;
             padding-right: 0 !important;}
         #channelTabs-container:not(:hover) .channelTabs-tabContainer {
             top: calc((var(--channelTabs-tabHeight) + 4px) * (-1)) !important;}
         /* Unread indicator */
-        #channelTabs-container:not(:hover) .channelTabs-unread {            
+        #channelTabs-container:not(:hover) .channelTabs-tabContainer .channelTabs-unread {            
             box-shadow: 0 4px 0 var(--CT_mBg);}
-        #channelTabs-container:not(:hover) .channelTabs-mention {            
+        #channelTabs-container:not(:hover) .channelTabs-tabContainer .channelTabs-mention {            
             box-shadow: 0 4px 0 var(--CT_uBg);}
         /* Tab controls */
         #channelTabs-container:not(:hover) .channelTabs-newTab,
@@ -74,6 +88,11 @@
             opacity: 0 !important;}
         #channelTabs-container:not(:hover) .channelTabs-tabNav {
             margin-right: 0 !important;}
+        /* Bookmark bar and settings appearance */
+        #channelTabs-container:not(:hover) .channelTabs-favContainer,
+        #channelTabs-container:not(:hover) .channelTabs-settingsIcon {
+            opacity: 0;
+            pointer-events: none;}
 /* Hover state */
     /* Timings */
         /* Tab container and tabs */
@@ -83,7 +102,9 @@
         /* Tab controls */
         #channelTabs-container:hover .channelTabs-newTab,
         #channelTabs-container:hover .channelTabs-tabNav,
-        #channelTabs-container:hover .channelTabs-tabNav > DIV {
+        #channelTabs-container:hover .channelTabs-tabNav > DIV,
+        #channelTabs-container:hover .channelTabs-favContainer,
+        #channelTabs-container:hover .channelTabs-settingsIcon {
             transition: height var(--CT_exAnim),
                         top var(--CT_exAnim),
                         margin var(--CT_exAnim),
@@ -94,7 +115,8 @@
     /* Effects */
         /* Tab container and tabs */
         #channelTabs-container:hover {
-            height: calc(var(--channelTabs-tabHeight) + 3px) !important;
+            height: calc(var(--channelTabs-tabHeight) + 3px) !important;}
+        #channelTabs-container:hover .channelTabs-tabContainer {
             padding-left: 8px !important;
             padding-right: 8px !important}
         #channelTabs-container .channelTabs-tabContainer {
@@ -118,3 +140,9 @@
             width: 32px !important;
             margin-right: 3px !important;
             opacity: 1 !important;}
+        /* Bookmark bar and settings appearance */
+        #channelTabs-container:hover .channelTabs-favContainer,
+        #channelTabs-container:hover .channelTabs-settingsIcon {
+            opacity: 1;
+            pointer-events: all;}
+

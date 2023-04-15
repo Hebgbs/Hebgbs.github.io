@@ -2,7 +2,7 @@
   * @name ChannelTabs — Vanilla+ with autohide
   * @description Providing slight improvements for ChannelTabs with Discord's default colours, linear gradient hackery and a highly animated autohide feature, this theme is both punchy and polite as tabs hide themselves away until you receive a guild message, mention or DM..
   * @author Hebgbs
-  * @version 1.4.8
+  * @version 1.5
 */
 
 /* === Preface ===
@@ -16,13 +16,16 @@
 */
 
 /* === Code Imports === */
-/* Code for ChannelTabs Vanilla+ theme by Hebgbs */
-@Import url("https://gitcdn.xyz/cdn/Hebgbs/Hebgbs.github.io/BetterDiscord-Personal/imports/TMP-core.css");
-/* Code for autohiding effects: See note */
+/* Code for autohiding effects: See N1 */
 @Import url("https://gitcdn.xyz/cdn/Hebgbs/Hebgbs.github.io/BetterDiscord-Personal/imports/CTautohide.css");
+/* Code for ChannelTabs Vanilla+ theme by Hebgbs: See N2 */
+@Import url("https://gitcdn.xyz/cdn/Hebgbs/Hebgbs.github.io/BetterDiscord-Personal/imports/CTvanillaPlus.css");
 /* === Code notes ===
    N1: Theme colours can be edited by declaring your
-	   own changes in the root block for Vanilla+ theme. 
+	   own changes in the root block for Vanilla+ theme.
+   N2: Theme should always be second since a new var
+	   was included to change the favourites bar colour.
 */
 
 /* CC0 2023 | Original work by Brandon "Hebgbs" Bachman | EOF */
+
