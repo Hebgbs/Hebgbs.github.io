@@ -2,6 +2,8 @@
 
 
 ### **TL;DR**
+> _This is obsolete now — `libpamac-aur` **`11.5.2-1`** and `pamac-aur` **`10.5.1-1`** can be compiled today so these packages are no longer relevant._
+
 * Download pamac tarball
 * Fetch any **one** of four tarballs from `libpamac`
 * Resolve deps, install and piss off.
@@ -13,6 +15,7 @@ For AUR browsing, novices love that they can install AUR software without the ne
 
 ### Installation
 Simply download any **one** of four selections from `libpamac` and the `pamac-aur` package, then install them with `sudo pacman U`.Below are hashes for pamac —  
+_Version:_ `10.5.0-1`
 _MD5:_ `584b34104cc8a594cb13f814142613b3`  
 _SHA256:_ `29c3272aef413e9b2b1ed474bfdf72601821a46385e2a19b1c5d101cda4950dc`
 
