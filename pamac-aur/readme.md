@@ -11,11 +11,11 @@
 ### Introduction
 Recently, a problem has been encountered with glib causing an inability to compile on x86_64 systems using AUR packages `libpamac-aur` and `pamac-aur`. As I had been able to successfully compile these packages on an older Manjaro system recently, I am sharing the fruits of my labour as a means to allow people the capability of managing Arch packages from a graphical interface, where it's usually braindead-simple as very often for sake of maintenance, people simply need to click on a few buttons and move on with their life.
 
-For AUR browsing, novices love that they can install AUR software without the need to use a terminal, which _while not the best, nor most safe thing in the wide, weird and wild world of Arch Linux to do_ is welcome for persons who who are just starting out, or who want to no-think their way to a better open-source experience than dealing with corporate shenanigans from Canonical and Red Hat, while maintaining the same appearance of user-friendliness their selections provide courtesy of the Manjaro project and their soft-fork release of Pamac suite for Arch Linux proper.
+For AUR browsing, novices love that they can install AUR software without the need to use a terminal, which _while not the best, nor most safe thing in the wide, weird and wild world of Arch Linux to do_ is welcome for persons who who are just starting out, or who want to no-think their way to a better open-source experience than dealing with corporate shenanigans from Canonical and Red Hat, while maintaining the same appearance of user-friendliness their selections provide courtesy of the Manjaro project and this soft-fork release of Pamac suite for Arch Linux proper.
 
 ### Installation
-Simply download any **one** of four selections from `libpamac` and the `pamac-aur` package, then install them with `sudo pacman U`.Below are hashes for pamac —  
-_Version:_ `10.5.0-1`
+Simply download any **one** of four selections from `libpamac` and the `pamac-aur` package, then install them with `sudo pacman -U`.Below are hashes for pamac —  
+_Version:_ `10.5.0-1`  
 _MD5:_ `584b34104cc8a594cb13f814142613b3`  
 _SHA256:_ `29c3272aef413e9b2b1ed474bfdf72601821a46385e2a19b1c5d101cda4950dc`
 
