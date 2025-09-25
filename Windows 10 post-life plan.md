@@ -14,6 +14,17 @@ More such accesories specific to a laptop model and adaption hardware can be pur
 After attachment of a storage media to the baseboard via such adapters, the existing opeical medium device can be inserted into a USB adapter so it may operate outside of the mechine, and be usable on other machines.
 ### _`when(ready)`_
 Once you have your (external) media hardware considerations fulfilled, you can proceed with software acquisition and exercise. Obtain a utility known as Rufus from its homepage, and figure out a means to obtain Windows so it can be installed via USB to a target device.
+### SUMMARY
+In case the above was a lot to ingest, here is the information pre-digested into a convenient bullet list, since I am aware attention spans are _absolutely crippled_ these days:
+* USB-attached adapter _of either:_
+  * M.2
+  * SATA
+* If removable cable, look for:
+  * Type-C
+  * Type-µB SuperSpeed (10-pin)
+* _If laptop with optical media device in expansion bay:_
+  * Extra storage can be built-in with an slimline SATA-attached storage adapter
+  *  
 ## Obtaining Windows
 …In one of three ways.
 ### _Official disc image_
