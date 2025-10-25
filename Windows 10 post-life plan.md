@@ -97,10 +97,14 @@ The only thing which stops an application from running outside of Windows (or ma
 
 If you _don't_ have a disc image for Hiren's BootCD PE, PortableApps is yet another avenue outside of using the stand-alone installer, to also Fetch Rufus for writing an instance of Windows onto a USB-attached media. Re-visit the above if that is of interest.
 
-### _The story so far…_
+## _The story so far…_
 After installing Ventoy on a USB storage media to try out all varieties of Linux (and / or BSD) you may fancy, _and_ to have on-hand tools which can work outside of your on-board media's primary system instance, PortableApps could be put on the same portable media to trial open-source alternatives through use at your leisure. Not everything which is cross-platform, open-source or (ideally) _both_ may be present in PortableApps, but it reliably has the popular tools that may be of interest.
 
 ## Managing your files
+> _Before backing up your files, I've put information about using Rufus in the **Installation** section. Do that **first** before off-loading anything else to a more-performative external media, because that process wipes all contents on it._
+>
+> _You can adjust partition geometry for that to make a space for your stuff afterward._
+
 If your filesystem is immaculent, and you know _exactly_ where anything on your machine is, you can skip most of this. For everybody else, let's talk about the most disorganised filing cabinet you've ever seen —
 
 ***Yours.*** I want to reserve this section for discussing this, since if you're dual-booting between Windows and Linux, the _last_ thing you need to do is juggle two filesystems at-once. You need lose nothing, _not even Windows_ in order to enjoy an open-source system instance, and I want to help you enjoy an open distribution with _minimal_ sacrifice.
@@ -288,7 +292,7 @@ _Alternatively_ if you didn't make a separate space for your stuff, recycling co
 >
 > Now with that done: one may reboot, re-enable Secure Boot and see if it works; booting into the newly-made instance with `-secure` suffixed onto it. For most people, the above example _under the specific circumstances previously defined_ should work.
 
-### _The story so close…_
+## _The story so close…_
 Comprehensive understanding about storage media, attachments and partition configurations is pretty boring stuff for lots of people, no matter how well it may be presented. All of these ideas and theories don't mean anything and are waste if not remotely considered for utilisation, so let's put it to work and finally get to (re-)building the digital temple which permits your business and leisure with your computation appliance.
 
 ### _A minty-fresh proposition_
@@ -311,6 +315,23 @@ Whichever one you end up picking, you can obtain it from [Linux Mint](https://li
 Continuing from the example of using Linux Mint, _based on Ububtu_ — also meaning in this case, it _installs_ the same way too — we can use a combination of GParted and Ubiquity to establish partitions, their identities (if desired) and install the system.
 
 Since we have all of the theory and information necessary to proceed at this point, let's dig into things which can be done.
+
+### _Erecting the crashpad_
+_Before_ doing much else, if there is concern about the viability of these future procedures and you feel the need to have a crashpad, _provided_ you kept a USB-attached SSD on-hand, you'll want to do this first;
+
+Upon opening Rufus, you may feel overwhelmed seeing this tall window with a lot of options opened. For most people, the breakdown for procedure would be this:
+
+* Download an image for Microsoft Windows from their website (or elsewhere) if not already obtained
+* Expand "advanced drive properties"" to enable showing of "USB Hard Drives" (which should be a solid-state media for best results)
+* Select the USB-attached device previously-hidden
+* Select the obtained Windows installation media image
+* Set "Image option" to _Windows To Go_
+* _Optionally_ provide a name for the volume label which will represent the partition this new instance of Windows will be in
+* _Optionally_ remove installation limitations, privacy questions (default disable all OOBE options) and create a local account to bypass OOBE altogether  
+> _Microsoft **insists** bypassing the out-of-box experience introduces security issues and failure to provide credentials for binding a local user profile with a Microsoft account produces an incomplete Microsoft system experience._  
+> <sub>_Did this matter in 2015?_</sub>
+
+Once this is all done, you may boot into the newly-minted Windows To Go instance to see if it works. If it does, congratulations; your crashpad to fall back upon when _all else_ goes completely wrong is ready.
 
 ### _Building the construct_
 Everything from before, has led up to this point. If you didn't make space for a Linux instance in Windows, you could open `gparted` and do that, prior to installing the system, and electing not to format _any_ freshly-created partitions in the process of assigning them yourself during installation.
@@ -406,7 +427,7 @@ Let's break that down, since this is something new you may need to understand:
 
 The vast majority of these options you don't need to mess with, and if using a utility like `gnoome-disks` (from the `gnome-disk-utility` package in most distributions), you needn't even mess with this file, so long you understand _enough_ of the fields in each partition's additional options — accessible by clicking on the gears next to start / stop for the selected partition — whan making adjustments to how each partition functions.
 
-### _The story begins_
+## _The story begins_
 After you're finsihed installing the system you'd like to use, the rest is _entirely_ up to you. Though, by the time you commit, you'll have formed opinions, and those opinions may change over time, _but_ eventually, you'll find your happy place, and enjoy a life (mostly) divorced from Windows.
 
 This is where your story may take one of three paths, and divergence may occur at any time:
