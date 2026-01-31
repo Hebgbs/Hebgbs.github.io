@@ -1,0 +1,294 @@
+<html>
+<head>
+<style>
+:root {--secSpc: 10px; --txtSpc: 5px; --bdrW: 1px;}
+h1, h2, h3 {margin-block-start: 0px; margin-block-end: 0px;}
+h1, h2 {text-align: center;}
+p, ul, ol, pre {font-size: 14pt; line-height: 150%;}
+blockquote p:last-child {margin-bottom: 0;}
+a {color: #0a0;}
+blockquote {font-style: oblique; line-height: 150%; font-size: 12pt; background: #121212; padding: 5px; margin: 16px 0 16px 0;}
+blockquote pre {font-size: 12px; font-style: initial;}
+pre {white-space: pre-wrap; background: #333; border-radius: 5px; padding: 5px;}
+.dbg {box-shadow: inset 2px 2px 2px red; background: darkred;}
+.bg {background: #232323; box-shadow: inset 0 0 0 var(--bdrW) #666;}
+.ylw {color: #ff0;}
+.cyn {color: #0ff;}
+.Tmain {display: flex; flex-wrap: wrap; width: 100%; height: 100%; gap: var(--secSpc);}
+.Cfull {width: calc(100% - var(--secSpc));}
+.Tsplit {width: calc(50% - var(--secSpc));}
+.Cstart {border-top-left-radius: 20px; border-top-right-radius: 20px;}
+.Cend {border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;}
+.Cwrap {width: calc(100% - 30px); margin: 10px; padding: calc(var(--txtSpc) + var(--bdrW));}
+.bg:not(:hover) {filter: brightness(0.465);}
+</style>
+</head>
+<body bgcolor="#000" text="#fff">
+<div style="margin-left: var(--secSpc);">
+<div class="Tmain">
+<div class="bg Cfull Cstart Cend">
+<div class="Cwrap"><h1>Introduction</h1><blockquote><h2>Before you continue…</h2><p>
+This is quite a lengthy document, and due to extended paragraph length, you may find yourself losing place and attention as you read. I will help you accommodate your devices to ideally read this document, but I will not help you retain attention — that is solely on you.</p><p>
+
+Please view this page using a landscape display. It is optimised for persons using a 16:9 or 16:10 resolution, but 4:3 / 16:12 should also suffice. Those viewing this page on a portrait display may find undue difficulty reading it. Also notice how removing your cursor from any block of text dims it from view — this is the only assist I am providing persons with attention-deficit (hyperactivity) disorder. All else are deficiencies you can overcome.</p><p class="ylw">
+
+<b>I believe in your capabilities.</b> Do not disappoint yourself.</p></blockquote>
+<p>Greetings. <b>This guide has been written to be in service of you</b>, the prospective open-source platform user still stuck on Windows for <i>whatever</i> reason. Since I am plainly tired of writing about this over and again on the Internet, I figured a collation of knowledge about my general understanding for how to install and configure Windows Enterprise LTSC — both in-place or from fresh — would help users continue to safely use Windows 10 beyond the general availability period where <i>all</i> were eligible to receive updates, or use Windows 11 with less unwanted interference and sales pitches. Reading this content from top to bottom, left to right, and for your major release of Windows where applicable will help guide you toward a desireable outcome, and enable you to continue using a "Legitimate" copy of Windows so you can remain within legal boundaries for your on-board system, if you have to care about that.</p><p>
+
+With any hope, I will cover every pitfall and how to avoid issues, so you don't have to repeatedly perform operations as I've had in order to geenerate this <i>entirely hand-written</i> guidance, with a little help from standards documentation where necessary. This whole webpage is developed using modern work practices, and declines to exercise any use of Javascript.</p></div>
+</div>
+<div class="bg Cfull Cstart Cend">
+<div class="Cwrap"><h1>Inspiration and method</h1><p>The vast majority of this work is inspired by Massgrave's previous documentation about the process of installing from fresh / upgrading from current to Enterprise LTSC, and activating this new instance of Windows using their Microsoft Activation Scripts utility. While definitely <i>very illegal</i> and <i>very immoral</i> to use, Microsoft has bankrolled one of the most prolific (<i>alleged</i>) content thieves on the face of the planet; Samual Altman, along with his OpenAI project; a part of Open Computing. (<b>Not associated</b> with a separate project you <i>definitely</i> should support; <a href="https://opencollective.com">Open Collective</a>.) While it is <i>technically</i> incorrect to fight wrong with wrong, it cannot be argued the fines which should be levied against AI/ML training associates for the scope and breadth of works (<i>allegedly</i>) scraped without consent by their authors far outweighs you, using a system instance you should had (by law) spent <b>thousands</b> of dollars on for the <i>privilege</i> of using an extremely stripped-down release of Windows.</p><p>
+
+Beyond the legal conundrum and resolution by <i>simply ignoring it</i>, Microsoft has been turning into a more obnxious company over the last decade;</p><ul><li>
+Advertising and pre-loaded launchers for "Core" users in the start menu</li><li>
+Non-consensual full-screen ads for the login window</li><li>
+Useless factoids about things outside one's work for the desktop background</li><li>
+Unwanted social change amplification through searchbar stickers and news</li><li>
+Harming core software choices through enforcement of security provisions later breached by third parties.</li><li>
+Incessant nagging about subscription features to pad out Microsoft's bottom-line</li><li>
+Compulsion to incorporate "AI" into everything, at the detriment of core Windows features<ul><li>
+Non-consensual collection of user-generated content for training data</li><li>
+<b>All of October 2025</b></li><li>
+Renaming of their Office suite:<ul><li>
+Office 365</li><li>
+Microsoft 365</li><li>
+CoPilot Companion</li></ul></li></ul></li></ul>
+<p>With this, <i>and more</i>, it's no wonder why people are looking to Tux for their future. But system instances based on the Linux kernel isn't going to fix everything, after nearly three decades of dominance in every business sub-vertical of personal computing. Since October 14th 2025 has long since came and went at the publishing of this writ, methdology for "Upgrading" outdated systems so they continue to receive software updates will be provided so you can stave off learning Windows 11 until 2032, or use a more-efficient Windows 11 until 2034.</p></div>
+</div>
+<div class="bg Cfull Cstart">
+<div class="Cwrap"><h1>Installation</h1><p>No matter how you go about this process, you will need to <a href="https://massgrave.dev/windows_ltsc_links#download-links">obtain an installation binary</a> from Massgrave, through their MAS portal. Once you've obtained that, then the advice below becomes significant.</p></div>
+</div>
+<div class="bg Tsplit">
+<div class="Cwrap">
+<h2>Fresh instance</h2>
+<p>You'll need a functional computer for this. There are a few ways this can be handled, two most practical I will illuminate:</p><ul>
+<li><b>Rufus</b></li><ul>
+<li><i>Made specifically for Windows</i></li><li>
+Allows bypass of privacy questions / OOBE content</li><li>
+Permits local account creation as part of its answer file</li><li>
+Enables <i>Windows To Go</i> functionality for opertion via USB-attached DRAM media
+</ul>
+<p>There are other features Rufus provides, but none of these are important now. What matters is that you are afforded the possibility of extracting a disc image onto a USB device, so it is bootable and useful as an installation media for Microsoft Windows.</p>
+<li><b>Ventoy</b></li><ul>
+<li><i>Made to be cross-platform (except for Apple OSes)</i></li><li>
+Enables booting into not only Windows, but other open-source system images, purpose-made utilities and virtual device snapshots as-well</li><li>
+Can function with Secure Boot for open-source distributions which function with Secure Boot, as-if it were "Flashed" through other methods</li><li>
+<b>Allow the device to continue being writable.</b></li>
+</ul>
+<p>With Ventoy, specifically, there are select caveats which make it more difficult to initialise, but <i>for some</i> its foibles may be outweighed by the boons it can provide. There are a couple of considerations to ponder before writing Ventoy onto a target USB-attached media:</p><ol>
+<li><b>Partition style</b> — By default, this will be set to MBR. Great for older machines, but newer machines may use GPT for modern boot instead. The <i>easy</i> way of figuring this out is to open <code>diskmgmt.msc</code> and context-click on the <i>disk</i> bearing the partition which contains Windows. View <i>Properties</i>, and select the <i>Volume</i> tab. This information is held there; match it in <code>ventoy2disk.exe</code>.</li><li>
+<b>Secure Boot</b> — You should just leave this on. Don't question it; unless you keep the MBR partition style, you'll end up using Secure Boot, and this feature provides a <code class="cyn">.crt</code> file in its own <code>VTOYEFI</code> partition, which is what you'll need to find when prompted for validity in your baseboard firmware's MOK management.</ol>
+
+<p>Once you're finished writing the contents of Ventoy to the USB device, the Enterprise LTSC <code class="cyn">.iso</code> can be put into the partition labelled <code>Ventoy</code>. When this operation is finished, you can then use Ventoy to initialise installation.</p><blockquote>
+
+Not all machines, devices and boot media may like Ventoy as a boot method. On select machines, Windows' installation may be prohibited due to alleged "Missing" drivers. If you encounter problems despite best efforts, fall back to conventional boot media creation processes.</blockquote></li></ol></li></ul>
+
+<p>No matter the method, and no matter the Windows release, you'll <b>skip</b> inputting a product key during intallation anyway — this will be resolved later.</p></div></div>
+<div class="bg Tsplit">
+<div class="Cwrap">
+<h2>Upgrade process</h2>
+<p>There are several things you need to do as an end-user so you can adequately "Upgrade" Windows by effectively installing an older copy of it:</p><ol>
+<li>Change edition in registry</li><li>
+Select edition during setup</li><li>
+Declare whether or not you want to keep installed applications</li></ol>
+
+<p>Let's run through these things in order</p>
+<h3><u>Changing edition</u></h3>
+<p>This is very simple to do; in the registry, you can change a setting called EditionID. Within <code>regedit.exe:</code></p>
+<pre>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion</pre>
+<p>Then, find <code>EditionID</code> and change it to <i>one of</i> either the following:</p>
+<ul>
+<li><code>EnterpriseS</code></li><li>
+<code>IoTEnterpriseS</code></li>
+</ul>
+<p>Later on, when activating Enterprise LTSC with Microsoft Activation Scripts, you'll end up with the IoT Enterprise LTSC license anyway, so <i>personally</i> I would go with <code>EnterpriseS</code> as the edition. So, here's <i>what else</i> you could do in an <b>elevated</b> command prompt so you can set <code>EditionID</code> to my preference:</p><pre>
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion" /v EditionID /d EnterpriseS /f</pre><p>
+Once that is set, you can now launch the setup binary for Windows 11 Enterprise LTSC.<blockqute>
+This <b><i>will</i></b> reset upon setup exit, so spare yourself from time by doing this right <i>once.</i> If corcumstances makes this not possible, you must re-define the edition to use.</blockquote></p>
+<h3><u>Selecting edition</u></h3><p>
+Selecting the edition to use is fairly simple, but depends on the edition you've defined. as follows:</p><ul>
+<li><code>EnterpriseS</code> — Enterprise LTSC</li><li>
+<code>IoTEnterpriseS</code> — <i>IoT</i> Enterprise LTSC</li></ul><p>
+Mind the version to use, and you shouldn't be prompted for a license key when proceeding to install Enterprise LTSC in Windows.</p>
+<h3><u>Keeping apps and files</u></h3><p>
+After selecting the edition dpeendent on <code>EditionID</code> in the registry, you will be prompted for what to keep. You can elect to keep <i>apps and</i> files if you like, but my personal preference i to omit apps, because for much commercial applicatins, you likely have a key or activation method which interacts with th registry already, and even if you do keep apps and files, the registry also becomes completely replaced.</p><p>
+
+If you already know where software activation indicators are in your registry, <i>and</i> if your software doesn't react poorly to the instance change after re-upgrading, then feel free to back those keys up prior to initiating the process. Else, just ignore it and deal with the problem(s) where they occur.</p></div>
+</div>
+<div class="bg Cfull Cend">
+<div class="Cwrap">
+<p>Either way, whether starting from nothing or "Upgrading" to Enterprise LTSC, you'll want, and need, to do some things which ensure your privacy by minimising how often your instance uses the Internet for contacting Microsoft. The following sections will help you deal with post-installation tasks, when prompted for your account, and after you've reached the desktop. <b>Above all else, do not be connected to the Internet</b> during initial steps, <i>untill</i> you are prompted to be online. If your Internet comes from a gateway / modem attachment, physically disconnect it from the machine until necessary.</p></div>
+</div>
+<div class="bg Cfull Cstart">
+<div class="Cwrap"><h1>Ensuring privacy</h1><p>
+
+The primary issue with Windows most people take chagrin to is its lacking privacy, and three things exemplify this like no other:</p><ul>
+<li>Enforced requirement of a Microssoft account</li><li>
+Built-in telemetry enabled by-default</li><li>
+Microsoft Edge</li></ul>
+
+<p>Since Enterprise LTSC is configured to not demand binding onto local profiles any active Microsoft accounts, we can skip ahead to resolving the telemetry problem first.</p><p>
+
+Unlike in "Core" editions of Windows, not much of Microsoft's more-invasive subscription-based software is enabled by-default. There is still a group policy configurable with <code>gpedit.msc</code> <i>unspecificed</i> by-default which would enable Microsoft to override with new default behaviour through an update in the future. While enabling and adjusting this policy may not guarantee data going out from your computer to end up in Microsoft's servers as content for training CoPolit, you can at least give yourself the same capabilities as corporations have with machines on their domains.
+
+After opening the group policy editor, navigate to <code>Administrative Templates\Windows Components\Data Collection and Preview Builds\</code> and adjust options for the following:</p></div>
+</div>
+<div class="bg Tsplit">
+<div class="Cwrap">
+<h2>Windows 10</h2><p>
+<code>Allow Telemetry</code></p><ul><li>
+<i>0 - Security (Enterprise only)</i></li></ul></div>
+</div>
+<div class="bg Tsplit">
+<div class="Cwrap">
+<h2>Windows 11</h2><p>
+<code>Allow Diagnostic Data</code></p><ul><li>
+<i>Diagnostic data off (not recommended)</i></li><blockquote>
+Excuse me? <b>Not recommended?</b> Shove off Microslop.</blockquote></ul></div></div>
+<div class="bg Cfull Cend">
+<div class="Cwrap"><p>With that resolved, you can <o>now</i> (re-)attach yourself to a network connection and continue with establishing the Microsoft Store for obtaining an alternative web browser, if you want to follow this page's advice about removing Microsoft Edge.</p></div>
+</div>
+<div class="bg Cfull Cstart">
+<div class="Cwrap"><h1>Obtaining software</h1>
+
+<p>You may begin to seek out and receive updates for Windows from hereon. But <i>before you do that</i>, you should establish Microsoft Store and handle some other things prior to removing Microsoft's applications. You may be tempted to use what's already available to do this, but if you want to ensure your privacy while using a Microsoft OS where telemetry is disabled, and CoPilot doesn't exist, using Microsoft's web browsers would be anti-thetical to this end-goal. </p><p>
+
+To obtain and make functional the Microsoft Store, open Powershell and send <code>wsreset -i</code>; after some time, this will install and make usable the Store application. To obtain <code>winget</code>, which at present instance state isn't installed, you can use Store to search for <i>UniGetUI</i> and proceed to obtain it, but then decline to install after it adds in other dependencies for it to work, one most notable being the <code>winget</code> application. This will help you to easily resolve the other problem Enterprise LTSC users typically have; applications requesting for an app providing <code>ms-gamingoverlay</code>.</p><p>
+
+Exit Powershell, open it again and type in the following to <i>test</i> if all of this has enabled <code>winget</code>:</p><pre>
+winget list</pre>
+<p>You will be prompted for agreement with Microssoft's terms of use the first time you run <code>winget</code>; choose <b><code>Y</code>es</b>. After you've seen it perform, run also the following:</p><pre>
+winget install 9NZKPTSNW4P</pre><p>
+
+This action will use <code>winget</code> to install Microsoft's Game Bar, which is the mythical application you just can't find in Store <i>by itself</i> no matter how hard you seek. Once finished, you can use <code>winget</code> in Powershell or the Microsoft Store to obtain much else.<blockquote>
+
+Microsoft Store <u>only</u> works with applications which have a store ID. For binaries unlisted in the store, using <code>winget</code> with the <b>search</b> argument and query after will enable you to find other applications provided as routines to initialise retrieval from a domain and execution of an installation binary for a more traditional software management experience. Pair your learning from installing Game Bar by store ID with searching for popular utilities you may be interested in. An example using Steam:<pre>
+winget search steam</pre></blockquote></p></div>
+</div>
+<div class="bg Cfull Cend">
+<div class="Cwrap"><h2>For those upgrading from (GAC) "Core" to LTSC</h2><p>
+
+If you've elected to upgrade your existing instance of Windows and declined to keep apps, that doesn't mean your apps are <i>gone</i> per-se, but it does mean you will need to re-install everything. My prior recommendation to omit apps wasn't just out of an abundance of fear that things like OneDrive and CoPilot would carry over into the new instance should you had not wanted those, but <i>also</i> because a lot of problems people have with Windows is application and autostart bloat, which is easier to manage starting from nothing, than to retrofit and tool around with an existing installation.</p><p>
+
+Since the apps are still there, <i>preferences</i> for them are also present; in <code>%systemdrive%\Windows.old</code>, all of the old application data too exists. So, for anything that should be at <code>%appdata%</code> or <code>%localappdata%</code>, it will instead be at the place it goes to, with <code>Windows.old</code> in the directory path. Let's use Mozilla Firefox installed traditionally as an example;</p><p>
+
+<blockquote>To install Firefox as <u>not</u> a store app via <code>winget</code>:<pre>
+winget install mozilla.firefox</pre></blockquote></p><p>
+
+Presented are two directories, <i>both</i> which hold configurations and preferences for Mozilla Firefox:</p><ul><li>
+Default, normally accessed via <code>%localappddata%</code><ul><li>
+<code>%systemdrive%\Users\%username%\AppData\Local\Mozilla</code></li></ul></li><li>
+Moved, after the upgrade process<ul><li>
+<code>%systemdrive%<span class="ylw">\Windows.old</span>\Users\%username%\AppData\Local\Mozilla</code></li></ul></li></ul><p>
+
+The highlighted portion shown is where your <i>old</i> stuff would be. If you're inclined on copying it, then in <code>cmd</code> <i>as administrator</i> you can do this:<pre>
+copy %systemdrive%\Windows.old\Users\%username%\AppData\Local\Mozilla %localappdata%</pre></p><p>
+
+Other applications will vary, but the general ideas still apply; if you know where it <i>was</i>, then now you know where it <i>is</i>.</p></div>
+</div>
+<div class="bg Cfull">
+<div class="Cwrap"><h1>Removing Microsoft Edge</h1><p>
+Some people won't care to do this, and I acknowledge as-much that most would be okay with keeping this piece of software on their machine. <i>However</i> if you legitimately care about your privacy, it must be guarded best one can, and Microsoft is most-certainly not your friend. <i>Especially</i> after that Honey situation which exposed coupon code aggregators thieving away last-click attribution from content creators people may have an interest in supporting, since Microsoft also has such a feature built into their modern Chrome derivative which might be doing the same thing.</p><p>
+
+So, after you've established Microsoft Store, have <code>winget</code> functional on your machine and installed a web browser of preference, we can now <i>safely</i> proceed with removal of Microsoft's core web browsing products so software you never asked for, or software you'd like with features you dislike are no longer present in your instance of Windows.<blockquote>
+
+Be aware; this <b><u>will</u></b> break select features of Windows which rely solely on Edge, or use page protocols suppported exclusively by Edge. While these are basically webpages like any other, they <b>cannot</b> be easily accessed or re-created with established web standard, and thus will be rendered useless without Edge installed. If any establishments you rely upon use these protocols for any reason, then you <b>cannot</b> follow this advice — skip this section.</blockquote></p></div>
+</div>
+<div class="bg Tsplit">
+<div class="Cwrap">
+<h2>Windows 10</h2><p>
+
+After removing Microsoft Edge, Internet Explorer 11 will prompt itself as a replacement; edit optional features, and disable Internet Explorer 11 from being availble to the system.</p><p>
+
+Once that is finished and you reboot your machine (a good time to finish applying the first wave of content delivered via Windows Update), you can then uninstall Microsoft Edge, and <i>potentially</i> be prompted by your browser of preference afterward. You can then proceed to the next sub-section</p></div>
+</div>
+<div class="bg Tsplit">
+<div class="Cwrap">
+<h2>Windows 11</h2><p>
+
+You can simply remove Microsoft Egde, and <i>only</i> for fresh installations, you can also remove WebView2, which contains other residuals related to Microsoft Edge — some which the instructions below will aalso provide guidance for removing, in case you can't.<blockquote>
+
+Unfortunately, any factory-reset instance will not permit removal of WebView2 without additional measures which I will not present here.</blockquote>.</p></div>
+</div>
+<div class="bg Cfull Cend">
+<div class="Cwrap">
+<h2>Manually removing Edge residuals</h2><p>
+
+Even <i>if</i> you remove Edge, there are files which may still exist, related to Edge and (where applicable) WebView2 which may still be in your system. There are three things of interest you may want to check, all to ensure no errant processes attempt to continue collecting data without your consent, to ensure operations tangential to the browser are disallowed from occurring, and dormant non-functioning components are removed;</p><ul><li>
+
+Scheduled tasks</li><li>
+Services</li><li>
+Group policies</li></ul><p>
+
+If you want to <i>completely</i> remove Edge, we need to get rid of these, wherever they may occur. So, should removing WebView2 in Windows 11 not be an option, if you are in Windows 10, or if Microsoft <i>changes their mind</i> on what you can do to get rid of everything Edge coordinates with, then you can follow these steps to eventually get rid of these things.<blockquote>
+Bear in mind, not all procedures shown below may be necessary. Spend some time to check for these things before following these instructions; if they don't exist, <b>you don't have to do it.</b></blockquote></p>
+<h3><u>Services</u></h3><p>
+
+To remove the services for Edge Update, there are two which may concern you in windows 10. <i>First</i> check if they are there by browsing installed applications. Ig you see anythingg related to Edge update there, then <b>as administrator</b> open <code>cmd.exe</code> and perform the following:<pre>
+sc delete edgeupdate
+sc delete edgeupdatem</pre>
+
+Once those thing are rid-of, they should no longer be there io invoke cheduled updates for Edge and related software.</p>
+
+<h3><u>Tasks</u></h3><p>
+
+Simply go into task scheduler and remove the tasks related to Microsoft Edge. Scroll through them and delete all you can find.</p>
+
+<h3><u>Group policy objects</u></h3><p>
+
+<i>Now</i> we get to the fun part. So, based on some <a href="https://www.reddit.com/r/PowerShell/comments/1ex15el">advice I found on Reddit</a>, there's a way to force yourself into te privileged user which is allowed to modify specific system components.<blockquote>
+
+Fun fact: <code>Administrator</code> is not the most privileged class in any Windows instance!</blockquote></p><p>
+
+To worm yourself into the position of TrustedInstaller, first you need to produce two shortcuts; One to adjust script execution policy and install NuGet which will enable the use of other scripting, the other to elevate oneself in the position of <code>nt system/trustedinstaller</code> (as-impersonated by <code>nt authority/system</code>:</p><ol><li>
+
+To enable becoming TrustedInstaller<pre>
+C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -c "Set-ExecutionPolicy Unrestricted CurrentUser;Set-ExecutionPolicy Unrestricted LocalMachine;install-module ntobjectmanager -Force"
+</pre></li><li>
+To execute Powershell <i>as TrustedInstaller</i><pre>
+C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe "Import-Module ntobjectmanager;sc.exe start trustedinstaller;$p=Get-NtProcess TrustedInstaller.exe;New-Win32Process powershell.exe -CreationFlags NewConsole -ParentProcess $p"</pre></li></ol><p>
+
+Both of these <b><i><u>must</u></i></b> be executed as administrator, in the order as they are shown.</p><p>
+
+These are necessary things to do for deleting the group policy objects <i>without</i> having to use an alternative system intance for seleting files in spaces you are normally disallowed <i>even as Administrator</i> to remove.</p><p>
+
+After asending yourself to demi-god status for your Windows instance, we can now eliminate the group policy objects through this elevated Powershell instance as-shown:<pre>
+remove-item $env:windir\PolicyDefinitions\MicrosoftEdge.admx
+get-childitem -path $env:windir\PolicyDefinitions\*\MicrosoftEdge.adml | remove-item</pre><blockquote>
+
+You could just delete the locale-specific <code class="cyn">.adml</code> files, but the catch-all using <code>get-childitem</code> is just-as effective.</blockquote></p></div>
+</div>
+<div class="bg Cfull Cstart Cend">
+<div class="Cwrap"><h1>Activation</h1><p>
+
+Finally, when everything is exactly how you want, we can wrap up procedures with activation.</p>
+<h2>To activate Windows, do the following in <code>powershell</code>:<pre class="ylw">
+irm https://get.activated.win | iex</pre></h2><p>
+
+When this command is sent, it will obtain the script which will prompt a menu in Command Prompt to appear. Select option <b><code>HWID</code></b> and wait ffor the magic to happen. Your regular copy of Microsoft Windows Enterprise LTSC will use a single-machine IoT Enterprise LTSC license, which should permit you to receive updates until 2032 for Windows 10, or 2034 for Windows 11.</p>
+<h2><i>Is it legal?</i></h2><p>
+
+<i><u><b>Absolutely not.</b></u></i> But remember, Microsoft funded and enabled one of the most prolific <i>alleged</i> criminals on the face of the planet to…</p><ul><li>
+Take mass quantaties of copyrighted work for trianing data</li><li>
+Establish an ecosystem of software which requires money yet-to-exist</li><li>
+Reserve DRAM modules for hardware not yet created</li><li>
+Produce hardware yet to be fabricated</li></ul><p>
+
+For…</p><ul><li>
+Data centres yet to be built</li><li>
+An idea yet to bear meaningful fruit</li><li>
+A consumer base yet to give a damn.</li></ul><p>
+
+If you were caught doing this kind of stuff on a smaller scale for less-selfish reasons, you would go to jail for <i>multiple</i> life-long sentences. <b>One life</b> wouldn't be enough time for you to serve, which they may as-well make a capital punishment to spare the waste of time and tax you would be.</p><blockquote>
+
+…In fact, a man <b>did</b> die by suicide because of <u>less</u>. See the last introductory paragraph for Aaron Swartz at <a href="https://en.wikipedia.org/wiki/Aaron_Swartz">his entry in Wikipedia.</a></blockquote><p>
+
+<i>Yet</i> because of current political trends, every major nation is treating enterprise-grade computer hardware as munitions, for a digital cold war that nobody had asked of, to produce a wide-sweeping utility which has provably put innocent persons in danger while people minding the backends of these projects crawl and take all they can so the fullness of human knowledge — both good and bad — can be used for teaching a machine to convey a <i>pale facsimile</i> of sentience which could impress shareholders while making it less feasible to purchase new and maintain in-future computer hardware for yourself.</P><p>
+
+In exchange for all of the good it could provide; scams and fraud will proliferate in record measure, communities and natural ecosystems will become devestated, and all who remain living will watch the planet around them suffer a miserable, protracted death. What an irredeemable disgrace this world has become. <i>Oh well</i>, at least you can five-finger the Windows corporate uses as a stop-gap between now and a future where you eventually abandon it in favour for <i>legally</i> using a Linux distribution, of whatever shape it may take.</div>
+</div>
+<p style="width: 100%; text-align: center;">Content provided courtesy of Brandon Bachman, <a href="https://spdx.org/licenses/0BSD.html">0BSD</a> 2026 and beyond.<br>Hosted on GitHub — a Microsoft company.<br>Made with hate. 🗡<br><span style="font-size: 8pt; color: #080808;"><i>The history of the present [administration] is [one] of repeated injuries and usurpations, all [bearing responsibility] the establishment of an absolute Tyranny over these States.</i> — The Declaration of Independence, 1776.</span></p>
+</div>
+</body>
+</html>
