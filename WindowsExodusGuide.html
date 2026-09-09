@@ -6,20 +6,26 @@
 :root{
 /* Colour assignments */
 --Sn: #232323;
---S1: #351929;
---S2: #351915;
---S3: #332919;
---S4: #29331b;
---S5: #1c331b;
---S6: #1d3329;
---S7: #192933;
---S8: #0e1a35;
---S9: #291934;
---S0: #090909;
+--S0: #34182B;
+--S1: #341818;
+--S2: #342B18;
+--S3: #2B3418;
+--S4: #183418;
+--S5: #18342B;
+--S6: #182B34;
+--S7: #181834;
+--S8: #2B1834;
+--Sx: #090909;
+--Tx: #fff;
+--Mv: #888;
+--Y: #ff4;
+--C: #4ff;
+--G: #4f4;
 /* Spacing */
---secSpc: 10px; --txtSpc: 5px; --bdrW: 1px;}
+--secSpc: 10px; --txtSpc: 5px; --bdrW: 1px; --codeSpc: 1px;}
 /* Colour classes */
 .Sn {background-color: var(--Sn);}
+.S0 {background-color: var(--S0);}
 .S1 {background-color: var(--S1);}
 .S2 {background-color: var(--S2);}
 .S3 {background-color: var(--S3);}
@@ -28,53 +34,60 @@
 .S6 {background-color: var(--S6);}
 .S7 {background-color: var(--S7);}
 .S8 {background-color: var(--S8);}
-.S9 {background-color: var(--S9);}
-.S0 {background-color: var(--S0);}
+.Sx {background-color: var(--Sx);}
 /* “The mess” */
 h1, h2, h3 {margin-block-start: 0px; margin-block-end: 0px;}
 h1, h2:not(.l) {text-align: center;}
 p, ul, ol, table {font-size: 14pt; line-height: 150%;}
-table.index td:nth-child(even) {text-align: right;}
+table.index td:nth-child(even), li.q td:nth-child(odd) {text-align: right;}
 blockquote p:last-child {margin-bottom: 0;}
-a:link {color: #28a028;}
-div blockquote, .qcmd {font-style: oblique;}
+a:link.mv, span.mv {font-family: monospace; color: var(--Mv); text-decoration: none;}
+tr:not(:last-child) a:link.t {color: var(--Tx)}
+tr:last-child a:link.t {color: var(--Y)}
+a:link:not(.mv):not(.t) {text-decoration: none; color: #fff; box-shadow: 0 0 0 1px #28a028; border-radius: 3px; padding: 2px; margin: 0 2px 0 2px; background-color: rgba(0,0,0,.5);}
+div blockquote, .qcmd, li.q table {font-style: oblique;}
+li.q td {line-height: 22px; padding: 0 1px 0 1px;}
 .noblq blockquote:not(.qcmd) {font-style: normal;}
 blockquote {line-height: 150%; background: rgba(0,0,0,0.5); padding: 5px; margin: 16px 0 16px 0;}
-blockquote, blockquote ul {font-size: 12pt;}
-.qcmd, blockquote code {font-size: 11pt;}
-a:link.mv, span.mv {font-family: monospace; color: #888; text-decoration: none;}
+blockquote, blockquote ul, li.q tr {font-size: 12pt;}
+blockquote code, .qcmd {font-size: 11pt;}
 ul li blockquote {margin: 0 0 0 -2.5em; display: inline-block; width: auto;}
 .q {list-style: none;}
 blockquote pre {font-size: 12px; font-style: initial;}
 pre {white-space: pre-wrap; background: rgba(255,255,255,0.07); border-radius: 5px; padding: 5px;}
+code, pre {font-stretch: condensed !important;}
+table.index {padding-top: 14px !Important;}
+table.index td {padding: 2px 7px 2px 7px;}
 .dbg {box-shadow: inset 2px 2px 2px red; background: darkred;}
-.ylw {color: #ff4;}
-.cyn {color: #4ff;}
-.Tflex {display: flex; width: 100%;}
-.Tmain {flex-wrap: wrap; height: 100%; gap: var(--secSpc);}
-.Thead {flex-wrap: nowrap; height: auto; justify-content: center;}
-.Thead div {margin: 0 .25em 0 .25em;}
-.Cfull {width: calc(100% - var(--secSpc));}
-.Chalf {width: calc(50% - var(--secSpc));}
-.Cfull, .Chalf {box-shadow: inset 0 0 0 var(--bdrW) rgba(255,255,255,0.305);}
-.Cstart {border-top-left-radius: 20px; border-top-right-radius: 20px;}
-.Cend {border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;}
-.Cwrap {width: calc(100% - 30px); margin: 10px; padding: calc(var(--txtSpc) + var(--bdrW));}
-.Cfull:not(:hover), .Chalf:not(:hover) {filter: brightness(0.465);}
-/* - Hack to adjust spacing code block placement in mixed-spacing writ */
-/* - */ code:not(:first-child):before, code:last-child:after {font-family: serif; content: " ";}
+.ylw {color: var(--Y);}
+.cyn {color: var(--C);}
+.grn {color: var(--G);}
+.T_flex {display: flex; width: 100%;}
+.T_main {flex-wrap: wrap; height: 100%; gap: var(--secSpc);}
+.T_head {flex-wrap: nowrap; height: auto; justify-content: center;}
+.T_head div {margin: 0 .25em 0 .25em;}
+.C_full {width: calc(100% - var(--secSpc));}
+.C_half {width: calc(50% - var(--secSpc));}
+.C_full, .C_half {box-shadow: inset 0 0 0 var(--bdrW) rgba(255,255,255,0.305);}
+.C_start {border-top-left-radius: 20px; border-top-right-radius: 20px;}
+.C_end {border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;}
+.C_wrap {width: calc(100% - 30px); margin: 10px; padding: calc(var(--txtSpc) + var(--bdrW));}
+.C_full:not(:hover), .C_half:not(:hover) {filter: brightness(0.465);}
+code {margin: 0 var(--codeSpc) 0 var(--codeSpc);}
 </style>
 </head>
 
-<!-- W3C's Nu HTML Checker complains about a lot of this. It also (perhaps correctly) diagnoses certain nested tags as wrongthink. Ask me if I care… -->
-<body bgcolor="#000" text="#fff">
+<!-- W3C's Nu HTML Checker complains about a lot of this. It also (perhaps correctly) diagnosed certain nested tags as wrongthink. Ask me if I care… -->
+<body bgcolor="#000" style="color: var(--Tx)">
 
 <div style="margin-left: var(--secSpc);">
-<div class="Tflex Tmain">
+<div class="T_flex T_main">
 
-<div class="Sn Cfull Cstart Cend"><div class="Cwrap"><h1>
+<div class="Sn C_full C_start C_end"><div class="C_wrap"><h1>
 Introduction</h1>
-<blockquote><h2>Before you continue…</h2><p>
+<blockquote><h2 class="ylw">AI / LLM use declaration</h2><p class="ylw">
+While my abilities with the English language are well-above average, there sometimes had occurred with me the inability to think of an “Appropriate” means for conveying information where it doesn't conflict with other already-defined language. This documents is still effectively <b>99.5% human-made</b>, but wherever I've encountered a mental block, I <u>may</u> had used AI to resolve it. The remainder of this page's content, including its primary structure, had been written by-hand.</p>
+<h2>Before you continue…</h2><p>
 This is quite a lengthy document, and due to extended paragraph length, you may find yourself losing place and attention as you read. I will help you accommodate your devices to ideally read this document, but I will not help you retain attention — that is solely on you.</p><p>
 
 Please view this page using a landscape display. It is optimised for persons using a 16:9 or 16:10 resolution, but 4:3 / 16:12 should also suffice. Those viewing this page on a portrait display may find undue difficulty reading it. Also notice how removing your cursor from any block of text dims it from view — this is the only assist I am providing persons with attention-deficit (hyperactivity) disorder. All else are deficiencies you can overcome.</p><p class="ylw">
@@ -84,92 +97,124 @@ Please view this page using a landscape display. It is optimised for persons usi
 
 What we can do <i>now</i> is to keep up what we have, and make the best of what's presently available to us. The purpose of this writ is to enable you the capability of putting disused or outdated hardware into rotation, with a modern and (hopefully) more secure operating system as a replacement for whatever copy of Windows (or OS X) came with it.</p><blockquote><b>Be advised:</b> this guide will only provide information for users of Windows. Apple users: you're on your own! But there <b>are</b> solutions out there for you, up-to before the M3-series ARM-based Apple machines.</blockquote></div></div>
 
-<div class="Sn Cfull Cstart Cend"><div class="Cwrap"><h1 id="S0">Content table</h1>
-<table width="100%" class="index">
-<tr class="S1"><td><a href="#S1">Addressing politics</a></td><td>
-Explanation of the ongoing political climate around technology, and debunking persuasions against exploring alternatives for WIndows.</td></tr>
-<tr class="S2""><td><a href="#S2">Training for tomorrow</a></td><td>
-Examples for software management and system interaction in modern Windows, parallel and which rhymes with like such from other systems.</td></tr>
-<tr class="S3"><td><a href="#S3">Making connections</a></td><td>
-Information about physical storage media and interconnects for data transfer and device power.</td></tr>
-<tr class="S4"><td><a href="#S4">Trade tools</a></td><td>
-Select methodologies for preparing a USB-atached bootable media, with consideration for their special features.</td></tr>
-<tr class="S5"><td><a href="#S5">Inventory management</a></td><td>
-Basic file management strategies for making space, where more could be made to optimise availability and enable greater partitioning.</td></tr>
-<tr class="S6"><td><a href="#S6">Open preview</a></td><td>
-Presentation of methodology for transforming a USB storage media into the means to use boot tools and access pre-installation operating environemnts</td></tr>
-<tr class="S7"><td><a href="#S7">Companion utilities</a></td><td>
-Useful boot-mode software which could persist in a USB device altogether with Ventoy, or separately as-weitten by other means.</td></tr>
-<tr class="S8"><td><a href="#S8">Evaluation</a></td><td>
+<div class="Sn C_full C_start C_end"><div class="C_wrap"><h1 id="Sx">Content table</h1>
+<table class="index" width="100%">
+<tr class="S0"><td><a href="#S0" class="t">Addressing politics</a></td><td>
+Explanation of the ongoing political climate around technology, and debunking persuasions against exploring alternatives for Windows</td></tr>
+<tr class="S1""><td><a href="#S1" class="t">Training for tomorrow</a></td><td>
+Examples for software management and system interaction in modern Windows, parallel and which rhymes with like such from other systems</td></tr>
+<tr class="S2"><td><a href="#S2" class="t">Making connections</a></td><td>
+Information about physical storage media and interconnects for data transfer and device power</td></tr>
+<tr class="S3"><td><a href="#S3" class="t">Trade tools</a></td><td>
+Select methodologies for preparing a USB-atached bootable media, with consideration for their special features</td></tr>
+<tr class="S4"><td><a href="#S4" class="t">Inventory management</a></td><td>
+Basic file management strategies for making space, where more could be made to optimise availability and enable greater partitioning</td></tr>
+<tr class="S5"><td><a href="#S5" class="t">Open preview</a></td><td>
+Methodologies for transforming a USB storage media into the means to use boot tools and access pre-installation operating environemnts</td></tr>
+<tr class="S6"><td><a href="#S6" class="t">Companion utilities</a></td><td>
+Useful boot-mode software which could persist in a USB device altogether with Ventoy, or separately as-weitten by other means</td></tr>
+<tr class="S7"><td><a href="#S7" class="t">Evaluation</a></td><td>
 Acclimation to software provided by Linux Mint <i>Xfce</i>, as-well options for covering perceived deicnencies or preferences</td></tr>
-<tr class="S9"><td><a href="#S9">House building</a></td><td>
-Installation and instantiation of the Linux Mint Xfce system, and for Windows dual-booters means to enable use of content from their  NTFS partition</td></tr>
-<tr class="S0"><td><a href="#Sa"><b>Speedrun</b></a></td><td>
+<tr class="S8"><td><a href="#S8" class="t">House building</a></td><td>
+Instantiation of the Linux Mint Xfce system, and for Windows dual-booters; means to enable use of content from their NTFS partition</td></tr>
+<tr class="Sx"><td><a href="#Sr" class="t"><b>Speedrun</b></a></td><td>
 <span class="ylw">No opening statements, no analogies, no waste — From nothing to <i>experience</i> in thirty minutes</span></td></tr>
 </table><p>
 In each heading, there will be two symbols. As-follows:</p><p>
 <span class="mv">⇣</span>: To Next section<br>
-<span class="mv">↟</span>: To content table</p></div>
+<span class="mv">↟</span>: To content table</p><p>
+
+If-ever you are suggested to re-visit a section, you can return to index, then use the table above to put yourself near where you were prior such a detour.</p></div>
 </div> 
 
-<div class="S1 Cfull Cstart"><div class="Cwrap"><h1><div class="Tflex Thead"><a href="#S2" class="mv">⇣</a><div id=S1>
-Addressing politics</div><a href="#S0" class="mv">↟</a></div></h1><p><i>
-…But first</i> we must address the politics of these solutions. Lots of people may compel you into believing the use of anything <b>except for</b> Microsoft Windows makes one a rebel and rabble-rouser who wants to be different, with use of tools made by queer-folk and terrorists which want to undermine America's efforts toward international digital dominance across all of the verticals their nation can assert control over. Let's observe some topics to declare why this <i>isn't</i> the case.</p></div></div>
-<div class="S1 Cfull"><div class="Cwrap"><h2>American-as</h2><P>
+<div class="S0 C_full C_start"><div class="C_wrap"><h1 id="S0"><div class="T_flex T_head"><a href="#S1" class="mv">⇣</a><div>
+Addressing politics</div><a href="#Sx" class="mv">↟</a></div></h1><p><i>
+…But first</i> we must address the politics of these solutions. Lots of people may compel you into believing the use of anything <b>except for</b> Microsoft Windows makes one a rebel and rabble-rouser who wants to be different, with use of tools made by queer-folk and terrorists which want to undermine America's efforts toward international digital dominance across all of the verticals their nation can assert control over. There are many ways to demonstrate why this <i>isn't</i> the case; a few shown below.</p></div></div>
+<div class="S0 C_full"><div class="C_wrap"><h2>American-as</h2><P>
 Let's make one thing <b><i><u>perfectly</u> clear</i></b>: Linux as the general population knows it in business and leisure is <i><u>very much</u></i> an <b>American</b> product. International Business Machines presently helms leadership for The Linux Foundation; a comglomerate of other American multi-nationals whose names you've heard in the context of business, with some being primarily responsible for the inflation of an AI-focused economy, as a continuation of their enterprise-grade computing ecology.</p><p>
 
-Even if Microsoft were to fail as a company <i>tomorrow</i>, IBM would be there to pick up the pieces and continue in their place, with all former Microsoft talent ending up in other American tech companies. <i>Exactly as IBM would had wanted it.</i> And for those who elect to use Apple hardware, they're using BSD at its core, as-do many other non-Linux open-source projects which bases their work on prior effort founded in California. Everything is fine…</p><p class="ylw">
+Even if Microsoft were to fail as a company <i>tomorrow</i>, IBM would be there to pick up the pieces and continue in their place, with all former Microsoft talent ending up in other American tech companies. <i>Exactly as IBM would had wanted it.</i> And for those who elect to use Apple hardware, they're using Berkeley System Distribution at its core, as-do many other non-Linux open-source projects which bases their work on prior effort with BSD founded in California. Everything is fine…</p><p class="ylw">
 
 <i>…Except</i> for recent efforts with age verification enforcement, which is making use of open-source system instances much more difficult to be in legal compliance of, where such is being enforced by law. Yet, the law is practically non-enforceable <i>unless</i> either children are forthcoming about being underaged, <i>or</i> new legislation is passed to enforce 24 / 7 surveillance in front of all Internet-accessible computers, either which may devastate habitually-violating residents through onerous penalties that may contribute to homelessness and separation of families. <i>There is no good with compliance, here</i> that I can see, and it is my <b>personal</b> belief that parents should be minding their children, <i><b>not</b></i> a state-governing body who may be exempt from their own legislation (who had enforced enough “Interest” of them already).</p></div></div>
-<div class="S1 Cfull"><div class="Cwrap"><h2>The data centre problem</h2><p>
-Long has it been foretold, after basically <i>every</i> computer component under the sun had been bought by big tech firms for the sake of enhancing current artificial intellignece initiatives through improvement of large-language models with additional training, that data centres would be built to house them, and enable the use of this hardware in a centralised fashion which allows businesses to establish rental models, where it is configured for remote use by subscribers through a recurrent fee, so people on thin-clients and less-capable mobile devices could <i>in theory</i> offload work to these machines in near-real time, as-needed for completion of tasks.</p><p>
+<div class="S0 C_full"><div class="C_wrap"><h2>The memory margin markup</h2><p>
+Due to America's ever-increasing interest in artificial intelligence and mass surveillance, <i class="ylw">you are now in-competition with associates of the American government for not only components, <b>but also the means of manufacture for <u>all</u> hardware</b>.</i> This has been cause for technology across every vertical to balloon in price, compared against <i>very</i> early 2026 and prior. <i>Forget</i> about Chinese distribution of machine components — you can't even get anything from America without it being a dear price anymore.</p><p>
 
-…This effectively means you don't own the hardware, nor have control over how any data put into these machines are used, which makes encryption for security-sake a fruitless endeavour. Imagine a landlord who gets to watch everything you're doing — <i>especially</i> when you're using the bathroom, <span class="ylw">paying for such “Privilege” through both subcription fees <i>and</i> your nation's taxes.</span> Pretty scummy stuff, which enables governing bodies around the world unbridled opportunities to find and punish dissent, rather than use semi-anonymised (scathing) criticism as an abstract metric of constituient satisfaction to adjust behaviours and policies so representitives better reflect the will of those who had put them in office.</p><p>
+The squeeze for consumers had began in-earnest after Samual Altman attempted to swing two sweetheart deals at-once with major South Korean dynamic random access memory technology manufacturers; Hynix (also: SK Hynix) and Samsung Corporation. After tech news outlets had effectively pulled the fire alarm to alert others purchasing for DRAM-dependent components through the publication of stories about OpenAI's capital expenditures, <i>everybody else</i> piled in striking deals so often that DRAM spot pricing for a brief period was measured <i>hourly</i>, rather-than daily.</p><p>
 
-Data centres, too are the new casinos; you've probably seen advertising for sportsbooks, predictive markets and gambling platforms at least once in the last several years, and these facilities which house data, are also harbouring the very things which if they were freshly-built casinos, would be chided as the worst places on planet Earth. So, an impasse usually encountered by a discerning and ideologically-driven populous is immorality in competition with principles that simply make good business sense, even <i>if</i> such business relies upon the exploitation of a vulnerable public, which if they were physical places would have people and politician alike raise legitimate question about their continued operation.</p><p>
+This ended up being <b>great</b> for the bottom-lines of Hynix and Samsung, even-after they caught Sam burning his candle at both ends and subsequently resciended their initial contracts. This heightened interest in DRAM was also was cause for Micron Corporation to shutter their business-to-consumer “Crucial” hardware division, which they've determined wasn't necessary after-all, since the consumer had quit being so <i>crucial</i> for their shareholders when they could just have hyperscalers sign fixed-pricing contracts of their own to provide hardware for their ongoing data centre projects. <i>Unfortunately</i> because of these exchanges, every other piece of technology has to suffer for continued production of high-bandwidth memory and storage; produced in ways which prohibit much of their re-use in consumer / non-enterprise applications, which results in anything with any consumer-grade DRAM being a highly-limited commodity; perhaps, purposefully-so.</p><p>
 
-There is also concern about environmental pollution affecting water, air, and habitability around such places, as there has long-been rumours of not only breathing difficulties induced by hazardous particulate exposure at all stages of erection and record of potable water rendered significantly less-available, but also from functioning facilities; manifestation of unacceptably-loud industrial noise and pervasive physiological discomfort, which yield as some of their products “Money-focused” services designed to pervade the mind with neon-coloured methods of putting oneself in financial distress, all made possible by the perversion of economic systems encouraging the rapid exploitation of all that had been made available to humans through advancements of material claimation technologies.</p><p class="ylw">
+This will continue to be an ongoing issue until <i>at-least</i> 2027, though more-realistically these seemingly-malicious markups will be around until 2029, and will negatively affect personal computing for likely an entire decade, provided as it recovers, global economies don't encounter Great Depression-era hardships if-ever the floor falls out beneath every company behind major AI movements.</p></div></div>
 
-<i>There is good news, yet;</i> due to declining interest by the general public for artificial intelligence initiatives, nearly <b>half</b> of all planned projects are either <i>modified</i>, <b>paused</b> or <b><i>cancelled</i></b> entirely at-time of writing this statement. Enough people have grown savvy the businesses these centres afford through use of their hardware and want nothing to do with it, so along with the incresingly-known impotence of aritifical intelligence initiatives for automating most trade work, the combined strident opposition of people and cities alike to permit their land be made bare for the sake of data centre construction is being cause for divestiture and dissolution of ongoing projects which intend to erect them.</p></div></div>
-<div class="S1 Cfull Cend"><div class="Cwrap"><h2>Assuming responsibility</h2><p>
+<div class="S0 C_full"><div class="C_wrap"><h2>The data centre problem</h2><p>
+Effectively, all extant hardware in all markets for file storage and task caching are out of your reach financially, since you're not only competing with government-assisted initiatives, you're also fighting independent non-government big data projects for nation-wide surveillance, scalpers knowing these market conditions will only attract well-funded orginisations, and a lack of regulation to ensure this hardware ends up in your hands for personal and small business at a reasonable price — especially after Jeff Bezos floated the idea of remote computing via thin-clients <i>years</i> back; which means less computer for end-users, and more hardware for prospective rentiers like you and yours to lease time with, making up for less-potent hardware at the cost of various subscriptions.</p><p>
+
+Of rural persons living outside bigger cities, <i>this sucks</i> for them since it either means paying for a dedicated fibre line to their house (since AT&T doesn't want to float cost for copper POTS lines anymore), or satellite Internet which may be weather-dependent and under-performative for near real-time telecommunications. Cloud gaming efforts of the past had proven impotent compared to having the hardware on-site, creative work moving to subscription models also enables the feeding of fresh data from all art fields for LLMs to ingest; <i>some which may be <span class="ylw">confidential</span></i>, and performing all tasks beyond basic web browsing with a remote computer makes data encryption entirely pointless for sake-of privacy-enhanced computing.</p><p>
+
+Aside from losing ownership of general-purpose compute to companies reliant upon these “Hyperscale” data centres, their presence now and future represent the new casinos; you've probably seen advertising for sportsbooks, predictive markets and gambling platforms at least once in the last several years, and these facilities which house data, are also harbouring the very things digitally which if they were freshly-built establishments, would be chided as the worst places on planet Earth. So, an impasse usually encountered by a discerning and ideologically-driven populous is immorality in competition with principles that simply make good business sense; even <i>if</i> such business relies upon the exploitation of a vulnerable public, which if they were physical places would have constituient and politician alike raise legitimate questions about their continued operation.</p><p>
+
+Concern of environmental pollution affecting water, air, and habitability around such places are abundantly rife, as there has long-been rumours of not only breathing difficulties induced by hazardous particulate exposure at all stages of erection, but too record of potable water rendered significantly less-available, and from functioning facilities; manifestation of unacceptably-loud industrial noise inducing physiological discomfort. In-exchange for all of this, these facilities yield as some of their products “Money-focused” services designed to pervade the mind with neon-coloured methods of putting oneself in financial distress, all made possible by the perversion of economic systems encouraging the rapid exploitation of all that had been made available to humans through advancements of material claimation technologies.</p><span class="ylw"><p>
+
+<i>There is good news, yet;</i> due to declining interest by the general public for artificial intelligence initiatives, nearly <b>half</b> of all planned projects are either <i>modified</i>, <b>paused</b> or <b><i>cancelled</i></b> entirely at-time of writing this statement. Enough people have grown savvy the businesses these centres afford through use of their hardware and want nothing to do with it, so along with the incresingly-known impotence of aritifical intelligence initiatives for automating most trade work, the combined strident opposition of people and cities alike to permit their land be made bare for the sake of data centre construction is being cause for divestiture and dissolution of ongoing projects which intend to erect them.</p><p>
+
+As-of recently, the hits keep coming for new “Hyperscale” data centre projects since politicians across both sides of the asile are standing united against future construction as they realise the same thing we've told them all-along; <b>there is not enough power</b> without affecting how other facilities use their service. So with any hope, this momentum can continue toward deprecation of larger projects as a remedy for otherwise-mandatory “Rolling blackouts”, discontinuation of service for some other larger constructs (especially once we figure out how to send them into space), and some <i>peace</i> can return where it was once-disrupted, while returning to consumers <i>some</i> consumer-grade computation hardware.</p></span></div></div>
+<div class="S0 C_full C_end"><div class="C_wrap"><h2>Assuming responsibility</h2><p>
 All of what makes mankind's culmulative investment in high-technology resultant of negative outcomes feel inevitible. as-if this were the ultimate product of any human-made technology once advancement progresses well-enough to enable countless, unspeakable horrors delivered to discerning audiences every femto-second, and people may be quick to blame the software behind it, as-much they are willing to blame the hardware. While it is understandable why one may feel like they <i>must</i> lash out at technology abusing humans, the problem isn't technology <i>itself</i>; through its use, you are reading this. And while there may be ongoing effort to wrest away control of it from you, <b><i><u class="ylw">now</u></i></b> is the time to act, so you may take control of hardware within your vicinity, and advocate assuming control of what we believe by law of first-sale doctrine to <b>own.</b></p><p>
 
 <span class="ylw">Bring belief to manifest, and manifest for <i>good.</i></span> Power is within your hands, whenever you are ready to assume responsibility as a steward of your sovereign, so all you have remain <b>yours.</b> It might not stop ongoing infrastructure erection, or be cause for radical changes in federal policies, <i>but</i> at least you can operate your machine with software which not only chafes against industry-held hardware consumer longevity narratives, but also agrees with your principles, whatever they may be.</p></div></div>
 
-<div class="S2 Cfull Cstart"><div class="Cwrap"><h1><div class="Tflex Thead"><a href="#S3" class="mv">⇣</a><div id=S2>
-Training for tomorrow</div><a href="#S0" class="mv">↟</a></div></h1><p>
+<div class="S1 C_full C_start"><div class="C_wrap"><h1 id="S1"><div class="T_flex T_head"><a href="#S2" class="mv">⇣</a><div>
+Training for tomorrow</div><a href="#Sx" class="mv">↟</a></div></h1><p>
 Before considering a departure from Windows, modern iterations of Microsoft's <i>previous</i> flagship product has utilities built into most “Core” generally-available Windows releases which can help train you for the future, using what you already have for building the foundational knowledge necessary to cope without Windows. Alongide a little bit of external assistance, you can spend a weekend learning how to manage software through a variety of means; both first- and third-party, so you can better-understand how to do the same in a terminal emulator or graphical interface for whatever Linux distribution you fancy using.<blockquote>
 While the above advice is handy for learning software management in <u>any</u> open-source system instance, to keep things simple, the scope of such will be limited to Ubuntu / Debian through <b>Linux Mint</b>.</blockquote></p>
 </div></div>
 
-<div class="S2 Cfull"><div class="Cwrap"><h2><code>
+<div class="S1 C_full"><div class="C_wrap"><h2>
+Conditional bias</h2><p>
+Before we get to further instruction and guidance, there are a few things I am assuming from you, the reader:<ul><li>
+You harbor an interest for dual-booting between Windows and Linux</li><li>
+Your workflow(s) in Windows may still depend on platform-exclusive applications</li><li>
+You want to use this as an opportunity of moving away from platform-exclusive workflows</li><li>
+Your machine only has 125 GiB / 128 GB total storage available</li><li>
+You have <i>at-least</i> 52 GiB of space available</li><li>
+You wouldn't mind learning some new things about file access</li><li>
+You want to access much of the user content from your NTFS partition in Linux root</li></ul></p><p>
+
+If this sounds like you, thenn congratulations; you've found your guide. After two to four hours from reading this and following along, you may find yourself in an unfamiliar place, but with familiar furnishing to go along with your fresh start away from Windows.</p>
+</div></div>
+
+<div class="S1 C_full"><div class="C_wrap"><h2><code>
 winget</code></h2><p>
 If you're not yet familiar with using text-only tools for software management, then this should provide a decent life-skills primer	. After opening <code>powershell</code>, submit the following:<pre>
 winget list</pre></p><p>
 
-If you've yet to agree with Microsoft's EULA for Winget, consent. Eventually, a list will be rendered which shows the software you have available. Unlike the graphical <i>Settings</i> utility, Winget shows what sources software comes from, so you can strategise how to manage them. While not all selections can (and should) be removed, most of the software shown there can be removed if you do not need it.<blockquote>
+If you've yet to agree with Microsoft's EULA for Winget, consent. Eventually, a list will be rendered which shows the software you have available. Unlike the graphical <i>Settings</i> utility, Winget shows what sources software comes from, so you can strategise how to manage them.</p><p>
+
+You see now what is available to you, but you may also be interested in finding what else can be obtained; let's look up a piece of software which will be obtained in the next section to demonstrate software search, which can help you forfeit the need to use a text-exclusive control surface:<pre>
+winget search unigetui</pre></p><p>
+
+As-later seen, you can install this utility based on its Microswoft Store ID, <span class="ylw">even if you've yet to bind a Microsoft account to a local user profile.</span> And if it happens you dislike any of the software presently-installed, <code>remove</code> / <code>uninstall</code> can be used to be rid of it. While not all selections can (and should) be removed, most of the software shown there can be rid-of if you do not need it.<blockquote>
 If the software show bears the name of any OEM / SI or hardware provider (i.e. Intel, Nvidia, Realtek, AND / Radeon etc.), you might want to keep those! Consult the greater Internet for what you <b>can</b> remove within this scope if you're uncertain.</blockquote><blockquote class="ylw">If you've installed any variety of Windows Enterprise LTSC, <code>winget</code> <b>will not</b> exist. You can manifest it into being by installing Store and its Store Experience dependency by submitting <b><code>wsreset -i</code></b>, then use the Microsoft Store to fetch a sofftware which depends on winget, like what is shown below.</blockquote></p></div></div>
-<div class="S2 Cfull"><div class="Cwrap"><h2>
+<div class="S1 C_full"><div class="C_wrap"><h2>
 UniGetUI</h2><p>
 As an analogue to third-party package management like you would see outside of Windows, UniGetUI allows for installation of software from multiple repositories beyond Winget. To install it, perform the following:<pre>
 winget install XPFFTQ032PTPHF</pre><p>
-Once installed, you will also want to apply software updates upon first execution. Afterward, you can use this application as an interface to install software from the Microsoft Store and via Winget.</p><p>
+Once installed, you will also want to apply software updates upon first execution. Afterward, you can use this application as an interface to manage and be notified of updates for installed software from; the Microsoft Store, via Winget, as-well other supported third-party repositories.</p><p>
 
-Simply search for a package for addition to your queue. Special options normally not used during manual intervention can also be specified on a per-package basis, as-necessary. Admittedly, UniGetUI provides significantly more options than other package managers for Linux-based system instances, but ths isn't necessarily to their detriment; they're different, <i>not</i> deficient.<blockquote>
-<span class="ylw">If having performed an in-place upgrade for Windows Enterprise LTSC so you can receive system updates for at least until 2032 (Windows 11; 2034), you can use either <code>winget</code> or UnigetUI to install apps, <b>but</b> your old application preferences may not persist if you elected to skip apps and give yourself a fresh start, while keeping your personal effects accessible.<br>
+Simply search for a package to queue for manage. Special options normally not used during manual intervention can also be specified on a per-package basis, as-necessary. Admittedly, UniGetUI provides significantly more options than other package managers for Linux-based system instances, but this isn't necessarily to their detriment; they're different, <i>not</i> deficient.<blockquote>
+<span class="ylw">If having performed an in-place upgrade for Windows Enterprise LTSC so you can receive system updates for at least until 2032 (Windows 11; 2034), you can use either <code>winget</code> or UnigetUI to install apps, <b>but</b> your old application preferences may not persist if you elected to skip keeping apps and give yourself a fresh start, while keeping your personal effects accessible.<br>
 <br>
-However, all <b>previous</b> application preferences will be held in <code>%systemdrive%\Windows.old.</code> So you can install applications, then restore preferences (wherever they may be) and continue <u>exactly</u> where you had left off, so long those preferences are not kept in the system registry; for those, you'll need to open <code>regedit</code> and back up keys to a place in <code>%userprofile%</code> to restore for later, which may be more hassle than it's worth in most circumtances.</span></blockquote></p></div></div><div class="S2 Cfull Cend"><div class="Cwrap"><h2>
+However, all <b>previous</b> application preferences will be held in <code>%systemdrive%\Windows.old.</code> So you can install applications, then restore preferences (wherever they may be) and continue <u>exactly</u> where you had left off, so long those preferences are not kept in the system registry; for those, you'll need to open <code>regedit</code> and back up keys to a place in <code>%userprofile%</code> to restore for later, which may be more hassle than it's worth in most circumtances.</span></blockquote></p></div></div><div class="S1 C_full C_end"><div class="C_wrap"><h2>
 PortableApps</h2><p>
-If you want a way to manage third-party applications and don't mind it being initially for use on USB-attached media, then the PortableApps Platform may best suit you. While all of the apps are still Windows-exclusive, many of the open-source applications provided by PortableApps' community are cross-platform capable. Its platform can be used as alternative to the Microsoft Store and Winget which provide software where in open-source systems are functionally-similar to AppImage-dependent options, can be updated similarly-as self-contained Flatpak or Snap packages, and isn't under Microsoft's control; should you want to remove as many Microsoft-dependent things one can for avoiding the potential of undue revocation while still using Windows.<blockquote>
+If you want a way to manage third-party applications and don't mind it being initially for use on USB-attached media, then the <a href="https://portableapps.com">PortableApps Platform</a> may best suit you. While all of the apps are still Windows-exclusive, many of the open-source applications provided by PortableApps' community are cross-platform capable. Its platform can be used as alternative to the Microsoft Store and Winget which provide software where in open-source systems are functionally-similar to AppImage-dependent options, can be updated similarly-as self-contained Flatpak or Snap packages, and isn't under Microsoft's control; should you want to remove as many Microsoft-dependent things one can for avoiding the potential of undue revocation while still using Windows.<blockquote>
 Select web browsers may not be available, due to an internal platform policy of limiting derivative applications.</blockquote><blockquote>
 Not all open-source applications for Windows may be immediately available from here without relying upon unlisted external contributions from the PortableApps community.</blockquote><blockquote><span class="ylw">
 If you've set up a Windows To Go instance on a USB-attached media with Rufus, you can use third-party partition management tools to shrink the NTFS partition this instance of Windows resides on, for the creation of another space in the removable media to put PortableApps' software on so such is better-available for <b>both</b> on-board and external Windows instances.</span></blockquote></p></div></div>
 
-<div class="S3 Cfull Cstart"><div class="Cwrap"><h1><div class="Tflex Thead"><a href="#S4" class="mv">⇣</a><div id=S3>
-Making connections</div><a href="#S0" class="mv">↟</a></div></h1><p>
+<div class="S2 C_full C_start"><div class="C_wrap"><h1 id="S2"><div class="T_flex T_head"><a href="#S3" class="mv">⇣</a><div>
+Making connections</div><a href="#Sx" class="mv">↟</a></div></h1><p>
 After practising software management strategies which can carry over fundamentally to other system instances, and perhaps even using some <i>cross-platform</i> open source software, you may feel confident in your readiness of exploring solutions beyond Windows, yet lack the hardware necessary to do so. The good news for people with a lot of storage space available is that they may need <i>nothing</i>. to trial alternative system platforms</p><p>
 
-For people whose disk space is lacking, there may be a lot of file management ahead which for brevity sake, will be excluded and left up to you, but one way to reduce storage use aside from file compression, is to operate a file de-duplication software; if you need files in several places, consider understanding symbolic links, which will be covered with some depth later in this guidance; the software mentioned in-question may handle this for you. Use best judgment, and work with what you've got.</p><p>
+For people whose disk space is lacking, there may be a lot of file management ahead which for brevity sake, will be excluded and left up to you, but one way to reduce storage use aside from file compression, is to operate a file de-duplication software; if you need files in several places, consider understanding content references for journaling filesystems, which will be covered with some depth later in this guidance; the software mentioned in-question may handle this for you. Use best judgment, and work with what you've got.</p><p>
 
 Most people will want to just have a USB flash media on-hand for general use, but for installation on anything higher-endurance <i>meant</i> to be put inside a machine's enclosure, you'll need a bit more. For those who are lacking, here's a list of possible hardware to look up:</p><ul><li>
 M.2 (NGFF B-key) to Serial ATA (SATA) adapter</li><li>
@@ -181,14 +226,14 @@ USB superspeed A to C</li><li>
 “Molex” (AMP 794132-1 <i>compatible</i>) to “Berg” (AMP 171822-4 <i>compatible</i>)<ul><li class="q"><blockquote>
 Only as-necessary; you'll know it when you see it.</blockquote></li></ul></li><li>
 SATA power to “Molex” (AMP 1-480424-0 <i>compatible</i>)</li><li>
-Molex to AC power adapter<ul><li class="q"><blockquote>
+“Molex” to AC power adapter<ul><li class="q"><blockquote>
 IEC 60320 C14 used to be the prevailing connector for these things, but newer models may use a C8 connector.</blockquote></li></ul></li></ul></li></ul><blockquote><h2>
 
 Alternative data attachment methods</h2>
-<p>If you cannot afford, or care, to use standard on-board attachments via USB, then none of the above may matter to you. While less enduring for long-term use than even the high-endurance models which may be available, you could use Secure Disk or microSD (TransFlash, TF) cards with compatible USB adapters. <span class="ylw"><b>For laptops</b>, it is a rare capability to use the on-board SD attachment, even though it is seen as a USB device in-practice which may be part of a built-in flex-attached 		hub.</span></p><p>
+<p>If you cannot afford, or care, to use standard on-board attachments via USB, then none of the above may matter to you. While even the “High-endurnce” models of such may bear less longevity of practical use compared to on-board media, you could use Secure Disk or microSD (TransFlash, TF) cards with compatible USB adapters. <span class="ylw"><b>For laptops</b>, it is a rare capability to use the on-board SD attachment, even though it is seen as a USB device in-practice which may be part of a built-in flex-attached hub.</span></p><p>
 
 Laptop users with older models which have an optical storage device (colloqually referred to as a “Disc drive” — with a C) may be able to use SATA full-size to slimline media carriage / “Caddy” adapters for attaching additional on-board storage. Hard disk media may never spin down, so using an solid-state media (SSD) for this instance (SATA or M.2-attached) can provide more storage for less power used, <span class="ylw">should you possess the money for such.</span></blockquote></p></div></div>
-<div class="S3 Cfull Cend"><div class="Cwrap"><h2>
+<div class="S2 C_full C_end"><div class="C_wrap"><h2>
 Overcoming difficulties</h2><p>
 You can make all of the connections you want, but none of that matters if you encounter issues during the process. Some of this may had been covered prior, but there are other complications which may be encountered when using older hardware during the sunset of before-times when Integrated Dirve Electronics (IDE) was still relevant. The issues I've encountered, and some troubleshooting for them where I am aware of a solution is presented below:<ul><li>
 <b>On-board media is unvailable during live use</b><br>
@@ -199,70 +244,70 @@ This can be an issue with <i>many</i> things, but one possibility on older devic
 Operating your baseboard without Secure Boot enabled may prohibit you from being able to view select media formats without this being available on applicable devices; if you installed any compatible open-source system, let-alone Linux Mint with Secure Boot off, the easiest resolution is to turn Secure Boot on, reboot into the live session and install it yet-again with the Secure Boot option <i>enabled</i>.</li><li>
 <b>Ventoy can't boot</b><ul><li class="q"><blockquote>This utility is covered in the next section.</blockquote></li></ul>
 This may most-likely be caused by using the wrong boot mode; reboot into Windows, look in <code>diskmgmt.msc</code> and move outt the image(s) held therein before overwriting with the correct “Partition Style” for the machine before trying again. Also <i>if you're not-already intending to use this feature</i>, double-check Compatibility Support Module (CSM) / “Legacy Boot” is disabled where-applicable, just to make sure you aren't unnecessarily mixing boot modes by accident.</li></ul></p></div></div>
-<div class="S4 Cfull Cstart"><div class="Cwrap"><h1><div class="Tflex Thead"><a href="#S5" class="mv">⇣</a><div id=S4>
-Trade tools</div><a href="#S0" class="mv">↟</a></div></h1><p>
+<div class="S3 C_full C_start"><div class="C_wrap"><h1 id="S3"><div class="T_flex T_head"><a href="#S4" class="mv">⇣</a><div>
+Trade tools</div><a href="#Sx" class="mv">↟</a></div></h1><p>
 Before you get stuck-in finding a way out of Windows with Linux live sessions, you'll want setting up a USB-attached storage media so the means to boot with it is available to you. Like with sheds and tents erected during construction, there are <i>many</i> ways to handle this. A couple of unique solutions which bear their own merits, and could have their strengths exercised in-tandem with specific use cases are highlighted below:
 </div></div>
-<div class="S4 Chalf">
-<div class="Cwrap">
+<div class="S3 C_half">
+<div class="C_wrap">
 <h2>Rufus</h2><ul><li>
 Enables the ability to use persistient content with live pre-installation sessions</li><li>
 Automates the writing of custom answer files to skip Windows' OOBE procedures</li><li>
 Allows for instantiating a complete Windows instance on separate USB-attached media via Windows To Go</li></ul><blockquote>For all of the good it does in Windows, this software is completely worthless otherwise since there is no compatible equivilent elsewhere, but virtual machine snapshots could be used with other solutions in its place, so long support for that is available and enabled in your baseboard firmware.</blockquote></div></div>
-<div class="S4 Chalf">
-<div class="Cwrap">
+<div class="S3 C_half">
+<div class="C_wrap">
 <h2>Ventoy</h2><p><ul><li>
 Allows use of Windows' supported partition formats for storing device images</li><li>
 Optionally enables use of <code class="cyn">.vhd</code> and <code class="cyn">.vdi</code> device images for use of ssystem instance snapshots otherwise exclusive to virtual machine appliances</li><li>
 Keeps writable the majority of space in a USB media available so it may continue being used as any other storage device</li></ul><blockquote>For its strengths, its author continues being Ventoy's achillies' heel since the default <b>partition style</b> is MBR (msdos elsewhere). Changing this to GPT enables it to work on more modern systems without the use of CSM, which should limit whatever boot issues you may encounter.</blockquote><blockquote class="ylw">If <b>not</b> using Windows, your option for image storage partition format is limited to ExFAT.</blockquote></div></div>
 
-<div class="S4 Cfull Cend">
-<div class="Cwrap"><h2>
+<div class="S3 C_full C_end">
+<div class="C_wrap"><h2>
 Combined powers</h2><p>
 There are several times where you may combine these utilities to make possible things that otherwise shouldn't, and one <i>exemplary</i> example involves <b>Hiren's BootCD PE</b>; a software collection made by the Hiren's BootCD community as a spiritual continuation of their bootable tool suite providing <i>only</i> a graphical shell to run on top of Windows 11's pre-installation environment, succeeding the combination of DOS and graphical tools provided by its previous iteration.</p><p>
 
 The only caveat it has for most people would be the inability to adjust display resolution on select video hardware, and everything looking <i>so</i> different compared to Windows 11 — it feels like Windows 7 more than anything else. If those hurdles can be overcome, you can then run Rufus and use it with a disc image of modern(-ish) Windows to make from it a bootable instance on a USB-attached media <i>different</i> than the one running HBCD PE at the moment, then reboot; using the freshly-written device modified with Rufus to boot into Windows, where it wouldn't work before as (a functional instance of) it had not yet exist.</p></div></div>
 
-<div class="S5 Cfull Cstart"><div class="Cwrap"><h1><div class="Tflex Thead"><a href="#S6" class="mv">⇣</a><div id=S5>
-Inventory management</div><a href="#S0" class="mv">↟</a></div></h1><p>
+<div class="S4 C_full C_start"><div class="C_wrap"><h1 id="S4"><div class="T_flex T_head"><a href="#S5" class="mv">⇣</a><div>
+Inventory management</div><a href="#Sx" class="mv">↟</a></div></h1><p>
 While the intangible world enabled by magnetic media makes it seem like space isn't being taken up by anything, as what we call “Space” here is just a binary determination which effectively amounts to virtual paper tape presenting readable data, one still must be mindful of it, as they would their stocked shelves and drawers.</p><p>
 
 Since some may have issues involving space constraints, this section is dedicated to strategies for making the best of storage you already have.</p></div></div>
 
-<div class="S5 Cfull">
-<div class="Cwrap"><h2>
+<div class="S4 C_full">
+<div class="C_wrap"><h2>
 Deep compression</h2><p>
-Much like how various bagged items can have their physical space minimised by removing the air from it, binary files can have their space minimised by altering them so repeated data patterns are put into a separate file, which can instruct a system on how to re-assemble the file using this reference which <i>when together with the original content</i> takes less space than the unaltered binary alone.</p><p>
+Much like how various bagged items can have their physical space minimised by removing the air from it, files on any media can have their “Space” minimised by altering them so repeated data patterns are put into a separate file, which can instruct a system on how to re-assemble it using this reference which <i>when together with the original content</i> takes less space than the unaltered content alone.</p><p>
 
-This is the ethos of <i>file compression</i>, and it's something you can enable for your whole system partition if you are so-inclined, by visiting the properties of a device visible in your system device summary (<code>My Computer</code> / <code>This PC</code>) and enabling compression for it.</p><p>
+This is the ethos of <i>file compression</i>, and it's something you can enable for your whole system partition if you are so-inclined, by visiting the properties dialogue for a device visible in your system device summary (<code>My Computer</code> / <code>This PC</code>) and enabling compression for it.</p><p>
 
 Continue using your machine as-normal, and <i>eventually</i> it will no longer be compressing anything. If you encounter any errors, <i>ignore</i> them and continue; leave in the background until finished. This process will take anywhere between hours and <i>days</i> depending on how many files are necessary to compress, but the sooner you start, the quicker it'll get done.</p><blockquote>
 If you do this before much else, you can follow the prior advice and perform other tasks to attain comfort operating in a text-only interface, and manage files on the NTFS partition Windows is running from while space is being reclaimed through compression.</blockquote><blockquote class="ylw">
 There will be a minor performance impact while decompressing contents in-situ, <b>especially</b> with system files. If there is any concern about overall system performance by compressing the entire contents of <code>%systemdrive%</code>, consider only compressing the contents of <code>%userprofile%</code> instead.</blockquote></div></div>
 
-<div class="S5 Cfull">
-<div class="Cwrap"><h2>
+<div class="S4 C_full">
+<div class="C_wrap"><h2>
 Mortal magic</h2><p>
-If you ever want people to think you've a wizard, tell them about symbolic links and file references. While not immediately useful to know such things, if you have <b>large</b> groups of files which need to be in multiple places at once, and it's part of the same local machine (or temporarily, from an external device where space is lacking for any reason without formally establishing a permanent device mountpoint), you can save a whole heap of space by not having to duplicate everything, and make access of directories you are already familiar with more seamless between system instances, by exercising the use of these “Links” which won't up-end typical tree-like hierarchical dirrectory structures; think of it as vines stretching between branches.<p>
+If you ever want people to think you've a wizard, tell them about symbolic links and file references. While not immediately useful to know such things, if you have <b>large</b> groups of files which may be desired to have in multiple places at once, and it's part of the same local machine (or temporarily, from an external device where space is lacking for any reason without formally establishing a permanent device mountpoint), you can save a whole heap of space by not having to duplicate everything, and make access of directories you are already familiar with more seamless between system instances, by exercising the use of these “Links” which won't up-end typical tree-like hierarchical dirrectory structures; think of it as vines stretching between branches.<p>
 
 These things are <i>awesome</i> for a variety of uses, but we'll get to the rules when it's relevant. Right now, just reserve the general idea in your mind, since you may find it quite useful in the future.</p></div></div>
 
-<div class="S5 Cfull Cend">
-<div class="Cwrap"><h2>
+<div class="S4 C_full C_end">
+<div class="C_wrap"><h2>
 Home improvement</h2><p>
-Before you even <i>begin</i> to consider installing an open-source operating system, there must first be the means to access its pre-installation environment. There are many ways to use many tools, but general use boils down to this:</p><ol><li>
+Before you even <i>begin</i> to consider installing an open-source operating system, there must first be the means to access its pre-installation environment. There are many ways to use many tools, but general-use boils down to this:</p><ol><li>
 Obtain</li><li>
-Unpack</li><li>
+Deploy</li><li>
 Use</li></ol><p>
 It's <i>a little</i> more complicated than that in-practice with conventional methods, but <i>good</i> work is all down to prep, and that is why more work is being put in up-front with Ventoy; later-discussed in the next section, which will enable much more-simple management of pre-installation environments and boot tools, than to be always-reliant on a separate machine with functional system instance for re-flashing the same USB device.</p><p>
 
 Lastly, sometimes the way to improve one's home is to <i>get rid</i> of things. Likewise, if you find yourself lacking capacity <i>even after</i> exercising the above for adding another system instance, it may behoove you to consider what is important, and dashing the rest by uninstalling / deleting what isn't necessary, should migrating to another space not be an option.</p></div></div>
 
-<div class="S6 Cfull Cstart"><div class="Cwrap"><h1><div class="Tflex Thead"><a href="#S7" class="mv">⇣</a><div id=S6>
-Open preview</div><a href="#S0" class="mv">↟</a></div></h1><p>
+<div class="S5 C_full C_start"><div class="C_wrap"><h1 id="S5"><div class="T_flex T_head"><a href="#S6" class="mv">⇣</a><div>
+Open preview</div><a href="#Sx" class="mv">↟</a></div></h1><p>
 There's been heaps of preamble up to this point; but success always begins with preparation, contributed primarily from planning and practice. A foundation is only strong-as the minds which lay it, and ideation can only go so far while idled. The following sections will provide the means to turn idea into action, by giving yourself the tools to build a new future for your computer; whether that mandates demolishing the past, or renovating around it, and the ability to see it in-action <i>before</i> you do much else.</p></div></div>
-<div class="S6 Cfull">
-<div class="Cwrap"><h2>
+<div class="S5 C_full">
+<div class="C_wrap"><h2>
 Booting <i>anything</i> through a disc image</h2>
 <blockquote>You'll want a minimum USB flash media device capacity of 8 GiB (8192 MiB).</blockquote><blockquote class="ylw">
 This will delete everything on the target media used, but you will <b>not</b> lose general writing capabilities, so you can store other stuff with your boot tools.</span></blockquote><p>
@@ -276,11 +321,11 @@ In the disk properties dialogue, select <i>Volume</i></li><li>
 Observe and take note the <i>Partiton Style</i> shown</li></ol></li><li>
 Download Ventoy<ol type="a"><li>
 <!-- Hack to resolve last child bug with span -->
-<span>Via <code>powershell</code>: <code>winget install ventoy</code></span> (<b class="ylw">recommended</b>)<ul><li class="q"><blockquote>
+Via <code>powershell</code>: <code>winget install ventoy</code> (<b class="ylw">recommended</b>)<ul><li class="q"><blockquote>
 Skip to <b>step 4</b></blockquote></li></ul></li><li>
 <a href="https://github.com/ventoy/Ventoy/releases/latest">From GitHub (preferred web method)</a></li><li>
 <a href="https://sourceforge.net/projects/ventoy/files/v1.1.10/">From SourceForge</a><ul><li class="q"><blockquote class="ylw">
-Ignore all other banner interface elements; the download button is in the page body.</blockquote></li></ul></li></ol></li><li>
+Ignore all other page banner elements; the download button is in the page body.</blockquote></li></ul></li></ol></li><li>
 Extract all contents at a place you will remember<ul><li class="q"><blockquote>
 <b>Optionally</b>: Extract at <code>%temp%</code> to delete with Disk Cleanup later.</blockquote></li></ul></li><li>
 Open <b><code>Ventoy2disk.exe</code></b><ul><li class="q"><blockquote>
@@ -294,8 +339,8 @@ Yes, you will be asked to commit twice; this is to give you pause for thought be
 
 There is some more to do after this, but that'll come in <i>later</i> sections.</p></div></div>
 
-<div class="S6 Cfull Cend">
-<div class="Cwrap"><h2>
+<div class="S5 C_full C_end">
+<div class="C_wrap"><h2>
 Enabling USB-bootable Windows</h2><blockquote>
 <b>You can skip this, if disinterested or otherwise-incapable of exercising this advice.</b></blockquote><blockquote class="ylw">
 Before proceeding here, there are several concerns to heed:<ul><li>
@@ -307,7 +352,7 @@ If being primed with all of those bright yellow warnings didn't dissuade you fro
 Rufus can do a <u>whiole lot</u> more than just this, which makes it an ideal Windows-exclusive utility to write images Ventoy has difficulty booting. However, for brevity sake the remainder of this section focuses on features exclusive for when a Windows disc image is selected.</blockquote><ol><li>
 Download Rufus<ol type="a"><li>
 <!-- Hack to resolve last child bug with span -->
-<span>Via <code>powershell</code>: <code>winget install rufus</code></span> (<b class="ylw">recommended</b>)</li><li>
+Via <code>powershell</code>: <code>winget install rufus</code> (<b class="ylw">recommended</b>)</li><li>
 <a href="https://rufus.ie/en/#download">From homepage</a></li><li>
 <a href="https://dappcdn.com/download/system-rescue/rufus">From dAppCDN</a></li></ol></li><li>
 Open Rufus</li><li>
@@ -325,8 +370,8 @@ When all seems right to you, select <b>Start</b></li>
 You will be prompted for a password eventually if creating an account before booting; this can be anything.</blockquote><blockquote class="ylw">
 If using Windows Enterprise LTSC, the build you select truly doesn't matter; valid third-party activation methods may modify an active instance to use the Internet-of-Things release if it isn't yet, since use of <u><b>IoT</b> Enterprise LTSC</u> is the only way to enable single-machine activation without need of domain configuration and a key management server.</blockquote></div></div>
 
-<div class="S7 Cfull Cstart"><div class="Cwrap"><h1><div class="Tflex Thead"><a href="#S8" class="mv">⇣</a><div id=S7>
-Companion utilities</div><a href="#S0" class="mv">↟</a></div></h1><p>
+<div class="S6 C_full C_start"><div class="C_wrap"><h1 id="S6"><div class="T_flex T_head"><a href="#S7" class="mv">⇣</a><div>
+Companion utilities</div><a href="#Sx" class="mv">↟</a></div></h1><p>
 All of the knowledge above is only good, if you already have the disc / disk images necessary to put them into use. While there are a lot of means and utilities which may be worth your while, to keeep explanations fairly simple the topics of interest will be boiled down to the following software intents:</p><ul><li>
 An alternative to Windows</li><li>
 A means for byte-perfect data backups</li><li>
@@ -334,18 +379,18 @@ A Windows-based tool suite</li></ul><p>
 
 We'll omit the first of these utilities for the next section just to keep everything together, but the other two software options may be of interest to you when you want to make a cold backup of your system and / or personal effects, and if-ever in a situation where Windows can't boot for any reason; the means to access a Windows-enabled desktop for establishing a portable Windows instance on separate USB media, or if you need an emergency Windows instance for some basic tasks and it simply <i>cannot</i> wait for you to re-install the system.</p><p>
 
-These practical examples can be used in-tandem to assume and maintain greater control over your machine.</p><blockquote class="ylw">While everything explained here can be performed with multiple USB “Flash drives” , it will be assumed <b>Ventoy</b> is used for everything described below, since instantiation is simple-as saving the disc image to a device with it already written to it.</blockquote></div>
-</div><div class="S7 Cfull"><div class="Cwrap"><h2>
+These practical examples can be used in-tandem to assume and maintain greater control over your machine.</p><blockquote class="ylw">While everything explained here can be performed with multiple USB “Flash drives”, it will be assumed <b>Ventoy</b> is used for everything described below, since instantiation is simple-as saving the disc image to a device with this  already written to it.</blockquote></div>
+</div><div class="S6 C_full"><div class="C_wrap"><h2>
 Data preservation / restoration — Clonezilla</h2><p>
-Clonezilla is an extremely capable data preservation and restoration tool provided by Taiwan's National Centre for High-performance Computing. While it is a text-only interface, due to the fact it's <i>so small</i> with just a few basic utilities alongside all necessary binaries to operate a Debian-based text shell environment, the option to establish a RAM disk and commit on memory everything it provides make this an effectively bullet-proof solution to duplicate and re-establish device partitions on a separate media, or restore the contents of existing devices should software issues occur which are confirmed to not be attributed by hardware failure.</p><p>
+Clonezilla is an extremely capable data preservation and restoration tool provided by Taiwan's National Centre for High-performance Computing. While it only provides a text interface, due to the fact it's <i>so small</i> with just a few basic utilities alongside all necessary binaries to operate a Debian-based text shell environment, the option to establish a RAM disk and commit on memory everything it provides make this an effectively bullet-proof solution to duplicate and re-establish device partitions on a separate media, or restore the contents of existing devices should software issues occur which are confirmed to not be attributed by hardware failure.</p><p>
 
 Visit <a href="https://clonezilla.org/downloads/download.php?branch=stable">this page</a> to obtain the software; select <code class="cyn">.iso</code> as the image format option, and select the <b>Download</b> button on the page to to initiate operation on a media with Ventoy, or elsewhere for later duplication at a separate media with other bootable device creation methods.</p><p>
 
 When finished, and booted into it, the familiar (for most long-term open-source system users) GRUB2-style menu will appear, <i>distinctly</i> Clonezilla-themed (after chain-booting from the <i>distinctly</i>-themed Ventoy GRUB2 menu) — once there, <i>even if USB ports are not limited</i> I would still recommend selecting any of the <i>to RAM</i> options so the kernel boots, initialises a RAM disk using the system memory, and copies <i>the <b>whole</b> system</i> onto it, relaying all operations to the kernel and software in RAM. One can then remove the boot media and replace with a target for desired operations. Stick with the beginner options and 95% of the time, you'll be fine.</p><p>
 
 But perhaps, you need more than this in the future for file recovery and resolving potential boot errors due to problems induced by failings of any stripe. While the following could be operated in the context of providing a completely separate USB-attached copy of Windows, it could also operate in a broader diagnostics and recovery context for existing Windows installations.</p></div></div>
-<div class="S7 Cfull Cend">
-<div class="Cwrap"><h2>USB-bootable Windows-based tool suite — Hiren's BootCD PE</h2><p>
+<div class="S6 C_full C_end">
+<div class="C_wrap"><h2>USB-bootable Windows-based tool suite — Hiren's BootCD PE</h2><p>
 A “Spiritual successor” of the original Hiren's BootCD maintained by a community niche to be a modern re-interpretation for their favourite “Swiss Army knife” tool suite, Hiren's BootCD PE provides a Windows 11 pre-installation environment with interface elements distinctly inspired by Windows Vista / 7, which comes with a myraid of tools for file recovery, data forensics and diagnostic tools for resolving inaccessible system instances.</p><p>
 
 What may be of great interest for future Linux mono-boot users is the ability of using a USb-attached media to use software made expressly for Microsoft Windows, without having installed it; the means to bootstrap in a working environment so Windows-exclusive binaries can be executed: <i>specifically</i> <b>Rufus</b>, to enable writing a fully-configured, turn-key Windows instance on separate external media so that a copy of Windows is available via USB <i>after</i> replacing a prior Windows mono-boot instance with its Linux-based successor, thus destroying it to render Windows-exclusive software tasks impossible otherwise.</p><p>
@@ -354,53 +399,91 @@ For a full list of provided tools to search at your own leisure, and to obtain t
 
 Once booted to the system instance it provides, one may open Rufus and operate it exactly like they would have had in any other copy of Windows, as-described earlier in this page. One may also use this as a means to operate Windows software in a virtual machine appliance to run it as-desired <i>without</i> obtaining Windows proper, so long the physical partition containing such remains accessible to the appliance which is using Hiren's BootCE PE.</p></div></div>
 
-<div class="S8 Cfull Cstart"><div class="Cwrap"><h1><div class="Tflex Thead"><a href="#S9" class="mv">⇣</a><div id=S8>
-Evaluation</div><a href="#S0" class="mv">↟</a></div></h1><p>
+<div class="S7 C_full C_start"><div class="C_wrap"><h1 id="S7"><div class="T_flex T_head"><a href="#S8" class="mv">⇣</a><div>
+Evaluation</div><a href="#Sx" class="mv">↟</a></div></h1><p>
 <i>Finally</i> we reach the purpose for this endeavour — to establish and set up a Linux-powered system instance. But first, just to double-check;<ol><li>
 Disk Encryption (BitLocker) is disabled<ul><li class="q"><blockquote>
 This is to ensure the NTFS partition Windows is on remains accessible when <u>not</u> using Windows.</blockquote></li><li class="q"><blockquote class="ylw">
 You can skip this if you have a spare empty or partially-used media with non-encrypted volumes, to install alongside existing partitions the Linux Mint session.</blockquote></li></ul></li><li>
 Your boot device is prepared<ul><li class="q"><blockquote>
 If using Ventoy, also have included in the boot media, disc image for Linux Mint Xfce and other optional images as-described above.</blockquote></li></ul></li><li>
-Secure Boot is <i>enabled</i><ul><li class="q"><blockquote>
-This is because Linux Mint (based on Ubuntu) uses Canonical's kernel, which supports Secure Boot; courtesy of Canonical's shim, and is <i>necessary</i> to use select multi-media interfaces provided by <code>ubuntu-restricted-extras</code>.</blockquote></li></ul></li><li>
+Secure Boot is <i>disabled</i><ul><li class="q"><blockquote>
+This is for Clonezilla; in spite of the fact their alternative-stable release is based-on Ubuntu, and perhaps even uses Canonical's Ubuntu Linux kernel; a requirement for Secure Boot compatibility with any Ubuntu-based OS, the provided copy of GRUB2 from Clonezilla's disc image fails to pass that vibe check, and thus requires disabling for the time being.</blockquote></li>
+<li class="q"><blockquote>
+As a reminder for later; <span class="ylw">Secure Boot must be <b>enabled</b></span> during Linux Mint installation where-applicable. This is because Linux Mint is based on Ubuntu, <b>and</b> has Canonical's boot shim, which is <i>necessary</i> to enable Secure Boot compatibility, and is required for select multimedia interfaces provided by <code>ubuntu-restricted-extras</code>.</blockquote></li></ul></li><li>
 All other possible boot issues specific for your machine and boot method are resolved</li></ol>
 </p><p>
 Before we continue, it's necessary to obtain the distributuion instance for preview and installation…</p></div></div>
 
-<div class="S8 Cfull"><div class="Cwrap"><h2>Windows alternative — Linux Mint</h2><p>
+<div class="S7 C_full"><div class="C_wrap"><h2>Windows alternative — Linux Mint</h2><p>
 Since the scope of open-source discussion will be limited to <b>Linux Mint <i>based on Ubuntu</i></b>, this pre-installation software suite image can be obtained in multiple varieties providing different desktop environments, <i>but</i> we'll limit our scope to the Xfce desktop release, since it's a great balance between weightiness, functionality and modernity; all which should help to make an older machine “Feel” new (of its time) once-again, without providing anything radically different from what you've been used to.<blockquote>
 There is also maintained on-occasion an “Edge” release which only comes with the Cinnamon desktop, but since all it really does is base itself off a <b>much</b> older Ubuntu release with a later kernel, the “Edge” image should only be used for instances where the typical instance doesn't work with more modern hardware.</blockquote><blockquote>
 Nothing precludes any of the other options from being viable; if you like how Cinnamon looks, go with that. If you want a more “Traditional” Ubuntu experience as-seen rom Canonical circa 2006 up to 2012, then use MATE. Just be aware that their respective software suites will be different, but it's all using older Gimp / GNOME Toolkit (GTK) libraries to enable their functionality.</blockquote></p><p>
 
-The image can be obtained from <a href="https://linuxmint.com/download.php">here</a>; pick the one with the Xfce desktop. Nothing else has to be done with the image file, except to duplicate its contents on a USB device, <i>or</i> if using Ventoy, put the image onto the bootable USB device. Once its contents are available on a media detected by your baseboard firmware, you can simply boot with it to trial before committal. If everything works on your machine, then you can install the system at your leisure, provided you have the space for it. If <i>most</i> things work save for the odd optional hardware feature, most times this can be resolved post-installation.</p><p>
+The image can be obtained from <a href="https://linuxmint.com/download.php">here</a>; pick the one with the Xfce desktop. Nothing else has to be done with the image file, except to duplicate its contents on a USB device, <i>or</i> if using Ventoy, put the image onto the bootable USB device. Once its contents are available on a media detected by your baseboard firmware, you can simply boot with it to trial before committal. If everything works on your machine, then you can install the system at your leisure, provided you have the space for it. If <i>most</i> things work save for the odd optional hardware feature, most issues encountered during pre-installation can be resolved post-installation.</p><p>
 
-With that sorted, boot into your Linux Mint instance using your baseboard's method, or if using a modern boot instance of Windows; by holding down Right-shift before choosing to restart, and selecting the boot device in Windows' Recovery Envrionment so you can reach the intended method of access.</p><p>
+With that sorted, boot into your Linux Mint instance using your baseboard's method, or if using a modern boot instance of Windows; by holding down Right-shift before choosing to restart, and selecting the boot device in Windows' Recovery Environment so you can slect the USB-attached device with Ventoy.</p>
 
-When there, give the system a play-about and check out the new digs you'll end up erecting in your primary boot media. Notice, too you can hold left-Alt ad scroll to magnify the display — <i>fancy.</i></p></div></div>
-<div class="S8 Cfull"><div class="Cwrap"><h2>
+<blockquote class="ylw"><h2>For Windows' modern boot instances using the GPT partition style</h2>
+<p>If having followed <i>all</i> prior instructions <b>and</b> your media is formatted with the GUID Partition Table style / format, you will want to back up the present state of your on-board media's Extended Firmware Interface System Partition. Sounds <i>fancy-as</i> but it only amounts to the little bit of space that comes before everything else as-configured by Microsoft Windows.</p><p>
+
+You may completely omit this and go straight into Linux Mint, but in doing so you deprive yourself an opportunity to restore the ESP at its original state, which will make reverting the appliance to a Windows mono-boot due to dissatisfaction with Linux generally a bit more difficult to execute.</p><p>
+
+To perform; first disable Secure Boot, then boot into Clonezilla — go through the motions to save a partition, with the NTFS space (typically <code>/dev/sda3</code> / <code>/dev/nvme0n0p3</code> / <code>/dev/nvme0n1p3</code>) configured to be Clonezilla's <code>/partimag</code> location. Once configured, back up the ESP to a file (“device-[to-]image”) into the NTFS location (presently <code>/partimag</code>) so you can have this content on-hand later if-ever you want to remove your Linux instance <b>entirely</b>.</p><p>
+
+When you reboot, return into UEFI Firmware Settings to re-enable Secure Boot — you shouldn't have trouble accessing Windows with Secure Boot disabed if you had turned off Disc Encryption, but in-case you do, your firmware settings can be accessed via the pre-POST hotkey as-explained in your baseboard's documentation. Secure Boot is necessary for some features provided by <code>ubuntu-restricted-extras</code> while using Linux Mint.</p></blockquote><p>
+
+When booting into the Linux Mint live session for the first time, you will notice a different text-only menu with more options; select “OEM Install”, but don't <i>choose</i> it by pressing <code>[Enter]</code> or cursor right (<code>→</code>); instead, <b class="ylw">press <code>E</code></b>.</p><p>
+
+You will be then permitted to edit the command list for this entry temporarily. Take advantage of this to delete <code>--only-ubiquity </code> from the series of operations this will establish, and press <code>[F10]</code> when finished. You will still have the benefits of this option, but <i>also</i> with a graphical desktop as you would with standard boot modes, except now also with the ability to include special information as part of the “Build name” and the ability to do other staging with applications and partition mounts later, <i><b>before</i> you establish the first user.</b><blockquote class="ylw">
+This is especially handy for baseboards which will drive the backlight at its lowest setting by-default; with <code>--only-ubiquity</code> retained, special functions on a keyboard to adjust various functions, including display backlight intensity will <b>not</b> be available, unlike other typical boot modes.</blockquote>
+<blockquote>
+When installation is finished, <code>oem</code> will be established as a temporary user which will be deleted after user <code>1000:1000</code> is created.</blockquote></p><p>
+
+When there, give the current instance a play-about and check out the new digs you'll end up erecting in your primary boot media. Notice, too you can hold left-Alt ad scroll to magnify the display — <i>fancy.</i><blockquote class="ylw">
+Everything seen here is temporary — you must still install the system for any changes to be permanent.</blockquote></p></div></div>
+<div class="S7 C_full"><div class="C_wrap"><h2>
 Furnishings</h2><p>
 As-with any other structure, depending on the style its built in, the furnishings will be different — sometimes, <i>radically</i> so. But since Xfce in its current state hadn't departed far from what makes a “Traditional” desktop environment, the parts you operate most should be extremely familiar to you as a prospective long-term end-user.</p><blockquote>
-Mind, this will be the same suite of software you encounter during almost every Distributor-provided instance of Xfce, <u>unless</u> they elect to change it.</blockquote><blockquote class="ylw">
+Mind, this will be the same suite of software you encounter during almost every Distributor-provided instance of Xfce, <u>unless</u> they elect to change it, <span class="grn">which Mint does.</span></blockquote><blockquote class="ylw">
 As a long-term user of this suite, I will provide advice about replacement, as-well explain the justification behind it.</blockquote><p>
 The primary utilities are as-follows:<ul><li>
 <code><b>xfwm4</b></code> — Application compositor and renderer which interfaces with teh X Window System (X11 / Xorg)</li><li>
-<code><b>xfce4-panel</b></code> — Window and system management applets; taskbars and task panels for monitoring and manipulating your system application instances.<ul><li class="q"><blockquote class="ylw">
-By-default, Window List is provided for showing all open windows visible to the compositing pager. if you want a more-modern label-free alternative, consider <code>xfce4-docklike-plugin</code>:<pre class="qcmd">
+<code><b class="ylw">xfce4-panel</b></code> — Window and system management applets; taskbars and task panels for monitoring and manipulating your system application instances.</li><li>
+<code><b>xfdesktop</b></code> — The desktop shell renderer displaying contents in <code>$HOME/Desktop</code> beneath everything else.</li><li>
+<code><b class="grn">xed</b></code> — Text editor, and a part of Mint's software suite, as a replacement for Mousepad.</li><li>
+<code><b>thunar</b></code> — The file browser.</li><ul><li class="q"><blockquote>
+Already a radical departure is exhibited here; in Windows, <code>explorer</code> is the file manager <b>and</b> desktop shell renderer; similarly, like GTK2 / early GTK3 Nautilus from GNOME, and file managers which follow in their stead; such-as Cinnamon's Nemo.</blockquote></li></ul></li><li>
+<code><b>xfce4-appfinder</b></code> — Graphical command interpreter and application launchpad<ul><li class="q"><blockquote>
+Default keybinds; <ul><li class="q"><table><tr><td>
+<code>⎇[F2]</code></td><td>
+to invoke command interpreter</td></tr><tr><td>
+<code>⬇</code></td><td>
+thereafter to present application search mode</td></tr><tr><td>
+<code>⬆</code></td><td>
+thereafter to return in command interpretation mode</td></tr></table>
+</table></li></ul></blockquote></li></ul></li><li>
+<b class="ylw">Whisker</b> — An Xfce-specific Redmond-style panel-resident application and session management menu.<ul><li class="q"><blockquote>
+This comes with Linux Mint, and is a fairly standard extra addition with other Xfce-equipped instances.</blockquote></li></ul></li><li>
+<code><b class="ylw">file-roller</b></code> — GTK3-based file archival utility from GNOME, with functionality dependent on whatever packages handling compressed file formats are installed.</li><li>
+<code><b class="ylw">xfce4-terminal</b></code> — The default terminal emulator which may also function as your primary control surface for text-only apps.<ul><li class="q"><blockquote>
+This is different from the fallback terminal emulator assigned via Debian's <code>update-alternatives</code> method as <code>x-terminal-emulator</code>, which is usually configured to be <code>xterm</code>.</blockquote></li></ul></li></p>
+<p>
+There are many other applications you can try out, but most of your interests will have been from your exploration in Windows prior — cross-platform open-source applications meant to replace the closed-source and / or platform-exclusive ones you were using in Windows. If you want an at-a-glance novice-friendly information resource which doesn't overwhelm you with <i>everything</i> a manual would, then consider installing <code>tldr</code>:<pre class="qcmd">
+<span class="ylw"><b>sudo</b></span> apt install tldr</pre></p></li></ul><blockquote class="ylw"><h2>
+Alternative compatible software</h2><p>
+The entries shown in yellow above can be replaced with the following software solutions, with explanations for each:<ul><li>
+<b><code>xfce4-panel</code>'s Window List panel applet</b><br>
+By-default, Window List is provided for showing all open windows visible to the compositing pager. if you want a more-modern label-free alternative which can replace it and custom launchers, consider <code>xfce4-docklike-plugin</code>:<pre class="qcmd">
 sudo add-apt-repository ppa:xubuntu-dev/extras
 sudo apt update
 sudo apt install xfce4-docklike-plugin</pre>
-Then, you can simply replace it in your panel settings to take place of Window List.</blockquote></li></ul></li><li>
-<code><b>xfdesktop</b></code> — The desktop shell renderer displaying contents in <code>$HOME/Desktop</code> beneath everything else.</li><li>
-<code><b>thunar</b></code> — The file browser.</li><ul><li class="q"><blockquote>
-Already a radical departure is exhibited here; in Windows, <code>explorer</code> is the file manager <b>and</b> desktop shell renderer; similarly, like GTK2 / early GTK3 Nautilus from GNOME, and file managers which follow in their stead; such-as Cinnamon's Nemo.</blockquote></li></ul></li><li>
-<code><b>xfce4-appfinder</b></code> — Graphical command interface and application finder<ul><li class="q"><blockquote>
-Default keybinds; <ul><li class="q">
-<code>⎇[F2]</code> to invoke</li><li class="q">
-<code>⬇</code> thereafter to present application search mode.</li><li class="q">
-<code>⬆</code> thereafter to return in command mode.</li></ul></blockquote></li></ul></li><li>
-<b>Whisker</b> — An Xfce-specific Redmond-style panel-resident application and session management menu.<ul><li class="q"><blockquote>
-This comes with Linux Mint, and is a fairly standard extra addition with other Xfce-equipped instances.</blockquote></li><li class="q"><blockquote class="ylw">
+Then, you can simply replace it in your panel settings to take place of Window List.</li><li>
+<code><b class="grn">xed</b></code> — If, even-after configuring <code>xed</code> to function how you want, you find it's <i>slightly</i> too basic or doesn't render anything to your liking, you have <i>many</i> options, but the Xfce-specific substitute that ormally comes with other distributions is known as Mousepad. To replace it:<pre class="qcmd">
+sudo apt autopurge xed*
+sudo rm -rf /usr/lib/x86_64-linux-gnu/python3/xed
+sudo apt install mousepad</pre></li><li>
+<b>Whisker</b><br>
 Alternative application launchpads you may be interested in:<ul><li>
 <code>xfce4-appfinder</code> — <b>You already have this.</b> Without Whisker, this is the default and <u>intended</u> method for executing applications.</li><li>
 Albert — An alternative cross-desktop extensible application launcher in a similar vein as Xfce's App Finder.<br>
@@ -409,68 +492,66 @@ Lightpad — A cross-desktop full-screen application grid with search, similar t
 sudo add-apt-repository ppa:libredeb/lightpad
 sudo apt-get update
 sudo apt-get install io.github.libredeb.lightpad</pre></li></ul>
-Give both non-default alternatives a look if you'd like, and feel default selections are lacking.</blockquote></li></ul></li><li>
-<code><b>file-roller</b></code> — File archival utility, dependent on whatever packages handling compressed file formats are installed.<ul><li class="q"><blockquote class="ylw">
-I've noticed this utility exhibits some deficiencies with handling multiple files, which many Xfce users resolve by removing this utility in favour for MATE's archive manager. As these are both GTK-based tools, it'll adopt GTK theming and integrate nicely into your instance. To perform:<pre class="qcmd">
-sudo apt remove file-roller && sudo apt install engrampa</pre></blockquote></li></ul></li><li>
-<code><b>xfce4-terminal</b></code> — The default terminal emulator which may also function as your primary control surface for text-only apps.<ul><li class="q"><blockquote>
-This is different from the fallback terminal emulator assigned via Debian's <code>update-alternatives</code> method as <code>x-terminal-emulator</code>, which is usually configured to be <code>xterm</code>.</blockquote></li><li class="q"><blockquote class="ylw">
+Give both non-default alternatives a look if you'd like, and feel default selections are lacking.</li><li>
+<b><code>file-roller</code></b><br>
+I've noticed this utility exhibits some deficiencies with handling multiple files, which many Xfce users resolve by removing this utility in favour for MATE's archive manager. As these are both GTK-based tools; this one using a more legacy-based GTK2-style interface, it'll adopt many older GTK themes nicely and integrate well into your instance. To perform:<pre class="qcmd">
+sudo apt remove file-roller && sudo apt install engrampa</pre></li><li>
+<b><code>xfce4-terminal</code></b><br>
 For a more-functional emulator which enables graphical viewport splitting so you can do more-than one thing in a visible space, while operating separate text shells / commands as-desired, you may be interested in <code>terminator</code>. Perform the following in <code>xterm</code>:<pre class="qcmd">
 sudo apt remove xfce4-terminal && sudo apt install terminator</pre>
-There are many others, but few worthy of attention; unless you care about GPU acceleration or graphics rendering inside the terminal (which I believe this can do, too through the KiTTY Protocol), </blockquote></li></ul></li></p><p>
-There are many other applications you can try out, but most of your interests will have been from your exploration in Windows prior — cross-platform open-source applications meant to replace the closed-source and / or platform-exclusive ones you were using in Windows. If you want an at-a-glance novice-friendly information resource which doesn't overwhelm you with <i>everything</i> a manual would, then consider installing <code>tldr</code>:<pre class="qcmd">
-sudo apt install tldr</pre></p>
+There are many others, but few worthy of attention; unless you care about GPU acceleration or graphics rendering as first-seen in KiTTY (which I believe this is also capable of emulating support for), or 3D rendering as recently-seen in RaTTY; neither project which bears importance now and in the immediate future.</li></ul></p></blockquote>
 </div></div>
-<div class="S8 Cfull Cend"><div class="Cwrap"><h2>
+<div class="S7 C_full C_end"><div class="C_wrap"><h2>
 Foundation</h2><p>
 Now that you've seen a snapshot of what <i>could</i> be during pre-installation, if you'd like to have it for yourself <i>and make it persist between reboots</i> then it must be committed to your on-board or other external storage.<ul><li class="q"><blockquote>
-Unlike in Windows; where a separate tool is necessary for an external installation, as-long the bootloader and system root are in the same device, an externally-attached system instance can be used across multiple machine, not-unlike what is shown in the pre-installation media's live session.</blockquote></li></ul>
-</p>To that effect, <i>minimally</i> two pieces of content ned to be defined:<ul><li>
+Unlike in Windows, where a separate tool is necessary for an external installation; as-long the bootloader and system root are in the same device, an externally-attached system instance can be used across multiple machines, not-unlike what is shown in the pre-installation media's “Live session.”</blockquote></li></ul></p><p>
+To that effect, <i>minimally</i> two locations for system software components need to be defined:<ul><li>
 Root partition mountpoint (<code>/</code>)</li><li class="ylw">
 <i>Boot method</i></li></ul></p><p>
 
-The latter is more-important than the former, and can be solved in a variety of ways, but traditionally the means of booting to an installed instance is handled by a separate bootloader; due in-part to the legacy of general computing but also for convenience: you can still choose to boot into Windows from an alternative bootloader, if you changed your mind last-minute and decided it necessary for an action. There are two primary ways that booting a system is handled, generally based upon whether a system precedes or follows after Secure Boot:<ol><li>
+The latter is more-important than the former, and can be solved in a variety of ways, but traditionally the means of booting to an installed instance is handled by a separate bootloader; due in-part to the legacy of general computing but also for convenience: you can still choose to boot into Windows from an alternative bootloader, if you changed your mind last-minute and decided it necessary for an action. There are two primary ways that booting a system is handled, generally based upon whether a system precedes or follows after Secure Boot:<ul><li>
 Master Boot Record (<code>mbr</code> / <code>msdos</code>)</li><li class="ylw">
-GUID Partition Table (<code>gpt</code>)</li></ol><p>
+GUID Partition Table (<code>gpt</code>)</li></ul><p>
 
 The latter-most one is <i>likely</i> what you may have. If an older machine is to be used, then most-likely it uses MBR, which means the NT bootloader will end up being replaced.<ul><li class="q"><blockquote>
 Without special software, the MBR cannot be manipulated to host more-than one boot method.</blockquote></li><li class="q"><blockquote class="ylw">
-The bootloader can persist on a separate media, if it is specfied to persist somewhere else. Regardless the boot method used, this is a valid mode of operation; using a USB-attached media for booting to an on-board system instance, so the original on-board / primary boot method isn't overwritten, and thus may render other instances unbootable by “Conventional” means if no other UEFI boot methods for GPT-compatible baseboards are available, without the use of special software such-as <b>Ventoy</b> to select an existing EFI file.</blockquote></li></ul></p><p>
+The bootloader can persist on a separate media, if it is specfied to exist somewhere else. Regardless the boot method used, this is a valid mode of operation; using a USB-attached media for booting to an on-board system instance, so the original on-board / primary boot method isn't overwritten, and thus may render other instances unbootable by “Conventional” means if no other UEFI boot methods for GPT-compatible baseboards are available, without the use of special software such-as <b>Ventoy</b> to select an existing EFI file.</blockquote></li></ul></p><p>
 
 You can also determine how memory pages are stored in any available media during use, which is similar to virtual RAM in Windows; when the “Memory pressure” (as macOS would call it) gets to be a little too much for RAM, your Linux session can handle this in one of two ways as—<ol><li>
 …A separate partition (<code>/swap</code>)</li><li class="ylw">
-…A page file elsewhere</li></ol></p><p>
+…A page file elsewhere<ul><li class="q" style="color: var(--Tx)"><blockquote>
+Swap files can exist alongside swap partitions, if performing an operatin which requires more memory paging than your on-board modules and dedicated virtual page space allows.</blockquote></li></ul></li></ol></p><p>
 
 The latter can get a bit tricky, which is why it would be easier to put the pages in a separate partition; less intermediary maths involved since no additional space would be taken by a file otherwise just sitting there and doing nothing, <i>but</i> if you elect to use a swap file, know it could be called whatever you like, so-long that name is used in your filesystem table (<code>/etc/fstab</code>) to mount as the location pages will go, so the system doesn't lock up completely through relief of this “Memory pressure” .</p><p>
 
-There is also concern about where <i>your</i> stuff goes. Like evrything else above, the location of <code>/home</code> can be in one of two places:<ul><li>
+There is also concern about where <i>your</i> stuff goes. Like evrything else above, the location of <code>/home</code> can be in one of two places:<ol type="a"><li>
 <code>/</code></li><li class="ylw">
-<i>Anywhere else</i></li></ul></p><p>
+<i>Anywhere else</i></li></ol></p><p>
 
 It doesn't even have to conform with expectant behaviour, either; with a little effort, one may move home into a space conventionally prohibited by system installation utilities for convenience-sake; if you want everybody's <code>$HOME</code> to be in the same partition Windows is stored in, then that is totally possible, and may be desired if you cannot afford a lot of space to the root partition without it being inconvenient long-term — especially, if you do not want to juggle which files go where, and would like everything in a single location so your present system backup workflows which are Windows-dependent can still be used, if you prefer that.</p>
 </div></div>
 
-<div class="S9 Cfull Cstart"><div class="Cwrap"><h1><div class="Tflex Thead"><a href="#Sa" class="mv">⇣</a><div id=S9>
-House building</div><a href="#S0" class="mv">↟</a></div></h1><p>
-It's one thing understanding the layout and knowing how to build, it's another thing to <i>actually</i> do it. This final section of the writ will part out the four topics explained in-brief above with some mathematics and minimums which can ensure the absolute best comfort during transition from a mono-boot Windows environment to a dual-boot environment, where open-source software transforms itself from curio to critical.</p>
+<div class="S8 C_full C_start"><div class="C_wrap"><h1 id="S8"><div class="T_flex T_head"><a href="#Sm" class="mv">⇣</a><div>
+House building</div><a href="#Sx" class="mv">↟</a></div></h1><p>
+It's one thing understanding the layout and knowing how to build, it's another thing to <i>actually</i> do it. This penultimate section will put into practice many prior topics with some mathematics and “Safe” minimums which can ensure the absolute best comfort during transition from a mono-boot Windows environment to a dual-boot environment, where open-source software may soon transform itself from curio to critical.</p>
 </div></div>
-<div class="S9 Cfull"><div class="Cwrap"><h2>
+<div class="S8 C_full"><div class="C_wrap"><h2>
 Partitioning</h2><p>
-Explained prior, minimally you need a space for root and <i>optionally</i> (though it is heavily implied as just-about necessary) a bootloader. Linux Mint — as its predecessors Ubuntu and Debian does — works best with and prefers use of the fourth extended filesystem, (<code>ext4</code>), <span class="ylw">and as-necessary based on boot method, use of the 32-bit file allocation table (<code>fat32</code>) format for an extensible firmware interface (<b>E</b>FI) system partition (<b>ESP</b>).</span><ul><li class="q"><blockquote>IF you use a Secure Boot-equipped baseboard, and have Windows installed, you already have this; typically, anywhere Windows is installed, you already have a <code>fat</code>-formatted space, which usually is recognised outside of Windows as the first partition of a storage media.</blockquote></li></ul></p><p>
+Explained prior, minimally you need a space for root and <i>optionally</i> (though it is heavily implied as just-about necessary) a bootloader. Linux Mint — as its predecessors Ubuntu and Debian does — works best with and prefers use of the fourth extended filesystem, (<code>ext4</code>), <span class="ylw">and as-necessary based on boot method, use of the 32-bit file allocation table (<code>fat32</code>) format for an extensible firmware interface (<b>E</b>FI) system partition (<b>ESP</b>).</span><ul><li class="q"><blockquote>If you use a Secure Boot-equipped baseboard, and have Windows installed, you already have this; typically, anywhere Windows is installed, you already have a <code>fat</code>-formatted space, which usually is recognised outside of Windows as the first partition of a storage media.</blockquote></li></ul></p><p>
 
-Unlike in Windows where all media <i>just is</i>; depending on device attachment to the baseboard, there will be several designations based on the technology used to transferdata:<ul><li>
+Unlike in Windows where all media <i>just is</i> and recognised as a “Drive” no matter what; depending on device attachment to the baseboard, there will be several designations based on the technology used to transferdata:<ul><li>
 <code>hd</code> — IDE { “Hard disk” )</li><li>
 <code>sd</code> — SATA / M.2 B-key { “Serial device” )</li><li>
-<code>nvme</code> — PCI-attached / M.2 E-key { “Non-volatile Memory Express” )</li><li>
+<code>nvme</code> — PCI-attached / M.2 E-key { “Non-Volatile Memory Express” )</li><li>
 <code>mmcblk</code> — “Card” based media (eMMC, M.2 A-key, “Multi-media card block” )<ul><li class="q"><blockquote>
 These designations are not strict; different attachments can change how a device is recognised. You can use <code>dmesg</code>, <code>fdisk</code> or <code>lsblk</code> to easily determine what you attached in text-only interfaces, and you can figure out based on contents shown in graphical applications, too which is what.</blockquote></li></ul></li></ul></p><p>
 
-The remainder of device assignments are <i>then</i> determined by letter based-on order of attachment (A-Z<sup>29</sup>; a maximum well-beyond your possession). After the device letter, each partition is provided a numeric designation (1-256; or, half-that in Windows).</p><p>
+The remainder of hard disk and serial device assignments are <i>then</i> determined by letter based-on order of attachment (A-Z<sup>29</sup>; a maximum well-beyond your possession). After the device letter, each partition is provided a numeric designation (1-256; or, half-that in Windows). For memory / flash-based devices, their designation will be based on host controller and port attachment.</p><p>
 
 <i>Example</i> — the device one could re-use for their ESP to install GRUB at, provided during installation of Microsoft Windows on a GPT-formatted disk, would typically be assigned as one of two locations:<ul><li>
 <code>sda1</code></li><li>
 <code>nvme0n0p1</code><ul><li class="q"><blockquote class="ylw">
-Yes, this gets even-more confusing with PCI-attached devices; an NVMe SSD will be rendered with the <b>host controller (<u>zero-indexed</u>)</b>, as-well the device designation rendered <b>with a number (<u>zero-indexed</u>)</b> instead of a letter. So, <code>nvme1n0p3</code> would be NVMe controller #2, first device, third partition.</blockquote></li></ul></li></ul>
+Yes, this gets even-more confusing with PCI-attached devices; an NVMe SSD will be rendered with the <b>host controller (<u>zero-indexed</u>)</b>, as-well the device designation rendered <b>with a number (<u>zero-indexed</u>)</b> instead of a letter. So, <code>nvme1n0p3</code> would be NVMe controller #2, first device, third partition.</blockquote></li></ul></li></ul><p>
 As-explained earlier, Linux-based systems (and other Unix-alikes) operate on different principles than Windows, and this even applies to how devices are recognised; rather than a device being assigned some arbitrary “Drive letter” from antiquity, everything operates from root (<code>/</code>), and all thereafter are a product associated thereof (<i>i.e.</i> <code>/home</code>).</p><p>
 
 By-default, if an externally-attached media doesn't have any mountpoint associated with it as-assigned in <code>/etc/fstab</code>, it will mount to a location in <code>/media/$USER</code>. These devices should be available through the file manager, when browsing for available devices in the left-side pane. Since the copy of Linux Mint previously-described uses the Xfce desktop, its file manager should be <code>thunar</code>. While this isn't strictly necessary to understand during installation, such knowledge may prove helpful when using external media along with the live session rendered from the USB-attached device you are using to access it.<ul><li class="q"><blockquote>
@@ -491,9 +572,9 @@ Lastly, if using an older baseboard which <i>only</i> accepts the legacy MBR for
 <br>
 This presumably means you're also using a hard disk, so if you're certain this is the case, then be sure for the NTFS partition, you add <code>prealloc</code> in your NTFS mount options.</blockquote></li></ul>
 </div></div>
-<div class="S9 Cfull"><div class="Cwrap"><h2>
+<div class="S8 C_full"><div class="C_wrap"><h2>
 Making entrance</h2><p>
-The way in is important-as the way around. Since Linux Mint operates on the more… “antiquated” GNU Grand Unified Bootloader (GRUB), it may look a little bit dated compared to other options, but <i>it works</i> and that's all we must concern ourselves with, <i>especially</i> as interested persons begin our open-source journeys.</p><p>
+The way in is important-as the way around. Since Linux Mint provides the more… “antiquated” GNU Grand Unified Bootloader (GRUB), it may look a little bit dated compared to other options, but <i>it works</i> and that's all we must concern ourselves with, <i>especially</i> as interested persons begin their open-source journeys.</p><p>
 
 Through their efforts with Ubuntu, Canonical had made this stupid-simple to deal with, if-ever you find yourself boot issues in the future for any reason:<pre>
 sudo update-grub</pre></p><p>
@@ -502,52 +583,54 @@ If-ever you want to install GRUB on a new device in the future — Perhaps, beca
 sudo grub-install /dev/sdc
 sudo grub-update</pre></p><p>
 
-By0default, GRUB wil find <i>other</i> systems it can boot into, which is why if using an older MBR disk, Windows (likely on <code>/dev/sda1</code> if installing on the same media using an extended partition) will also be shown.</p>
+By-default in Linux Mint, GRUB wil find <i>other</i> systems it can boot into, which is why if using an older MBR-formatted disk, Windows (if installing on the same media it exists on, likely is at <code>/dev/sda1</code>) will also be shown.</p>
 
 <p><code>update-grub</code> basically does equivalent of the following, if-ever this shortcut is unavailable:<pre>
-sudo grub-mkconfig -o /boot/grub/grub.cfg</pre><blockquote class="ylw">
-<h2>Using NTFS for inter-spacial symbolic link references</h2><p>Establishment of these links will be explained later. But something important to understand is how a bootloader; whether it's GRUB2, Lemine, systemd-boot, rEFInd, <u>et cetera</u> provides consistency between machines, whose device management may differ between firmware provided on various brands of hardware, or even across baseboard models of the <u>same</u> brand. A bootloader is antiquated and had come from the time when you could have <u>only</u> one, if-uninformed about the subject of hosting multiple in the same hidden space MBR bootloaders were held in, but they continue to serve a significant function in a lot of modern hardware applications.</p><p>
-
-Microsoft's formerly-indomitible position enabled them to incorporate several features which are specific to their Windows platform; one of which being Fast Boot, otherwise-known as Fast Startup. While firmware on lots of older baseboards allow you to disable this feature and return to legacy system operation characteristics, recent baseboards and their firmware seemingly had removed this feature toggle from their various menus. <u>Because of that</u> I have to address this topic as-if you cannot turn it off.</p><p>
+sudo grub-mkconfig -o /boot/grub/grub.cfg</pre><blockquote>
+While a bootloader in-concept is antiquated and hails from the time when you could have <u>only</u> one, if-uninformed about the subject of hosting multiple in the same hidden space MBR bootloaders were held in, they continue to serve significant functions in a lot of modern hardware applications.
+<br><br>
+Whether it's GRUB2, Lemine, systemd-boot, rEFInd, <u>et cetera</u>, a bootloader provides consistency between machines, whose device management may differ between firmware provided on various brands of hardware, or even across baseboard models of the <u>same</u> brand. They also help to enable system-wide encryption, by providing the means to forward a user into LUKS authentication, whereby after a PIN is entered, will render the remainder of an instance available to complete system boot and begin use.</blockquote><blockquote class="ylw">
+<h2>Using NTFS for inter-spacial “Symbolic” link references</h2><p>Establishment of these links will be explained later on. Microsoft's formerly-indomitible position enabled them to incorporate several features which are specific to their Windows platform; one of which being Fast Boot, otherwise-known as Fast Startup. While firmware on lots of older baseboards allow you to disable this feature and return to legacy system operation characteristics, recent baseboards and their firmware seemingly had removed this feature toggle from their various menus. <u>Because of that</u> I have to address this topic as-if you cannot turn it off.</p><p>
 
 This “Fast boot” feature does one thing <u>really</u> well, and that is to disturb your experience on platforms outside of Windows, because of how its root NTFS partition is kept in a read-only state; if recycling the contents of your Windows root partition, <u>and</u> you had <b>shut down</b> Windows, then rebooting into Linux Mint, let-alone any other Linux-based desktop will result in unexpected dysfunction since the partition Windows is in cannot be written to, which will make appending content into it impossible.</p><p>
 
 If you are to follow the later advice provided about how to relocate your <code>/home</code> directory, this introduces <u>new</u> problems; it's one thing to be rendered unable of adding content in any directories from your Windows user profile, it's another to be entirely unable of logging in because of this read-only state caused by Windows' modern boot mechanisms. Since <code>.Xauthority</code> cannot be written, the X window server refuses to comply and kick you back out to the display manager.</p><p>
 
-Of course, fixing this is simple-enough; just reboot the computer into Windows, then select <b>restart</b> from there; everything for it will be unloaded, and the NTFS partition will return to its normal read / write operation. But now the question remains of how to turn off the machine, which is answered simply; power off <b>at the bootloader</b> rather-than shutting down in Windows. It takes a bit longer, but depending on how the firmware operates with the power button, you may have to hold that down for several seconds, unlike with “Aftermarket” bootloaders where you should only need to press once for turning the machine off.</p></blockquote>
+Of course, fixing this is simple-enough; just reboot the computer into Windows, then select <b>restart</b> from there; everything for it will be unloaded, and the NTFS partition will return to its normal read / write operation. But now the question remains of how to turn off the machine, which is answered simply; power off <b>at the bootloader</b> rather-than shutting down in Windows. You are then at the mercy of your baseboard firmware; since depending on how it operates the power button, you may have to hold that down for several seconds, or it might turn the machine off straight-away.</p></blockquote>
 </div></div>
-<div class="S9 Cfull"><div class="Cwrap"><h2>
+<div class="S8 C_full"><div class="C_wrap"><h2>
 RAM-paging</h2><p>
 DRAM pricing has been absolutely <b>outrageous</b> ever since 2026Q1 </i>for suspecious and political reasons</i>, so many of us will have to make do with the “RAM” we've got, by enabling use of “Swap” space, and perhaps as-well page compression on more-capable machines to ensure continued operation with more than just a couple of applications.</p><p>
 
-Not many people are aware of this typically, but Windows also has this feature called “Virtual RAM” which is basically what you think it is; rather than storing things to RAM, a virtual extension of it is made for putting background processes into, when they've lingered in RAM in disuse for a bit, and it'll usually take a little bit longer to reprise background tasks reading from the much, <i>much</i> slower on-board media.</p><p>
+Not many people are aware of this typically, but Windows also has this feature called “Virtual RAM” which is basically what you think it is; rather than storing things to RAM, a virtual extension of it is made for putting background processes into, when they've lingered in RAM disused for a bit, and it'll usually take a little bit longer to reprise background tasks reading from the much, <i>much</i> slower on-board media.</p><p>
 
 Open-source systems, <i>especially</i> those using the Linux kernel operate on similar ideas, and the ideal result is that performance with a swap file or partition should be similar to virtual RAM in Windows. What Linux <i>can't</i> do is make a slow media feel quicker; if you are already having trouble in Windows, even with a fresh system instance, then your speed improvements will come from less software bloat, telemetry and overall application size, but you remain limited to the speeds and feeds of your media components.</p><p>
 
-You can elect to <i>not</i> establish a swap space if you don't need it, but there should be provisions to prevent the system from seizing up because of lacking RAM in <i>all</i> systems, regardless how much RAM you have to prevent a system from grinding to a halt due to insufficient RAM, before processs are killed as a last-ditch effort to retain system stability. if you've made a swap space after-the-fact, then it must be defined in the filesystem table. So <i>as an example</i>, at <code>/etc/fstab</code>:<pre>
+You can elect to <i>not</i> establish a swap space if you don't need it, but there should be provisions to prevent the system from seizing up because of lacking RAM in <i>all</i> systems, regardless how much RAM you may have to prevent it from grinding at a halt due to insufficient RAM, before processs are killed as a last-ditch effort to retain system stability. if you've made a swap space after-the-fact, then it must be defined in the filesystem table. So <i>as an example</i>, in <code>/etc/fstab</code>:<pre>
 UUID=1234abcd-5678-efab-90fe-dcba76543210 none swap sw 0 0</pre><blockquote>
 Unlike swap files, swap partitions are less-arbitrary. The former can be called anything, and be anywhere; the latter is determined more-or-less by the partition's UUID. The following swapfile examples will use generic names, but the names for such can differ from what is shown.</blockquote></p><p>
 
-You can also establish a swap <i>file</i>, instead of a partition. Using some advice elsewhere from the Internet, here's a functional example for <code>ext4</code> filesystems to initialise 8 GiB for immediate use:<pre>
-sudo fallocate -l 8G /vram
-sudo chmod 600 /vram
-sudo mkswap /vram
-sudo swapon /vram</pre></p>
+You can also establish a swap <i>file</i>, instead of a partition. Using some advice elsewhere from the Internet, here's a functional example for <code>ext4</code> filesystems to initialise 8 GiB for immediate use:<blockquote>
+You can call this swap file <u>anything</u>, but <code>vmem</code> is used to distinguish the purpose of this swap file. Examples elsewhere often call for using <code>swap</code> or </code>swapfile</code>; the name matters less than <code>/etc/fstab</code> listing the file, and the system recognising its existence.</blockquote><pre>
+sudo fallocate -l 8G /vmem
+sudo chmod 600 /vmem
+sudo mkswap /vmem
+sudo swapon /vmem</pre></p>
 <p>Then after all of that, add this to <code>/etc/fstab</code>:<pre>
-/vram none swap defaults 0 0</pre></p><blockquote class="ylw">
+/vmem none swap defaults 0 0</pre></p><blockquote class="ylw">
 <h2>For BTRFS root</h2><p>
 If you've elected to make BTRFS the root partition format, then the above steps will <b>fail</b> due to the copy-on-write nature of this partition format, which in other cases may be advantageous <u>with intent</u> as a “Soft” backup via file snapshots, but <b>not</b> for this application. To prevent issues, the above must be modified:<pre>
 sudo mkdir /swap
 sudo chattr +C /swap
-sudo fallocate -l 8G /swap/vram
-sudo chmod 600 /swap//vram
-sudo mkswap /swap/vram
-sudo swapon /swap/vram</pre></p><p>
+sudo fallocate -l 8G /swap/vmem
+sudo chmod 600 /swap//vmem
+sudo mkswap /swap/vmem
+sudo swapon /swap/vmem</pre></p><p>
 Afterward, in <code>/etc/fstab</code>:<pre>
-/swap/vram none swap defaults 0 0</pre>
+/swap/vmem none swap defaults 0 0</pre>
 </blockquote></p>
 </div></div>
-<div class="S9 Cfull"><div class="Cwrap"><h2>
+<div class="S8 C_full"><div class="C_wrap"><h2>
 Personal property</h2><p>
 Your stuff is valuable, and you've probably accrued a bunch of it through Windows during years of use. Unfortunately, the default configuration for every open-source system under the sun doesn't even <i>consider</i> the NTFS partition. However, there are a few things you can do if you'd like to have all of your old stuff accessible from within Linux Mint and other system instances.
 
@@ -559,13 +642,13 @@ With Disk Encryption disabled in Windows, one who hardly uses their computer can
 
 It'd be <i>very</i> nice to just have access of your prior content from Windows within Linux Mint at convenient locations software would already respect, so that the various acts of copying over all of your stuff isn't necessary. And, using <b>only</b> directory link references, we can do <i>just</i> that.<blockquote class="ylw">
 
-Reiterating prior warnings: The moment any inter-spacial file links are referenced which require the content to be available at-boot, you will always, <i>always</i> have to <b>restart</b> Windows, lest you find yourself unable to append into any NTFS partitions used. If you hadn't taken the time to part your stuff in WIndows and change library locations within <code>explorer</code> to reference conent from that space, then you <i>will</i> encounter issues with Windows' Fast Boot if you do the thing which seems intuitive at the onset.</blockquote></p>
-</div></div><div class="S9 Cfull"><div class="Cwrap"><h2>
+Reiterating prior warnings: The moment any inter-spacial file links are referenced which require the content to be available at-boot, you will always, <i>always</i> have to <b>restart</b> Windows, lest you find yourself unable to append into any NTFS partitions used. If you hadn't taken the time to part your stuff in Windows and change library locations within <code>exploforetoldfrer</code> to reference conent from that space, then you <i>will</i> encounter issues with Windows' Fast Boot if you do the thing which seems intuitive at the onset.</blockquote></p>
+</div></div><div class="S8 C_full C_end"><div class="C_wrap"><h2>
 Remote access</h2><p>
 Before executing on this idea of accessing content inter-spacially through directory link references, the partition has to be accessible. One could do this for both now, and later upon next-reboot with the following <i>example</I> commands:<blockquote class="ylw">
 If the output of <code>lsblk</code> is different than shown, then <b>use what you see</b>. Assuming result has Windows root as <code>/dev/sda3</code>.</blockquote><pre>
 sudo mkdir /mnt/WinRoot
-lsblk -f
+lsblk -f⇣
 sudo mount /dev/sda3 /mnt/WinRoot
 sudo echo "/dev/sda3 /mnt/WinRoot ntfs nosuid,nodev,nofail<span class="ylw">,prealloc,gid=1000,uid=1000,umask=000</span> 0 0" >> /etc/fstab</pre><blockquote class="ylw">
 The provided additional mount options as-shown:<ul><li>
@@ -613,7 +696,7 @@ Now that last one is <i>a lot</i>. So; <code>$lns</code> is the local-scope vari
 Traditional...%appdata%\Mozilla\Firefox
 <span class="ylw">Market</span>........<span class="ylw">%localappdata%\Packages\Mozilla.Firefox_n80bbvh6b1yt2\LocalCache\Roaming\Mozilla\Firefox</span>
 </pre>
-<i>!???</i> That is wicked-confusing, even for Firefox since if the traditional user files path doesn't exist, then the file browser invocation buttons in <code>about:profiles</code> don't work. <i>Nonetheless</i> once you claw through the syntactical labyrinth of market applications (none of which I will get into much here), you'll end up in a similar place. And, just because market apps operate in a virtualised filesystem to isolate itself from other such apps, <i>doesn't</i> prohibit their use as directory references from what WIndows would know as <code>%localappdata%</code> either; it's simple enough if Alice were to stick with the Firefox example:<pre>
+<i>!???</i> That is wicked-confusing, even for Firefox since if the traditional user files path doesn't exist, then the file browser invocation buttons in <code>about:profiles</code> don't work. <i>Nonetheless</i> once you claw through the syntactical labyrinth of market applications (none of which I will get into much here), you'll end up in a similar place as someone else would using Firefox “Traditionally”; Just because market apps operate in a virtualised filesystem to isolate itself from other such apps, <i>doesn't</i> prohibit their use as directory references from what Windows would know as <code>%localappdata%</code> either; it's simple enough if Alice were to stick with the Firefox example:<pre>
 cd $HOME
 ln -s /mnt/WinRoot/Users/$USER/AppData/Local/Packages/Mozilla.Firefox_n80bbvh6b1yt2/LocalCache/Roaming/Mozilla/Firefox $HOME/.mozilla</pre><ul><li class="q"><blockquote class="ylw">
 Rendering the above may appear broken at smaller resolutions, since the location is so very long.</blockquote>
@@ -629,25 +712,16 @@ systemctl reboot</pre>
 Rebooting when finished will ensure <i>all</i> remaining applications using data from <code>$HOME</code> will not encounter issues due to <code>$HOME</code> being in a different location.<ul><li><blockquote class="ylw">
 You <b><u>must</u></b> reboot Windows every time from hereon, even if you are finished using the session with intent to shut down. This is due to modern session management in Windows treating “Shut down” as hibernate for fast boot, which would otherwise put the NTFS partition into a read-only state until next Windows session. <b>This will prevent the writing of <code>.Xauthority</code> in <code>$HOME</code> for application authentication during the user session, and thus prevent normal use of the Linux instance session until resolved.</b></blockquote></li></ul></li></ul></p>
 </div></div>
-<div class="S9 Cfull Cend"><div class="Cwrap"><h2>
-Summary</h2><p>
-With respect to all of the above advice given, this is what you should end up with<ul><li>
-Cross-platform software, provided by alternative modes of software delivery to emulate the first-class software expeirence provided by alternatives using an open-source kernel.</li><li>
-A USB device (32 GiB / GB or higher) to host a copy of Windows written via Rufus you can <i>occasionally</i> boot into if-desired, or to use as a crashpad in-event of data catastrophe.</li><li>
-A USB device with Ventoy you could use to install a Linux instance with (specifically; Linux Mint Xfce) and have other tools available, such-as Clonezilla and Hiren's BootCD PE.</li><li>
-Linux Mint Xfce with an adequate root partition — minimally; 32 GiB, with provisioned 32 GiB (+ 16 GiB per-user) in <code>$HOME</code> (though, you might need to make that bigger).</li><li>
-Optionally; mounted NTFS partition to both use symbolic links from existing directory locations made by Windows for specific purposes elsewhere, and to have <i>the entirety of <code>$HOME</code></i> be put somewhere else so less allocated disk space is wasted on nothing.</li><li>
-A newfound appreciation for software; when good people come together not to advance an agenda or narrative, but to simply provide things which work as you'd expect them to.</li></ul></p><p>
-
-How you do this is entirely up to you, with whatever hardware and funds to obtain such available. More broad hardware support, greater security and computing which work on your terms is well-within reach, <span class="ylw">if-only you <i>try.</i></span></p>
+<div class="Sn C_full C_start"><div class="C_wrap"><h1 id="Sm"><h1>
+And so, so much more…</h1><p>
+There is a <i>lot</i> more informatino to be had about open-source software and how to wrangle it so your preferences are accepted, but there's already <i>way</i> too much information in here for the average person to chew on without personal guidance and consultation with their machine within the vicinity. If you managed to read this far and feel dizzy… <i>look</i> I get it. That is why the following section is for the <span class="ylw">“Speedrun”</span> portion of this guide, where you are given just a lit of things to do which compresses the above writ into a checklist of items. The rest can be discussed with me, at the prescribed date of our upcoming computer event.</p>
 </div></div>
-
-<div class="Sn Cfull Cstart"><div class="Cwrap"><h1><div class="Tflex Thead"><a href="#Sb" class="mv">⇣</a><div id=Sa>
-<u>Speedrun</u></div><a href="#S0" class="mv">↟</a></div></h1><p>
-If you're reading this, then clearly you care about the topics above, but lack time or concentration to work your way through it. This section is dedicated to those who want to just <i>get it done</i> and expect everything to work out. In-exchange for such expedited information, I expect no problems from you. So here's your pre-flight:<ul><li>
+<div class="Sn C_full"><div class="C_wrap"><h1 id="Sr"><div class="T_flex T_head"><a href="#Sx" class="mv">↟</a><div>
+<u>Speedrun</u></div><a href="#Sx" class="mv">↟</a></div></h1><p>
+If you're reading this, then clearly you care about most of the topics above, but lack time or concentration to work your way through long-winded language. This section is dedicated to those who want to just <i>get it done</i> and expect everything to work out. In-exchange for such expedited information, I expect no problems from you. So here's your pre-flight:<ul><li>
 Disable disk encryption (Bitlocker) in Windows</li><li>
 <code>Powershell</code> / <code>cmd</code>: <b><code>winget install ventoy rufus XPFFTQ032PTPHF</code></b><ul><li><blockquote class="ylw">
-Don't care about portable Windows? Omit <code>rufus</code> from the above and skip later steps for portabalising WIndows with it.</blockquote></li>
+Don't care about portable Windows? Omit <code>rufus</code> from the above and skip later steps for portabalising Windows with it.</blockquote></li>
 <li><blockquote>
 The string of digits as the last “Package” is to install UniGetUI from the Microsoft Store, through its store ID. Else, <code>winget</code> would spit out context-appropriate answers for <code>unigetui</code>. If you don't care for an application which makes third-party software management via <code>winget</code> easier via a graphical command-line wrapper, then don't bother with this either by omission.</blockquote></li></ul></li><li>
 Open <code>diskmgmt.msc</code> and find wherever <code>C:</code> is — left-of that, context-click and view <u>disk</u> <i>Properties</i>; observe in the <i>Volume</i> tab that media's <i>Partiton Style</i></li><li>
@@ -670,7 +744,7 @@ Can't find it? That's fine, just mind to always reboot Windows — <b><u>Never</
 If-problematic and not in-use, disable Intel Rapid Storage Technology (RST)</li><li>
 If the machine is old-enough to have different modes for SATA-connected devices, AHCI is likely your best bet — specify that</li></ul></p>
 </div></div>
-<div class="Sn Cfull Cend"><div class="Cwrap"><h2>
+<div class="Sn C_full C_end"><div class="C_wrap"><h2>
 Install and instantiate</h2><p>
 Either through the Recovery Environment menu; accessed previous for rebooting into UEFI Firmware Options, through the firmware; via boot order adjustment, or through a device selector menu, choose the USB device which has Ventoy. With this, we're going to do two things:<ul><li>
 Back up the present ESP if-applicable for when reverting this process is desired</ii><li>
@@ -755,7 +829,9 @@ systemctl reboot</span>
 </div></div>
 
 <!-- DO NOT remove these last two tags; this closes the flex table. Close divs above to prevent malfunction. -->
+<blockquote style="width: 100%; filter: brightness(0.5);"><center>Made with spite, by Brandon Bachman.<br>
+To those who dare oppose my sovereign; “<span style="color: #f22">Μολών λαβέ</span>”<br>
+CC0 <span style="font-style: initial;">🄯</span> 2026</center></blockquote>
 </div></div>
-
 </body>
 </html> 
